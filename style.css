@@ -1,0 +1,523 @@
+/* CSS Atualizado */
+
+/* Reset CSS Completo (Mantenha como está) */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1rem;
+    color: #392523;
+    background-color: #F8F2EA;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+}
+
+/* Layout (Mantenha como está) */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem; /* 20px 40px convertido para rem */
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0 2px 5px convertido para rem */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2em;
+    color: #392523;
+    letter-spacing: 0.125rem; /* 2px convertido para rem */
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 0.9375rem; /* 0 15px convertido para rem */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #392523;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    font-family: 'Fragment Core', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #94A473;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem; /* 160px convertido para rem */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2); /* 0px 8px 16px 0px convertido para rem */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 0.75rem 1rem; /* 12px 16px convertido para rem */
+    text-decoration: none;
+    display: block;
+    color: #392523;
+    transition: color 0.3s ease;
+    font-family: 'Fragment Core', sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #94A473;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Banner Sections (Mantenha como está) */
+main {
+    padding-top: 5rem; /* 80px convertido para rem */
+}
+
+section {
+    padding: 3.75rem 0; /* 60px 0 convertido para rem */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* --------------- MODIFICADO --------------- */
+.banner-1 {
+    width: 100%;
+    height: 37.5rem; /* 600px convertido para rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: #F8F2EA;
+}
+
+.banner-1 img {
+    width: 100%;
+    height: 100%; /* Preenche todo o espaço do banner */
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-content {
+    color: white;
+    font-size: 2em;
+}
+
+.banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    color: #fff;
+    font-style: italic;
+}
+
+/* --------------- ADICIONADO --------------- */
+.container-banners {
+    display: flex;
+    width: 100%;
+    height: 31.25rem; /* 500px convertido para rem */
+}
+
+.container-banners > * {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-banners .banner-texto {
+    background-color: #94A473;
+    color: white;
+}
+
+.container-banners .banner-texto .banner-subtitle {
+    width: 80%;
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.container-banners .banner-imagem {
+    background-color: #F8F2EA;
+}
+
+.container-banners .banner-imagem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* --------------- MODIFICADO --------------- */
+.banner-3 {
+    background-color: #F8F2EA;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3.125rem 0; /* 50px 0 convertido para rem */
+}
+
+.banner-3 .background-image {
+    background-image: url('img/banner3.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: brightness(0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner-3 .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+}
+
+.banner-3 .banner-text {
+    padding: 3.75rem; /* 60px convertido para rem */
+    z-index: 1;
+}
+
+/* --------------- MODIFICADO --------------- */
+/* Define um tamanho de fonte base para telas maiores */
+.mini-bio {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 1.1em; /* Defina um tamanho base que fique bom em telas maiores */
+    font-weight: normal;
+    color: #392523;
+    line-height: 1.6;
+    max-width: 43.75rem; /* 700px convertido para rem */
+    text-align: justify;
+    margin: 0 auto; /* Centraliza o texto */
+    font-style: italic;
+}
+
+.mini-bio p {
+    margin-bottom: 0;
+}
+
+.banner-4 {
+    background-color: #f5f5f5;
+    text-align: center;
+    width: 100%;
+    padding-top: 3.75rem; /* 60px convertido para rem */
+    padding-bottom: 0;
+}
+
+.banner-4-title {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2.5em;
+    color: #392523;
+    margin-bottom: 1.875rem; /* 30px convertido para rem */
+}
+
+.brands-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem 3.75rem; /* 0 20px 60px convertido para rem */
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.875rem; /* 30px convertido para rem */
+}
+
+.brand-row img {
+    width: 5rem; /* 80px convertido para rem */
+    margin: 0 1.25rem; /* 0 20px convertido para rem */
+}
+
+/* Gallery (Mantenha como está) */
+.gallery {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    padding-top: 3.75rem; /* 60px convertido para rem */
+    padding-bottom: 0;
+}
+
+.gallery h2 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2.5em;
+    color: #392523;
+    margin-bottom: 1.875rem; /* 30px convertido para rem */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* minmax(300px, 1fr) convertido para rem */
+    gap: 1.25rem; /* 20px convertido para rem */
+    padding: 1.25rem; /* 20px convertido para rem */
+}
+
+.gallery-item {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer (Mantenha como está) */
+footer {
+    padding: 1.875rem 0; /* 30px 0 convertido para rem */
+    background-color: #f0f0f0;
+    text-align: center;
+    width: 100%;
+}
+
+.social-icons a {
+    font-size: 1.5625rem; /* 25px convertido para rem */
+    margin: 0 0.625rem; /* 0 10px convertido para rem */
+    color: #392523;
+    transition: color 0.3s ease;
+    font-family: 'Fragment Core', sans-serif;
+}
+
+.social-icons a:hover {
+    color: #94A473;
+}
+
+.contact-form {
+    max-width: 31.25rem; /* 500px convertido para rem */
+    margin: 1.25rem auto; /* 20px auto convertido para rem */
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1.8em;
+    color: #392523;
+    text-align: center;
+    margin-bottom: 0.9375rem; /* 15px convertido para rem */
+    font-weight: 500;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.625rem; /* 10px convertido para rem */
+    margin-bottom: 0.625rem; /* 10px converted para rem */
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem; /* 5px converted para rem */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0px 2px 5px rgba(0, 0, 0, 0.1) convertido para rem */
+    font-family: 'Nixie One', sans-serif;
+}
+
+.contact-form button {
+    background-color: #392523;
+    color: #fff;
+    padding: 0.625rem 1.25rem; /* 10px 20px convertido para rem */
+    border: none;
+    border-radius: 0.3125rem; /* 5px converted para rem */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Nixie One', sans-serif;
+}
+
+.contact-form button:hover {
+    background-color: #94A473;
+}
+
+/* Esconde o botão do menu por padrão */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #392523;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 0.9375rem 1.25rem; /* 15px 20px convertido para rem */
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        height: auto; /* Ajusta a altura automaticamente */
+        position: fixed; /* Garante que o header permaneça fixo */
+    }
+
+    .logo {
+        font-size: 1.5em;
+        margin-bottom: 0; /* Remove a margem inferior do logo */
+    }
+
+    /* Mostra o botão do menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* Esconde a navegação por padrão */
+    .nav-links {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links nav ul li {
+        margin: 0.625rem 0; /* 10px 0 convertido para rem */
+    }
+
+    /* Estilos para quando o menu estiver ativo */
+    header.active .nav-links {
+        display: block; /* Mostra a navegação */
+        background-color: #f9f9f9; /* Adiciona um fundo para destacar o menu */
+        padding: 1rem; /* Adiciona preenchimento ao menu */
+        width: 100%;
+    }
+
+    /* Ajustes na mini-bio para telas menores */
+    .mini-bio {
+        font-size: 0.8em; /* Reduz o tamanho da fonte */
+        margin-left: 15%; /* Adiciona margem esquerda de 15% */
+        margin-right: 15%; /* Adiciona margem direita de 15% */
+        text-align: justify; /* Justifica o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 2.5em;
+    }
+
+    .banner-3 .banner-text {
+        padding: 1.875rem; /* 30px convertido para rem */
+    }
+
+    .mini-bio {
+        font-size: 0.7em; /* Reduz ainda mais o tamanho da fonte */
+        line-height: 1.7;
+    }
+
+    /* Ajustes para o container de banners */
+    .container-banners {
+        flex-direction: column; /* Empilha os banners verticalmente */
+        height: auto; /* Altura automática para se ajustar ao conteúdo */
+    }
+
+    .container-banners > * {
+        width: 100%; /* Cada banner ocupa 100% da largura */
+        margin-bottom: 1.875rem; /* Adiciona espaço entre os banners */
+    }
+
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 2em; /* Reduz o tamanho da fonte do subtítulo */
+    }
+}
+
+/* Media query para telas maiores (tablets e desktops) */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Esconde o menu toggle em telas maiores */
+    }
+
+    .nav-links {
+        display: flex !important; /* Garante que a navegação seja visível */
+    }
+}
