@@ -239,6 +239,7 @@ section {
     justify-content: center;
     width: 100%;
     padding: 3.125rem 0; /* 50px 0 convertido para rem */
+    min-height: 20rem; /* Altura mínima para o banner 3 */
 }
 
 .banner-3 .background-image {
@@ -272,7 +273,7 @@ section {
 /* Define um tamanho de fonte base para telas maiores */
 .mini-bio {
     font-family: 'Glacial Indifference', sans-serif;
-    font-size: 1.1em; /* Defina um tamanho base que fique bom em telas maiores */
+    font-size: 0.8125rem; /* Tamanho fixo de 13px */
     font-weight: normal;
     color: #392523;
     line-height: 1.6;
