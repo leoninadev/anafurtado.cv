@@ -123,6 +123,11 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+/* Adicionado para o script do dropdown */
+.dropdown-content.show {
+    display: block;
+}
+
 .dropdown-content a {
     padding: 0.75rem 1rem; /* 12px 16px convertido para rem */
     text-decoration: none;
