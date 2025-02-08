@@ -240,6 +240,13 @@ section {
     width: 100%;
     padding: 3.125rem 0; /* 50px 0 convertido para rem */
     min-height: 20rem; /* Altura mínima para o banner 3 */
+
+    /* Ajustes Flexbox */
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Garante que o texto interno também esteja centralizado */
 }
 
 .banner-3 .background-image {
@@ -265,7 +272,7 @@ section {
 }
 
 .banner-3 .banner-text {
-    padding: 3.75rem; /* 60px convertido para rem */
+    /* Removido o padding */
     z-index: 1;
 }
 
