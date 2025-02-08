@@ -279,7 +279,7 @@ section {
     text-align: justify;
     margin: 0 auto; /* Centraliza o texto */
     font-style: italic;
-    font-size: 0.9rem; /* Tamanho padrão para telas maiores */
+    font-size: 1rem; /* Tamanho padrão para telas maiores - AUMENTADO PARA 1rem */
 }
 
 .mini-bio p {
