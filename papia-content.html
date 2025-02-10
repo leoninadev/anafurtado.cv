@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background-color: #392523; /* Dark background color from your style */
-            color: #fff; /* Light text color */
-            font-family: 'Nixie One', sans-serif; /* Main font from your site */
+            background-color: #392523; /* Dark background color */
+            color: #fff;
+            font-family: 'Nixie One', sans-serif; /* General font */
             text-align: center;
             padding: 50px;
             display: flex;
@@ -22,24 +22,32 @@
             align-items: center;
             min-height: 100vh;
         }
+
         h1 {
-            font-size: 3em;
+            font-family: 'Nixie One', sans-serif; /* Use the same font as "ANA FURTADO" */
+            font-size: 2em; /* Same size as logo */
             margin-bottom: 20px;
-            font-family: 'Playfair Display', serif; /* Use a display font */
-            font-style: italic;
+            font-weight: normal; /* Reset bold */
         }
+
         p {
             font-size: 1.2em;
             margin-bottom: 30px;
-            font-family: 'Fragment Core', sans-serif; /* Use your main text font */
+            font-family: 'Fragment Core', sans-serif;
         }
+
+        .social-icons {
+            margin-top: auto; /* Push to the bottom */
+            margin-bottom: 20px;
+        }
+
         .social-icons a {
             font-size: 1.5em;
             margin: 0 10px;
             color: #fff;
             text-decoration: none;
         }
-        /* Mock progress bar */
+
         .progress-container {
             width: 80%;
             max-width: 500px;
@@ -48,25 +56,34 @@
             margin-bottom: 30px;
             overflow: hidden;
         }
+
         .progress-bar {
             height: 20px;
-            background-color: #94A473; /* Green accent color from your site */
-            width: 75%; /* Adjust this to represent progress */
+            background-color: #94A473;
+            width: 75%;
             border-radius: 10px;
         }
-        /* Button style */
+
         .return-button {
-            background-color: #94A473; /* Use green accent color from your site */
+            background-color: #94A473;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            text-decoration: none; /* To remove underline from the link */
+            text-decoration: none;
+            margin-bottom: 40px; /* Add more space */
         }
+
         .return-button:hover {
-            background-color: #6a7652; /* Darker shade of green */
+            background-color: #6a7652;
+        }
+
+        footer {
+            margin-top: auto; /* Push to the bottom */
+            margin-bottom: 10px;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -82,6 +99,6 @@
         <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
     </div>
-    <p>© 2025 Ana Furtado. Catalisando mudanças por meio da Comunicação.</p>
+    <footer>© 2025 Ana Furtado. Catalisando mudanças por meio da Comunicação.</footer>
 </body>
 </html>
