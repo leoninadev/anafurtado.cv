@@ -17,7 +17,7 @@ html {
 
 body {
     font-family: 'Nixie One', sans-serif;
-    font-size: 2rem; /* Dobrado o tamanho da fonte */
+    font-size: 1rem;
     color: #392523;
     background-color: #F8F2EA;
     line-height: 1.6;
@@ -446,7 +446,7 @@ footer {
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
-    padding: 0.625rem; /* 10px convertido para rem */
+    padding: 0.625rem; /* 10px converted para rem */
     margin-bottom: 0.625rem; /* 10px converted para rem */
     border: 1px solid #ccc;
     border-radius: 0.3125rem; /* 5px convertido para rem */
@@ -466,7 +466,7 @@ footer {
     color: #fff;
     padding: 0.625rem 1.25rem; /* 10px 20px convertido para rem */
     border: none;
-    border-radius: 0.3125rem; /* 5px convertido para rem */
+    border-radius: 0.3125rem; /* 5px converted para rem */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionado transição para cor e escala */
     font-family: 'Nixie One', sans-serif;
@@ -563,17 +563,9 @@ footer {
         display: none !important; /* Esconde o menu toggle em telas maiores */
       }
     }
-
-     body {
-        font-size: 1.5rem; /* Reduz para 1.5rem em telas médias */
-    }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 1.2rem; /* Reduz ainda mais para 1.2rem em telas pequenas */
-    }
-
     .banner-title {
         font-size: 2.5em;
     }
