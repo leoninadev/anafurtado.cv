@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo - Ana Furtado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Estilos para a página de conteúdo */
+        .conteudo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste o valor 250px conforme necessário */
+            gap: 1.25rem; /* 20px convertido para rem */
+            padding: 1.25rem; /* 20px convertido para rem */
+        }
+
+        .conteudo-item {
+            text-decoration: none;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .conteudo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.3125rem; /* 5px convertido para rem */
+            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* Sutil sombra para destacar */
+        }
+
+        .conteudo-item:hover {
+            transform: scale(1.03); /* Leve efeito de zoom */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">ANA FURTADO</h1>
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
+                        <div class="dropdown-content">
+                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                        </div>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="banner banner-1">
+            <h1>Conteúdo</h1>
+            <p>Confira abaixo meus conteúdos:</p>
+        </section>
+        <section>
+            <div class="conteudo-grid">
+                <a href="URL_DO_LINK_1" class="conteudo-item">
+                    <img src="img/conteudo1.jpg" alt="Conteúdo 1">
+                </a>
+                <a href="URL_DO_LINK_2" class="conteudo-item">
+                    <img src="img/conteudo2.jpg" alt="Conteúdo 2">
+                </a>
+                <a href="URL_DO_LINK_3" class="conteudo-item">
+                    <img src="img/conteudo3.jpg" alt="Conteúdo 3">
+                </a>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="contact-form">
+            <h3>Entre em contato</h3>
+            <form action="#" method="post" style="display: flex; flex-direction: column; align-items: center;">
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="text" name="subject" placeholder="Título da mensagem" required>
+                <textarea name="message" placeholder="Sua mensagem" rows="4" required></textarea>
+                <button type="submit" style="margin-top: 10px;">Enviar</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
