@@ -251,7 +251,7 @@ section {
 .container-banners .banner-texto .banner-subtitle {
     width: 80%;
     text-align: center;
-    font-size: 2.5em; /* Reduzido para 2.5em */
+    font-size: 3.25em;
     text-transform: uppercase;
 }
 
@@ -544,14 +544,9 @@ footer {
     }
 
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.25em; /* Reduzido para 2.25em */
+        font-size: 2.8em;
     }
-
-    /* Centraliza o formulário de contato em telas menores */
-    footer .contact-form {
-        text-align: center;
-        padding: 0 1rem;
-    }
+    /* Ajuste para o subtítulo em telas médias */
 }
 
 @media (max-width: 480px) {
@@ -580,8 +575,9 @@ footer {
     }
 
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 1.75em; /* Reduzido para 1.75em */
+        font-size: 2.25em;
     }
+    /* Ajuste para o subtítulo em telas pequenas */
 }
 
 /* Keyframes para animações */
