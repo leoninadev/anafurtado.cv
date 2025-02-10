@@ -152,7 +152,7 @@ nav ul li a:hover {
 
 /* Banner Sections (Mantenha como está) */
 main {
-    padding-top: 0; /* 80px convertido para rem */
+    padding-top: 1rem; /* 80px convertido para rem */
 }
 
 section {
