@@ -12,6 +12,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Ajuste esse valor para a altura do seu header */
 }
 
 body {
@@ -252,6 +253,8 @@ section {
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
     text-align: center; /* Garante que o texto interno também esteja centralizado */
+    padding-top: 9.75rem; /*Ajustado para garantir espaçamento correto */
+    margin-top: -6rem; /* Compensa o padding para que o conteúdo comece na posição correta */
 }
 
 .banner-3 .background-image {
@@ -352,7 +355,7 @@ section {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* minmax(300px, 1fr) convertido para rem */
-    gap: 1.25rem; /* 20px convertido para rem */
+    gap: 1.25rem; /* 20px converted para rem */
     padding: 1.25rem; /* 20px convertido para rem */
 }
 
@@ -382,7 +385,7 @@ footer {
 
 .social-icons a {
     font-size: 1.5625rem; /* 25px convertido para rem */
-    margin: 0 0.625rem; /* 0 10px convertido para rem */
+    margin: 0 0.625rem; /* 0 10px converted para rem */
     color: #392523;
     transition: color 0.3s ease;
     font-family: 'Fragment Core', sans-serif;
@@ -411,10 +414,10 @@ footer {
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
-    padding: 0.625rem; /* 10px convertido para rem */
-    margin-bottom: 0.625rem; /* 10px convertido para rem */
+    padding: 0.625rem; /* 10px converted para rem */
+    margin-bottom: 0.625rem; /* 10px converted para rem */
     border: 1px solid #ccc;
-    border-radius: 0.3125rem; /* 5px convertido para rem */
+    border-radius: 0.3125rem; /* 5px converted para rem */
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0px 2px 5px rgba(0, 0, 0, 0.1) convertido para rem */
     font-family: 'Nixie One', sans-serif;
 }
@@ -422,9 +425,9 @@ footer {
 .contact-form button {
     background-color: #392523;
     color: #fff;
-    padding: 0.625rem 1.25rem; /* 10px 20px convertido para rem */
+    padding: 0.625rem 1.25rem; /* 10px 20px converted para rem */
     border: none;
-    border-radius: 0.3125rem; /* 5px convertido para rem */
+    border-radius: 0.3125rem; /* 5px converted para rem */
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Nixie One', sans-serif;
