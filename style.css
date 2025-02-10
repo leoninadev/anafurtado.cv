@@ -22,16 +22,22 @@ body {
     background-color: #F8F2EA;
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease; /* Animação na troca de cor de fundo */
+}
+
+body:hover {
+    background-color: #f0e8e0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animação na mudança de cor e tamanho */
 }
 
 a:hover {
     color: #94A473;
+    transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
 ul,
@@ -43,6 +49,11 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    transition: opacity 0.3s ease; /* Animação no carregamento da imagem */
+}
+
+img:hover {
+    opacity: 0.8;
 }
 
 button {
@@ -52,11 +63,16 @@ button {
     outline: none;
     padding: 0;
     font: inherit;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #94A473;
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 input,
@@ -68,6 +84,14 @@ select {
     padding: 0.5em;
     display: block;
     width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animação no foco */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #94A473;
+    box-shadow: 0 0 0.25rem rgba(148, 164, 115, 0.5);
 }
 
 /* Layout */
@@ -90,6 +114,11 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: transform 0.3s ease; /* Animação ao fixar no topo */
+}
+
+header:hover {
+    transform: translateY(-5px); /* Leve deslocamento para cima */
 }
 
 /* Logo */
@@ -98,6 +127,11 @@ header {
     font-size: 2em;
     letter-spacing: 0.125rem;
     text-align: center;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .logo a {
@@ -113,10 +147,20 @@ header {
 nav ul {
     display: flex;
     list-style: none;
+    transition: transform 0.3s ease; /* Animação na ul */
+}
+
+nav ul:hover {
+    transform: translateX(5px);
 }
 
 nav ul li {
     margin: 0 0.9375rem;
+    transition: transform 0.3s ease; /* Animação nas li */
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
 }
 
 nav ul li a {
@@ -133,6 +177,11 @@ nav ul li a:hover {
 
 .dropdown {
     position: relative;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.dropdown:hover {
+    transform: scale(1.05);
 }
 
 .dropdown-content {
@@ -143,13 +192,15 @@ nav ul li a:hover {
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animação ao exibir */
+    transform-origin: top;
 }
 
 /* Adicionado para o script do dropdown */
 .dropdown-content.show {
     display: block;
     opacity: 1;
+    transform: scaleY(1);
 }
 
 .dropdown-content a {
@@ -169,6 +220,7 @@ nav ul li a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
+    transform: scaleY(1);
 }
 
 .dropbtn {
@@ -178,6 +230,11 @@ nav ul li a:hover {
 /* Banner Sections */
 main {
     padding-top: 2rem;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+main:hover {
+    transform: translateY(-5px);
 }
 
 section {
@@ -185,6 +242,11 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
+    transition: transform 0.3s ease; /* Animação no carregamento da section */
+}
+
+section:hover {
+    transform: scale(1.02);
 }
 
 /* --------------- MODIFICADO --------------- */
@@ -201,6 +263,11 @@ section {
     padding-bottom: 0.9375rem;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
+    transition: transform 0.3s ease; /* Animação ao carregar */
+}
+
+.banner-1:hover {
+    transform: rotate(2deg);
 }
 
 .banner-1 img {
@@ -209,11 +276,21 @@ section {
     max-height: 50rem;
     object-fit: contain;
     object-position: center;
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.banner-1 img:hover {
+    transform: scale(1.05);
 }
 
 .banner-content {
     color: white;
     font-size: 2em;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.banner-content:hover {
+    transform: translateY(-5px);
 }
 
 .banner-title {
@@ -221,6 +298,11 @@ section {
     font-size: 4em;
     color: #fff;
     font-style: italic;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.banner-title:hover {
+    transform: translateX(5px);
 }
 
 /* --------------- ADICIONADO --------------- */
@@ -229,6 +311,11 @@ section {
     width: 100%;
     height: 40.625rem;
     padding-top: 0.9375rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.container-banners:hover {
+    transform: scale(1.02);
 }
 
 .container-banners > * {
@@ -237,6 +324,11 @@ section {
     justify-content: center;
     align-items: center;
     height: 100%;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.container-banners > *:hover {
+    transform: rotate(-2deg);
 }
 
 .container-banners .banner-texto {
@@ -246,6 +338,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.container-banners .banner-texto:hover {
+    transform: translateX(5px);
 }
 
 .container-banners .banner-texto .banner-subtitle {
@@ -253,6 +350,11 @@ section {
     text-align: center;
     font-size: 3.25em;
     text-transform: uppercase;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.container-banners .banner-texto .banner-subtitle:hover {
+    transform: scale(1.1);
 }
 
 .container-banners .banner-imagem img {
@@ -260,6 +362,11 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.container-banners .banner-imagem img:hover {
+    transform: rotate(5deg);
 }
 
 /* --------------- MODIFICADO --------------- */
@@ -279,6 +386,11 @@ section {
     align-items: center;
     text-align: center;
     margin-top: -6rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.banner-3:hover {
+    transform: scale(1.03);
 }
 
 .banner-3 .background-image {
@@ -293,6 +405,11 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: filter 0.3s ease; /* Animação no hover */
+}
+
+.banner-3 .background-image:hover {
+    filter: brightness(0.6);
 }
 
 .banner-3 .banner-image img {
@@ -301,10 +418,20 @@ section {
     object-fit: cover;
     object-position: center;
     display: none;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.banner-3 .banner-image img:hover {
+    transform: scale(1.1);
 }
 
 .banner-3 .banner-text {
     z-index: 1;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.banner-3 .banner-text:hover {
+    transform: translateY(-5px);
 }
 
 /* --------------- MODIFICADO - TAMANHO DA FONTE DA MINI BIO --------------- */
@@ -318,6 +445,11 @@ section {
     margin: 0 auto;
     font-style: italic;
     font-size: 1rem;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.mini-bio:hover {
+    transform: rotate(-1deg);
 }
 
 .mini-bio p {
@@ -331,6 +463,11 @@ section {
     width: 100%;
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.banner-4:hover {
+    transform: translateY(-5px);
 }
 
 .banner-4-title {
@@ -338,12 +475,22 @@ section {
     font-size: 2.5em;
     color: #392523;
     margin-bottom: 1.875rem;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.banner-4-title:hover {
+    transform: translateX(5px);
 }
 
 .brands-grid {
     display: flex;
     flex-direction: column;
     padding: 0 1.25rem 3.75rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.brands-grid:hover {
+    transform: scale(1.02);
 }
 
 .brand-row {
@@ -351,6 +498,11 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 1.875rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.brand-row:hover {
+    transform: translateY(-5px);
 }
 
 .brand-row img {
@@ -373,6 +525,11 @@ section {
     width: 100%;
     padding-top: 3.75rem;
     padding-bottom: 0;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.gallery:hover {
+    transform: scale(1.02);
 }
 
 .gallery h2 {
@@ -380,13 +537,22 @@ section {
     font-size: 2.5em;
     color: #392523;
     margin-bottom: 1.875rem;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.gallery h2:hover {
+    transform: translateY(-5px);
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 1.25rem;
-    padding: 1.25rem;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.gallery-grid:hover {
+    transform: scale(1.03);
 }
 
 .gallery-item {
@@ -399,6 +565,7 @@ section {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -411,24 +578,35 @@ footer {
     background-color: #f0f0f0;
     text-align: center;
     width: 100%;
+    transition: transform 0.3s ease; /* Animação ao carregar */
+}
+
+footer:hover {
+    transform: translateY(-5px);
 }
 
 .social-icons a {
     font-size: 1.5625rem;
     margin: 0 0.625rem;
     color: #392523;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     font-family: 'Fragment Core', sans-serif;
 }
 
 .social-icons a:hover {
     color: #94A473;
+    transform: scale(1.2);
 }
 
 .contact-form {
     max-width: 31.25rem;
     margin: 1.25rem auto;
     text-align: left;
+    transition: transform 0.3s ease; /* Animação no carregamento */
+}
+
+.contact-form:hover {
+    transform: scale(1.02);
 }
 
 .contact-form h3 {
@@ -438,6 +616,11 @@ footer {
     text-align: center;
     margin-bottom: 0.9375rem;
     font-weight: 500;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+.contact-form h3:hover {
+    transform: translateY(-5px);
 }
 
 .contact-form input[type="email"],
@@ -450,13 +633,14 @@ footer {
     border-radius: 0.3125rem;
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     font-family: 'Nixie One', sans-serif;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animação no foco */
 }
 
 .contact-form input[type="email"]:focus,
 .contact-form input[type="text"]:focus,
 .contact-form textarea:focus {
     border-color: #94A473;
+    box-shadow: 0 0 0.25rem rgba(148, 164, 115, 0.5);
 }
 
 .contact-form button {
@@ -486,6 +670,11 @@ footer {
     font-size: 1.5rem;
     color: #392523;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg);
 }
 
 /* Responsiveness */
@@ -501,6 +690,11 @@ footer {
     .logo {
         font-size: 1.5em;
         margin-bottom: 0;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
     }
 
     /* Mostra o botão do menu */
@@ -516,15 +710,30 @@ footer {
         display: none;
         width: 100%;
         justify-content: center;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .nav-links:hover {
+        transform: translateY(-5px);
     }
 
     .nav-links nav ul {
         flex-direction: column;
         text-align: center;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .nav-links nav ul:hover {
+        transform: rotate(-2deg);
     }
 
     .nav-links nav ul li {
         margin: 0.625rem 0;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .nav-links nav ul li:hover {
+        transform: translateY(-3px);
     }
 
     /* Estilos para quando o menu estiver ativo */
@@ -533,6 +742,11 @@ footer {
         background-color: #f9f9f9;
         padding: 1rem;
         width: 100%;
+        transition: transform 0.3s ease; /* Animação no carregamento */
+    }
+
+    header.active .nav-links:hover {
+        transform: scale(1.05);
     }
 
     /* Ajustes na mini-bio para telas menores */
@@ -541,10 +755,20 @@ footer {
         margin-left: 15%;
         margin-right: 15%;
         text-align: justify;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .mini-bio:hover {
+        transform: scale(1.05);
     }
 
     .container-banners .banner-texto .banner-subtitle {
         font-size: 2.8em;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .container-banners .banner-texto .banner-subtitle:hover {
+        transform: scale(1.1);
     }
     /* Ajuste para o subtítulo em telas médias */
 }
@@ -552,30 +776,60 @@ footer {
 @media (max-width: 480px) {
     .banner-title {
         font-size: 2.5em;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .banner-title:hover {
+        transform: rotate(2deg);
     }
 
     .banner-3 .banner-text {
         padding: 1.875rem;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .banner-3 .banner-text:hover {
+        transform: scale(1.05);
     }
 
     .mini-bio {
         font-size: 0.7em;
         line-height: 1.7;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .mini-bio:hover {
+        transform: translateX(5px);
     }
 
     /* Ajustes para o container de banners */
     .container-banners {
         flex-direction: column;
         height: auto;
+        transition: transform 0.3s ease; /* Animação ao carregar */
+    }
+
+    .container-banners:hover {
+        transform: rotate(-5deg);
     }
 
     .container-banners > * {
         width: 100%;
         margin-bottom: 1.875rem;
+        transition: transform 0.3s ease; /* Animação no carregamento */
+    }
+
+    .container-banners > *:hover {
+        transform: rotate(2deg);
     }
 
     .container-banners .banner-texto .banner-subtitle {
         font-size: 2.25em;
+        transition: transform 0.3s ease; /* Animação no hover */
+    }
+
+    .container-banners .banner-texto .banner-subtitle:hover {
+        transform: scale(1.1);
     }
     /* Ajuste para o subtítulo em telas pequenas */
 }
