@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Furtado</title>
+    <title>Conteúdo - Ana Furtado</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Estilos para a página de conteúdo */
+        .conteudo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste o valor 250px conforme necessário */
+            gap: 1.25rem; /* 20px convertido para rem */
+            padding: 1.25rem; /* 20px convertido para rem */
+        }
+
+        .conteudo-item {
+            text-decoration: none;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .conteudo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.3125rem; /* 5px convertido para rem */
+            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* Sutil sombra para destacar */
+        }
+
+        .conteudo-item:hover {
+            transform: scale(1.03); /* Leve efeito de zoom */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,9 +46,9 @@
         <div class="nav-links">
             <nav>
                 <ul>
-                    <li><a href="#" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
-                    <li><a href="#conteudo" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
                         <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
                         <div class="dropdown-content">
@@ -38,50 +65,21 @@
     </header>
     <main>
         <section class="banner banner-1">
-    <img src="img/foto1.jpg?v=1" alt="foto 1">
-</section>
-        <section class="container-banners">
-            <div class="banner banner-texto">
-                <p class="banner-subtitle">Catalisando mudanças por meio da Comunicação</p>
-            </div>
-            <div class="banner banner-imagem">
-                <img src="img/foto2.jpg" alt="foto 2">
-            </div>
+            <h1>Conteúdo</h1>
+            <p>Confira abaixo meus conteúdos:</p>
         </section>
-        <section class="banner banner-3" id="minha-trajetoria">
-            <div class="banner-content">
-                <p class="mini-bio">
-                    Meu nome é Ana Furtado, Sou o fruto da união de culturas, a cabo-verdiana e a brasileira, resultando uma verdadeira Brasi-verdiana. Apaixonada por desafios que me permitam utilizar minhas habilidades de comunicação para um presente mais inclusivo e equitativo!
-                    <br><br>
-                    Bolsista Chevening 2024-2025. Mestranda em Mídia e Estudos Culturais na Universidade de Lancaster. Comunicóloga e Analista de Gênero e Interseccionalidades. Especialista em Comunicação Estratégica e Gestão de Marcas.
-                    <br><br>
-                    Tenho mais de 7 anos de experiência com comunicação digital, atuando com segmentos variados: produção de conteúdo, redação, gestão de projetos e planejamento estratégico de uma comunicação diversa e representativa.
-                    <br><br>
-                    Atuei na Comunicação do Tribunal Regional Eleitoral da Bahia durante as Eleições Gerais de 2022; e atuei como Coordenadora de Comunicação Digital do Festival Afrofuturismo Ano por dois anos consecutivos (2023/2024).
-                    <br><br>
-                    Estou sempre aberta a novas conexões com pessoas, projetos e oportunidades. Não hesite em me mandar uma mensagem, estou a disposição para trocar ideias :)
-                </p>
-            </div>
-        </section>
-        <section class="banner banner-4" id="trajetoria">
-            <h2 class="banner-4-title">Passos da minha trajetória</h2>
-            <div class="brands-grid">
-                <div class="brand-row">
-                    <img src="img/logo1.png" alt="logo 1">
-                    <img src="img/logo2.png" alt="logo 2">
-                    <img src="img/logo3.png" alt="logo 3">
-                    <img src="img/logo4.png" alt="logo 4">
-                    <img src="img/logo5.png" alt="logo 5">
-                    <img src="img/logo6.png" alt="logo 6">
-                </div>
-                <div class="brand-row">
-                    <img src="img/logo7.png" alt="logo 7">
-                    <img src="img/logo8.png" alt="logo 8">
-                    <img src="img/logo9.png" alt="logo 9">
-                    <img src="img/logo10.png" alt="logo 10">
-                    <img src="img/logo11.png" alt="logo 11">
-                    <img src="img/logo12.png" alt="logo 12">
-                </div>
+        <section>
+            <div class="conteudo-grid">
+                <a href="URL_DO_LINK_1" class="conteudo-item">
+                    <img src="img/conteudo1.jpg" alt="Conteúdo 1">
+                </a>
+                <a href="URL_DO_LINK_2" class="conteudo-item">
+                    <img src="img/conteudo2.jpg" alt="Conteúdo 2">
+                </a>
+                <a href="URL_DO_LINK_3" class="conteudo-item">
+                    <img src="img/conteudo3.jpg" alt="Conteúdo 3">
+                </a>
+                <!-- Adicione mais itens conforme necessário -->
             </div>
         </section>
     </main>
