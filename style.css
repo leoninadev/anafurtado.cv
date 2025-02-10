@@ -82,12 +82,17 @@ header {
     z-index: 1000;
 }
 
+/* Logo */
 .logo {
     font-family: 'Nixie One', sans-serif;
     font-size: 2em;
-    color: #392523;
     letter-spacing: 0.125rem; /* 2px convertido para rem */
     text-align: center;
+}
+
+.logo a {
+    color: #392523;
+    text-decoration: none; /* Remove o sublinhado do link */
 }
 
 nav ul {
