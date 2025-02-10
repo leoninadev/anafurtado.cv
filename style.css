@@ -92,7 +92,6 @@ header {
 
 .logo a {
     color: #392523;
-    text-decoration: none;
 }
 
 nav ul {
@@ -402,11 +401,11 @@ footer {
     margin: 0 0.625rem;
     color: #392523;
     font-family: 'Fragment Core', sans-serif;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Adicionando animação */
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Aumentando um pouco no hover */
 }
 
 .contact-form {
