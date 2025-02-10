@@ -198,37 +198,23 @@ section {
 .container-banners {
     display: flex;
     width: 100%;
-    height: 31.25rem; /* 500px convertido para rem */
+    /* Mantive a largura */
+    height: 40.625rem; /* Ajustei a altura: 31.25rem * 1.3 = 40.625rem */
 }
 
 .container-banners > * {
-    width: 50%;
+    width: 50%; /* Mantive a largura */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container-banners .banner-texto {
-    background-color: #94A473;
-    color: white;
-}
-
-.container-banners .banner-texto .banner-subtitle {
-    width: 80%;
-    text-align: center;
-    font-size: 2.5em;
-    text-transform: uppercase;
-}
-
-.container-banners .banner-imagem {
-    background-color: #F8F2EA;
+    height: 100%; /* Garante que cada banner ocupe toda a altura do container */
 }
 
 .container-banners .banner-imagem img {
-    width: 100%; /* Garante que a imagem ocupe toda a largura do container */
-    height: 100%; /* Garante que a imagem ocupe toda a altura do container */
-    object-fit: cover; /* Ajusta o tamanho da imagem para cobrir todo o container */
-    object-position: center; /* Centraliza a imagem dentro do container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* --------------- MODIFICADO --------------- */
