@@ -322,10 +322,10 @@ section {
 }
 
 .brand-row img {
-    height: 5rem; /* Defini a altura */
-    width: auto; /* Largura automática para manter a proporção */
-    max-width: 12rem; /* Largura máxima para evitar que as logos fiquem muito grandes */
-    margin: 0 1.25rem; /* 0 20px convertido para rem */
+    height: 5rem; /* Mantém a altura */
+    width: auto;   /* Permite que a largura se ajuste */
+    min-width: 8rem; /* Define uma largura mínima */
+    margin: 0 1.25rem; /* Mantém as margens */
 }
 
 /* Gallery (Mantenha como está) */
