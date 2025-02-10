@@ -197,6 +197,11 @@ section {
     max-height: 50rem;
     object-fit: contain;
     object-position: center;
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.banner-1 img:hover {
+    transform: scale(1.05); /* Manter o zoom */
 }
 
 .banner-content {
