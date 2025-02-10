@@ -251,7 +251,7 @@ section {
 .container-banners .banner-texto .banner-subtitle {
     width: 80%;
     text-align: center;
-    font-size: 5em; /* Aumentei a fonte para 5em */
+    font-size: 2.5em; /* Reduzido para 2.5em */
     text-transform: uppercase;
 }
 
@@ -542,9 +542,9 @@ footer {
         margin-right: 15%;
         text-align: justify;
     }
-    /* Ajuste para o subtítulo em telas médias */
+
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 4em; /* Reduz o tamanho da fonte em telas médias */
+        font-size: 2.25em; /* Reduzido para 2.25em */
     }
 
     /* Centraliza o formulário de contato em telas menores */
@@ -578,9 +578,9 @@ footer {
         width: 100%;
         margin-bottom: 1.875rem;
     }
-    /* Ajuste para o subtítulo em telas menores */
+
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 3em; /* Reduz o tamanho da fonte em telas pequenas */
+        font-size: 1.75em; /* Reduzido para 1.75em */
     }
 }
 
