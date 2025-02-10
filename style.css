@@ -12,7 +12,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; /* Ajuste esse valor para a altura do seu header */
+    scroll-padding-top: 5rem;
 }
 
 body {
@@ -27,11 +27,11 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease; /* Adicionado para transição de cor */
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #94A473; /* Mantém o hover padrão */
+    color: #94A473;
 }
 
 ul,
@@ -52,11 +52,11 @@ button {
     outline: none;
     padding: 0;
     font: inherit;
-    transition: background-color 0.3s ease; /* Adicionado para transição de cor */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #94A473; /* Mantém o hover padrão */
+    background-color: #94A473;
 }
 
 input,
@@ -70,7 +70,7 @@ select {
     width: 100%;
 }
 
-/* Layout (Mantenha como está) */
+/* Layout */
 html,
 body {
     height: 100%;
@@ -83,9 +83,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 2.5rem; /* 20px 40px convertido para rem */
+    padding: 1.25rem 2.5rem;
     background-color: #fff;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0 2px 5px convertido para rem */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -96,18 +96,18 @@ header {
 .logo {
     font-family: 'Nixie One', sans-serif;
     font-size: 2em;
-    letter-spacing: 0.125rem; /* 2px convertido para rem */
+    letter-spacing: 0.125rem;
     text-align: center;
 }
 
 .logo a {
     color: #392523;
-    text-decoration: none; /* Remove o sublinhado do link */
-    transition: color 0.3s ease; /* Adicionado para transição de cor */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .logo a:hover {
-    color: #94A473; /* Altera a cor do logo ao passar o mouse */
+    color: #94A473;
 }
 
 nav ul {
@@ -116,7 +116,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.9375rem; /* 0 15px convertido para rem */
+    margin: 0 0.9375rem;
 }
 
 nav ul li a {
@@ -139,21 +139,21 @@ nav ul li a:hover {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 10rem; /* 160px convertido para rem */
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2); /* 0px 8px 16px 0px convertido para rem */
+    min-width: 10rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.3s ease; /* Adicionado para transição de opacidade */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Adicionado para o script do dropdown */
 .dropdown-content.show {
     display: block;
-    opacity: 1; /* Torna visível quando a classe 'show' é adicionada */
+    opacity: 1;
 }
 
 .dropdown-content a {
-    padding: 0.75rem 1rem; /* 12px 16px convertido para rem */
+    padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
     color: #392523;
@@ -175,13 +175,13 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Banner Sections (Mantenha como está) */
+/* Banner Sections */
 main {
-    padding-top: 2rem; /* ALTERADO: Remove o espaço acima do banner 1 */
+    padding-top: 2rem;
 }
 
 section {
-    padding: 3.75rem 0; /* 60px 0 convertido para rem */
+    padding: 3.75rem 0;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -190,7 +190,7 @@ section {
 /* --------------- MODIFICADO --------------- */
 .banner-1 {
     width: 100%;
-    height: 50rem; /* 600px convertido para rem */
+    height: 50rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,16 +198,16 @@ section {
     position: relative;
     z-index: 1;
     background-color: #F8F2EA;
-    padding-bottom: 0.9375rem; /* Reduz o padding-bottom em 75%: 3.75rem * 0.25 = 0.9375rem */
-    animation: fadeInUp 1s ease forwards; /* Adiciona a animação de entrada */
-    opacity: 0; /* Inicialmente invisível */
+    padding-bottom: 0.9375rem;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
 }
 
 .banner-1 img {
     width: 100%;
-    height: auto; /* A altura se ajusta automaticamente */
-    max-height: 50rem; /* Define uma altura máxima para a imagem */
-    object-fit: contain; /* Garante que a imagem seja exibida completamente */
+    height: auto;
+    max-height: 50rem;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -227,8 +227,8 @@ section {
 .container-banners {
     display: flex;
     width: 100%;
-    height: 40.625rem; /* Ajustei a altura: 31.25rem * 1.3 = 40.625rem */
-    padding-top: 0.9375rem; /* Reduz o padding-top em 75%: 3.75rem * 0.25 = 0.9375rem */
+    height: 40.625rem;
+    padding-top: 0.9375rem;
 }
 
 .container-banners > * {
@@ -236,22 +236,22 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Garante que cada banner ocupe toda a altura do container */
+    height: 100%;
 }
 
 .container-banners .banner-texto {
     background-color: #94A473;
     color: white;
-    height: 100%; /* Garante que a cor de fundo preencha toda a altura */
-    display: flex; /* Adiciona flexbox para centralizar o texto */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-banners .banner-texto .banner-subtitle {
     width: 80%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 5em; /* Aumentei a fonte para 5em */
     text-transform: uppercase;
 }
 
@@ -270,16 +270,15 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 6.75rem 0; /* Ajusta o padding superior e inferior */
-    min-height: 20rem; /* Altura mínima para o banner 3 */
+    padding: 6.75rem 0;
+    min-height: 20rem;
 
-    /* Ajustes Flexbox */
     display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Garante que o texto interno também esteja centralizado */
-    margin-top: -6rem; /* Compensa o padding para que o conteúdo comece na posição correta */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -6rem;
 }
 
 .banner-3 .background-image {
@@ -305,7 +304,6 @@ section {
 }
 
 .banner-3 .banner-text {
-    /* Removido o padding */
     z-index: 1;
 }
 
@@ -315,11 +313,11 @@ section {
     font-weight: normal;
     color: #392523;
     line-height: 1.6;
-    max-width: 43.75rem; /* 700px convertido para rem */
+    max-width: 43.75rem;
     text-align: justify;
-    margin: 0 auto; /* Centraliza o texto */
+    margin: 0 auto;
     font-style: italic;
-    font-size: 1rem; /* Tamanho padrão para telas maiores - AUMENTADO PARA 1rem */
+    font-size: 1rem;
 }
 
 .mini-bio p {
@@ -331,49 +329,49 @@ section {
     background-color: #f5f5f5;
     text-align: center;
     width: 100%;
-    padding-top: 7.5rem;   /* Aumenta o padding superior: 60px -> 120px */
-    padding-bottom: 7.5rem; /* Aumenta o padding inferior: 60px -> 120px */
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
 }
 
 .banner-4-title {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
-    margin-bottom: 1.875rem; /* 30px convertido para rem */
+    margin-bottom: 1.875rem;
 }
 
 .brands-grid {
     display: flex;
     flex-direction: column;
-    padding: 0 1.25rem 3.75rem; /* 0 20px 60px convertido para rem */
+    padding: 0 1.25rem 3.75rem;
 }
 
 .brand-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 1.875rem; /* 30px convertido para rem */
+    margin-bottom: 1.875rem;
 }
 
 .brand-row img {
-    height: 10rem; /* Aumenta a altura: 5rem -> 10rem */
-    width: 10rem;  /* Define a largura igual à altura para torná-los quadrados */
-    object-fit: contain; /* Garante que a imagem caiba dentro do quadrado */
-    min-width: auto; /* Remove a largura mínima */
-    margin: 0 1.25rem; /* Mantém as margens */
-    transition: transform 0.3s ease; /* Adiciona transição para o hover */
+    height: 10rem;
+    width: 10rem;
+    object-fit: contain;
+    min-width: auto;
+    margin: 0 1.25rem;
+    transition: transform 0.3s ease;
 }
 
 .brand-row img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Gallery (Mantenha como está) */
+/* Gallery */
 .gallery {
     background-color: #fff;
     text-align: center;
     width: 100%;
-    padding-top: 3.75rem; /* 60px convertido para rem */
+    padding-top: 3.75rem;
     padding-bottom: 0;
 }
 
@@ -381,14 +379,14 @@ section {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
-    margin-bottom: 1.875rem; /* 30px convertido para rem */
+    margin-bottom: 1.875rem;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* minmax(300px, 1fr) convertido para rem */
-    gap: 1.25rem; /* 20px convertido para rem */
-    padding: 1.25rem; /* 20px convertido para rem */
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem;
 }
 
 .gallery-item {
@@ -407,17 +405,17 @@ section {
     transform: scale(1.05);
 }
 
-/* Footer (Mantenha como está) */
+/* Footer */
 footer {
-    padding: 1.875rem 0; /* 30px 0 convertido para rem */
+    padding: 1.875rem 0;
     background-color: #f0f0f0;
     text-align: center;
     width: 100%;
 }
 
 .social-icons a {
-    font-size: 1.5625rem; /* 25px convertido para rem */
-    margin: 0 0.625rem; /* 0 10px converted para rem */
+    font-size: 1.5625rem;
+    margin: 0 0.625rem;
     color: #392523;
     transition: color 0.3s ease;
     font-family: 'Fragment Core', sans-serif;
@@ -428,8 +426,8 @@ footer {
 }
 
 .contact-form {
-    max-width: 31.25rem; /* 500px convertido para rem */
-    margin: 1.25rem auto; /* 20px auto convertido para rem */
+    max-width: 31.25rem;
+    margin: 1.25rem auto;
     text-align: left;
 }
 
@@ -438,7 +436,7 @@ footer {
     font-size: 1.8em;
     color: #392523;
     text-align: center;
-    margin-bottom: 0.9375rem; /* 15px converted para rem */
+    margin-bottom: 0.9375rem;
     font-weight: 500;
 }
 
@@ -446,29 +444,29 @@ footer {
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
-    padding: 0.625rem; /* 10px converted para rem */
-    margin-bottom: 0.625rem; /* 10px converted para rem */
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
     border: 1px solid #ccc;
-    border-radius: 0.3125rem; /* 5px convertido para rem */
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0px 2px 5px rgba(0, 0, 0, 0.1) convertido para rem */
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     font-family: 'Nixie One', sans-serif;
-    transition: border-color 0.3s ease; /* Adicionado para transição de cor da borda */
+    transition: border-color 0.3s ease;
 }
 
 .contact-form input[type="email"]:focus,
 .contact-form input[type="text"]:focus,
 .contact-form textarea:focus {
-    border-color: #94A473; /* Altera a cor da borda ao focar */
+    border-color: #94A473;
 }
 
 .contact-form button {
     background-color: #392523;
     color: #fff;
-    padding: 0.625rem 1.25rem; /* 10px 20px convertido para rem */
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 0.3125rem; /* 5px converted para rem */
+    border-radius: 0.3125rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionado transição para cor e escala */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: 'Nixie One', sans-serif;
 }
 
@@ -477,7 +475,7 @@ footer {
 }
 
 .contact-form button:active {
-    transform: scale(0.95); /* Reduz o tamanho ao clicar */
+    transform: scale(0.95);
 }
 
 /* Esconde o botão do menu por padrão */
@@ -493,16 +491,16 @@ footer {
 /* Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 0.9375rem 1.25rem; /* 15px 20px convertido para rem */
+        padding: 0.9375rem 1.25rem;
         flex-direction: column;
-        align-items: flex-start; /* Alinha os itens à esquerda */
-        height: auto; /* Ajusta a altura automaticamente */
-        position: fixed; /* Garante que o header permaneça fixo */
+        align-items: flex-start;
+        height: auto;
+        position: fixed;
     }
 
     .logo {
         font-size: 1.5em;
-        margin-bottom: 0; /* Remove a margem inferior do logo */
+        margin-bottom: 0;
     }
 
     /* Mostra o botão do menu */
@@ -526,42 +524,33 @@ footer {
     }
 
     .nav-links nav ul li {
-        margin: 0.625rem 0; /* 10px 0 convertido para rem */
+        margin: 0.625rem 0;
     }
 
     /* Estilos para quando o menu estiver ativo */
     header.active .nav-links {
-        display: block; /* Mostra a navegação */
-        background-color: #f9f9f9; /* Adiciona um fundo para destacar o menu */
-        padding: 1rem; /* Adiciona preenchimento ao menu */
+        display: block;
+        background-color: #f9f9f9;
+        padding: 1rem;
         width: 100%;
     }
 
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
-        font-size: 0.8em; /* Reduz o tamanho da fonte */
-        margin-left: 15%; /* Adiciona margem esquerda de 15% */
-        margin-right: 15%; /* Adiciona margem direita de 15% */
-        text-align: justify; /* Justifica o texto */
+        font-size: 0.8em;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justify;
+    }
+    /* Ajuste para o subtítulo em telas médias */
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 4em; /* Reduz o tamanho da fonte em telas médias */
     }
 
     /* Centraliza o formulário de contato em telas menores */
     footer .contact-form {
-        text-align: center; /* Centraliza o conteúdo */
-        padding: 0 1rem; /* Adiciona um pequeno preenchimento para evitar que o texto toque nas bordas */
-    }
-
-    footer .contact-form form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Media query para telas maiores (tablets e desktops) */
-    @media (min-width: 769px) {
-      .menu-toggle {
-        display: none !important; /* Esconde o menu toggle em telas maiores */
-      }
+        text-align: center;
+        padding: 0 1rem;
     }
 }
 
@@ -571,27 +560,27 @@ footer {
     }
 
     .banner-3 .banner-text {
-        padding: 1.875rem; /* 30px convertido para rem */
+        padding: 1.875rem;
     }
 
     .mini-bio {
-        font-size: 0.7em; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 0.7em;
         line-height: 1.7;
     }
 
     /* Ajustes para o container de banners */
     .container-banners {
-        flex-direction: column; /* Empilha os banners verticalmente */
-        height: auto; /* Altura automática para se ajustar ao conteúdo */
+        flex-direction: column;
+        height: auto;
     }
 
     .container-banners > * {
-        width: 100%; /* Cada banner ocupa 100% da largura */
-        margin-bottom: 1.875rem; /* Adiciona espaço entre os banners */
+        width: 100%;
+        margin-bottom: 1.875rem;
     }
-
+    /* Ajuste para o subtítulo em telas menores */
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 2em; /* Reduz o tamanho da fonte do subtítulo */
+        font-size: 3em; /* Reduz o tamanho da fonte em telas pequenas */
     }
 }
 
