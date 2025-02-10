@@ -173,6 +173,7 @@ section {
     position: relative;
     z-index: 1;
     background-color: #F8F2EA;
+    padding-bottom: 0.9375rem; /* Reduz o padding-bottom em 75%: 3.75rem * 0.25 = 0.9375rem */
 }
 
 .banner-1 img {
@@ -200,6 +201,7 @@ section {
     display: flex;
     width: 100%;
     height: 40.625rem; /* Ajustei a altura: 31.25rem * 1.3 = 40.625rem */
+    padding-top: 0.9375rem; /* Reduz o padding-top em 75%: 3.75rem * 0.25 = 0.9375rem */
 }
 
 .container-banners > * {
@@ -350,7 +352,7 @@ section {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* minmax(300px, 1fr) convertido para rem */
-    gap: 1.25rem; /* 20px convertido para rem */
+    gap: 1.25rem; /* 20px converted para rem */
     padding: 1.25rem; /* 20px convertido para rem */
 }
 
@@ -408,145 +410,4 @@ footer {
 .contact-form input[type="email"],
 .contact-form input[type="text"],
 .contact-form textarea {
-    width: 100%;
-    padding: 0.625rem; /* 10px convertido para rem */
-    margin-bottom: 0.625rem; /* 10px converted para rem */
-    border: 1px solid #ccc;
-    border-radius: 0.3125rem; /* 5px converted para rem */
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 0px 2px 5px rgba(0, 0, 0, 0.1) convertido para rem */
-    font-family: 'Nixie One', sans-serif;
-}
-
-.contact-form button {
-    background-color: #392523;
-    color: #fff;
-    padding: 0.625rem 1.25rem; /* 10px 20px convertido para rem */
-    border: none;
-    border-radius: 0.3125rem; /* 5px converted para rem */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Nixie One', sans-serif;
-}
-
-.contact-form button:hover {
-    background-color: #94A473;
-}
-
-/* Esconde o botão do menu por padrão */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #392523;
-    cursor: pointer;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 0.9375rem 1.25rem; /* 15px 20px convertido para rem */
-        flex-direction: column;
-        align-items: flex-start; /* Alinha os itens à esquerda */
-        height: auto; /* Ajusta a altura automaticamente */
-        position: fixed; /* Garante que o header permaneça fixo */
-    }
-
-    .logo {
-        font-size: 1.5em;
-        margin-bottom: 0; /* Remove a margem inferior do logo */
-    }
-
-    /* Mostra o botão do menu */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
-
-    /* Esconde a navegação por padrão */
-    .nav-links {
-        display: none;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .nav-links nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links nav ul li {
-        margin: 0.625rem 0; /* 10px 0 convertido para rem */
-    }
-
-    /* Estilos para quando o menu estiver ativo */
-    header.active .nav-links {
-        display: block; /* Mostra a navegação */
-        background-color: #f9f9f9; /* Adiciona um fundo para destacar o menu */
-        padding: 1rem; /* Adiciona preenchimento ao menu */
-        width: 100%;
-    }
-
-    /* Ajustes na mini-bio para telas menores */
-    .mini-bio {
-        font-size: 0.8em; /* Reduz o tamanho da fonte */
-        margin-left: 15%; /* Adiciona margem esquerda de 15% */
-        margin-right: 15%; /* Adiciona margem direita de 15% */
-        text-align: justify; /* Justifica o texto */
-    }
-    
-    /* Centraliza o formulário de contato em telas menores */
-    footer .contact-form {
-        text-align: center; /* Centraliza o conteúdo */
-        padding: 0 1rem; /* Adiciona um pequeno preenchimento para evitar que o texto toque nas bordas */
-    }
-
-    footer .contact-form form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner-title {
-        font-size: 2.5em;
-    }
-
-    .banner-3 .banner-text {
-        padding: 1.875rem; /* 30px convertido para rem */
-    }
-
-    .mini-bio {
-        font-size: 0.7em; /* Reduz ainda mais o tamanho da fonte */
-        line-height: 1.7;
-    }
-
-    /* Ajustes para o container de banners */
-    .container-banners {
-        flex-direction: column; /* Empilha os banners verticalmente */
-        height: auto; /* Altura automática para se ajustar ao conteúdo */
-    }
-
-    .container-banners > * {
-        width: 100%; /* Cada banner ocupa 100% da largura */
-        margin-bottom: 1.875rem; /* Adiciona espaço entre os banners */
-    }
-
-    .container-banners .banner-texto .banner-subtitle {
-        font-size: 2em; /* Reduz o tamanho da fonte do subtítulo */
-    }
-}
-
-/* Media query para telas maiores (tablets e desktops) */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Esconde o menu toggle em telas maiores */
-    }
-
-    .nav-links {
-        display: flex !important; /* Garante que a navegação seja visível */
-    }
-}
+    width:
