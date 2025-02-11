@@ -18,8 +18,8 @@ html {
 body {
     font-family: 'Nixie One', sans-serif;
     font-size: 1rem;
-    color: #392523;
-    background-color: #F8F2EA;
+    color: #392523; /* Cor castanha */
+    background-color: #F8F2EA; /* Cor bege */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -233,8 +233,8 @@ section {
 }
 
 .container-banners .banner-texto {
-    background-color: #94A473;
-    color: white;
+    background-color: #392523; /* Cor castanha */
+    color: #F8F2EA; /* Cor bege */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -246,6 +246,12 @@ section {
     text-align: center;
     font-size: 3.25em;
     text-transform: uppercase;
+}
+
+/* Estilização da palavra "Comunicação" */
+.container-banners .banner-texto .banner-subtitle strong {
+    color: #94A473; /* Cor verde */
+    font-weight: bold; /* Garante que esteja em negrito */
 }
 
 .container-banners .banner-imagem img {
@@ -509,71 +515,4 @@ footer {
     .mini-bio {
         font-size: 0.8em;
         margin-left: 15%;
-        margin-right: 15%;
-        text-align: justify;
-    }
-
-    .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.8em;
-    }
-    /* Ajuste para o subtítulo em telas médias */
-}
-
-@media (max-width: 480px) {
-    .banner-title {
-        font-size: 2.5em;
-    }
-
-    .banner-3 .banner-text {
-        padding: 1.875rem;
-    }
-
-    .mini-bio {
-        font-size: 0.7em;
-        line-height: 1.7;
-    }
-
-    /* Ajustes para o container de banners */
-    .container-banners {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .container-banners > * {
-        width: 100%;
-        margin-bottom: 1.875rem;
-    }
-
-    .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.25em;
-    }
-    /* Ajuste para o subtítulo em telas pequenas */
-
-    /* INÍCIO - Ajustes para o Banner 1 em Mobile */
-    /* Alteração: Garante que a imagem não ultrapasse a altura do header */
-    .banner-1 {
-        height: auto; /* Remove a altura fixa */
-        padding-top: 0; /* Remove o padding superior (se houver) */
-        padding-bottom: 0; /* Remove o padding inferior */
-    }
-
-    .banner-1 img {
-        max-height: calc(100vh - 6rem); /* Define a altura máxima da imagem subtraindo a altura do header (aproximadamente 6rem) */
-        object-fit: contain; /* Garante que a imagem caiba dentro do container */
-        margin: 0; /* Remove qualquer margem da imagem */
-        padding: 0; /* Remove qualquer padding da imagem */
-    }
-    /* FIM - Ajustes para o Banner 1 em Mobile */
-}
-
-/* Keyframes para animações */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        
