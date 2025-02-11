@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+Adocument.addEventListener('DOMContentLoaded', function() {
     // ------------------------------ Animações ScrollReveal ------------------------------
     // Inicializa ScrollReveal
     ScrollReveal({
@@ -67,4 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
         reset: false
     });
 
+     // ------------------------------ Menu Toggle ------------------------------
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+
+    menuToggle.addEventListener('click', () => {
+        header.classList.toggle('active');
+    });
 });
