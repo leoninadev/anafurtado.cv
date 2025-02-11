@@ -575,7 +575,19 @@ footer {
     .brand-row img {
         margin: 0.625rem; /* Adiciona margem em todos os lados da imagem */
     }
+
+    .second-row img {
+        margin-top: 1.25rem; /* Adiciona margem superior para a segunda linha */
+    }
     /* Fim - Espaçamento entre as logos no mobile */
+
+    /* Início - Ajustes para o formulário de contato no mobile */
+    footer .contact-form {
+        max-width: 90%; /* Define uma largura máxima para o formulário */
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto; /* Centraliza horizontalmente */
+    }
+    /* Fim - Ajustes para o formulário de contato no mobile */
 }
 
 /* Keyframes para animações */
