@@ -551,16 +551,16 @@ footer {
 
     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
     .banner-1 {
-        height: auto; /* Remove a altura fixa */
-        padding-top: 0; /* Remove o padding superior (se houver) */
-        padding-bottom: 0; /* Remove o padding inferior */
+        height: auto !important; /* Remove a altura fixa */
+        padding-top: 0 !important; /* Remove o padding superior (se houver) */
+        padding-bottom: 0 !important; /* Remove o padding inferior */
     }
 
     .banner-1 img {
-        max-height: 80vh; /* Define uma altura máxima para a imagem */
-        object-fit: cover; /* Garante que a imagem caiba dentro do container */
-        margin: 0; /* Remove qualquer margem da imagem */
-        padding: 0; /* Remove qualquer padding da imagem */
+        max-height: 80vh !important; /* Define uma altura máxima para a imagem */
+        object-fit: cover !important; /* Garante que a imagem caiba dentro do container */
+        margin: 0 !important; /* Remove qualquer margem da imagem */
+        padding: 0 !important; /* Remove qualquer padding da imagem */
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
 }
