@@ -1,4 +1,4 @@
-Adocument.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // ------------------------------ Animações ScrollReveal ------------------------------
     // Inicializa ScrollReveal
     ScrollReveal({
@@ -11,7 +11,7 @@ Adocument.addEventListener('DOMContentLoaded', function() {
     });
 
     // Revela os elementos que você quer animar
-    ScrollReveal().reveal('.banner-3, .banner-4, footer'); // Anima banner-3, banner-4 e footer
+    //ScrollReveal().reveal('.banner-3, .banner-4, footer'); // Anima banner-3, banner-4 e footer
     ScrollReveal().reveal('.container-banners > *', { interval: 200 }); // Anima os filhos do container um após o outro
 
     // Anima o header quando a página é carregada (opcional)
