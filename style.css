@@ -549,11 +549,11 @@ footer {
     }
     /* Ajuste para o subtítulo em telas pequenas */
 
-    /* INÍCIO - Remove Banner 1 para Mobile */
-    .banner-1 {
+    /* INÍCIO - Remove a IMAGEM do Banner 1 para Mobile */
+    .banner-1 img {
         display: none;
     }
-    /* FIM - Remove Banner 1 para Mobile */
+    /* FIM - Remove a IMAGEM do Banner 1 para Mobile */
 }
 
 /* Keyframes para animações */
