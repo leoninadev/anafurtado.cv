@@ -403,7 +403,7 @@ section {
 /* Footer */
 footer {
     padding: 1.875rem 0;
-    background-color: #f0f0f0;
+    background-color: #F8F2EA; /* Cor bege */
     text-align: center;
     width: 100%;
 }
@@ -511,7 +511,7 @@ footer {
         padding: 1rem;
         width: 100%;
     }
-    header.active .social-icons-mobile {
+header.active .social-icons-mobile {
     
     display: flex;
     justify-content: space-around;
