@@ -74,7 +74,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 2.5rem;
-    background-color: #fff;
+    background-color: #F8F2EA; /* Cor bege */
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -511,6 +511,12 @@ footer {
         padding: 1rem;
         width: 100%;
     }
+    header.active .social-icons-mobile {
+    
+    display: flex;
+    justify-content: space-around;
+}
+
 
     /* Estilo da fonte nos links do menu mobile */
     header.active .nav-links nav ul li a {
@@ -594,6 +600,13 @@ footer {
         margin-right: auto; /* Centraliza horizontalmente */
     }
     /* Fim - Ajustes para o formulário de contato no mobile */
+}
+
+/* Estilos para telas grandes (acima de 768px) */
+@media (min-width: 769px) {
+    .mini-bio {
+        font-size: 1.3rem; /* Aumenta a fonte em 30% (1rem * 1.3) */
+    }
 }
 
 /* Keyframes para animações */
