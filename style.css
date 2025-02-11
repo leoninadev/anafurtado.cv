@@ -251,7 +251,6 @@ section {
 /* Estilização da palavra "Comunicação" */
 .container-banners .banner-texto .banner-subtitle .comunicacao {
     color: #94A473; /* Cor verde */
-    font-weight: bold; /* Garante que esteja em negrito */
 }
 
 .container-banners .banner-imagem img {
