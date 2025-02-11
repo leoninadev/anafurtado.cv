@@ -548,9 +548,22 @@ footer {
         font-size: 2.25em;
     }
     /* Ajuste para o subtítulo em telas pequenas */
+
+    /* INÍCIO - Ajustes para o Banner 1 em Mobile */
+    .banner-1 {
+        height: auto; /* Remove a altura fixa */
+        padding-top: 0; /* Remove o padding superior (se houver) */
+        padding-bottom: 0; /* Remove o padding inferior */
+    }
+
+    .banner-1 img {
+        max-height: 80vh; /* Define uma altura máxima para a imagem */
+        object-fit: contain; /* Garante que a imagem caiba dentro do container */
+    }
+    /* FIM - Ajustes para o Banner 1 em Mobile */
 }
 
-/* Keyframes para animações */
+/* Keyframes para animações e espero que funcione */
 @keyframes fadeInUp {
     from {
         opacity: 0;
