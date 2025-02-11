@@ -512,6 +512,11 @@ footer {
         width: 100%;
     }
 
+    /* Estilo da fonte nos links do menu mobile */
+    header.active .nav-links nav ul li a {
+        font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
+    }
+
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
         font-size: 0.8em;
