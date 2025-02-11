@@ -3,57 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Cabonnet</title>
+    <title>Conteúdo - Ana Furtado</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos para a galeria */
-        .galeria-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Centraliza as imagens */
+        /* Estilos específicos para esta seção */
+        .conteudo-section {
             padding: 20px;
+            background-color: #F8F2EA; /* Cor bege de fundo */
         }
 
-        .galeria-item {
-            width: 200px; /* Tamanho desejado para as imagens */
-            height: 150px; /* Altura desejada */
-            margin: 10px;
-            overflow: hidden; /* Garante que a imagem não ultrapasse as dimensões */
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sutil sombra */
-        }
-
-        .galeria-item a {
-            display: block; /* Faz o link ocupar todo o espaço do item */
-            width: 100%;
-            height: 100%;
-        }
-
-        .galeria-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Preenche o espaço mantendo a proporção */
-            display: block;
-            transition: transform 0.3s ease; /* Efeito de zoom suave */
-        }
-
-        .galeria-item img:hover {
-            transform: scale(1.1); /* Aumenta a imagem no hover */
-        }
-
-        /* Estilos para centralizar o conteúdo */
-        body {
+        .conteudo-item-container {
             display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+            align-items: center; /* Alinhar verticalmente */
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd; /* Linha divisória */
+            padding-bottom: 20px;
         }
 
-        main {
-            flex: 1; /* Expande o main para ocupar o espaço restante */
+        .conteudo-texto {
+            flex: 1; /* Ocupa o espaço restante */
+            margin-right: 20px;
         }
 
-        footer {
-            margin-top: auto; /* Empurra o footer para a parte inferior */
+        .conteudo-texto h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-family: 'Fragment Core', sans-serif; /* Sua fonte */
+            font-size: 1.2em;
+            color: #392523; /* Sua cor */
+        }
+
+        .conteudo-texto h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-family: 'Nixie One', sans-serif; /* Sua fonte */
+            font-size: 2em;
+            color: #392523; /* Sua cor */
+        }
+
+        .conteudo-texto p {
+            font-family: 'Fragment Core', sans-serif; /* Sua fonte */
+            font-size: 1em;
+            color: #392523; /* Sua cor */
+        }
+
+        .conteudo-ver-mais {
+            display: inline-block;
+            margin-top: 10px;
+            font-family: 'Fragment Core', sans-serif; /* Sua fonte */
+            color: #94A473; /* Sua cor */
+            text-decoration: none;
+        }
+
+        .conteudo-ver-mais:hover {
+            text-decoration: underline;
+        }
+
+        .conteudo-imagem {
+            width: 250px; /* Ajuste conforme necessário */
+            height: 180px; /* Ajuste conforme necessário */
+            border-radius: 10px; /* Bordas arredondadas */
+            overflow: hidden;
+        }
+
+        .conteudo-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
     </style>
 </head>
@@ -62,23 +83,34 @@
         <!-- Seu header existente -->
     </header>
     <main>
-        <section class="galeria-container">
-            <div class="galeria-item">
-                <a href="https://www.exemplo.com/link1" target="_blank">
-                    <img src="img/cabonnet-galeria1.jpg" alt="Cabonnet Galeria 1">
-                </a>
+        <section class="conteudo-section">
+
+            <div class="conteudo-item-container">
+                <div class="conteudo-texto">
+                    <h3>Rawse Creative</h3>
+                    <h2>Cabonnet</h2>
+                    <p>A Cabonnet, com 29 anos de história, conecta mais de 100 mil pessoas em 40 cidades à internet.</p>
+                    <a href="cabonnet-galeria.html" class="conteudo-ver-mais">Ver mais</a>
+                </div>
+                <div class="conteudo-imagem">
+                    <img src="img/cabonnet.jpg" alt="Cabonnet">
+                </div>
             </div>
-            <div class="galeria-item">
-                <a href="https://www.exemplo.com/link2" target="_blank">
-                    <img src="img/cabonnet-galeria2.jpg" alt="Cabonnet Galeria 2">
-                </a>
+
+            <div class="conteudo-item-container">
+                <div class="conteudo-texto">
+                    <h3>Colmeia Marketing</h3>
+                    <h2>Vital Âtman</h2>
+                    <p>Há 26 anos, essa marca de suplementos alimentares naturais se destacou como pioneira ao introduzir a tecnologia de prensagem a frio.</p>
+                    <a href="vital-atman-galeria.html" class="conteudo-ver-mais">Ver mais</a>
+                </div>
+                <div class="conteudo-imagem">
+                    <img src="img/vital-atman.jpg" alt="Vital Âtman">
+                </div>
             </div>
-            <div class="galeria-item">
-                <a href="https://www.exemplo.com/link3" target="_blank">
-                    <img src="img/cabonnet-galeria3.jpg" alt="Cabonnet Galeria 3">
-                </a>
-            </div>
+
             <!-- Adicione mais itens conforme necessário -->
+
         </section>
     </main>
     <footer>
