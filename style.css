@@ -550,18 +550,23 @@ footer {
     /* Ajuste para o subtítulo em telas pequenas */
 
     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
-    /* Alteração: Garante que a imagem não ultrapasse a altura do header */
+    /* Alteração: Usa position: absolute para controlar o posicionamento da imagem */
     .banner-1 {
         height: auto; /* Remove a altura fixa */
         padding-top: 0; /* Remove o padding superior (se houver) */
         padding-bottom: 0; /* Remove o padding inferior */
+        position: relative; /* Adiciona position: relative para o container */
     }
 
     .banner-1 img {
-        max-height: calc(100vh - 6rem); /* Define a altura máxima da imagem subtraindo a altura do header (aproximadamente 6rem) */
-        object-fit: contain; /* Garante que a imagem caiba dentro do container */
+        max-height: 100vh; /* Define uma altura máxima para a imagem */
+        width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+        object-fit: contain;
         margin: 0; /* Remove qualquer margem da imagem */
         padding: 0; /* Remove qualquer padding da imagem */
+        position: absolute; /* Adiciona position: absolute para a imagem */
+        top: 0; /* Posiciona a imagem no topo do container */
+        left: 0;
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
 }
