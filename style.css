@@ -558,12 +558,14 @@ footer {
 
     .banner-1 img {
         max-height: 80vh; /* Define uma altura máxima para a imagem */
-        object-fit: contain; /* Garante que a imagem caiba dentro do container */
+        object-fit: cover; /* Garante que a imagem caiba dentro do container */
+        margin: 0; /* Remove qualquer margem da imagem */
+        padding: 0; /* Remove qualquer padding da imagem */
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
 }
 
-/* Keyframes para animações e espero que funcione */
+/* Keyframes para animações */
 @keyframes fadeInUp {
     from {
         opacity: 0;
