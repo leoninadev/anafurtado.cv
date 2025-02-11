@@ -11,9 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Estilos específicos para esta seção */
+        body {
+            font-family: 'Nixie One', sans-serif;
+            background-color: #F8F2EA;
+            color: #392523;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos específicos para esta seção */
         .conteudo-section {
             padding: 20px;
             background-color: #F8F2EA; /* Cor bege de fundo */
+            padding-top: 80px; /* Espaçamento para não sobrepor com o header */
         }
 
         .conteudo-item-container {
@@ -76,11 +87,182 @@
             object-fit: cover;
             display: block;
         }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2.5rem;
+            background-color: #F8F2EA; /* Cor bege */
+            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Nixie One', sans-serif;
+            font-size: 2em;
+            letter-spacing: 0.125rem;
+            text-align: center;
+        }
+
+        .logo a {
+            color: #392523;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 0.9375rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #392523;
+            font-weight: 500;
+            font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #94A473;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 10rem;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            opacity: 0;
+        }
+
+        /* Adicionado para o script do dropdown */
+        .dropdown-content.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Estilo para links do dropdown */
+        .dropdown-content a {
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            color: #392523;
+            font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #94A473;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        /* Esconde o botão do menu por padrão */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #392523;
+            cursor: pointer;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 0.9375rem 1.25rem;
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                position: fixed;
+            }
+
+            .logo {
+                font-size: 1.5em;
+                margin-bottom: 0;
+            }
+
+            /* Mostra o botão do menu */
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            /* Esconde a navegação por padrão */
+            .nav-links {
+                display: none;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .nav-links nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links nav ul li {
+                margin: 0.625rem 0;
+            }
+
+            /* Estilos para quando o menu estiver ativo */
+            header.active .nav-links {
+                display: block;
+                background-color: #f9f9f9;
+                padding: 1rem;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <!-- Seu header existente -->
+        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
+                        <div class="dropdown-content">
+                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                        </div>
+                    </li>
+                     <li class="social-icons-mobile">
+                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="conteudo-section">
@@ -117,7 +299,12 @@
         <!-- Seu footer existente -->
     </footer>
     <script>
-        // Seu script existente
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
