@@ -550,7 +550,7 @@ footer {
     /* Ajuste para o subtítulo em telas pequenas */
 
     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
-    /* Alteração: Aumenta a altura máxima da imagem para evitar cortes */
+    /* Alteração: object-fit para contain para evitar cortes */
     .banner-1 {
         height: auto !important; /* Remove a altura fixa */
         padding-top: 0 !important; /* Remove o padding superior (se houver) */
@@ -559,7 +559,7 @@ footer {
 
     .banner-1 img {
         max-height: 100vh !important; /* Define uma altura máxima para a imagem */
-        object-fit: cover !important; /* Garante que a imagem caiba dentro do container */
+        object-fit: contain !important; /* Garante que a imagem caiba dentro do container */
         margin: 0 !important; /* Remove qualquer margem da imagem */
         padding: 0 !important; /* Remove qualquer padding da imagem */
     }
