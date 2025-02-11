@@ -21,24 +21,32 @@
             margin: 0;
             padding-top: 80px;
             box-sizing: border-box;
+            align-items: center; /* Centralizar horizontalmente */
         }
 
-        .em-breve {
-            background-color: #94A473;
-            color: #F8F2EA;
-            padding: 5px 10px;
-            border-radius: 5px;
+        /* Estilos para a barra de progresso */
+        .progress-container {
+            width: fit-content; /* Largura baseada no conteúdo */
+            max-width: 400px; /* Largura máxima */
+            height: 15px; /* Altura da barra */
+            background-color: #ddd;
+            border-radius: 10px;
             margin-bottom: 20px;
-            font-family: 'Fragment Core', sans-serif;
-            font-size: 1em;
-            font-style: normal;
-            display: inline-block;
+            overflow: hidden;
+            display: inline-block; /* Para ocupar apenas o tamanho do texto */
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #94A473;
+            width: 75%; /* Preenchimento de 75% */
+            border-radius: 10px;
         }
 
         h1 {
             font-family: 'Nixie One', sans-serif;
             font-size: 2em;
-            margin-bottom: 5px;
+            margin-bottom: 10px; /* Ajustei a margem */
             font-weight: normal;
             color: #F8F2EA;
         }
@@ -47,24 +55,12 @@
             font-size: 1.2em;
             margin-bottom: 40px;
             font-family: 'Fragment Core', sans-serif;
-            max-width: 43.75rem;
+            max-width: 50rem; /* Aumentei a largura máxima */
             margin-left: auto;
             margin-right: auto;
             text-align: justify;
             font-style: italic;
             color: #F8F2EA;
-        }
-
-        .social-icons {
-            margin-top: auto;
-            margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            font-size: 1.5em;
-            margin: 0 10px;
-            color: #F8F2EA;
-            text-decoration: none;
         }
 
         footer {
@@ -176,7 +172,9 @@
 
     <main>
         <h1>EM CONSTRUÇÃO</h1>
-        <div class="em-breve">Em breve</div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
         <p>
             Comunicar é mais do que falar — é existir, ocupar espaços, reivindicar narrativas. "Papia", do crioulo cabo-verdiano "falar", representa esse projeto que nasce para amplificar vozes historicamente silenciadas.
 
@@ -187,11 +185,6 @@
     </main>
 
     <footer style="background-color: #392523;">
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-        </div>
         <div>© 2025 Ana Furtado. Catalisando mudanças por meio da Comunicação.</div>
     </footer>
 
