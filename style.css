@@ -570,6 +570,12 @@ footer {
         padding: 0; /* Remove qualquer padding da imagem */
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
+
+    /* Início - Espaçamento entre as logos no mobile */
+    .brand-row img {
+        margin: 0.625rem; /* Adiciona margem em todos os lados da imagem */
+    }
+    /* Fim - Espaçamento entre as logos no mobile */
 }
 
 /* Keyframes para animações */
