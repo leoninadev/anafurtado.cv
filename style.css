@@ -450,12 +450,17 @@ footer {
 }
 
 .contact-form button {
-    background-color: #392523;
+    background-color: #94A473;
     color: #fff;
     padding: .625rem 1.25rem;
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6A7652;
 }
 
 /* Esconde o botão do menu por padrão */
@@ -690,10 +695,262 @@ footer {
 }
 
 .contact-form button {
-    background-color: #392523;
+    background-color: #94A473;
     color: #fff;
     padding: .625rem 1.25rem;
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6A7652;
+}
+
+/* Esconde o botão do menu por padrão */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #392523;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: .9375rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        position: fixed;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    /* Mostra o botão do menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* Esconde a navegação por padrão */
+    .nav-links {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links nav ul li {
+        margin: .625rem 0;
+    }
+
+    /* Estilos para quando o menu estiver ativo */
+    header.active .nav-links {
+        display: block;
+        background-color: #f9f9f9;
+        padding: 1rem;
+        width: 100%;
+    }
+header.active .social-icons-mobile {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+    /* Estilo da fonte nos links do menu mobile */
+    header.active .nav-links nav ul li a {
+        font-family: 'Fragment Core', sans-serif;
+    }
+
+    /* Ajustes na mini-bio para telas menores */
+    .mini-bio {
+        font-size: .8em;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justify;
+    }
+
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 2.8em;
+    }
+        /* Início - Estilos para alinhar os ícones sociais */
+    header.active .nav-links nav ul .social-icons-mobile {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    header.active .nav-links nav ul .social-icons-mobile li {
+        margin: 0;
+    }
+
+    header.active .nav-links nav ul .social-icons-mobile li a {
+        font-size: 1.5rem;
+    }
+    /* Fim - Estilos para alinhar os ícones sociais */
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 2.5em;
+    }
+
+    .banner-3 .banner-text {
+        padding: 1.875rem;
+    }
+
+    .mini-bio {
+        font-size: .7em;
+        line-height: 1.7;
+    }
+
+    /* Ajustes para o container de banners */
+    .container-banners {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container-banners > * {
+        width: 100%;
+        margin-bottom: 1.875rem;
+    }
+
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 2.25em;
+    }
+
+    /* INÍCIO - Ajustes para o Banner 1 em Mobile */
+    .banner-1 {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .banner-1 img {
+        max-height: calc(100vh - 6rem);
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+    }
+    /* FIM - Ajustes para o Banner 1 em Mobile */
+
+    /* Início - Espaçamento entre as logos no mobile */
+    .brand-row img {
+        margin: .625rem;
+    }
+
+    .second-row img {
+        margin-top: 1.25rem;
+    }
+    /* Fim - Espaçamento entre as logos no mobile */
+
+    /* Início - Ajustes para o formulário de contato no mobile */
+    footer .contact-form {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Fim - Ajustes para o formulário de contato no mobile */
+}
+
+/* Estilos para telas grandes (acima de 768px) */
+@media (min-width: 769px) {
+    .mini-bio {
+        font-size: 1.3rem;
+    }
+}
+
+/* Keyframes para animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    padding: 1.875rem 0;
+    background-color: #392523;
+    text-align: center;
+    width: 100%;
+    color: #F8F2EA;
+}
+footer::after {
+    content: "© 2025 Ana Furtado. Todos os direitos reservados.";
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.social-icons a {
+    font-size: 1.5625rem;
+    margin: 0 .625rem;
+    color: #F8F2EA;
+    font-family: 'Fragment Core', sans-serif;
+    transition: transform .3s ease,color .3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #94A473;
+}
+
+.contact-form {
+    max-width: 31.25rem;
+    margin: 1.25rem auto;
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1.8em;
+    color: #94A473;
+    text-align: center;
+    margin-bottom: .9375rem;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: .625rem;
+    margin-bottom: .625rem;
+    border: 1px solid #ccc;
+    border-radius: .3125rem;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
+    font-family: 'Nixie One', sans-serif;
+    color: #392523;
+}
+
+.contact-form button {
+    background-color: #94A473;
+    color: #fff;
+    padding: .625rem 1.25rem;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6A7652;
 }
