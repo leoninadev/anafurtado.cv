@@ -103,11 +103,12 @@ nav ul li {
     margin: 0 0.9375rem;
 }
 
+/* Estilo para links de navegação */
 nav ul li a {
     text-decoration: none;
     color: #392523;
     font-weight: 500;
-    font-family: 'Fragment Core', sans-serif;
+    font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
     transition: color 0.3s ease;
 }
 
@@ -135,12 +136,13 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* Estilo para links do dropdown */
 .dropdown-content a {
     padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
     color: #392523;
-    font-family: 'Fragment Core', sans-serif;
+    font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
     transition: color 0.3s ease;
 }
 
