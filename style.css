@@ -18,8 +18,8 @@ html {
 body {
     font-family: 'Nixie One', sans-serif;
     font-size: 1rem;
-    color: #392523; /* Cor castanha */
-    background-color: #F8F2EA; /* Cor bege */
+    color: #392523;
+    background-color: #F8F2EA;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -74,8 +74,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 2.5rem;
-    background-color: #F8F2EA; /* Cor bege */
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    background-color: #F8F2EA;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -86,7 +86,7 @@ header {
 .logo {
     font-family: 'Nixie One', sans-serif;
     font-size: 2em;
-    letter-spacing: 0.125rem;
+    letter-spacing: .125rem;
     text-align: center;
 }
 
@@ -100,7 +100,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.9375rem;
+    margin: 0 .9375rem;
 }
 
 /* Estilo para links de navegação */
@@ -108,8 +108,8 @@ nav ul li a {
     text-decoration: none;
     color: #392523;
     font-weight: 500;
-    font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
-    transition: color 0.3s ease;
+    font-family: 'Fragment Core', sans-serif;
+    transition: color .3s ease;
 }
 
 nav ul li a:hover {
@@ -125,7 +125,7 @@ nav ul li a:hover {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 10rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,.2);
     z-index: 1;
     opacity: 0;
 }
@@ -138,12 +138,12 @@ nav ul li a:hover {
 
 /* Estilo para links do dropdown */
 .dropdown-content a {
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
     text-decoration: none;
     display: block;
     color: #392523;
-    font-family: 'Fragment Core', sans-serif; /* Adicionada a fonte Fragment Core */
-    transition: color 0.3s ease;
+    font-family: 'Fragment Core', sans-serif;
+    transition: color .3s ease;
 }
 
 .dropdown-content a:hover {
@@ -183,10 +183,10 @@ section {
     position: relative;
     z-index: 1;
     background-color: #F8F2EA;
-    padding-bottom: 0.9375rem;
+    padding-bottom: .9375rem;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 .banner-1:hover {
@@ -199,15 +199,15 @@ section {
     max-height: 50rem;
     object-fit: contain;
     object-position: center;
-    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    transition: transform .3s ease;
 }
 
 .banner-1 img:hover {
-    transform: scale(1.05); /* Manter o zoom */
+    transform: scale(1.05);
 }
 
 .banner-content {
-    color: white;
+    color: #fff;
     font-size: 2em;
 }
 
@@ -223,7 +223,7 @@ section {
     display: flex;
     width: 100%;
     height: 40.625rem;
-    padding-top: 0.9375rem;
+    padding-top: .9375rem;
 }
 
 .container-banners > * {
@@ -235,8 +235,8 @@ section {
 }
 
 .container-banners .banner-texto {
-    background-color: #392523; /* Cor castanha */
-    color: #F8F2EA; /* Cor bege */
+    background-color: #392523;
+    color: #F8F2EA;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -252,7 +252,7 @@ section {
 
 /* Estilização da palavra "Comunicação" */
 .container-banners .banner-texto .banner-subtitle .comunicacao {
-    color: #94A473; /* Cor verde */
+    color: #94A473;
 }
 
 .container-banners .banner-imagem img {
@@ -282,14 +282,14 @@ section {
 }
 
 .banner-3 .background-image {
-    background-image: url('img/banner3.jpg');
+    background-image: url(img/banner3.jpg);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-    filter: brightness(0.4);
+    filter: brightness(.4);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -359,7 +359,7 @@ section {
     object-fit: contain;
     min-width: auto;
     margin: 0 1.25rem;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 .brand-row img:hover {
@@ -403,21 +403,23 @@ section {
 /* Footer */
 footer {
     padding: 1.875rem 0;
-    background-color: #F8F2EA; /* Cor bege */
+    background-color: #392523;
     text-align: center;
     width: 100%;
+    color: #F8F2EA;
 }
 
 .social-icons a {
     font-size: 1.5625rem;
-    margin: 0 0.625rem;
-    color: #392523;
+    margin: 0 .625rem;
+    color: #F8F2EA;
     font-family: 'Fragment Core', sans-serif;
-    transition: transform 0.3s ease; /* Adicionando animação */
+    transition: transform .3s ease,color .3s ease;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2); /* Aumentando um pouco no hover */
+    transform: scale(1.2);
+    color: #94A473;
 }
 
 .contact-form {
@@ -429,29 +431,30 @@ footer {
 .contact-form h3 {
     font-family: 'Nixie One', sans-serif;
     font-size: 1.8em;
-    color: #392523;
+    color: #94A473;
     text-align: center;
-    margin-bottom: 0.9375rem;
+    margin-bottom: .9375rem;
 }
 
 .contact-form input[type="email"],
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
-    padding: 0.625rem;
-    margin-bottom: 0.625rem;
+    padding: .625rem;
+    margin-bottom: .625rem;
     border: 1px solid #ccc;
-    border-radius: 0.3125rem;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    border-radius: .3125rem;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
     font-family: 'Nixie One', sans-serif;
+    color: #392523;
 }
 
 .contact-form button {
     background-color: #392523;
     color: #fff;
-    padding: 0.625rem 1.25rem;
+    padding: .625rem 1.25rem;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: .3125rem;
     cursor: pointer;
 }
 
@@ -468,7 +471,7 @@ footer {
 /* Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 0.9375rem 1.25rem;
+        padding: .9375rem 1.25rem;
         flex-direction: column;
         align-items: flex-start;
         height: auto;
@@ -501,7 +504,7 @@ footer {
     }
 
     .nav-links nav ul li {
-        margin: 0.625rem 0;
+        margin: .625rem 0;
     }
 
     /* Estilos para quando o menu estiver ativo */
@@ -512,7 +515,6 @@ footer {
         width: 100%;
     }
 header.active .social-icons-mobile {
-    
     display: flex;
     justify-content: space-around;
 }
@@ -525,7 +527,7 @@ header.active .social-icons-mobile {
 
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
-        font-size: 0.8em;
+        font-size: .8em;
         margin-left: 15%;
         margin-right: 15%;
         text-align: justify;
@@ -537,19 +539,19 @@ header.active .social-icons-mobile {
     /* Ajuste para o subtítulo em telas médias */
         /* Início - Estilos para alinhar os ícones sociais */
     header.active .nav-links nav ul .social-icons-mobile {
-        display: flex; /* Habilita o flexbox */
-        justify-content: space-around; /* Distribui os ícones igualmente */
-        width: 100%; /* Garante que os ícones ocupem toda a largura do menu */
-        padding: 0; /* Remove qualquer padding */
-        margin-top: 1rem; /* Adiciona um espaço acima dos ícones */
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin-top: 1rem;
     }
 
     header.active .nav-links nav ul .social-icons-mobile li {
-        margin: 0; /* Remove as margens dos itens da lista */
+        margin: 0;
     }
 
     header.active .nav-links nav ul .social-icons-mobile li a {
-        font-size: 1.5rem; /* Ajuste o tamanho dos ícones */
+        font-size: 1.5rem;
     }
     /* Fim - Estilos para alinhar os ícones sociais */
 }
@@ -564,7 +566,7 @@ header.active .social-icons-mobile {
     }
 
     .mini-bio {
-        font-size: 0.7em;
+        font-size: .7em;
         line-height: 1.7;
     }
 
@@ -602,7 +604,7 @@ header.active .social-icons-mobile {
 
     /* Início - Espaçamento entre as logos no mobile */
     .brand-row img {
-        margin: 0.625rem; /* Adiciona margem em todos os lados da imagem */
+        margin: .625rem; /* Adiciona margem em todos os lados da imagem */
     }
 
     .second-row img {
@@ -636,4 +638,62 @@ header.active .social-icons-mobile {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Footer */
+footer {
+    padding: 1.875rem 0;
+    background-color: #392523;
+    text-align: center;
+    width: 100%;
+    color: #F8F2EA;
+}
+
+.social-icons a {
+    font-size: 1.5625rem;
+    margin: 0 .625rem;
+    color: #F8F2EA;
+    font-family: 'Fragment Core', sans-serif;
+    transition: transform .3s ease,color .3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #94A473;
+}
+
+.contact-form {
+    max-width: 31.25rem;
+    margin: 1.25rem auto;
+    text-align: left;
+}
+
+.contact-form h3 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1.8em;
+    color: #94A473;
+    text-align: center;
+    margin-bottom: .9375rem;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: .625rem;
+    margin-bottom: .625rem;
+    border: 1px solid #ccc;
+    border-radius: .3125rem;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
+    font-family: 'Nixie One', sans-serif;
+    color: #392523; /* Garante que o texto digitado seja visível */
+}
+
+.contact-form button {
+    background-color: #392523;
+    color: #fff;
+    padding: .625rem 1.25rem;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
 }
