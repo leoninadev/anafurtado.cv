@@ -549,11 +549,21 @@ footer {
     }
     /* Ajuste para o subtítulo em telas pequenas */
 
-    /* INÍCIO - Remove a IMAGEM do Banner 1 para Mobile */
-    .banner-1 img {
-        display: none;
+    /* INÍCIO - Ajustes para o Banner 1 em Mobile */
+    /* Alteração: Garante que a imagem não ultrapasse a altura do header */
+    .banner-1 {
+        height: auto; /* Remove a altura fixa */
+        padding-top: 0; /* Remove o padding superior (se houver) */
+        padding-bottom: 0; /* Remove o padding inferior */
     }
-    /* FIM - Remove a IMAGEM do Banner 1 para Mobile */
+
+    .banner-1 img {
+        max-height: calc(100vh - 6rem); /* Define a altura máxima da imagem subtraindo a altura do header (aproximadamente 6rem) */
+        object-fit: contain; /* Garante que a imagem caiba dentro do container */
+        margin: 0; /* Remove qualquer margem da imagem */
+        padding: 0; /* Remove qualquer padding da imagem */
+    }
+    /* FIM - Ajustes para o Banner 1 em Mobile */
 }
 
 /* Keyframes para animações */
