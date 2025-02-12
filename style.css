@@ -183,7 +183,7 @@ section {
     z-index: 1;
     background-color: #F8F2EA;
     padding-bottom: .9375rem;
-    /*animation: fadeInUp 1s ease forwards;*/
+    animation: fadeInUp 1s ease forwards;
     opacity: 0;
     transition: transform .3s ease;
 }
@@ -224,8 +224,7 @@ section {
     width: 100%;
     height: 40.625rem;
     padding-top: .9375rem;
-   /* animation: fadeInUp 1s ease forwards;*/
-    }
+}
 
 .container-banners > * {
     width: 50%;
@@ -233,9 +232,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 100%;
-   /* animation: fadeInUp 1s ease forwards;*/
-    opacity: 0;
-    }
+}
 
 .container-banners .banner-texto {
     background-color: #392523;
@@ -244,28 +241,28 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+}
 
 .container-banners .banner-texto .banner-subtitle {
     width: 80%;
     text-align: center;
     font-size: 3.25em;
     text-transform: uppercase;
-    }
+}
 
 /* Estilização da palavra "Comunicação" */
 .container-banners .banner-texto .banner-subtitle .comunicacao {
     color: #94A473;
-    }
+}
 
 .container-banners .banner-imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    }
+}
 
-    /* --------------- MODIFICADO --------------- */
+/* --------------- MODIFICADO --------------- */
 .banner-3 {
     background-color: #F8F2EA;
     display: flex;
@@ -376,79 +373,79 @@ section {
     width: 100%;
     padding-top: 3.75rem;
     padding-bottom: 0;
-    }
+}
 
-    .gallery h2 {
+.gallery h2 {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
     margin-bottom: 1.875rem;
-    }
+}
 
-    .gallery-grid {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 1.25rem;
     padding: 1.25rem;
-    }
+}
 
-    .gallery-item {
+.gallery-item {
     text-decoration: none;
     display: block;
-    }
+}
 
-    .gallery-item img {
+.gallery-item img {
     width: 100%;
     height: auto;
     display: block;
-    }
+}
 
-    /* Footer */
-    footer {
+/* Footer */
+footer {
     padding: 1.875rem 0;
     background-color: #392523;
     text-align: center;
     width: 100%;
     color: #F8F2EA;
-    }
+}
 
-    footer::after {
+footer::after {
     content: "© 2025 Ana Furtado. Todos os direitos reservados.";
     display: block;
     margin-top: 10px;
     font-size: 0.8em;
-    }
+}
 
-    .social-icons a {
+.social-icons a {
     font-size: 1.5625rem;
     margin: 0 .625rem;
     color: #F8F2EA;
     font-family: 'Fragment Core', sans-serif;
     transition: transform .3s ease,color .3s ease;
-    }
+}
 
-    .social-icons a:hover {
+.social-icons a:hover {
     transform: scale(1.2);
     color: #94A473;
-    }
+}
 
-    .contact-form {
+.contact-form {
     max-width: 31.25rem;
     margin: 1.25rem auto;
     text-align: left;
-    }
+}
 
-    .contact-form h3 {
+.contact-form h3 {
     font-family: 'Nixie One', sans-serif;
     font-size: 1.8em;
     color: #94A473;
     text-align: center;
     margin-bottom: .9375rem;
-    }
+}
 
-    .contact-form input[type="email"],
-    .contact-form input[type="text"],
-    .contact-form textarea {
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
     width: 100%;
     padding: .625rem;
     margin-bottom: .625rem;
@@ -457,9 +454,9 @@ section {
     box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
     font-family: 'Nixie One', sans-serif;
     color: #392523;
-    }
+}
 
-    .contact-form button {
+.contact-form button {
     background-color: #94A473;
     color: #fff;
     padding: .625rem 1.25rem;
@@ -467,188 +464,188 @@ section {
     border-radius: .3125rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    }
+}
 
-    .contact-form button:hover {
+.contact-form button:hover {
     background-color: #6A7652;
-    }
+}
 
-    /* Esconde o botão do menu por padrão */
-    .menu-toggle {
+/* Esconde o botão do menu por padrão */
+.menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #392523;
     cursor: pointer;
-    }
+}
 
-    /* Responsiveness */
-    @media (max-width: 768px) {
+/* Responsiveness */
+@media (max-width: 768px) {
     header {
-    padding: .9375rem 1.25rem;
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    position: fixed;
+        padding: .9375rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        position: fixed;
     }
 
     .logo {
-    font-size: 1.5em;
-    margin-bottom: 0;
+        font-size: 1.5em;
+        margin-bottom: 0;
     }
 
     /* Mostra o botão do menu */
     .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 
     /* Esconde a navegação por padrão */
     .nav-links {
-    display: none;
-    width: 100%;
-    justify-content: center;
+        display: none;
+        width: 100%;
+        justify-content: center;
     }
 
     .nav-links nav ul {
-    flex-direction: column;
-    text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .nav-links nav ul li {
-    margin: .625rem 0;
+        margin: .625rem 0;
     }
 
     /* Estilos para quando o menu estiver ativo */
     header.active .nav-links {
-    display: block;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    width: 100%;
+        display: block;
+        background-color: #f9f9f9;
+        padding: 1rem;
+        width: 100%;
     }
-    header.active .social-icons-mobile {
+header.active .social-icons-mobile {
     display: flex;
     justify-content: space-around;
-    }
+}
 
 
     /* Estilo da fonte nos links do menu mobile */
     header.active .nav-links nav ul li a {
-    font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
+        font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
     }
 
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
-    font-size: .8em;
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: justify;
+        font-size: .8em;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justify;
     }
 
     .container-banners .banner-texto .banner-subtitle {
-    font-size: 2.8em;
+        font-size: 2.8em;
     }
     /* Ajuste para o subtítulo em telas médias */
-    /* Início - Estilos para alinhar os ícones sociais */
+        /* Início - Estilos para alinhar os ícones sociais */
     header.active .nav-links nav ul .social-icons-mobile {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 0;
-    margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin-top: 1rem;
     }
 
     header.active .nav-links nav ul .social-icons-mobile li {
-    margin: 0;
+        margin: 0;
     }
 
     header.active .nav-links nav ul li a {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
     /* Fim - Estilos para alinhar os ícones sociais */
-    }
+}
 
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
     .banner-title {
-    font-size: 2.5em;
+        font-size: 2.5em;
     }
 
     .banner-3 .banner-text {
-    padding: 1.875rem;
+        padding: 1.875rem;
     }
 
     .mini-bio {
-    font-size: .7em;
-    line-height: 1.7;
+        font-size: .7em;
+        line-height: 1.7;
     }
 
     /* Ajustes para o container de banners */
     .container-banners {
-    flex-direction: column;
-    height: auto;
+        flex-direction: column;
+        height: auto;
     }
 
     .container-banners > * {
-    width: 100%;
-    margin-bottom: 1.875rem;
+        width: 100%;
+        margin-bottom: 1.875rem;
     }
 
     .container-banners .banner-texto .banner-subtitle {
-    font-size: 2.25em;
+        font-size: 2.25em;
     }
 
     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
     .banner-1 {
-    height: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .banner-1 img {
-    max-height: calc(100vh - 6rem);
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
+        max-height: calc(100vh - 6rem);
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
 
     /* Início - Espaçamento entre as logos no mobile */
     .brand-row img {
-    margin: .625rem;
+        margin: .625rem;
     }
 
     .second-row img {
-    margin-top: 1.25rem;
+        margin-top: 1.25rem;
     }
     /* Fim - Espaçamento entre as logos no mobile */
 
     /* Início - Ajustes para o formulário de contato no mobile */
     footer .contact-form {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     /* Fim - Ajustes para o formulário de contato no mobile */
-    }
+}
 
-    /* Estilos para telas grandes (acima de 768px) */
-    @media (min-width: 769px) {
+/* Estilos para telas grandes (acima de 768px) */
+@media (min-width: 769px) {
     .mini-bio {
-    font-size: 1.3rem;
+        font-size: 1.3rem;
     }
-    }
+}
 
-    /* Keyframes para animações */
-    @keyframes fadeInUp {
+/* Keyframes para animações */
+@keyframes fadeInUp {
     from {
-    opacity: 0;
-    transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-    opacity: 1;
-    transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-    }
+}
