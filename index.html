@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- Importa a biblioteca ScrollReveal -->
 </head>
 <body>
     <header>
@@ -21,7 +20,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
                         <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
@@ -41,28 +40,14 @@
     </header>
     <main>
         <section class="banner banner-1">
-        <img src="img/foto1.jpg"
-            srcset="img/foto1-small.jpg 600w,
-                    img/foto1-medium.jpg 1200w,
-                    img/foto1.jpg 1920w"
-            alt="foto 1"
-            sizes="(max-width: 600px) 100vw,
-                   (max-width: 1200px) 100vw,
-                   100vw">
+            <img src="img/foto1.jpg?v=1" alt="foto 1">
         </section>
         <section class="container-banners">
             <div class="banner banner-texto">
                 <p class="banner-subtitle">Catalisando mudanças por meio da <span class="comunicacao">Comunicação</span></p>
             </div>
             <div class="banner banner-imagem">
-                 <img src="img/foto2.jpg"
-                srcset="img/foto2-small.jpg 600w,
-                        img/foto2-medium.jpg 1200w,
-                        img/foto2.jpg 1920w"
-                alt="foto 2"
-                sizes="(max-width: 600px) 100vw,
-                       (max-width: 1200px) 100vw,
-                       100vw">
+                <img src="img/foto2.jpg" alt="foto 2">
             </div>
         </section>
         <section class="banner banner-3" id="minha-trajetoria">
@@ -114,6 +99,13 @@
             </form>
         </div>
     </footer>
-    <script src="script.js"></script> <!-- Link para o arquivo script.js -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
