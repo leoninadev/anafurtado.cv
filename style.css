@@ -1,73 +1,73 @@
-/* Reset CSS Completo (Mantenha como está) */
-*,
-*::before,
-*::after {
+    /* Reset CSS Completo (Mantenha como está) */
+    *,
+    *::before,
+    *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    }
 
-html {
+    html {
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-}
+    }
 
-body {
+    body {
     font-family: 'Nixie One', sans-serif;
     font-size: 1rem;
     color: #392523;
     background-color: #F8F2EA;
     line-height: 1.6;
     overflow-x: hidden;
-}
+    }
 
-a {
+    a {
     text-decoration: none;
     color: inherit;
-}
+    }
 
-ul,
-ol {
+    ul,
+    ol {
     list-style: none;
-}
+    }
 
-img {
+    img {
     max-width: 100%;
     height: auto;
     display: block;
-}
+    }
 
-button {
+    button {
     background: none;
     border: none;
     cursor: pointer;
     outline: none;
     padding: 0;
     font: inherit;
-}
+    }
 
-input,
-textarea,
-select {
+    input,
+    textarea,
+    select {
     font: inherit;
     border: 1px solid #ccc;
     border-radius: 0;
     padding: 0.5em;
     display: block;
     width: 100%;
-}
+    }
 
-/* Layout */
-html,
-body {
+    /* Layout */
+    html,
+    body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
+    }
 
-/* Header */
-header {
+    /* Header */
+    header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,48 +78,48 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-}
+    }
 
-/* Logo */
-.logo {
+    /* Logo */
+    .logo {
     font-family: 'Nixie One', sans-serif;
     font-size: 2em;
     letter-spacing: .125rem;
     text-align: center;
     font-weight: bold; /* Garante que o texto seja exibido em negrito */
-}
+    }
 
-.logo a {
+    .logo a {
     color: #392523;
-}
+    }
 
-nav ul {
+    nav ul {
     display: flex;
     list-style: none;
-}
+    }
 
-nav ul li {
+    nav ul li {
     margin: 0 .9375rem;
-}
+    }
 
-/* Estilo para links de navegação */
-nav ul li a {
+    /* Estilo para links de navegação */
+    nav ul li a {
     text-decoration: none;
     color: #392523;
     font-weight: 500;
     font-family: 'Fragment Core', sans-serif;
     transition: color .3s ease;
-}
+    }
 
-nav ul li a:hover {
+    nav ul li a:hover {
     color: #94A473;
-}
+    }
 
-.dropdown {
+    .dropdown {
     position: relative;
-}
+    }
 
-.dropdown-content {
+    .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -127,52 +127,52 @@ nav ul li a:hover {
     box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,.2);
     z-index: 1;
     opacity: 0;
-}
+    }
 
-/* Adicionado para o script do dropdown */
-.dropdown-content.show {
+    /* Adicionado para o script do dropdown */
+    .dropdown-content.show {
     display: block;
     opacity: 1;
-}
+    }
 
-/* Estilo para links do dropdown */
-.dropdown-content a {
+    /* Estilo para links do dropdown */
+    .dropdown-content a {
     padding: .75rem 1rem;
     text-decoration: none;
     display: block;
     color: #392523;
     font-family: 'Fragment Core', sans-serif;
     transition: color .3s ease;
-}
+    }
 
-.dropdown-content a:hover {
+    .dropdown-content a:hover {
     background-color: #f1f1f1;
     color: #94A473;
-}
+    }
 
-.dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
-}
+    }
 
-.dropbtn {
+    .dropbtn {
     cursor: pointer;
-}
+    }
 
-/* Banner Sections */
-main {
+    /* Banner Sections */
+    main {
     padding-top: 2rem;
-}
+    }
 
-section {
+    section {
     padding: 3.75rem 0;
     position: relative;
     overflow: hidden;
     width: 100%;
-}
+    }
 
-/* --------------- MODIFICADO --------------- */
-.banner-1 {
+    /* --------------- MODIFICADO --------------- */
+    .banner-1 {
     width: 100%;
     height: 50rem;
     display: flex;
@@ -186,84 +186,87 @@ section {
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
     transition: transform .3s ease;
-}
+    }
 
-.banner-1:hover {
+    .banner-1:hover {
     transform: scale(1.02);
-}
+    }
 
-/* Adiciona srcset para imagens responsivas */
-.banner-1 img {
+    /* Adiciona srcset para imagens responsivas */
+    .banner-1 img {
     width: 100%;
     height: auto;
     max-height: 50rem;
     object-fit: contain;
     object-position: center;
     transition: transform .3s ease;
-}
+    }
 
-.banner-1 img:hover {
+    .banner-1 img:hover {
     transform: scale(1.05);
-}
+    }
 
-.banner-content {
+    .banner-content {
     color: #fff;
     font-size: 2em;
-}
+    }
 
-.banner-title {
+    .banner-title {
     font-family: 'Playfair Display', serif;
     font-size: 4em;
     color: #fff;
     font-style: italic;
-}
+    }
 
-/* --------------- ADICIONADO --------------- */
-.container-banners {
+    /* --------------- ADICIONADO --------------- */
+    .container-banners {
     display: flex;
     width: 100%;
     height: 40.625rem;
     padding-top: .9375rem;
-}
+    /*animation: fadeInUp 1s ease forwards;*/
+    }
 
-.container-banners > * {
+    .container-banners > * {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-}
+    /*animation: fadeInUp 1s ease forwards;*/
+    opacity: 0;
+    }
 
-.container-banners .banner-texto {
+    .container-banners .banner-texto {
     background-color: #392523;
     color: #F8F2EA;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
-.container-banners .banner-texto .banner-subtitle {
+    .container-banners .banner-texto .banner-subtitle {
     width: 80%;
     text-align: center;
     font-size: 3.25em;
     text-transform: uppercase;
-}
+    }
 
-/* Estilização da palavra "Comunicação" */
-.container-banners .banner-texto .banner-subtitle .comunicacao {
+    /* Estilização da palavra "Comunicação" */
+    .container-banners .banner-texto .banner-subtitle .comunicacao {
     color: #94A473;
-}
+    }
 
-.container-banners .banner-imagem img {
+    .container-banners .banner-imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
+    }
 
-/* --------------- MODIFICADO --------------- */
-.banner-3 {
+    /* --------------- MODIFICADO --------------- */
+    .banner-3 {
     background-color: #F8F2EA;
     display: flex;
     position: relative;
@@ -279,9 +282,9 @@ section {
     align-items: center;
     text-align: center;
     margin-top: -6rem;
-}
+    }
 
-.banner-3 .background-image {
+    .banner-3 .background-image {
     background-image: url(img/banner3.jpg);
     position: absolute;
     top: 0;
@@ -293,22 +296,22 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+    }
 
-.banner-3 .banner-image img {
+    .banner-3 .banner-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: none;
-}
+    }
 
-.banner-3 .banner-text {
+    .banner-3 .banner-text {
     z-index: 1;
-}
+    }
 
-/* --------------- MODIFICADO - TAMANHO DA FONTE DA MINI BIO --------------- */
-.mini-bio {
+    /* --------------- MODIFICADO - TAMANHO DA FONTE DA MINI BIO --------------- */
+    .mini-bio {
     font-family: 'Glacial Indifference', sans-serif;
     font-weight: normal;
     color: #392523;
@@ -318,134 +321,134 @@ section {
     margin: 0 auto;
     font-style: italic;
     font-size: 1rem;
-}
+    }
 
-.mini-bio p {
+    .mini-bio p {
     margin-bottom: 0;
-}
+    }
 
-/* --------------- MODIFICADO - TAMANHO DO BANNER 4 --------------- */
-.banner-4 {
+    /* --------------- MODIFICADO - TAMANHO DO BANNER 4 --------------- */
+    .banner-4 {
     background-color: #f5f5f5;
     text-align: center;
     width: 100%;
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
-}
+    }
 
-.banner-4-title {
+    .banner-4-title {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
     margin-bottom: 1.875rem;
-}
+    }
 
-.brands-grid {
+    .brands-grid {
     display: flex;
     flex-direction: column;
     padding: 0 1.25rem 3.75rem;
-}
+    }
 
-.brand-row {
+    .brand-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 1.875rem;
-}
+    }
 
-.brand-row img {
+    .brand-row img {
     height: 10rem;
     width: 10rem;
     object-fit: contain;
     min-width: auto;
     margin: 0 1.25rem;
     transition: transform .3s ease;
-}
+    }
 
-.brand-row img:hover {
+    .brand-row img:hover {
     transform: scale(1.1);
-}
+    }
 
-/* Gallery */
-.gallery {
+    /* Gallery */
+    .gallery {
     background-color: #fff;
     text-align: center;
     width: 100%;
     padding-top: 3.75rem;
     padding-bottom: 0;
-}
+    }
 
-.gallery h2 {
+    .gallery h2 {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
     margin-bottom: 1.875rem;
-}
+    }
 
-.gallery-grid {
+    .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 1.25rem;
     padding: 1.25rem;
-}
+    }
 
-.gallery-item {
+    .gallery-item {
     text-decoration: none;
     display: block;
-}
+    }
 
-.gallery-item img {
+    .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
-}
+    }
 
-/* Footer */
-footer {
+    /* Footer */
+    footer {
     padding: 1.875rem 0;
     background-color: #392523;
     text-align: center;
     width: 100%;
     color: #F8F2EA;
-}
+    }
 
-footer::after {
+    footer::after {
     content: "© 2025 Ana Furtado. Todos os direitos reservados.";
     display: block;
     margin-top: 10px;
     font-size: 0.8em;
-}
+    }
 
-.social-icons a {
+    .social-icons a {
     font-size: 1.5625rem;
     margin: 0 .625rem;
     color: #F8F2EA;
     font-family: 'Fragment Core', sans-serif;
     transition: transform .3s ease,color .3s ease;
-}
+    }
 
-.social-icons a:hover {
+    .social-icons a:hover {
     transform: scale(1.2);
     color: #94A473;
-}
+    }
 
-.contact-form {
+    .contact-form {
     max-width: 31.25rem;
     margin: 1.25rem auto;
     text-align: left;
-}
+    }
 
-.contact-form h3 {
+    .contact-form h3 {
     font-family: 'Nixie One', sans-serif;
     font-size: 1.8em;
     color: #94A473;
     text-align: center;
     margin-bottom: .9375rem;
-}
+    }
 
-.contact-form input[type="email"],
-.contact-form input[type="text"],
-.contact-form textarea {
+    .contact-form input[type="email"],
+    .contact-form input[type="text"],
+    .contact-form textarea {
     width: 100%;
     padding: .625rem;
     margin-bottom: .625rem;
@@ -454,9 +457,9 @@ footer::after {
     box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
     font-family: 'Nixie One', sans-serif;
     color: #392523;
-}
+    }
 
-.contact-form button {
+    .contact-form button {
     background-color: #94A473;
     color: #fff;
     padding: .625rem 1.25rem;
@@ -464,188 +467,188 @@ footer::after {
     border-radius: .3125rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+    }
 
-.contact-form button:hover {
+    .contact-form button:hover {
     background-color: #6A7652;
-}
+    }
 
-/* Esconde o botão do menu por padrão */
-.menu-toggle {
+    /* Esconde o botão do menu por padrão */
+    .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #392523;
     cursor: pointer;
-}
+    }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+    /* Responsiveness */
+    @media (max-width: 768px) {
     header {
-        padding: .9375rem 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        position: fixed;
+    padding: .9375rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    position: fixed;
     }
 
     .logo {
-        font-size: 1.5em;
-        margin-bottom: 0;
+    font-size: 1.5em;
+    margin-bottom: 0;
     }
 
     /* Mostra o botão do menu */
     .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     }
 
     /* Esconde a navegação por padrão */
     .nav-links {
-        display: none;
-        width: 100%;
-        justify-content: center;
+    display: none;
+    width: 100%;
+    justify-content: center;
     }
 
     .nav-links nav ul {
-        flex-direction: column;
-        text-align: center;
+    flex-direction: column;
+    text-align: center;
     }
 
     .nav-links nav ul li {
-        margin: .625rem 0;
+    margin: .625rem 0;
     }
 
     /* Estilos para quando o menu estiver ativo */
     header.active .nav-links {
-        display: block;
-        background-color: #f9f9f9;
-        padding: 1rem;
-        width: 100%;
+    display: block;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    width: 100%;
     }
-header.active .social-icons-mobile {
+    header.active .social-icons-mobile {
     display: flex;
     justify-content: space-around;
-}
+    }
 
 
     /* Estilo da fonte nos links do menu mobile */
     header.active .nav-links nav ul li a {
-        font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
+    font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
     }
 
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
-        font-size: .8em;
-        margin-left: 15%;
-        margin-right: 15%;
-        text-align: justify;
+    font-size: .8em;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
     }
 
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.8em;
+    font-size: 2.8em;
     }
     /* Ajuste para o subtítulo em telas médias */
-        /* Início - Estilos para alinhar os ícones sociais */
+    /* Início - Estilos para alinhar os ícones sociais */
     header.active .nav-links nav ul .social-icons-mobile {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        padding: 0;
-        margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
     }
 
     header.active .nav-links nav ul .social-icons-mobile li {
-        margin: 0;
+    margin: 0;
     }
 
     header.active .nav-links nav ul li a {
-        font-size: 1.5rem;
+    font-size: 1.5rem;
     }
     /* Fim - Estilos para alinhar os ícones sociais */
-}
+    }
 
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
     .banner-title {
-        font-size: 2.5em;
+    font-size: 2.5em;
     }
 
     .banner-3 .banner-text {
-        padding: 1.875rem;
+    padding: 1.875rem;
     }
 
     .mini-bio {
-        font-size: .7em;
-        line-height: 1.7;
+    font-size: .7em;
+    line-height: 1.7;
     }
 
     /* Ajustes para o container de banners */
     .container-banners {
-        flex-direction: column;
-        height: auto;
+    flex-direction: column;
+    height: auto;
     }
 
     .container-banners > * {
-        width: 100%;
-        margin-bottom: 1.875rem;
+    width: 100%;
+    margin-bottom: 1.875rem;
     }
 
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.25em;
+    font-size: 2.25em;
     }
 
     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
     .banner-1 {
-        height: auto;
-        padding-top: 0;
-        padding-bottom: 0;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
     }
 
     .banner-1 img {
-        max-height: calc(100vh - 6rem);
-        object-fit: contain;
-        margin: 0;
-        padding: 0;
+    max-height: calc(100vh - 6rem);
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
     }
     /* FIM - Ajustes para o Banner 1 em Mobile */
 
     /* Início - Espaçamento entre as logos no mobile */
     .brand-row img {
-        margin: .625rem;
+    margin: .625rem;
     }
 
     .second-row img {
-        margin-top: 1.25rem;
+    margin-top: 1.25rem;
     }
     /* Fim - Espaçamento entre as logos no mobile */
 
     /* Início - Ajustes para o formulário de contato no mobile */
     footer .contact-form {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     }
     /* Fim - Ajustes para o formulário de contato no mobile */
-}
-
-/* Estilos para telas grandes (acima de 768px) */
-@media (min-width: 769px) {
-    .mini-bio {
-        font-size: 1.3rem;
     }
-}
 
-/* Keyframes para animações */
-@keyframes fadeInUp {
+    /* Estilos para telas grandes (acima de 768px) */
+    @media (min-width: 769px) {
+    .mini-bio {
+    font-size: 1.3rem;
+    }
+    }
+
+    /* Keyframes para animações */
+    @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
     }
-}
+    }
