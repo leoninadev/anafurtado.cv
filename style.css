@@ -7,15 +7,16 @@
     box-sizing: border-box;
 }
 
+/* Definição da fonte base no html */
 html {
-    font-size: 16px;
+    font-size: 16px; /* Tamanho base para facilitar o escalonamento */
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
 }
 
 body {
     font-family: 'Nixie One', sans-serif;
-    font-size: 1rem;
+    font-size: 1rem; /* Usando rem para tamanhos de fonte responsivos */
     color: #392523;
     background-color: #F8F2EA;
     line-height: 1.6;
@@ -648,4 +649,27 @@ header.active .social-icons-mobile {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*Estilo específico para o conteúdo.html*/
+@media (max-width: 768px) {
+  .conteudo-item-container {
+      flex-direction: column; /* Empilha os itens verticalmente */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .conteudo-texto {
+      margin-right: 0; /* Remove a margem */
+  }
+
+  .conteudo-imagem {
+      width: 100%; /* A imagem ocupa toda a largura */
+      max-height: 200px; /* Define uma altura máxima */
+      margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+  }
+
+  .conteudo-imagem img {
+      object-fit: cover; /* Garante que a imagem cubra o espaço */
+      object-position: center; /* Centraliza a imagem */
+  }
 }
