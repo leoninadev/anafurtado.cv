@@ -494,6 +494,7 @@ footer::after {
     .logo {
         font-size: 1.5em;
         margin-bottom: 0;
+         font-family: 'Nixie One', sans-serif !important;
     }
 
     /* Mostra o botão do menu */
@@ -518,6 +519,7 @@ footer::after {
 
     .nav-links nav ul li {
         margin: .625rem 0;
+         font-family: 'Fragment Core', sans-serif !important;
     }
 
     /* Estilos para quando o menu estiver ativo */
@@ -535,7 +537,7 @@ header.active .social-icons-mobile {
 
     /* Estilo da fonte nos links do menu mobile */
     header.active .nav-links nav ul li a {
-        font-family: 'Fragment Core', sans-serif; /* Adiciona a fonte Fragment Core */
+        font-family: 'Fragment Core', sans-serif !important; /* Adiciona a fonte Fragment Core */
     }
 
     /* Ajustes na mini-bio para telas menores */
@@ -547,10 +549,12 @@ header.active .social-icons-mobile {
         padding-right: 1rem; /* Adicionado padding direito */
         text-align: justify;
         box-sizing: border-box;
+         font-family: 'Glacial Indifference', sans-serif !important;
     }
 
     .container-banners .banner-texto .banner-subtitle {
         font-size: 2.8em;
+         font-family: 'Nixie One', sans-serif !important;
     }
 
 /* Início - Ajustes para o formulário de contato no mobile */
@@ -561,6 +565,7 @@ footer .contact-form {
     padding-left: 1rem; /* Adicionado padding esquerdo */
     padding-right: 1rem; /* Adicionado padding direito */
     box-sizing: border-box;
+     font-family: 'Nixie One', sans-serif !important;
 }
 /* Fim - Ajustes para o formulário de contato no mobile */
     /* Ajuste para o subtítulo em telas médias */
@@ -592,6 +597,18 @@ footer .contact-form {
         margin-right: 0; /* Remove a margem */
     }
 
+    .conteudo-texto h3 {
+         font-family: 'Fragment Core', sans-serif !important;
+    }
+
+    .conteudo-texto h2 {
+         font-family: 'Nixie One', sans-serif !important;
+    }
+
+    .conteudo-texto p {
+         font-family: 'Fragment Core', sans-serif !important;
+    }
+
     .conteudo-imagem {
         width: 100%; /* A imagem ocupa toda a largura */
         max-height: 200px; /* Define uma altura máxima */
@@ -616,6 +633,12 @@ section {
     width: 100%;
     box-sizing: border-box; /* Garante que o padding não aumente a largura */
 }
+ main h1{
+          font-family: 'Nixie One', sans-serif !important;
+        }
+        main p {
+             font-family: 'Fragment Core', sans-serif !important;
+        }
 }
 
 @media (max-width: 480px) {
