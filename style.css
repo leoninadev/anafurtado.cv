@@ -541,14 +541,28 @@ header.active .social-icons-mobile {
     /* Ajustes na mini-bio para telas menores */
     .mini-bio {
         font-size: .8em;
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem; /* Adicionado padding esquerdo */
+        padding-right: 1rem; /* Adicionado padding direito */
         text-align: justify;
+        box-sizing: border-box;
     }
 
     .container-banners .banner-texto .banner-subtitle {
         font-size: 2.8em;
     }
+
+/* Início - Ajustes para o formulário de contato no mobile */
+footer .contact-form {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* Adicionado padding esquerdo */
+    padding-right: 1rem; /* Adicionado padding direito */
+    box-sizing: border-box;
+}
+/* Fim - Ajustes para o formulário de contato no mobile */
     /* Ajuste para o subtítulo em telas médias */
         /* Início - Estilos para alinhar os ícones sociais */
     header.active .nav-links nav ul .social-icons-mobile {
@@ -567,6 +581,41 @@ header.active .social-icons-mobile {
         font-size: 1.5rem;
     }
     /* Fim - Estilos para alinhar os ícones sociais */
+
+/*Estilo específico para o conteúdo.html*/
+    .conteudo-item-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .conteudo-texto {
+        margin-right: 0; /* Remove a margem */
+    }
+
+    .conteudo-imagem {
+        width: 100%; /* A imagem ocupa toda a largura */
+        max-height: 200px; /* Define uma altura máxima */
+        margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+    }
+
+    .conteudo-imagem img {
+        object-fit: cover; /* Garante que a imagem cubra o espaço */
+        object-position: center; /* Centraliza a imagem */
+    }
+
+    /* Ajustes para o container de banners */
+    .container-banners {
+        padding-left: 1rem; /* Adicionado padding esquerdo */
+        padding-right: 1rem; /* Adicionado padding direito */
+        box-sizing: border-box;
+    }
+section {
+    padding: 3.75rem 1rem; /* Adicionado padding horizontal */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
 }
 
 @media (max-width: 480px) {
@@ -649,27 +698,4 @@ header.active .social-icons-mobile {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/*Estilo específico para o conteúdo.html*/
-@media (max-width: 768px) {
-  .conteudo-item-container {
-      flex-direction: column; /* Empilha os itens verticalmente */
-      align-items: flex-start; /* Alinha os itens à esquerda */
-  }
-
-  .conteudo-texto {
-      margin-right: 0; /* Remove a margem */
-  }
-
-  .conteudo-imagem {
-      width: 100%; /* A imagem ocupa toda a largura */
-      max-height: 200px; /* Define uma altura máxima */
-      margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
-  }
-
-  .conteudo-imagem img {
-      object-fit: cover; /* Garante que a imagem cubra o espaço */
-      object-position: center; /* Centraliza a imagem */
-  }
 }
