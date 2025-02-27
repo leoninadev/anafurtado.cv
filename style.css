@@ -196,10 +196,9 @@ section {
 /* Adiciona srcset para imagens responsivas */
 .banner-1 img {
     width: 100%;
-    height: auto;
-    max-height: 50rem;
-    object-fit: contain;
-    object-position: center;
+    height: 100%; /* Alterado para 100% para ocupar todo o espaço */
+    object-fit: cover; /* Adicionado object-fit: cover para cobrir o container */
+    object-position: top; /* Alterado para top para priorizar a parte superior */
     transition: transform .3s ease;
 }
 
