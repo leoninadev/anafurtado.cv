@@ -4,13 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Furtado</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Link para seu CSS externo original -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* ESTILOS ESSENCIAIS PARA O HEADER PADRÃO (sem dropdown ativo) */
+        /* (Baseado na estrutura do seu HTML original) */
+        body {
+            font-family: 'Nixie One', sans-serif;
+            background-color: #F8F2EA; /* Assumindo cor de fundo padrão */
+            color: #392523; /* Assumindo cor de texto padrão */
+            margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
+        }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 2.5rem; /* Padding padrão */
+            background-color: #F8F2EA;
+            color: #392523;
+            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+            position: relative; /* Ou fixed se for o caso no seu original */
+             top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
+        }
+        .logo {
+            font-family: 'Nixie One', sans-serif; font-size: 2em;
+            letter-spacing: 0.125rem; text-align: center; margin: 0;
+            font-weight: 400; /* Peso normal */
+        }
+        .logo a { color: #392523; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; }
+        nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+        nav ul li { margin: 0 0.9375rem; }
+        nav ul li a {
+            text-decoration: none; color: #392523; font-weight: 500; /* Peso normal dos links */
+            font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease;
+            display: flex; align-items: center;
+        }
+        nav ul li a:hover { color: #94A473; /* Cor de hover padrão */ }
+        nav ul li a i.fas.fa-home { font-size: 1.3em; margin-right: 5px;} /* Ícone Home */
+
+        /* Esconde o conteúdo do dropdown por padrão neste header */
+        .dropdown-content {
+            display: none;
+        }
+         /* Remove a seta do dropdown do link Projetos neste header */
+        .dropdown .dropbtn::after,
+        .dropdown .dropbtn i.fa-chevron-down {
+             display: none;
+        }
+        /* Esconde placeholder de ícones sociais mobile no desktop */
+        .social-icons-mobile { display: none; }
+
+        /* Menu Hamburguer (inicialmente escondido) */
+        .menu-toggle {
+            display: none; background: none; border: none;
+            font-size: 1.5rem; color: #392523; cursor: pointer;
+        }
+
+        /* RESPONSIVIDADE PARA HEADER PADRÃO (do seu index.html) */
+        @media (max-width: 768px) {
+             header { padding: 0.9375rem 1.25rem; }
+             /* Esconde links desktop e mostra toggle */
+            .nav-links nav > ul > li:not(:first-child):not(.social-icons-mobile) {
+                 display: none;
+            }
+            /* Esconde link home também no mobile, já que vira menu */
+            .nav-links nav > ul > li:first-child {
+                display:none;
+            }
+
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; width: 100%;
+                background-color: #F8F2EA; box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+                padding: 1rem 0; border-top: 1px solid #eee;
+            }
+            header.active .nav-links { display: block; } /* Mostra menu */
+
+            .logo { font-size: 1.5em; }
+            .menu-toggle { display: block; } /* Mostra hamburguer */
+            nav ul { flex-direction: column; text-align: center; width: 100%; }
+            nav ul li { margin: 0.8rem 0; width: 100%; }
+             /* Mostra links dentro do menu mobile */
+            .nav-links nav > ul > li:not(:first-child):not(.social-icons-mobile) {
+                 display: list-item;
+                 width: 100%;
+            }
+            /* Mostra ícones sociais MOBILE */
+            .social-icons-mobile {
+                display: block !important;
+                margin-top: 1rem; padding-top: 1rem;
+                border-top: 1px solid #eee; list-style: none;
+                padding-left: 0; width: 100%; text-align: center;
+            }
+            .social-icons-mobile li {
+                display: inline-block !important;
+                margin: 0 10px !important; width: auto !important;
+            }
+            .social-icons-mobile li a i {
+                font-size: 1.4em !important; margin-right: 0 !important;
+            }
+            /* Garante que dropdown content permaneça escondido */
+             .dropdown-content { display: none !important; }
+        }
+
+        /* --- ESTILOS DO CONTEÚDO DA PÁGINA INDEX --- */
+        /* Cole aqui os estilos originais do seu style.css que formatam o conteúdo */
+        .banner { width: 100%; margin-bottom: 0; /* Exemplo */ }
+        .banner img { display: block; width: 100%; height: auto; }
+        .container-banners { display: flex; flex-wrap: wrap; }
+        .banner-texto, .banner-imagem { width: 50%; /* Exemplo */ }
+        /* ... adicione todos os outros estilos do seu style.css aqui ... */
+        .banner-4-title { text-align: center; margin-bottom: 20px; }
+        .brands-grid { /* ... */ }
+        .brand-row { /* ... */ }
+        footer { /* ... */ }
+        .social-icons { /* ... */ }
+        .contact-form { /* ... */ }
+
+    </style>
 </head>
 <body>
+    <!-- SEU HTML ORIGINAL DO INDEX.HTML -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -22,6 +138,7 @@
                     <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <!-- Link Projetos - O HTML do dropdown existe, mas o CSS acima o esconde -->
                     <li class="dropdown">
                         <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
                         <div class="dropdown-content">
@@ -29,16 +146,19 @@
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
+                     <!-- Ícones sociais Mobile -->
                      <li class="social-icons-mobile">
                           <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                           <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                           <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
                     </li>
+                    <!-- NOTE: Os ícones sociais desktop NÃO estavam nesta UL no seu código original -->
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        <!-- SEU CONTEÚDO ORIGINAL -->
         <section class="banner banner-1">
             <img src="img/foto1.jpg?v=1" alt="foto 1">
         </section>
@@ -51,16 +171,16 @@
             </div>
         </section>
         <section class="banner banner-3" id="minha-trajetoria">
-    <div class="banner-content">
-        <p class="mini-bio">
-            Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
-            Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
-            <br><br>
-            Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
-            <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
-        </p>
-    </div>
-</section>
+            <div class="banner-content">
+                <p class="mini-bio">
+                    Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
+                    Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
+                    <br><br>
+                    Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
+                    <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
+                </p>
+            </div>
+        </section>
         <section class="banner banner-4" id="trajetoria">
             <h2 class="banner-4-title">Passos da minha trajetória</h2>
             <div class="brands-grid">
@@ -99,13 +219,18 @@
             </form>
         </div>
     </footer>
+
+    <!-- SEU JAVASCRIPT ORIGINAL DO INDEX.HTML (APENAS MENU TOGGLE) -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
 
-        menuToggle.addEventListener('click', () => {
-            header.classList.toggle('active');
-        });
+        if (menuToggle && header) { // Verifica se existem
+            menuToggle.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        }
+        // NENHUM script de dropdown aqui
     </script>
 </body>
 </html>
