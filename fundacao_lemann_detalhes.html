@@ -1,223 +1,267 @@
-<!-- HEADER (Permanece igual) -->
-<header>
-    <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
-    <button class="menu-toggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="nav-links">
-        <nav>
-            <ul>
-                <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
-                <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
-                <li class="dropdown">
-                    <a href="#" aria-label="Projetos" class="dropbtn">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
-                    <div class="dropdown-content">
-                        <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
-                        <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
-                    </div>
-                </li>
-                 <li class="social-icons-mobile">
-                      <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                      <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                      <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Fundação Lemann - Ana Furtado</title>
 
-<!-- Conteúdo Principal -->
-<main> <!-- O fundo castanho #392523 será aplicado aqui, mas o banner o cobrirá inicialmente -->
+    <!-- === CSS EXTERNO === -->
+    <!-- Garante que o header e estilos base venham do arquivo principal -->
+    <link rel="stylesheet" href="style.css">
 
-    <!-- **** NOVO BANNER INTRODUTÓRIO BEGE **** -->
-    <section class="page-intro-banner">
-        <!-- Link Voltar -->
-        <a href="javascript:history.back()" class="back-link">
-            <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
-        </a>
+    <!-- === FONTES E ÍCONES === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Título e Tags -->
-        <h2 class="page-title text-verde">Fundação Lemann</h2>
-        <div class="tags">
-             <span>Redação</span>
-             <span>Gestão de Redes Sociais</span>
-             <span>Campanha</span>
-             <span>Cobertura de Evento</span>
+    <!-- === TAG <STYLE> REMOVIDA === -->
+    <!-- Todos os estilos específicos agora estão no style.css -->
+
+</head>
+<body>
+    <!-- ======================= HEADER PADRÃO ======================= -->
+    <header>
+        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li class="dropdown">
+                        <!-- onclick removido, JS cuida pelo seletor .dropbtn -->
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                        </div>
+                    </li>
+                     <li class="social-icons-mobile">
+                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <!-- A linha divisória será aplicada via CSS nesta section -->
-    </section>
-    <!-- **** FIM DO BANNER INTRODUTÓRIO **** -->
+    </header>
 
+    <!-- =================== CONTEÚDO PRINCIPAL ===================== -->
+    <!-- Classe 'main-dark-bg' adicionada para ativar estilos de fundo escuro do style.css -->
+    <main class="main-dark-bg">
 
-    <!-- Grids de Conteúdo Detalhado (agora sobre o fundo escuro do main) -->
-    <div class="main-content-wrapper"> <!-- Wrapper opcional para padding, se necessário -->
-        <article id="campanha-citemaisuma">
-            <h3>CAMPANHA #CiteMaisUma</h3>
-            <div class="content-grid">
-                <!-- content-item divs -->
-                 <div class="content-item">
-                    <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
-                    <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>toolzin.com-....jpg</small>
-                </div>
-                <div class="content-item">
-                    <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
-                    <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_429...jpg</small>
-                </div>
-                <div class="content-item">
-                     <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
-                    <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_431...jpg</small>
-                </div>
-                 <div class="content-item">
-                    <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
-                    <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_470...jpg</small>
-                </div>
+        <!-- === BANNER INTRODUTÓRIO BEGE === -->
+        <section class="page-intro-banner">
+            <!-- Link Voltar -->
+            <a href="javascript:history.back()" class="back-link">
+                <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
+            </a>
+
+            <!-- Título e Tags -->
+            <h2 class="page-title text-verde">Fundação Lemann</h2>
+            <div class="tags">
+                 <span>Redação</span>
+                 <span>Gestão de Redes Sociais</span>
+                 <span>Campanha</span>
+                 <span>Cobertura de Evento</span>
             </div>
-        </article>
+        </section>
+        <!-- === FIM DO BANNER INTRODUTÓRIO === -->
 
-        <article id="campanha-declaracao-racial">
-            <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
-            <div class="content-grid">
-                <!-- content-item divs -->
-                <div class="content-item">
-                    <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
-                    <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_465...jpg</small>
+        <!-- === WRAPPER PARA CONTEÚDO PRINCIPAL (FUNDO ESCURO) === -->
+        <div class="main-content-wrapper">
+            <article id="campanha-citemaisuma">
+                <!-- Estilo do H3 virá da regra 'main.main-dark-bg .main-content-wrapper h3' no CSS -->
+                <h3>CAMPANHA #CiteMaisUma</h3>
+                <div class="content-grid">
+                    <!-- Itens do Grid -->
+                    <div class="content-item">
+                        <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
+                        <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>toolzin.com-....jpg</small>
+                    </div>
+                    <div class="content-item">
+                        <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
+                        <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_429...jpg</small>
+                    </div>
+                    <div class="content-item">
+                         <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
+                        <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_431...jpg</small>
+                    </div>
+                     <div class="content-item">
+                        <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
+                        <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_470...jpg</small>
+                    </div>
                 </div>
-                <div class="content-item">
-                    <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
-                    <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_468...jpg</small>
-                </div>
-                 <div class="content-item">
-                     <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
-                    <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_469...jpg</small>
-                </div>
-                 <div class="content-item">
-                    <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4">
-                    <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                     <small>Imagem não especificada</small>
-                </div>
-            </div>
-        </article>
+            </article>
 
-        <article id="campanha-always-on">
-            <h3>ALWAYS ON</h3>
-            <div class="content-grid">
-                <!-- content-item divs -->
-                 <div class="content-item">
-                    <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
-                    <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_453...jpg</small>
+            <article id="campanha-declaracao-racial">
+                <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
+                <div class="content-grid">
+                    <!-- Itens do Grid -->
+                    <div class="content-item">
+                        <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
+                        <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_465...jpg</small>
+                    </div>
+                    <div class="content-item">
+                        <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
+                        <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_468...jpg</small>
+                    </div>
+                     <div class="content-item">
+                         <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
+                        <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_469...jpg</small>
+                    </div>
+                     <div class="content-item">
+                        <!-- Usar imagem real se disponível -->
+                        <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4">
+                        <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                         <small>Imagem não especificada</small>
+                    </div>
                 </div>
-                <div class="content-item">
-                    <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
-                    <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                     <small>Snapinst.app_480...jpg</small>
-               </div>
-               <div class="content-item">
-                    <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
-                    <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>Snapinst.app_480...jpg</small>
+            </article>
+
+            <article id="campanha-always-on">
+                <h3>ALWAYS ON</h3>
+                <div class="content-grid">
+                    <!-- Itens do Grid -->
+                     <div class="content-item">
+                        <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
+                        <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_453...jpg</small>
+                    </div>
+                    <div class="content-item">
+                        <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
+                        <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                         <small>Snapinst.app_480...jpg</small>
+                   </div>
+                   <div class="content-item">
+                        <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
+                        <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>Snapinst.app_480...jpg</small>
+                    </div>
+                    <div class="content-item">
+                         <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
+                         <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                         <small>Snapinst.app_470...jpg</small>
+                    </div>
                 </div>
-                <div class="content-item">
-                     <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
-                     <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                     <small>Snapinst.app_470...jpg</small>
-                </div>
-            </div>
-        </article>
+            </article>
 
-        <article id="artigos">
-            <h3>ARTIGOS</h3>
-             <div class="content-grid">
-                <!-- content-item divs -->
-                <div class="content-item">
-                    <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
-                    <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>1736773435916.png</small>
-                </div>
-                 <div class="content-item">
-                    <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
-                    <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
-                    <small>1734728039157.png</small>
-                </div>
-             </div>
-        </article>
-    </div> <!-- Fim do .main-content-wrapper -->
+            <article id="artigos">
+                <h3>ARTIGOS</h3>
+                 <div class="content-grid">
+                    <!-- Itens do Grid -->
+                    <div class="content-item">
+                        <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
+                        <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>1736773435916.png</small>
+                    </div>
+                     <div class="content-item">
+                        <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
+                        <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
+                        <small>1734728039157.png</small>
+                    </div>
+                 </div>
+            </article>
+        </div> <!-- Fim do .main-content-wrapper -->
 
-</main>
+    </main>
+    <!-- ===================== FIM MAIN ============================ -->
 
-<!-- FOOTER (Permanece igual) -->
-<footer>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-    </div>
-     <p>Ana Furtado © <span id="currentYear"></span></p>
-</footer>
 
-<!-- SCRIPTS (Permanece igual) -->
-<script>
-    // ... (todo o script JS anterior) ...
+    <!-- ================= FOOTER PADRÃO =========================== -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+         <!-- Parágrafo do Copyright com ID para CSS e Span para JS -->
+         <p id="copyright">Ana Furtado © <span id="currentYear"></span></p>
+         <!-- Formulário de contato não presente nesta página -->
+    </footer>
+    <!-- ===================== FIM FOOTER ========================== -->
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('header');
-    const dropdownButtons = document.querySelectorAll('.dropbtn'); // Seleciona todos os botões de dropdown
 
-    // Script Menu Hamburguer
-    if (menuToggle && header) {
-        menuToggle.addEventListener('click', () => {
-            header.classList.toggle('active');
-            // Fecha dropdowns abertos ao fechar o menu hamburguer
-            if (!header.classList.contains('active')) {
-                closeAllDropdowns(null);
-            }
+    <!-- ================= SCRIPT PADRÃO (Menu e Dropdown) ======== -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+        const dropdownButtons = document.querySelectorAll('.dropbtn'); // Seleciona todos os botões de dropdown
+
+        // Script Menu Hamburguer
+        if (menuToggle && header) {
+            menuToggle.addEventListener('click', () => {
+                header.classList.toggle('active');
+                // Fecha dropdowns abertos ao fechar o menu hamburguer
+                if (!header.classList.contains('active')) {
+                    closeAllDropdowns(null);
+                }
+            });
+        }
+
+        // === Script Dropdown Aprimorado ===
+        function closeAllDropdowns(exceptThisOne) {
+            document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
+                if (dropdown !== exceptThisOne) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Previne o comportamento padrão do link '#'
+                const dropdownMenu = button.closest('.dropdown'); // Encontra o elemento .dropdown pai
+                if (!dropdownMenu) return; // Sai se não encontrar o pai
+                const dropdownContent = dropdownMenu.querySelector('.dropdown-content'); // Pega o .dropdown-content irmão
+
+                if (!dropdownContent) return; // Sai se não encontrar o conteúdo
+
+                const isCurrentlyShown = dropdownContent.classList.contains('show');
+
+                closeAllDropdowns(null); // Fecha todos antes de abrir/fechar o clicado
+
+                if (!isCurrentlyShown) {
+                    dropdownContent.classList.add('show');
+                    // Adicionar classe 'open' ao pai para possível rotação do ícone (opcional)
+                    // dropdownMenu.classList.add('open');
+                } else {
+                    // Remover classe 'open' ao fechar (opcional)
+                    // dropdownMenu.classList.remove('open');
+                }
+                // Se já estava aberto, o closeAllDropdowns já o fechou.
+            });
         });
-    }
 
-    // === Script Dropdown Aprimorado ===
-    function closeAllDropdowns(exceptThisOne) {
-        document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
-            if (dropdown !== exceptThisOne) {
-                dropdown.classList.remove('show');
-            }
+        // Fecha dropdowns se clicar fora
+        window.addEventListener('click', (event) => {
+          // Verifica se o clique NÃO foi em um botão dropdown OU dentro de um conteúdo de dropdown
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
+             closeAllDropdowns(null);
+             // Remover classe 'open' de todos os dropdowns pais (opcional)
+             // document.querySelectorAll('.dropdown.open').forEach(menu => menu.classList.remove('open'));
+          }
         });
-    }
+        // === Fim Script Dropdown ===
 
-    dropdownButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // Previne o comportamento padrão do link '#'
-            const dropdownContent = button.nextElementSibling; // Pega o .dropdown-content irmão
-            const isCurrentlyShown = dropdownContent.classList.contains('show');
+        // Script para atualizar o ano no footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if(currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+    <!-- ===================== FIM SCRIPT ========================== -->
 
-            closeAllDropdowns(null); // Fecha todos antes de abrir/fechar o clicado
-
-            if (!isCurrentlyShown) {
-                dropdownContent.classList.add('show');
-            }
-            // Se já estava aberto, o closeAllDropdowns já o fechou.
-        });
-    });
-
-    // Fecha dropdowns se clicar fora
-    window.addEventListener('click', (event) => {
-      // Verifica se o clique NÃO foi em um botão dropdown OU dentro de um conteúdo de dropdown
-      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
-         closeAllDropdowns(null);
-      }
-    });
-    // === Fim Script Dropdown ===
-
-    // Script para atualizar o ano no footer
-    const currentYearSpan = document.getElementById('currentYear');
-    if(currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-</script>
+</body>
+</html>
