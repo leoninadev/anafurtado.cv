@@ -3,132 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundação Lemann - Ana Furtado</title> <!-- Título Atualizado -->
+    <!-- Nome do arquivo como 'conteudo.html' mas título pode ser específico -->
+    <title>Conteúdo - Fundação Lemann - Ana Furtado</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos GERAIS (Mantidos) */
+        /* Estilos GERAIS */
         body {
             font-family: 'Nixie One', sans-serif;
-            background-color: #F8F2EA; /* Fundo geral bege claro */
-            color: #392523;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.25rem 2.5rem;
             background-color: #F8F2EA;
+            color: #392523;
+            margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
+        }
+
+        /* === HEADER PADRÃO (do index.html) === */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 2.5rem; background-color: #F8F2EA;
             box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-sizing: border-box;
+            position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
         }
-
         .logo {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 2em;
-            letter-spacing: 0.125rem;
-            text-align: center;
-            margin: 0;
+            font-family: 'Nixie One', sans-serif; font-size: 2em;
+            letter-spacing: 0.125rem; text-align: center; margin: 0;
         }
-
-        .logo a {
-            color: #392523;
-            text-decoration: none;
-        }
-
-        .nav-links {
-             display: flex;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 0.9375rem;
-        }
-
-        /* Header Links ATUALIZADOS - sem dropdown Portfólio */
+        .logo a { color: #392523; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; }
+        nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+        nav ul li { margin: 0 0.9375rem; }
         nav ul li a {
-            text-decoration: none;
-            color: #392523;
-            font-weight: 500;
-            font-family: 'Fragment Core', sans-serif;
-            transition: color 0.3s ease;
+            text-decoration: none; color: #392523; font-weight: 500;
+            font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease;
+            display: flex; align-items: center;
         }
-
-        nav ul li a:hover {
-            color: #94A473;
+        nav ul li a:hover { color: #94A473; }
+        nav ul li a i { margin-right: 5px; font-size: 1.1em; }
+        nav ul li a[aria-label="Home"] i { font-size: 1.3em; }
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none; position: absolute; background-color: #f9f9f9;
+            min-width: 10rem; box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+            z-index: 1; opacity: 0; transition: opacity 0.3s ease;
         }
-
-        /* Remover estilos específicos do dropdown se não houver mais nenhum */
-        /* .dropdown, .dropdown-content, .dropbtn etc. podem ser removidos se não usados */
-
+        .dropdown-content.show { display: block; opacity: 1; }
+        .dropdown-content a {
+            padding: 0.75rem 1rem; text-decoration: none; display: block;
+            color: #392523; font-family: 'Fragment Core', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dropdown-content a:hover { background-color: #f1f1f1; color: #94A473; }
+        .dropbtn {
+            cursor: pointer; background: none; border: none; color: inherit;
+            font: inherit; padding: 0; display: inline-flex; align-items: center;
+        }
+        .dropbtn i { margin-left: 5px; }
+        .social-icons-mobile { display: none; }
         .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #392523;
-            cursor: pointer;
+            display: none; background: none; border: none;
+            font-size: 1.5rem; color: #392523; cursor: pointer;
         }
+        /* === FIM HEADER PADRÃO === */
+
 
         /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
         main {
              padding: 20px;
-             padding-top: 100px; /* Espaço para o header fixo */
-             /* Removido background-color daqui, aplicado via classe */
+             padding-top: 100px;
+             /* Fundo cinza aplicado diretamente */
+             background-color: #EAEAEA;
         }
-
-        /* NOVA CLASSE para fundo cinza */
-        .bg-gray {
-            background-color: #EAEAEA; /* Tom de cinza claro - ajuste se necessário */
-        }
-        /* Ajustar cor do texto dentro de bg-gray se necessário (provavelmente não, pois é claro) */
-        /* .bg-gray h2, .bg-gray p { color: #392523; } */
-
 
         main section {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            /* Remover borda inferior se não desejar mais a separação */
-            /* border-bottom: 1px solid #dcdcdc; */
+            border-bottom: none; /* Sem borda no fundo cinza */
         }
          main section:last-of-type {
-             border-bottom: none;
+             margin-bottom: 0; padding-bottom: 0;
          }
 
          main h2 {
             font-family: 'Nixie One', sans-serif;
             font-size: 2.2em;
             color: #392523;
-            margin-bottom: 10px; /* Menos espaço antes das tags */
+            margin-bottom: 10px; /* Reduzido */
             font-weight: 400;
          }
-         /* Título "Tipos de Conteúdo" */
-         main h3 {
-             font-family: 'Fragment Core', sans-serif;
-             font-weight: 600;
-             font-size: 1.1em; /* Menor, mais sutil */
-             color: #5c4b49; /* Cor mais suave */
-             margin-top: 0; /* Colado no h2 */
-             margin-bottom: 15px;
-         }
+         /* Título H3 REMOVIDO */
 
          main p {
             font-family: 'Fragment Core', sans-serif;
@@ -136,184 +100,173 @@
             color: #392523;
             margin-bottom: 1em;
          }
-         /* Data */
+         /* Data - Fonte Alterada */
          main p.date {
-             font-family: 'Playfair Display', serif;
-             font-style: italic;
+             font-family: 'Fragment Core', sans-serif; /* ALTERADO */
+             font-style: italic; /* Mantido */
              color: #5c4b49;
-             margin-top: 15px; /* Espaço após as tags */
-             margin-bottom: 10px;
+             margin-top: 5px; /* Ajustado para seguir H2 */
+             margin-bottom: 15px; /* Espaço antes da descrição */
              font-size: 0.95em;
          }
 
-         /* Links */
          main a {
-             color: #94A473;
-             text-decoration: none;
-             font-weight: 600;
+             color: #94A473; text-decoration: none; font-weight: 600;
          }
-         main a:hover {
-             text-decoration: underline;
-         }
+         main a:hover { text-decoration: underline; }
 
-        /* Texto verde */
-        .text-verde {
-            color: #7A8A5A;
-        }
-        h2.text-verde {
-             color: #7A8A5A;
-        }
+        .text-verde { color: #7A8A5A; }
+        h2.text-verde { color: #7A8A5A; }
 
-        /* Tags */
-        .tags {
-            margin-top: 5px; /* Espaço após o h3 */
-            margin-bottom: 5px; /* Espaço antes da data */
-        }
-        .tags span {
-            display: inline-block;
-            background-color: #dcdcdc; /* Cinza um pouco mais escuro que o fundo */
-            padding: 5px 12px;
-            margin: 4px 5px 4px 0;
-            border-radius: 15px;
-            font-size: 0.85em; /* Menor */
-            font-family: 'Fragment Core', sans-serif;
-            color: #392523;
-            font-weight: 400;
-        }
+        /* Estilos de Tags REMOVIDOS ou não usados nesta página */
+        /* .tags, .tags span { ... } */
 
-        /* Footer (Mantido) */
+        /* Footer */
         footer {
-            margin-top: 0; /* Remover margem se main tem fundo */
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #5c4b49;
-            font-family: 'Fragment Core', sans-serif;
-            border-top: 1px solid #ddd;
-            background-color: #F8F2EA; /* Fundo bege original */
+            margin-top: 0; padding: 25px 20px; text-align: center; font-size: 0.9em;
+            color: #5c4b49; font-family: 'Fragment Core', sans-serif;
+            border-top: 1px solid #ddd; background-color: #F8F2EA;
         }
+        footer .social-icons { margin-bottom: 20px; }
+        footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
+        footer .social-icons a:hover { color: #94A473; }
+        footer .contact-form { display: none; } /* Formulário oculto */
 
-        /* Estilos de Responsividade (REVISADOS para header sem dropdown) */
+
+        /* === RESPONSIVIDADE (Baseado no index.html) === */
         @media (max-width: 768px) {
-            header {
-                padding: 0.9375rem 1.25rem;
-            }
-
+            header { padding: 0.9375rem 1.25rem; }
             .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #F8F2EA;
-                box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-                padding: 1rem 0;
+                display: none; position: absolute; top: 100%; left: 0; width: 100%;
+                background-color: #F8F2EA; box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+                padding: 1rem 0; border-top: 1px solid #eee;
             }
-
-            header.active .nav-links {
-                display: block;
+            header.active .nav-links { display: block; }
+            .logo { font-size: 1.5em; }
+            .menu-toggle { display: block; }
+            nav ul { flex-direction: column; text-align: center; width: 100%; }
+            nav ul li { margin: 0.8rem 0; width: 100%; }
+            .dropdown-content {
+                 position: static; box-shadow: none; background-color: transparent;
+                 min-width: auto; opacity: 1; display: none; padding-left: 20px;
+                 border-left: 2px solid #e0d8cf; margin: 5px 15% 0 15%;
             }
+            .dropdown-content.show { display: block; }
+            .dropdown-content a { padding: 0.5rem 1rem; color: #5c4b49; font-size: 0.95em; text-align: left; }
+            .dropdown-content a:hover { background-color: #e0d8cf; }
+            .dropbtn { width: 100%; justify-content: center; }
+            .social-icons-mobile { display: block; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee; }
+            .social-icons-mobile li { display: inline-block; margin: 0 10px; }
+            .social-icons-mobile li a i { font-size: 1.4em; margin-right: 0; }
 
-            .logo {
-                font-size: 1.5em;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                width: 100%;
-            }
-
-            nav ul li {
-                margin: 0.8rem 0;
-            }
-
-            /* Remover regras de dropdown mobile se não houver mais dropdowns */
-
-             main {
-                 padding-top: 80px;
-                 padding-left: 15px;
-                 padding-right: 15px;
-             }
+             main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
              main h2 { font-size: 1.8em; }
-             main h3 { font-size: 1em; }
-             .tags span { font-size: 0.8em; padding: 4px 10px; }
+             main p.date { font-size: 0.9em; }
         }
-
     </style>
 </head>
 <body>
+    <!-- HEADER PADRÃO (COPIADO DO INDEX) -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
-
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <div class="nav-links">
             <nav>
                 <ul>
-                    <!-- NAVEGAÇÃO ATUALIZADA - Sem Dropdown Portfólio -->
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="portfolio-geral.html">Portfólio</a></li> <!-- Link direto -->
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                        </div>
+                    </li>
+                     <li class="social-icons-mobile">
+                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
-             <i class="fas fa-bars"></i>
-        </button>
     </header>
 
     <!-- Conteúdo Principal com fundo cinza -->
-    <main class="bg-gray">
+    <main> <!-- Fundo cinza aplicado via CSS -->
 
         <!-- Seção Introdutória -->
         <section id="intro-fundacao-lemann">
             <h2 class="text-verde">Fundação Lemann</h2>
 
-             <!-- Título e Tags Movidos para cá -->
-            <h3>Fundação Lemann: Tipos de Conteúdo</h3>
-            <div class="tags">
-                 <span>Redação</span>
-                 <span>Gestão de Redes Sociais</span>
-                 <span>Campanha</span>
-                 <span>Cobertura de Evento</span>
-            </div>
+            <!-- Título H3 Removido -->
+            <!-- Tags Removidas -->
 
+            <!-- Data com fonte ajustada no CSS -->
             <p class="date"><em>[Oct. 2024 - Presente]</em></p>
+
+            <!-- Descrição -->
             <p>
                 Organização brasileira que investe em educação e desenvolvimento
                 de lideranças para promover mudanças sistêmicas no Brasil. Seu foco
                 principal está na melhoria da educação pública e na formação de
                 lideranças comprometidas com impacto social.
             </p>
-            <!-- Link para a NOVA PÁGINA de detalhes, sem seta -->
+            <!-- Link para a página de detalhes -->
             <p><a href="fundacao_lemann_detalhes.html">Conheça minha atuação</a></p>
         </section>
 
-        <!-- A SEÇÃO #conteudos-detalhados FOI REMOVIDA DAQUI -->
-
     </main>
 
-    <footer>
+    <!-- FOOTER (Simplificado) -->
+     <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
          <p>Ana Furtado © <span id="currentYear"></span></p>
-         <!-- <p style="font-size: 0.8em; margin-top: 5px;">Site por Rawse Creative</p> -->
     </footer>
 
+    <!-- Script Padrão (COPIADO DO INDEX) -->
     <script>
-        // Script para o Menu Hamburguer (Mantido)
-        function toggleMenu() {
-            const header = document.querySelector('header');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
             header.classList.toggle('active');
+        });
+
+        // === Script Dropdown (Adicionado do Index) ===
+        function toggleDropdown(event) {
+            var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
+            closeAllDropdowns(dropdownContent);
+            if (dropdownContent) {
+                dropdownContent.classList.toggle('show');
+            }
         }
+        function closeAllDropdowns(exceptThisOne) {
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+                if (dropdown !== exceptThisOne && dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
+             closeAllDropdowns(null);
+          }
+        }
+        // === Fim Script Dropdown ===
 
-        // Remover funções toggleDropdown e closeAllDropdowns se não houver mais dropdowns
-        // window.onclick também pode ser simplificado ou removido se não houver dropdowns
-
-        // Script para atualizar o ano no footer (Mantido)
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Script para atualizar o ano no footer
+        if(document.getElementById('currentYear')) {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        }
     </script>
 
 </body>
