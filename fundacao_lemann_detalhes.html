@@ -44,6 +44,7 @@
         font-size: 1.1em;
         color: inherit;
     }
+    /* Estilo específico para ícones sociais no desktop */
     nav ul li a[aria-label="LinkedIn"] i,
     nav ul li a[aria-label="Instagram"] i,
     nav ul li a[aria-label="E-mail"] i {
@@ -70,7 +71,12 @@
         font: inherit; padding: 0; display: inline-flex; align-items: center;
     }
     .dropbtn i { margin-left: 5px; }
-    .social-icons-mobile { display: none; }
+
+    /* Esconder container mobile por padrão (desktop) */
+    .social-icons-mobile {
+        display: none;
+    }
+
     .menu-toggle {
         display: none; background: none; border: none;
         font-size: 1.5rem; color: #392523; cursor: pointer;
@@ -236,10 +242,18 @@ footer .contact-form { display: none; }
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
      header { padding: 0.9375rem 1.25rem; }
-    .nav-links nav > ul > li:not(.dropdown):not(:first-child):not(.social-icons-mobile),
-    .nav-links nav > ul > li > a[aria-label="LinkedIn"],
-    .nav-links nav > ul > li > a[aria-label="Instagram"],
-    .nav-links nav > ul > li > a[aria-label="E-mail"] { }
+
+    /* Esconder links de texto e ícones sociais desktop */
+    .nav-links nav > ul > li:not(.dropdown):not(:first-child):not(.social-icons-mobile) {
+        /* Você pode esconder outros itens aqui se precisar */
+    }
+     /* Esconde especificamente os links dos ícones sociais desktop */
+     nav > ul > li > a[aria-label="LinkedIn"],
+     nav > ul > li > a[aria-label="Instagram"],
+     nav > ul > li > a[aria-label="E-mail"] {
+         display: none;
+     }
+
     .nav-links {
         display: none; position: absolute; top: 100%; left: 0; width: 100%;
         background-color: #F8F2EA; box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
@@ -251,11 +265,6 @@ footer .contact-form { display: none; }
     .menu-toggle { display: block; }
     nav ul { flex-direction: column; text-align: center; width: 100%; }
     nav ul li { margin: 0.8rem 0; width: 100%; }
-     nav ul li a[aria-label="LinkedIn"],
-     nav ul li a[aria-label="Instagram"],
-     nav ul li a[aria-label="E-mail"] {
-         display: none;
-     }
 
     .dropdown-content {
          position: static; box-shadow: none; background-color: transparent;
@@ -267,24 +276,31 @@ footer .contact-form { display: none; }
     .dropdown-content a:hover { background-color: #e0d8cf; }
     .dropbtn { width: 100%; justify-content: center; }
 
+    /* Estilos para o CONTAINER dos ícones sociais no mobile */
     .social-icons-mobile {
-        display: block !important;
+        display: block !important; /* Mostra o container no mobile */
         margin-top: 1rem;
         padding-top: 1rem;
         border-top: 1px solid #eee;
-        list-style: none;
+        list-style: none; /* Remove o bullet point do li container */
         padding-left: 0;
         width: 100%;
-        text-align: center;
+        text-align: center; /* Centraliza os links inline */
     }
-    .social-icons-mobile li {
-        display: inline-block !important;
-        margin: 0 10px !important;
-        width: auto !important;
+    /* Estilo para os LINKS dentro do container mobile */
+    .social-icons-mobile a {
+        display: inline-block !important; /* Coloca os links lado a lado */
+        margin: 0 10px !important; /* Espaçamento entre os ícones */
+        color: #392523; /* Cor padrão do ícone */
+        transition: color 0.3s ease;
     }
-    .social-icons-mobile li a i {
-        font-size: 1.4em !important;
-        margin-right: 0 !important;
+    .social-icons-mobile a:hover {
+        color: #94A473; /* Cor no hover */
+    }
+    /* Estilo para os ÍCONES dentro dos links DENTRO do container mobile */
+    .social-icons-mobile a i {
+        font-size: 1.4em !important; /* Tamanho do ícone no mobile */
+        margin-right: 0 !important; /* Remove margem extra se houver */
     }
 
      /* Conteúdo principal mobile */
@@ -331,16 +347,17 @@ footer .contact-form { display: none; }
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
-                    <!-- ÍCONES SOCIAIS DESKTOP -->
+                    <!-- ÍCONES SOCIAIS DESKTOP (Serão escondidos no mobile pelo CSS) -->
                     <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
 
-                    <!-- ÍCONES SOCIAIS MOBILE -->
+                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE (Será mostrado no mobile pelo CSS) -->
                      <li class="social-icons-mobile">
-                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                          <!-- Links diretamente dentro do container li -->
+                          <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                          <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -421,16 +438,22 @@ footer .contact-form { display: none; }
 
     menuToggle.addEventListener('click', () => {
         header.classList.toggle('active');
+        // Ao abrir/fechar o menu mobile, também fechamos qualquer dropdown aberto
+        closeAllDropdowns(null);
     });
 
     // === Script Dropdown ===
     function toggleDropdown(event) {
         var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
-        closeAllDropdowns(dropdownContent);
-        if (dropdownContent) {
-            dropdownContent.classList.toggle('show');
+        var isCurrentlyShown = dropdownContent && dropdownContent.classList.contains('show');
+        closeAllDropdowns(null); // Fecha todos primeiro
+        if (dropdownContent && !isCurrentlyShown) { // Abre apenas se não estava aberto
+            dropdownContent.classList.add('show');
         }
+        // Impede que o clique no link navegue ou feche o menu via window.onclick
+        event.stopPropagation();
     }
+
     function closeAllDropdowns(exceptThisOne) {
         var dropdowns = document.querySelectorAll('.dropdown-content');
         dropdowns.forEach(function(dropdown) {
@@ -439,8 +462,11 @@ footer .contact-form { display: none; }
             }
         });
     }
+
+    // Fecha dropdowns se clicar fora deles
     window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
+      // Verifica se o clique NÃO foi no botão do dropdown OU dentro de um conteúdo de dropdown
+      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content')) {
          closeAllDropdowns(null);
       }
     }
@@ -450,6 +476,21 @@ footer .contact-form { display: none; }
     if(document.getElementById('currentYear')) {
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     }
+
+     // Fecha o menu mobile se um link dentro dele for clicado (opcional, mas boa UX)
+    const navLinksContainer = document.querySelector('.nav-links');
+    if (navLinksContainer) {
+        navLinksContainer.addEventListener('click', (event) => {
+            // Verifica se o clique foi em um link 'a' e se o menu mobile está ativo
+            if (event.target.tagName === 'A' && header.classList.contains('active')) {
+                 // Verifica se NÃO é o botão do dropdown para permitir que ele funcione
+                 if (!event.target.classList.contains('dropbtn') && !event.target.closest('.dropbtn')) {
+                    header.classList.remove('active'); // Fecha o menu
+                 }
+            }
+        });
+    }
+
 </script>
 
 </body>
