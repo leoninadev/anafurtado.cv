@@ -11,7 +11,8 @@
 html {
     font-size: 16px; /* Tamanho base para facilitar o escalonamento */
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    /* Ajuste o scroll-padding-top para a altura real do seu header fixo */
+    scroll-padding-top: 7rem; /* Ex: 112px se o header tiver essa altura */
 }
 
 body {
@@ -20,7 +21,7 @@ body {
     color: #392523;
     background-color: #F8F2EA;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
 a {
@@ -53,19 +54,14 @@ textarea,
 select {
     font: inherit;
     border: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 0; /* Pode ajustar se quiser bordas arredondadas */
     padding: 0.5em;
     display: block;
     width: 100%;
 }
 
 /* Layout */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+/* html, body height: 100% removido - pode causar problemas com alguns layouts */
 
 /* Header */
 header {
@@ -77,8 +73,11 @@ header {
     box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
     position: fixed;
     top: 0;
+    left: 0; /* Garante que comece na esquerda */
     width: 100%;
     z-index: 1000;
+    /* Adicionado box-sizing para garantir que padding não aumente a largura total */
+    box-sizing: border-box;
 }
 
 /* Logo */
@@ -88,15 +87,24 @@ header {
     letter-spacing: .125rem;
     text-align: center;
     font-weight: bold; /* Garante que o texto seja exibido em negrito */
+    margin: 0; /* Reset de margem */
 }
 
 .logo a {
     color: #392523;
 }
 
+.nav-links { /* Adicionado para alinhar itens no desktop */
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
     display: flex;
+    align-items: center; /* Alinha itens verticalmente */
     list-style: none;
+    margin: 0; /* Reset de margem */
+    padding: 0; /* Reset de padding */
 }
 
 nav ul li {
@@ -110,12 +118,24 @@ nav ul li a {
     font-weight: 500;
     font-family: 'Fragment Core', sans-serif;
     transition: color .3s ease;
+    display: flex; /* Para alinhar ícones e texto */
+    align-items: center; /* Para alinhar ícones e texto */
 }
+
+nav ul li a i { /* Estilo para ícones dentro dos links */
+    margin-right: 5px;
+    font-size: 1.1em; /* Tamanho padrão do ícone */
+}
+nav ul li a[aria-label="Home"] i { /* Ícone Home um pouco maior */
+    font-size: 1.3em;
+}
+
 
 nav ul li a:hover {
     color: #94A473;
 }
 
+/* Dropdown Styles */
 .dropdown {
     position: relative;
 }
@@ -128,22 +148,25 @@ nav ul li a:hover {
     box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,.2);
     z-index: 1;
     opacity: 0;
+    transition: opacity 0.3s ease; /* Transição suave */
+    margin-top: 5px; /* Pequeno espaço entre botão e menu */
+    left: 0; /* Alinha à esquerda por padrão */
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    overflow: hidden; /* Garante que o conteúdo respeite o border-radius */
 }
 
-/* Adicionado para o script do dropdown */
 .dropdown-content.show {
     display: block;
     opacity: 1;
 }
 
-/* Estilo para links do dropdown */
 .dropdown-content a {
     padding: .75rem 1rem;
     text-decoration: none;
     display: block;
     color: #392523;
     font-family: 'Fragment Core', sans-serif;
-    transition: color .3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
 }
 
 .dropdown-content a:hover {
@@ -151,108 +174,257 @@ nav ul li a:hover {
     color: #94A473;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-    opacity: 1;
-}
-
+/* Botão do Dropdown */
 .dropbtn {
     cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    display: inline-flex; /* Alinha ícone chevron */
+    align-items: center; /* Alinha ícone chevron */
 }
+.dropbtn i { /* Ícone chevron */
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+/* Rotaciona o chevron quando o dropdown está aberto (requer JS para adicionar classe 'open' ao .dropdown ou .dropbtn) */
+/* .dropdown.open .dropbtn i { transform: rotate(180deg); } */
 
-/* Banner Sections */
+/* --- MAIN CONTENT AREA --- */
 main {
-    padding-top: 2rem;
+    /* Padding top GERAL para compensar o header fixo. Ajuste este valor! */
+    padding-top: 100px; /* Exemplo: altura do header + algum espaço */
+    /* Remove padding lateral e inferior padrão, será adicionado por seções ou wrappers */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    /* Cor de fundo padrão (bege) - páginas específicas podem sobrescrever */
+    background-color: #F8F2EA;
+    /* Garante que o main ocupe pelo menos a altura restante da viewport */
+    min-height: calc(100vh - 100px - 75px); /* Ajuste 100px (header) e 75px (footer) se necessário */
+    box-sizing: border-box;
 }
 
+/* --- ESTILOS PARA PÁGINAS COM FUNDO ESCURO E BANNER INTRO BEGE --- */
+/* Adicione a classe 'main-dark-bg' ao <main> nessas páginas */
+main.main-dark-bg {
+    background-color: #392523; /* Fundo castanho escuro */
+    color: #F8F2EA; /* Texto padrão claro */
+}
+
+.page-intro-banner {
+    background-color: #F8F2EA; /* Fundo Bege */
+    color: #392523; /* Cor de texto padrão escura */
+    padding: 30px 20px 25px 20px; /* Espaçamento interno */
+    border-bottom: 1px solid #d1c8bf; /* Linha divisória sutil */
+    margin-bottom: 40px; /* Espaço entre a linha e o conteúdo abaixo */
+    /* Padding lateral padrão para alinhar com conteúdo abaixo */
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.page-intro-banner .back-link {
+     display: inline-block;
+     margin-bottom: 20px;
+     font-size: 0.9em;
+     color: #5c4b49;
+     font-family: 'Fragment Core', sans-serif;
+     font-weight: 400;
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+ .page-intro-banner .back-link i { margin-right: 5px; }
+ .page-intro-banner .back-link:hover {
+     color: #7A8A5A;
+     text-decoration: underline;
+ }
+
+.page-intro-banner .page-title {
+     font-family: 'Nixie One', sans-serif;
+     font-size: 2.2em;
+     color: #7A8A5A; /* Verde */
+     margin-top: 0;
+     margin-bottom: 5px;
+     font-weight: 400;
+     padding-bottom: 0;
+     border-bottom: none;
+}
+.text-verde { color: #7A8A5A !important; } /* Helper class */
+
+.page-intro-banner .tags {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.page-intro-banner .tags span {
+    display: inline-block;
+    background-color: #7A8A5A; /* Fundo verde */
+    color: #F8F2EA; /* Texto claro */
+    padding: 5px 12px;
+    margin: 4px 5px 4px 0;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 400;
+}
+
+/* Wrapper para conteúdo principal em páginas com fundo escuro */
+.main-content-wrapper {
+    padding-left: 2.5rem; /* Mesmo padding lateral do header */
+    padding-right: 2.5rem;
+    padding-bottom: 40px; /* Espaço antes do footer */
+}
+
+/* Estilo para H3 dentro do conteúdo principal escuro */
+main.main-dark-bg .main-content-wrapper h3 {
+     font-family: 'Fragment Core', sans-serif;
+     font-weight: 600;
+     font-size: 1.6em;
+     color: #F8F2EA; /* Título claro */
+     margin-top: 0; /* Espaçamento vem do margin-bottom do banner */
+     margin-bottom: 25px;
+     border-bottom: 1px solid #7a6a63; /* Linha divisória sutil */
+     padding-bottom: 10px;
+}
+/* Remove margin-top extra do primeiro h3 */
+main.main-dark-bg .main-content-wrapper article:first-of-type h3 {
+    margin-top: 0;
+}
+
+/* Grid de conteúdo (usado na página Lemann) */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+/* Cards de conteúdo (usado na página Lemann) */
+.content-item {
+    border: 1px solid #5a4a46; /* Borda sutil para separar do fundo escuro quando hover */
+    padding: 20px;
+    text-align: center;
+    background-color: #F8F2EA; /* Fundo BEGE claro */
+    border-radius: 8px;
+    color: #392523; /* TEXTO ESCURO dentro do card */
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.content-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+.content-item img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 4px;
+    border: 1px solid #e0d8cf;
+}
+.content-item a {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 600;
+    font-size: 1.05em;
+    word-wrap: break-word;
+    color: #7A8A5A; /* Verde */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.content-item a:hover {
+     color: #392523; /* Marrom no hover */
+     text-decoration: underline;
+}
+.content-item small {
+    font-size: 0.8em;
+    color: #665856; /* Cinza/Marrom escuro */
+    display: block;
+    word-wrap: break-word;
+    margin-top: 5px;
+    font-style: normal;
+    font-family: 'Fragment Core', sans-serif;
+}
+
+/* --- FIM DOS ESTILOS P/ PÁGINAS COM BANNER INTRO --- */
+
+
+/* Banner Sections (Estilos do Index) */
 section {
-    padding: 3.75rem 0;
+    /* Removido padding geral, aplicar onde necessário */
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Evita conteúdo vazando */
     width: 100%;
 }
 
-/* --------------- MODIFICADO --------------- */
+/* Banner 1 */
 .banner-1 {
     width: 100%;
-    height: 50rem;
+    height: 50rem; /* Altura grande */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    z-index: 1;
-    background-color: #F8F2EA;
-    padding-bottom: .9375rem;
+    background-color: #F8F2EA; /* Fundo padrão */
+    /* padding-bottom: .9375rem; */ /* Removido padding */
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
-    transition: transform .3s ease;
+    transition: transform .3s ease; /* Hover na section inteira */
 }
 
 .banner-1:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); /* Leve zoom no hover */
 }
 
-/* Adiciona srcset para imagens responsivas */
 .banner-1 img {
     width: 100%;
-    height: 100%; /* Alterado para 100% para ocupar todo o espaço */
-    object-fit: cover; /* Adicionado object-fit: cover para cobrir o container */
-    object-position: top; /* Alterado para top para priorizar a parte superior */
-    transition: transform .3s ease;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform .3s ease; /* Hover na imagem */
 }
 
-.banner-1 img:hover {
-    transform: scale(1.05);
-}
+/* Removido hover da imagem separada, já tem no banner */
+/* .banner-1 img:hover { transform: scale(1.05); } */
 
-.banner-content {
-    color: #fff;
-    font-size: 2em;
-}
-
-.banner-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 4em;
-    color: #fff;
-    font-style: italic;
-}
-
-/* --------------- ADICIONADO --------------- */
+/* Container Banners (Texto + Imagem) */
 .container-banners {
     display: flex;
     width: 100%;
-    height: 40.625rem;
-    padding-top: .9375rem;
+    height: 40.625rem; /* Altura fixa */
+    /* padding-top: .9375rem; */ /* Removido padding */
 }
 
-.container-banners > * {
+.container-banners > * { /* Aplica a ambos os filhos (texto e imagem) */
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    overflow: hidden; /* Garante que conteúdo não vaze */
 }
 
 .container-banners .banner-texto {
-    background-color: #392523;
-    color: #F8F2EA;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #392523; /* Fundo escuro */
+    color: #F8F2EA; /* Texto claro */
+    padding: 1rem; /* Padding interno */
+    text-align: center; /* Centraliza texto */
 }
 
 .container-banners .banner-texto .banner-subtitle {
-    width: 80%;
-    text-align: center;
+    width: 80%; /* Limita largura do texto */
+    margin: 0 auto; /* Centraliza bloco de texto */
     font-size: 3.25em;
     text-transform: uppercase;
+    line-height: 1.2; /* Ajuste para multilinhas */
 }
 
-/* Estilização da palavra "Comunicação" */
 .container-banners .banner-texto .banner-subtitle .comunicacao {
-    color: #94A473;
+    color: #94A473; /* Verde */
 }
 
 .container-banners .banner-imagem img {
@@ -262,103 +434,84 @@ section {
     object-position: center;
 }
 
-/* --------------- MODIFICADO --------------- */
+/* Banner 3 (Mini-bio) */
 .banner-3 {
-    background-color: #F8F2EA;
+    background-color: #F8F2EA; /* Fundo padrão */
     display: flex;
-    position: relative;
+    flex-direction: column; /* Centraliza conteúdo verticalmente */
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 6.75rem 0;
-    min-height: 20rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 6.75rem 1rem; /* Padding vertical e horizontal mínimo */
+    min-height: 20rem; /* Altura mínima */
     text-align: center;
-    margin-top: -6rem;
+    /* margin-top: -6rem; */ /* Removido margin-top negativo, pode causar sobreposição inesperada */
+    box-sizing: border-box; /* Inclui padding na altura/largura */
 }
 
-.banner-3 .background-image {
-    background-image: url(img/banner3.jpg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    filter: brightness(.4);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* Removido background-image fixo, pode ser adicionado via classe se necessário */
 
-.banner-3 .banner-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: none;
-}
-
-.banner-3 .banner-text {
-    z-index: 1;
-}
-
-/* --------------- MODIFICADO - TAMANHO DA FONTE DA MINI BIO --------------- */
 .mini-bio {
-    font-family: 'Glacial Indifference', sans-serif;
+    /* Fonte Glacial Indifference não está linkada, usando Fragment Core */
+    font-family: 'Fragment Core', sans-serif; /* Usando fonte disponível */
     font-weight: normal;
     color: #392523;
     line-height: 1.6;
-    max-width: 43.75rem;
-    text-align: justify;
-    margin: 0 auto;
+    max-width: 43.75rem; /* Largura máxima */
+    text-align: justify; /* Justificado */
+    margin: 0 auto; /* Centraliza */
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1rem; /* Tamanho base */
 }
-
-.mini-bio p {
+.mini-bio p { /* Remove margem de parágrafos dentro da bio */
     margin-bottom: 0;
 }
+.mini-bio strong { /* Estilo para o negrito */
+    font-weight: 600; /* Mais forte que o normal */
+}
 
-/* --------------- MODIFICADO - TAMANHO DO BANNER 4 --------------- */
+/* Banner 4 (Logos Trajetória) */
 .banner-4 {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Fundo cinza claro */
     text-align: center;
     width: 100%;
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding: 5rem 1rem; /* Padding ajustado */
 }
 
 .banner-4-title {
     font-family: 'Nixie One', sans-serif;
     font-size: 2.5em;
     color: #392523;
-    margin-bottom: 1.875rem;
+    margin-bottom: 3rem; /* Mais espaço abaixo do título */
 }
 
 .brands-grid {
     display: flex;
     flex-direction: column;
-    padding: 0 1.25rem 3.75rem;
+    align-items: center; /* Centraliza as linhas */
+    /* padding: 0 1.25rem 3.75rem; */ /* Removido padding interno */
 }
 
 .brand-row {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center; /* Alinha logos verticalmente */
+    flex-wrap: wrap; /* Permite quebrar linha */
     margin-bottom: 1.875rem;
+    gap: 1.5rem; /* Espaço entre logos */
+    max-width: 1200px; /* Largura máxima para a grade */
+    width: 100%; /* Ocupa largura disponível */
+}
+.brand-row:last-child {
+    margin-bottom: 0; /* Remove margem da última linha */
 }
 
 .brand-row img {
-    height: 10rem;
-    width: 10rem;
-    object-fit: contain;
-    min-width: auto;
-    margin: 0 1.25rem;
+    height: 6rem; /* Altura ajustada */
+    width: auto; /* Largura automática */
+    max-width: 10rem; /* Largura máxima */
+    object-fit: contain; /* Mantém proporção */
+    /* margin: 0 1.25rem; */ /* Removido, usando gap */
     transition: transform .3s ease;
 }
 
@@ -366,13 +519,12 @@ section {
     transform: scale(1.1);
 }
 
-/* Gallery */
+/* Gallery (Se aplicável) */
 .gallery {
     background-color: #fff;
     text-align: center;
     width: 100%;
-    padding-top: 3.75rem;
-    padding-bottom: 0;
+    padding: 3.75rem 1rem; /* Padding */
 }
 
 .gallery h2 {
@@ -386,331 +538,358 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 1.25rem;
-    padding: 1.25rem;
+    /* padding: 1.25rem; */ /* Removido, padding está na section .gallery */
 }
 
 .gallery-item {
     text-decoration: none;
     display: block;
+    overflow: hidden; /* Para efeitos de hover na imagem */
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s ease; /* Efeito de zoom no hover */
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    padding: 1.875rem 0;
-    background-color: #392523;
+    padding: 2.5rem 1rem; /* Padding ajustado */
+    background-color: #392523; /* Fundo escuro */
     text-align: center;
     width: 100%;
-    color: #F8F2EA;
+    color: #F8F2EA; /* Texto claro */
+    font-family: 'Fragment Core', sans-serif; /* Fonte para o texto do footer */
+    margin-top: 0; /* Garante que cole no main */
 }
 
-footer::after {
-    content: "© 2025 Ana Furtado. Todos os direitos reservados.";
-    display: block;
-    margin-top: 10px;
-    font-size: 0.8em;
+.social-icons {
+    margin-bottom: 1.5rem; /* Espaço abaixo dos ícones */
 }
 
 .social-icons a {
     font-size: 1.5625rem;
     margin: 0 .625rem;
     color: #F8F2EA;
-    font-family: 'Fragment Core', sans-serif;
     transition: transform .3s ease,color .3s ease;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #94A473;
+    color: #94A473; /* Verde no hover */
 }
 
+/* Ícones sociais específicos mobile (escondidos por padrão) */
+.social-icons-mobile {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Copyright - Adicionado ID para JS */
+footer p#copyright {
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: #c7bdb5; /* Cor mais suave */
+}
+
+/* Contact Form */
 .contact-form {
     max-width: 31.25rem;
-    margin: 1.25rem auto;
+    margin: 2.5rem auto 0 auto; /* Espaço acima e centralizado */
     text-align: left;
 }
 
 .contact-form h3 {
     font-family: 'Nixie One', sans-serif;
     font-size: 1.8em;
-    color: #94A473;
+    color: #94A473; /* Verde */
     text-align: center;
-    margin-bottom: .9375rem;
+    margin-bottom: 1.5rem; /* Mais espaço */
 }
 
 .contact-form input[type="email"],
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
-    padding: .625rem;
-    margin-bottom: .625rem;
-    border: 1px solid #ccc;
+    padding: .8rem; /* Mais padding */
+    margin-bottom: 1rem; /* Mais espaço */
+    border: 1px solid #5a4a46; /* Borda sutil no fundo escuro */
     border-radius: .3125rem;
-    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
-    font-family: 'Nixie One', sans-serif;
-    color: #392523;
+    /* box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1); */ /* Sombra não visível no escuro */
+    font-family: 'Fragment Core', sans-serif; /* Fonte */
+    color: #392523; /* Cor do texto digitado */
+    background-color: #F8F2EA; /* Fundo claro para contraste */
+}
+.contact-form textarea {
+    min-height: 120px; /* Altura mínima */
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 .contact-form button {
-    background-color: #94A473;
+    background-color: #94A473; /* Verde */
     color: #fff;
-    padding: .625rem 1.25rem;
+    padding: .8rem 1.5rem; /* Padding */
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block; /* Ocupa linha inteira */
+    width: 100%; /* Ocupa linha inteira */
+    margin-top: 0.5rem; /* Espaço acima */
+    font-weight: 600; /* Negrito */
+    font-family: 'Fragment Core', sans-serif; /* Fonte */
 }
 
 .contact-form button:hover {
-    background-color: #6A7652;
+    background-color: #6A7652; /* Verde mais escuro */
 }
 
-/* Esconde o botão do menu por padrão */
+/* Menu Toggle (Hamburguer) */
 .menu-toggle {
-    display: none;
+    display: none; /* Escondido por padrão */
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Tamanho do ícone */
     color: #392523;
     cursor: pointer;
+    position: absolute; /* Posicionamento no header */
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    z-index: 1001; /* Acima de outros elementos do header */
 }
 
-/* Responsiveness */
+/* ----- Responsiveness ----- */
+
+/* Medium screens (tablets, etc.) */
 @media (max-width: 768px) {
+    html {
+        /* Ajuste o padding-top para a altura do header mobile */
+        scroll-padding-top: 5rem; /* Exemplo */
+    }
+
     header {
-        padding: .9375rem 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        position: fixed;
+        padding: 0.9375rem 1.25rem; /* Menos padding */
+        /* Removido flex-direction: column, o JS controla o display do nav */
+        align-items: center; /* Alinha logo e toggle */
+        min-height: 5rem; /* Altura mínima para acomodar logo e botão */
     }
 
     .logo {
         font-size: 1.5em;
-        margin-bottom: 0;
-         font-family: 'Nixie One', sans-serif !important;
+        margin-bottom: 0; /* Remove margem */
+        /* font-family: 'Nixie One', sans-serif !important; */ /* !important desnecessário */
     }
 
-    /* Mostra o botão do menu */
     .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
+        display: block; /* Mostra o botão hamburguer */
     }
 
-    /* Esconde a navegação por padrão */
     .nav-links {
-        display: none;
+        display: none; /* Esconde links por padrão */
+        position: absolute; /* Posiciona abaixo do header */
+        top: 100%; /* Começa logo abaixo do header */
+        left: 0;
         width: 100%;
-        justify-content: center;
+        background-color: #F8F2EA; /* Fundo */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra */
+        padding: 1rem 0; /* Padding vertical */
+        border-top: 1px solid #eee; /* Linha separadora */
+    }
+
+    header.active .nav-links {
+        display: block; /* Mostra o menu quando ativo */
     }
 
     .nav-links nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Links empilhados */
         text-align: center;
+        width: 100%;
     }
 
     .nav-links nav ul li {
-        margin: .625rem 0;
-         font-family: 'Fragment Core', sans-serif !important;
+        margin: 0.8rem 0; /* Espaçamento vertical */
+        width: 100%; /* Ocupa largura total */
     }
 
-    /* Estilos para quando o menu estiver ativo */
-    header.active .nav-links {
-        display: block;
-        background-color: #f9f9f9;
-        padding: 1rem;
+    /* Dropdown no mobile */
+    .dropdown-content {
+         position: static; /* Remove posicionamento absoluto */
+         box-shadow: none;
+         background-color: transparent;
+         min-width: auto;
+         opacity: 1; /* Sempre visível quando pai está visível */
+         display: none; /* Escondido até ser mostrado via JS */
+         padding-left: 20px; /* Indentação */
+         border-left: 2px solid #e0d8cf; /* Linha lateral */
+         margin: 5px 15% 0 15%; /* Margens laterais */
+         border-radius: 0; /* Remove border-radius */
+    }
+    .dropdown-content.show {
+        display: block; /* Mostra quando ativo */
+    }
+    .dropdown-content a {
+        padding: 0.5rem 1rem;
+        color: #5c4b49; /* Cor mais suave */
+        font-size: 0.95em;
+        text-align: left; /* Alinha texto à esquerda */
+    }
+     .dropdown-content a:hover {
+        background-color: #e0d8cf; /* Fundo no hover */
+     }
+    .dropbtn {
+         width: 100%; /* Ocupa toda a largura do LI */
+         justify-content: center; /* Centraliza texto e ícone */
+    }
+
+    /* Ícones sociais no menu mobile */
+    .social-icons-mobile {
+        display: flex; /* Mostra os ícones */
+        justify-content: center; /* Centraliza */
+        gap: 1.5rem; /* Espaço entre ícones */
         width: 100%;
-    }
-header.active .social-icons-mobile {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-    /* Estilo da fonte nos links do menu mobile */
-    header.active .nav-links nav ul li a {
-        font-family: 'Fragment Core', sans-serif !important; /* Adiciona a fonte Fragment Core */
-    }
-
-    /* Ajustes na mini-bio para telas menores */
-    .mini-bio {
-        font-size: .8em;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 1rem; /* Adicionado padding esquerdo */
-        padding-right: 1rem; /* Adicionado padding direito */
-        text-align: justify;
-        box-sizing: border-box;
-         font-family: 'Glacial Indifference', sans-serif !important;
-    }
-
-    .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.8em;
-         font-family: 'Nixie One', sans-serif !important;
-    }
-
-/* Início - Ajustes para o formulário de contato no mobile */
-footer .contact-form {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; /* Adicionado padding esquerdo */
-    padding-right: 1rem; /* Adicionado padding direito */
-    box-sizing: border-box;
-     font-family: 'Nixie One', sans-serif !important;
-}
-/* Fim - Ajustes para o formulário de contato no mobile */
-    /* Ajuste para o subtítulo em telas médias */
-        /* Início - Estilos para alinhar os ícones sociais */
-    header.active .nav-links nav ul .social-icons-mobile {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        padding: 0;
+        padding: 1rem 0 0 0; /* Espaço acima */
         margin-top: 1rem;
+        border-top: 1px solid #eee; /* Linha separadora */
+    }
+    .social-icons-mobile li {
+        margin: 0; /* Remove margem padrão */
+    }
+    .social-icons-mobile li a i {
+        font-size: 1.6em; /* Tamanho dos ícones sociais */
+        margin-right: 0; /* Remove margem direita */
     }
 
-    header.active .nav-links nav ul .social-icons-mobile li {
-        margin: 0;
-    }
 
-    header.active .nav-links nav ul li a {
-        font-size: 1.5rem;
-    }
-    /* Fim - Estilos para alinhar os ícones sociais */
+    /* Ajustes PÁGINAS com Intro Banner */
+     main {
+         padding-top: 80px; /* Ajuste se header mobile for diferente */
+     }
+     .page-intro-banner {
+         padding: 25px 15px 20px 15px; /* Menos padding */
+         margin-bottom: 30px;
+     }
+     .page-intro-banner .page-title { font-size: 1.8em; }
+     .page-intro-banner .tags span { font-size: 0.8em; padding: 4px 10px;}
 
-/*Estilo específico para o conteúdo.html*/
-    .conteudo-item-container {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
+     .main-content-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+     }
+     main.main-dark-bg .main-content-wrapper h3 { font-size: 1.4em; }
 
-    .conteudo-texto {
-        margin-right: 0; /* Remove a margem */
+    /* Ajustes Grid/Cards Conteúdo (Página Lemann) */
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
+    .content-item { padding: 15px; }
+    .content-item img { height: 160px; margin-bottom: 15px; }
+    .content-item a { font-size: 1em; }
+    .content-item small { font-size: 0.75em; }
 
-    .conteudo-texto h3 {
-         font-family: 'Fragment Core', sans-serif !important;
-    }
-
-    .conteudo-texto h2 {
-         font-family: 'Nixie One', sans-serif !important;
-    }
-
-    .conteudo-texto p {
-         font-family: 'Fragment Core', sans-serif !important;
-    }
-
-    .conteudo-imagem {
-        width: 100%; /* A imagem ocupa toda a largura */
-        max-height: 200px; /* Define uma altura máxima */
-        margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
-    }
-
-    .conteudo-imagem img {
-        object-fit: cover; /* Garante que a imagem cubra o espaço */
-        object-position: center; /* Centraliza a imagem */
-    }
-
-    /* Ajustes para o container de banners */
+    /* Ajustes Banner Container (Texto + Imagem) */
     .container-banners {
-        padding-left: 1rem; /* Adicionado padding esquerdo */
-        padding-right: 1rem; /* Adicionado padding direito */
-        box-sizing: border-box;
+        height: auto; /* Altura automática */
+        flex-direction: column; /* Empilha verticalmente */
     }
-section {
-    padding: 3.75rem 1rem; /* Adicionado padding horizontal */
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
-}
- main h1{
-          font-family: 'Nixie One', sans-serif !important;
-        }
-        main p {
-             font-family: 'Fragment Core', sans-serif !important;
-        }
-}
-
-@media (max-width: 480px) {
-    .banner-title {
-        font-size: 2.5em;
-    }
-
-    .banner-3 .banner-text {
-        padding: 1.875rem;
-    }
-
-    .mini-bio {
-        font-size: .7em;
-        line-height: 1.7;
-    }
-
-    /* Ajustes para o container de banners */
-    .container-banners {
-        flex-direction: column;
-        height: auto;
-    }
-
     .container-banners > * {
-        width: 100%;
-        margin-bottom: 1.875rem;
+        width: 100%; /* Ocupa largura total */
+        height: 300px; /* Altura fixa para cada parte */
     }
-
     .container-banners .banner-texto .banner-subtitle {
-        font-size: 2.25em;
+        font-size: 2.5em; /* Fonte menor */
+        width: 90%; /* Mais largura */
     }
 
-    /* INÍCIO - Ajustes para o Banner 1 em Mobile */
-    .banner-1 {
-        height: auto;
-        padding-top: 0;
-        padding-bottom: 0;
+    /* Ajustes Mini-bio */
+    .mini-bio {
+        font-size: 1rem; /* Tamanho um pouco maior que antes no mobile */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .banner-3 {
+        padding: 4rem 1rem; /* Menos padding vertical */
     }
 
-    .banner-1 img {
-        max-height: calc(100vh - 6rem);
-        object-fit: contain;
-        margin: 0;
-        padding: 0;
-    }
-    /* FIM - Ajustes para o Banner 1 em Mobile */
+    /* Ajustes Logos Trajetória */
+    .banner-4 { padding: 4rem 1rem; }
+    .banner-4-title { font-size: 2em; margin-bottom: 2rem; }
+    .brand-row { gap: 1rem; margin-bottom: 1rem; }
+    .brand-row img { height: 4.5rem; }
 
-    /* Início - Espaçamento entre as logos no mobile */
-    .brand-row img {
-        margin: .625rem;
-    }
+    /* Ajustes Footer */
+    footer { padding: 2rem 1rem; }
+    .contact-form { max-width: 90%; margin-top: 2rem; }
 
-    .second-row img {
-        margin-top: 1.25rem;
-    }
-    /* Fim - Espaçamento entre as logos no mobile */
+    /* Estilo específico para o conteúdo.html */
+    /* ... (mantido como estava no seu CSS) ... */
+    .conteudo-item-container { flex-direction: column; align-items: flex-start; }
+    .conteudo-texto { margin-right: 0; }
+    .conteudo-imagem { width: 100%; max-height: 200px; margin-bottom: 10px; }
+    .conteudo-imagem img { object-fit: cover; object-position: center; }
 
-    /* Início - Ajustes para o formulário de contato no mobile */
-    footer .contact-form {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+    /* Ajustes gerais */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    /* Fim - Ajustes para o formulário de contato no mobile */
 }
 
-/* Estilos para telas grandes (acima de 768px) */
+/* Small screens (smartphones) */
+@media (max-width: 480px) {
+    .logo { font-size: 1.3em; }
+    .menu-toggle { font-size: 1.5rem; right: 1rem; }
+    header { min-height: 4.5rem; }
+
+    /* Banner 1 */
+    .banner-1 { height: auto; max-height: 70vh; } /* Altura automática com máximo */
+    .banner-1 img { object-fit: cover; } /* Cover para preencher melhor */
+
+    /* Banner Container */
+    .container-banners > * { height: 250px; } /* Altura menor ainda */
+    .container-banners .banner-texto .banner-subtitle { font-size: 2em; }
+
+    /* Mini-bio */
+    .mini-bio { font-size: 0.9rem; line-height: 1.7; }
+    .banner-3 { padding: 3rem 1rem; }
+
+    /* Logos Trajetória */
+    .banner-4-title { font-size: 1.8em; }
+    .brand-row { gap: 0.8rem; }
+    .brand-row img { height: 3.5rem; }
+
+    /* Conteúdo Lemann */
+    .page-intro-banner .page-title { font-size: 1.6em; }
+    .page-intro-banner .tags span { font-size: 0.75em; padding: 3px 8px; }
+    main.main-dark-bg .main-content-wrapper h3 { font-size: 1.3em; }
+    .content-grid { grid-template-columns: 1fr; gap: 15px; } /* Uma coluna */
+    .content-item img { height: 180px; } /* Altura pode ser maior em 1 coluna */
+
+    /* Footer */
+    .social-icons a { font-size: 1.4em; margin: 0 0.5rem; }
+    .contact-form h3 { font-size: 1.5em; }
+    .contact-form { max-width: 100%; padding: 0 1rem; box-sizing: border-box; }
+    footer p#copyright { font-size: 0.8em; }
+}
+
+/* Large screens (melhora mini-bio) */
 @media (min-width: 769px) {
     .mini-bio {
-        font-size: 1.3rem;
+        font-size: 1.2rem; /* Pouco maior em telas grandes */
+        line-height: 1.7;
     }
 }
 
-/* Keyframes para animações */
+/* Keyframes para animações (mantido como estava) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
