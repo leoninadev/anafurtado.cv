@@ -1,235 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes - Fundação Lemann - Ana Furtado</title>
-    <!-- *** CSS EXTERNO ATIVADO PARA GARANTIR CONSISTÊNCIA DO HEADER *** -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Estilos GERAIS (Podem ser movidos para style.css se aplicável globalmente) */
-        body {
-            /* A cor de fundo principal é definida pelo style.css agora,
-               mas mantemos a fonte e outros padrões caso style.css não carregue */
-            font-family: 'Nixie One', sans-serif;
-            margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
-            /* A cor de fundo do body virá do style.css (#F8F2EA) */
-            /* A cor padrão do texto virá do style.css (#392523) */
-        }
+<!-- HEADER (Permanece igual) -->
+<header>
+    <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
+    <button class="menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links">
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                <li class="dropdown">
+                    <a href="#" aria-label="Projetos" class="dropbtn">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <div class="dropdown-content">
+                        <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                        <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                    </div>
+                </li>
+                 <li class="social-icons-mobile">
+                      <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                      <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        /* === ESTILOS DO HEADER FORAM REMOVIDOS DESTE BLOCO === */
-        /* === Eles agora vêm exclusivamente do style.css === */
+<!-- Conteúdo Principal -->
+<main> <!-- O fundo castanho #392523 será aplicado aqui, mas o banner o cobrirá inicialmente -->
 
-
-        /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ESPECÍFICA ---- */
-        main {
-             padding: 20px;
-             /* Garante espaço suficiente abaixo do header fixo */
-             padding-top: 120px; /* Ajuste se necessário com base na altura real do header */
-             /* *** COR DE FUNDO AJUSTADA CONFORME SOLICITADO *** */
-             background-color: #392523; /* Castanho escuro da Papia Content */
-             color: #F8F2EA; /* Cor de texto principal clara para contraste */
-             min-height: calc(100vh - 120px - 75px); /* Calcula altura mínima descontando header e footer (ajuste o 75px se o footer tiver altura diferente) */
-             box-sizing: border-box;
-        }
-
-        /* Título Principal da Página */
-        main h2.page-title {
-             font-family: 'Nixie One', sans-serif;
-             font-size: 2.2em;
-             color: #7A8A5A; /* Letra verde conforme solicitado */
-             margin-bottom: 5px;
-             font-weight: 400;
-             padding-bottom: 10px;
-             border-bottom: 1px solid #7a6a63; /* Linha divisória sutil (tom sobre tom com fundo escuro) */
-        }
-        .text-verde { color: #7A8A5A !important; } /* Garante verde se a classe for usada */
-
-        /* Tags */
-        .tags {
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-        .tags span {
-            display: inline-block;
-            /* Estilo para fundo escuro */
-            background-color: #6e5c54; /* Tom castanho um pouco mais claro que o fundo main */
-            color: #F8F2EA; /* Texto claro */
-            padding: 5px 12px;
-            margin: 4px 5px 4px 0;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-family: 'Fragment Core', sans-serif;
-            font-weight: 400;
-        }
-
-        /* Títulos das Seções (H3) */
-        main h3 {
-             font-family: 'Fragment Core', sans-serif;
-             font-weight: 600;
-             font-size: 1.6em;
-             color: #F8F2EA; /* Título claro */
-             margin-top: 40px;
-             margin-bottom: 25px;
-             border-bottom: 1px solid #7a6a63; /* Linha divisória sutil */
-             padding-bottom: 10px;
-        }
-         main article:first-of-type h3 {
-             margin-top: 0; /* Remover espaço extra antes do primeiro H3 */
-         }
-
-        /* Link Voltar */
-        .back-link {
-             display: inline-block;
-             margin-bottom: 30px;
-             font-size: 0.9em;
-             color: #bdb0a7; /* Cor clara, mas diferente do texto principal */
-             font-family: 'Fragment Core', sans-serif;
-             font-weight: 400;
-             text-decoration: none;
-             transition: color 0.3s ease;
-         }
-         .back-link i { margin-right: 5px; }
-         .back-link:hover { color: #ffffff; } /* Branco no hover */
-
-        /* Grid de Conteúdo */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 30px;
-            margin-top: 25px;
-        }
-
-        /* Cards de Conteúdo - FUNDO BEGE */
-        .content-item {
-            border: 1px solid #5a4a46; /* Borda sutil um pouco mais escura que o fundo bege para separar do fundo castanho */
-            padding: 20px;
-            text-align: center;
-            /* *** COR DE FUNDO AJUSTADA CONFORME SOLICITADO *** */
-            background-color: #F8F2EA; /* Fundo BEGE claro */
-            border-radius: 8px;
-            color: #392523; /* TEXTO ESCURO dentro do card */
-            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-        }
-        .content-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada no hover */
-            transform: translateY(-3px); /* Leve efeito de elevação */
-        }
-
-        .content-item img {
-            max-width: 100%;
-            height: 180px; /* Altura fixa para manter alinhamento */
-            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-            display: block;
-            margin: 0 auto 20px auto;
-            border-radius: 4px;
-            border: 1px solid #e0d8cf; /* Borda muito sutil na imagem dentro do card bege */
-        }
-
-        /* Link "Confira" - COR ESCURA */
-        .content-item a {
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            font-family: 'Fragment Core', sans-serif;
-            font-weight: 600;
-            font-size: 1.05em;
-            word-wrap: break-word; /* Quebra palavras longas se necessário */
-            color: #7A8A5A; /* Verde conforme original (ou use #392523 se preferir marrom) */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .content-item a:hover {
-             color: #392523; /* Marrom no hover */
-             text-decoration: underline;
-        }
-
-        /* Nome do arquivo (<small>) - COR ESCURA */
-        .content-item small {
-            font-size: 0.8em;
-            color: #665856; /* Cinza/Marrom escuro, bom contraste no bege */
-            display: block;
-            word-wrap: break-word; /* Quebra palavras longas se necessário */
-            margin-top: 5px;
-            font-style: normal;
-            font-family: 'Fragment Core', sans-serif;
-        }
-
-
-        /* Footer (Deve vir do style.css para consistência) */
-        /* Regras específicas de footer podem ficar aqui se necessário,
-           mas a base (cores, fontes) deve vir do style.css */
-        footer {
-            background-color: #F8F2EA; /* Fundo bege padrão */
-            color: #392523; /* Texto escuro padrão */
-            /* Outros estilos de footer vêm do style.css */
-            margin-top: 0; /* Remove margem superior para colar após o main escuro */
-        }
-
-        /* Ajustes de Responsividade Específicos para esta página (se necessário) */
-        @media (max-width: 768px) {
-             /* Ajuste o padding-top se o header mobile for de altura diferente */
-             main {
-                 padding-top: 100px; /* Pode precisar ajustar */
-                 padding-left: 15px;
-                 padding-right: 15px;
-                 min-height: calc(100vh - 100px - 75px); /* Recalcula altura mínima */
-             }
-             main h2.page-title { font-size: 1.8em; }
-             .tags span { font-size: 0.8em; padding: 4px 10px;}
-             main h3 { font-size: 1.4em; }
-
-            /* Grid mobile */
-            .content-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mantém, ajusta bem */
-                gap: 20px;
-            }
-            .content-item { padding: 15px; }
-            .content-item img { height: 160px; margin-bottom: 15px; }
-            .content-item a { font-size: 1em; }
-            .content-item small { font-size: 0.75em; }
-        }
-
-    </style>
-</head>
-<body>
-    <!-- HEADER PADRÃO (Renderizado com base no style.css agora) -->
-    <header>
-        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
-        <button class="menu-toggle" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-            <nav>
-                <ul>
-                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
-                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
-                    <li class="dropdown">
-                        <!-- Removido onclick inline, o script JS cuidará disso -->
-                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
-                        <div class="dropdown-content">
-                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
-                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
-                        </div>
-                    </li>
-                     <li class="social-icons-mobile">
-                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Conteúdo Principal com fundo castanho escuro -->
-    <main>
-
+    <!-- **** NOVO BANNER INTRODUTÓRIO BEGE **** -->
+    <section class="page-intro-banner">
         <!-- Link Voltar -->
         <a href="javascript:history.back()" class="back-link">
             <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
@@ -242,14 +44,19 @@
              <span>Gestão de Redes Sociais</span>
              <span>Campanha</span>
              <span>Cobertura de Evento</span>
-             <!-- Adicione ou modifique as tags conforme necessário -->
         </div>
+        <!-- A linha divisória será aplicada via CSS nesta section -->
+    </section>
+    <!-- **** FIM DO BANNER INTRODUTÓRIO **** -->
 
-        <!-- Grids de Conteúdo Detalhado -->
+
+    <!-- Grids de Conteúdo Detalhado (agora sobre o fundo escuro do main) -->
+    <div class="main-content-wrapper"> <!-- Wrapper opcional para padding, se necessário -->
         <article id="campanha-citemaisuma">
             <h3>CAMPANHA #CiteMaisUma</h3>
             <div class="content-grid">
-                <div class="content-item">
+                <!-- content-item divs -->
+                 <div class="content-item">
                     <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
                     <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
                     <small>toolzin.com-....jpg</small>
@@ -275,6 +82,7 @@
         <article id="campanha-declaracao-racial">
             <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
             <div class="content-grid">
+                <!-- content-item divs -->
                 <div class="content-item">
                     <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
                     <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -291,7 +99,6 @@
                     <small>Snapinst.app_469...jpg</small>
                 </div>
                  <div class="content-item">
-                    <!-- Se tiver a imagem, substitua o placeholder -->
                     <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4">
                     <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
                      <small>Imagem não especificada</small>
@@ -302,6 +109,7 @@
         <article id="campanha-always-on">
             <h3>ALWAYS ON</h3>
             <div class="content-grid">
+                <!-- content-item divs -->
                  <div class="content-item">
                     <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
                     <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -328,6 +136,7 @@
         <article id="artigos">
             <h3>ARTIGOS</h3>
              <div class="content-grid">
+                <!-- content-item divs -->
                 <div class="content-item">
                     <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
                     <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -340,76 +149,75 @@
                 </div>
              </div>
         </article>
+    </div> <!-- Fim do .main-content-wrapper -->
 
-    </main>
+</main>
 
-    <!-- FOOTER (Renderizado com base no style.css) -->
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-        </div>
-         <p>Ana Furtado © <span id="currentYear"></span></p>
-         <!-- O formulário de contato não existe nesta página, ok -->
-    </footer>
+<!-- FOOTER (Permanece igual) -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+    </div>
+     <p>Ana Furtado © <span id="currentYear"></span></p>
+</footer>
 
-    <!-- Script Padrão (Melhor ter um arquivo .js separado, mas mantendo como solicitado) -->
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const header = document.querySelector('header');
-        const dropdownButtons = document.querySelectorAll('.dropbtn'); // Seleciona todos os botões de dropdown
+<!-- SCRIPTS (Permanece igual) -->
+<script>
+    // ... (todo o script JS anterior) ...
 
-        // Script Menu Hamburguer
-        if (menuToggle && header) {
-            menuToggle.addEventListener('click', () => {
-                header.classList.toggle('active');
-                // Fecha dropdowns abertos ao fechar o menu hamburguer
-                if (!header.classList.contains('active')) {
-                    closeAllDropdowns(null);
-                }
-            });
-        }
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+    const dropdownButtons = document.querySelectorAll('.dropbtn'); // Seleciona todos os botões de dropdown
 
-        // === Script Dropdown Aprimorado ===
-        function closeAllDropdowns(exceptThisOne) {
-            document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
-                if (dropdown !== exceptThisOne) {
-                    dropdown.classList.remove('show');
-                }
-            });
-        }
-
-        dropdownButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault(); // Previne o comportamento padrão do link '#'
-                const dropdownContent = button.nextElementSibling; // Pega o .dropdown-content irmão
-                const isCurrentlyShown = dropdownContent.classList.contains('show');
-
-                closeAllDropdowns(null); // Fecha todos antes de abrir/fechar o clicado
-
-                if (!isCurrentlyShown) {
-                    dropdownContent.classList.add('show');
-                }
-                // Se já estava aberto, o closeAllDropdowns já o fechou.
-            });
+    // Script Menu Hamburguer
+    if (menuToggle && header) {
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('active');
+            // Fecha dropdowns abertos ao fechar o menu hamburguer
+            if (!header.classList.contains('active')) {
+                closeAllDropdowns(null);
+            }
         });
+    }
 
-        // Fecha dropdowns se clicar fora
-        window.addEventListener('click', (event) => {
-          // Verifica se o clique NÃO foi em um botão dropdown OU dentro de um conteúdo de dropdown
-          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
-             closeAllDropdowns(null);
-          }
+    // === Script Dropdown Aprimorado ===
+    function closeAllDropdowns(exceptThisOne) {
+        document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
+            if (dropdown !== exceptThisOne) {
+                dropdown.classList.remove('show');
+            }
         });
-        // === Fim Script Dropdown ===
+    }
 
-        // Script para atualizar o ano no footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if(currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-    </script>
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Previne o comportamento padrão do link '#'
+            const dropdownContent = button.nextElementSibling; // Pega o .dropdown-content irmão
+            const isCurrentlyShown = dropdownContent.classList.contains('show');
 
-</body>
-</html>
+            closeAllDropdowns(null); // Fecha todos antes de abrir/fechar o clicado
+
+            if (!isCurrentlyShown) {
+                dropdownContent.classList.add('show');
+            }
+            // Se já estava aberto, o closeAllDropdowns já o fechou.
+        });
+    });
+
+    // Fecha dropdowns se clicar fora
+    window.addEventListener('click', (event) => {
+      // Verifica se o clique NÃO foi em um botão dropdown OU dentro de um conteúdo de dropdown
+      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
+         closeAllDropdowns(null);
+      }
+    });
+    // === Fim Script Dropdown ===
+
+    // Script para atualizar o ano no footer
+    const currentYearSpan = document.getElementById('currentYear');
+    if(currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+</script>
