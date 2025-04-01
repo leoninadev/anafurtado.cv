@@ -3,171 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartas da Diáspora</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Detalhes - Fundação Lemann - Ana Furtado</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* Estilos GERAIS */
         body {
-            background-color: #392523;
-            color: #F8F2EA;
             font-family: 'Nixie One', sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            padding-top: 80px;
-            box-sizing: border-box;
-            align-items: center; /* Centralizar horizontalmente */
-        }
-
-        /* Estilos para a barra de progresso */
-        .progress-container {
-            width: fit-content; /* Largura baseada no conteúdo */
-            max-width: 400px; /* Largura máxima */
-            height: 15px; /* Altura da barra */
-            background-color: #ddd;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            display: inline-block; /* Para ocupar apenas o tamanho do texto */
-        }
-
-        .progress-bar {
-            height: 100%;
-            background-color: #94A473;
-            width: 75%; /* Preenchimento de 75% */
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 2em;
-            margin-bottom: 10px; /* Ajustei a margem */
-            font-weight: normal;
-            color: #F8F2EA;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px; /* Reduzi a margem */
-            font-family: 'Fragment Core', sans-serif;
-            max-width: 50rem; /* Aumentei a largura máxima */
-            margin-left: auto;
-            margin-right: auto;
-            text-align: justify;
-            font-style: italic;
-            color: #F8F2EA;
-        }
-
-        .loading-gif {
-            margin-top: 20px;
-            margin-bottom: 40px; /* Adicionei margem inferior */
-            max-width: 100px; /* Defina um tamanho máximo */
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        footer {
-            margin-top: auto;
-            margin-bottom: 10px;
-            font-size: 0.8em;
-            background-color: inherit;
-            color: #F8F2EA;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             background-color: #F8F2EA;
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-
-        .logo {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 2em;
-            letter-spacing: 0.125rem;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .logo a {
             color: #392523;
+            margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
         }
+/* === HEADER PADRÃO === */
+    header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 1.25rem 2.5rem; background-color: #F8F2EA;
+        color: #392523;
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
+    }
+    .logo {
+        font-family: 'Nixie One', sans-serif; font-size: 2em;
+        letter-spacing: 0.125rem; text-align: center; margin: 0;
+    }
+    .logo a { color: #392523; text-decoration: none; }
+    .nav-links { display: flex; align-items: center; }
+    nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+    nav ul li { margin: 0 0.9375rem; }
+    nav ul li a {
+        text-decoration: none; color: #392523; font-weight: 500;
+        font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease;
+        display: flex; align-items: center;
+    }
+    nav ul li a:hover { color: #94A473; }
+    nav ul li a i { margin-right: 5px; font-size: 1.1em; }
+    nav ul li a[aria-label="Home"] i { font-size: 1.3em; }
+    .dropdown { position: relative; }
+    .dropdown-content {
+        display: none; position: absolute; background-color: #f9f9f9;
+        min-width: 10rem; box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+        z-index: 1; opacity: 0; transition: opacity 0.3s ease;
+    }
+    .dropdown-content.show { display: block; opacity: 1; }
+    .dropdown-content a {
+        padding: 0.75rem 1rem; text-decoration: none; display: block;
+        color: #392523; font-family: 'Fragment Core', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .dropdown-content a:hover { background-color: #f1f1f1; color: #94A473; }
+    .dropbtn {
+        cursor: pointer; background: none; border: none; color: inherit;
+        font: inherit; padding: 0; display: inline-flex; align-items: center;
+    }
+    .dropbtn i { margin-left: 5px; }
+    .social-icons-mobile { display: none; }
+    .menu-toggle {
+        display: none; background: none; border: none;
+        font-size: 1.5rem; color: #392523; cursor: pointer;
+    }
+    /* === FIM HEADER PADRÃO === */
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+/* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
+main {
+     padding-top: 100px;
+     padding-left: 0;
+     padding-right: 0;
+     padding-bottom: 0;
+}
 
-        nav ul li {
-            margin: 0 0.9375rem;
-        }
+/* Estilos para a seção superior (sobre fundo bege do body) */
+.top-content-area {
+    padding: 30px 20px 0 20px;
+    margin-bottom: 50px;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #392523;
-            font-weight: 500;
-            font-family: 'Fragment Core', sans-serif;
-            transition: color 0.3s ease;
-        }
+.top-content-area .back-link {
+     display: inline-block;
+     margin-bottom: 25px;
+     font-size: 0.9em;
+     color: #555555;
+     font-family: 'Fragment Core', sans-serif;
+     font-weight: 400;
+     text-decoration: none;
+ }
+.top-content-area .back-link i { margin-right: 5px; }
+.top-content-area .back-link:hover { color: #000000; }
 
-        nav ul li a:hover {
-            color: #94A473;
-        }
+.top-content-area h2.page-title {
+     font-family: 'Nixie One', sans-serif;
+     font-size: 2.2em;
+     color: #7A8A5A;
+     margin-bottom: 15px;
+     font-weight: 400;
+}
+.text-verde { color: #7A8A5A !important; }
 
-        @media (max-width: 768px) {
-            header {
-                padding: 0.9375rem 1.25rem;
-                flex-direction: column;
-                align-items: flex-start;
-                height: auto;
-            }
+.top-content-area .tags {
+    margin-top: 15px;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.top-content-area .tags span {
+    display: inline-block;
+    background-color: #6e5c54; /* Fundo marrom mantido */
+    /* **MODIFICADO**: Cor do texto da tag para verde */
+    color: #7A8A5A;
+    padding: 5px 12px;
+    margin: 4px 5px 4px 0;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 400; /* Mantém peso normal */
+}
 
-            .logo {
-                font-size: 1.5em;
-                margin-bottom: 0.625rem;
-            }
 
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-            }
+/* Container para os articles (com fundo MARROM MAIS ESCURO) */
+.content-articles {
+    /* **MODIFICADO**: Fundo marrom mais escuro */
+    background-color: #392523;
+    padding: 40px 20px 1px 20px;
+}
 
-            nav ul li {
-                margin: 0.625rem 0;
-            }
+/* Espaçamento entre seções (articles) */
+.content-articles article {
+    margin-bottom: 60px;
+}
+.content-articles article:last-of-type {
+    margin-bottom: 0;
+}
 
-            /* Adicionado para resolver o problema em telas menores */
-            body {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
+/* Títulos das Seções (H3) - Dentro da ÁREA ESCURA */
+.content-articles h3 {
+     font-family: 'Fragment Core', sans-serif;
+     font-weight: 600;
+     font-size: 1.6em;
+     color: #F8F2EA; /* Cor clara OK para contraste */
+     margin-top: 0;
+     margin-bottom: 25px;
+     /* Linha abaixo (marrom claro #7a6a63) ainda deve ser visível */
+     border-bottom: 1px solid #7a6a63;
+     padding-bottom: 10px;
+}
 
-            p {
-               max-width: 100%; /* Garante que o texto não ultrapasse as bordas */
-               padding-left: 1rem;
-               padding-right: 1rem;
-               text-align: justify;
-            }
-        }
+/* Grid de Conteúdo */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+/* Cards de Conteúdo - TODOS BEGES */
+.content-item {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    text-align: center;
+    background-color: #F8F2EA;
+    border-radius: 8px;
+    color: #392523;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.content-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.content-item img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+/* Link "Confira" - **MODIFICADO** */
+.content-item a {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 400; /* Tira negrito */
+    font-style: italic; /* Adiciona itálico */
+    font-size: 1em;   /* Diminui um pouco a fonte */
+    word-wrap: break-word;
+    color: #7A8A5A; /* Verde mantido */
+    text-decoration: none;
+}
+.content-item a:hover {
+     color: #392523; /* Marrom no hover mantido */
+     text-decoration: underline;
+}
+
+/* Nome do arquivo (<small>) */
+.content-item small {
+    font-size: 0.8em;
+    color: #777;
+    display: block;
+    word-wrap: break-word;
+    margin-top: 5px;
+    font-style: normal;
+    font-family: 'Fragment Core', sans-serif;
+}
+
+/* Footer */
+footer {
+    margin-top: 0;
+    padding: 25px 20px; text-align: center; font-size: 0.9em;
+    color: #392523;
+    font-family: 'Fragment Core', sans-serif;
+    border-top: 1px solid #ddd;
+    background-color: #F8F2EA; /* Fundo bege claro */
+}
+footer .social-icons { margin-bottom: 20px; }
+footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
+footer .social-icons a:hover { color: #94A473; }
+footer .contact-form { display: none; }
+
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+     header { padding: 0.9375rem 1.25rem; }
+    .nav-links { /* ... */ }
+    header.active .nav-links { /* ... */ }
+    .logo { /* ... */ }
+    .menu-toggle { /* ... */ }
+    nav ul { /* ... */ }
+    nav ul li { /* ... */ }
+    .dropdown-content { /* ... */ }
+    .dropdown-content.show { /* ... */ }
+    .dropdown-content a { /* ... */ }
+    .dropdown-content a:hover { /* ... */ }
+    .dropbtn { /* ... */ }
+    .social-icons-mobile { /* ... */ }
+    .social-icons-mobile li { /* ... */ }
+    .social-icons-mobile li a i { /* ... */ }
+
+     /* Conteúdo principal mobile */
+     main { padding-top: 80px; }
+     .top-content-area { padding: 20px 15px 0 15px; margin-bottom: 30px; }
+     .top-content-area .back-link { margin-bottom: 20px; }
+     .top-content-area h2.page-title { font-size: 1.8em; }
+     .top-content-area .tags span { font-size: 0.8em; padding: 4px 10px;} /* Cor já alterada acima */
+
+     /* Area escura mobile */
+     .content-articles { padding: 30px 15px 1px 15px; } /* Fundo já alterado acima */
+     .content-articles article { margin-bottom: 40px; }
+     .content-articles h3 { font-size: 1.4em; }
+
+    /* Grid mobile */
+    .content-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .content-item { padding: 15px; }
+    .content-item img { height: 160px; margin-bottom: 15px; }
+    .content-item a { font-size: 0.95em; } /* Ajuste fino para mobile, se necessário */
+    .content-item small { font-size: 0.75em; }
+}
     </style>
 </head>
 <body>
+    <!-- HEADER PADRÃO -->
     <header>
-        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
+        <!-- ... conteúdo do header ... -->
+         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
             <i class="fas fa-bars"></i>
         </button>
@@ -178,7 +279,7 @@
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
+                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
                         <div class="dropdown-content">
                             <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
@@ -194,29 +295,117 @@
         </div>
     </header>
 
-    <main>
-        <h1>EM CONSTRUÇÃO</h1>
-        <div class="progress-container">
-            <div class="progress-bar"></div>
+<!-- Conteúdo Principal -->
+<main>
+    <!-- Área superior com fundo bege -->
+    <div class="top-content-area">
+        <!-- Link Voltar -->
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
+        </a>
+
+        <!-- Título e Tags (Tags agora com texto verde) -->
+        <h2 class="page-title text-verde">Fundação Lemann</h2>
+        <div class="tags">
+             <span>Redação</span>
+             <span>Gestão de Redes Sociais</span>
+             <span>Campanha</span>
+             <span>Cobertura de Evento</span>
         </div>
-        <p>
-            10 ilhas compõe Cabo Verde, mas sua essência se estende para além do oceano Atlântico. A 11ª ilha, invisível aos mapas, mas presente em cada rua estrangeira onde a sodad pulsa. Essa é a diáspora viva — feita de passos que cruzaram oceanos, de vozes que se entrelaçam em mornas e batuques, de memórias carregadas no peito como quem leva o mar dentro de si.
+    </div>
 
-            “Cartas da Diáspora” nasce desse pulsar, das vozes que ecoam quebrando as distâncias. Este projeto busca transformar saudade em encontro, ausência em palavra, identidade em resistência. É um espaço onde cada carta é um abraço, cada história um retorno. Faça parte dessa ilha que não se vê, mas se sente — a ilha di nós genti, espalhada pelo mundo, mas eternamente cabo-verdiana.
-        </p>
-        <img src="img/loading.gif" alt="Carregando..." class="loading-gif"> <!-- Adicionado o GIF -->
-    </main>
+    <!-- Container para os articles (com fundo MARROM MAIS ESCURO) -->
+    <div class="content-articles">
+        <!-- Grids de Conteúdo Detalhado -->
+        <article id="campanha-citemaisuma">
+            <h3>CAMPANHA #CiteMaisUma</h3>
+            <div class="content-grid">
+                <!-- Cards com link "Confira" alterado -->
+                 <div class="content-item"> <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1"> <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a> <small>toolzin.com-....jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2"> <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_429...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3"> <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_431...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4"> <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_470...jpg</small> </div>
+            </div>
+        </article>
 
-    <footer style="background-color: #392523;">
-    </footer>
+        <article id="campanha-declaracao-racial">
+            <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
+            <div class="content-grid">
+                 <div class="content-item"> <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1"> <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_465...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2"> <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_468...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3"> <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_469...jpg</small> </div>
+                 <div class="content-item"> <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Imagem não especificada</small> </div>
+            </div>
+        </article>
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const header = document.querySelector('header');
+        <article id="campanha-always-on">
+            <h3>ALWAYS ON</h3>
+            <div class="content-grid">
+                 <div class="content-item"> <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1"> <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_453...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2"> <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_480...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3"> <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_480...jpg</small> </div>
+                 <div class="content-item"> <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4"> <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_470...jpg</small> </div>
+            </div>
+        </article>
 
-        menuToggle.addEventListener('click', () => {
-            header.classList.toggle('active');
+        <article id="artigos">
+            <h3>ARTIGOS</h3>
+             <div class="content-grid">
+                 <div class="content-item"> <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco"> <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a> <small>1736773435916.png</small> </div>
+                 <div class="content-item"> <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024"> <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a> <small>1734728039157.png</small> </div>
+             </div>
+        </article>
+    </div>
+
+</main>
+<!-- FOOTER -->
+<footer>
+    <!-- ... conteúdo do footer ... -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+    </div>
+     <p>Ana Furtado © <span id="currentYear"></span></p>
+</footer>
+<!-- Scripts -->
+<script>
+    // ... scripts ...
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+
+    menuToggle.addEventListener('click', () => {
+        header.classList.toggle('active');
+    });
+
+    // === Script Dropdown ===
+    function toggleDropdown(event) {
+        var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
+        closeAllDropdowns(dropdownContent);
+        if (dropdownContent) {
+            dropdownContent.classList.toggle('show');
+        }
+    }
+    function closeAllDropdowns(exceptThisOne) {
+        var dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown !== exceptThisOne && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
         });
-    </script>
+    }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
+         closeAllDropdowns(null);
+      }
+    }
+    // === Fim Script Dropdown ===
+
+    // Script para atualizar o ano no footer
+    if(document.getElementById('currentYear')) {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    }
+</script>
+
 </body>
 </html>
