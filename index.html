@@ -1,199 +1,359 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Furtado</title>
-    <!-- Mantém o link para o CSS externo -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <!-- Header SUBSTITUÍDO pela versão da página de detalhes -->
-    <header>
-        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
-        <button class="menu-toggle" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-            <nav>
-                <ul>
-                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
-                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
-                    <li class="dropdown">
-                        <!-- O 'a' com class dropbtn agora usa o mesmo estilo de fonte -->
-                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event);">Projetos</a>
-                        <div class="dropdown-content">
-                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
-                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
-                        </div>
-                    </li>
-                    <!-- ÍCONES SOCIAIS DESKTOP (Agora presentes na index também) -->
-                    <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+/* Reset CSS Completo (Mantenha como está ou o seu reset) */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Ajuste conforme a altura final do header fixo */
+}
+body {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1rem;
+    color: #392523;
+    background-color: #F8F2EA;
+    line-height: 1.6;
+    overflow-x: hidden;
+     /* Adiciona padding-top para compensar header fixo */
+     padding-top: 70px; /* Ajuste este valor para a altura real do seu header */
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+button { background: none; border: none; cursor: pointer; outline: none; padding: 0; font: inherit; }
+input, textarea, select { font: inherit; border: 1px solid #ccc; border-radius: 0; padding: 0.5em; display: block; width: 100%; }
+/* ------------------------------------------------------- */
 
-                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE (Com a estrutura corrigida) -->
-                     <li class="social-icons-mobile">
-                          <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                          <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                          <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- MAIN (Não modificado) -->
-    <main>
-        <section class="banner banner-1">
-            <img src="img/foto1.jpg?v=1" alt="foto 1">
-        </section>
-        <section class="container-banners">
-            <div class="banner banner-texto">
-                <p class="banner-subtitle">Catalisando mudanças por meio da <span class="comunicacao">Comunicação</span></p>
-            </div>
-            <div class="banner banner-imagem">
-                <img src="img/foto2.jpg" alt="foto 2">
-            </div>
-        </section>
-        <section class="banner banner-3" id="minha-trajetoria">
-            <div class="banner-content">
-                <p class="mini-bio">
-                    Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
-                    Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
-                    <br><br>
-                    Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
-                    <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
-                </p>
-            </div>
-        </section>
-        <section class="banner banner-4" id="trajetoria">
-            <h2 class="banner-4-title">Passos da minha trajetória</h2>
-            <div class="brands-grid">
-                <div class="brand-row">
-                    <a href="https://www.valedodende.org" target="_blank"><img src="img/logo1.png" alt="Vale do Dendê"></a>
-                    <a href="http://fundacaolemann.org.br" target="_blank"><img src="img/logo2.png" alt="Fundação Lemann"></a>
-                    <a href="https://www.institutonatura.org" target="_blank"><img src="img/logo3.png" alt="Instituto Natura"></a>
-                    <a href="http://lancaster.ac.uk" target="_blank"><img src="img/logo4.png" alt="Lancaster University"></a>
-                    <a href="https://www.lancaster.ac.uk/arts-and-social-sciences/" target="_blank"><img src="img/logo5.png" alt="FASS Decolonising"></a>
-                    <a href="https://wp.lancs.ac.uk/decolonising/" target="_blank"><img src="img/logo6.png" alt="Decolonising Lancaster University"></a>
-                </div>
-                <div class="brand-row second-row">
-                    <a href="https://www.tre-ba.jus.br" target="_blank"><img src="img/logo7.png" alt="TRE BA"></a>
-                    <a href="https://oifuturo.org.br/" target="_blank"><img src="img/logo8.png" alt="Oi Futuro"></a>
-                    <a href="https://afrofuturismo.com.br" target="_blank"><img src="img/logo9.png" alt="Afro Futurismo Ano V"></a>
-                    <a href="https://afrofuturismo.com.br" target="_blank"><img src="img/logo10.png" alt="Afro Futurismo Ano VI"></a>
-                    <a href="https://nibstransforma.com.br" target="_blank"><img src="img/logo11.png" alt="Nibs"></a>
-                    <a href="https://posafro.ufba.br" target="_blank"><img src="img/logo12.png" alt="Pos Afro"></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- FOOTER (Não modificado) -->
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-        </div>
-        <div class="contact-form">
-            <h3>Entre em contato</h3>
-            <form action="#" method="post" style="display: flex; flex-direction: column; align-items: center;">
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="text" name="subject" placeholder="Título da mensagem" required>
-                <textarea name="message" placeholder="Sua mensagem" rows="4" required></textarea>
-                <button type="submit" style="margin-top: 10px;">Enviar</button>
-            </form>
-        </div>
-    </footer>
-    <!-- SCRIPT (Não modificado - mas o JS do dropdown precisa estar no seu style.css ou aqui) -->
-    <script>
-        // --- INÍCIO: JS necessário para o Header funcionar ---
-        const menuToggle = document.querySelector('.menu-toggle');
-        const header = document.querySelector('header');
+/* -- START HEADER CSS -- (Copie daqui para baixo e substitua no seu style.css) */
 
-        if (menuToggle && header) { // Verifica se os elementos existem
-            menuToggle.addEventListener('click', () => {
-                header.classList.toggle('active');
-                closeAllDropdowns(null); // Fecha dropdowns ao abrir/fechar menu
-            });
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem; /* 20px 40px */
+    background-color: #F8F2EA;
+    color: #392523;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px */
+    position: fixed;
+    top: 0;
+    left: 0; /* Garante que comece na esquerda */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Importante para padding não aumentar width */
+}
 
-        // === Script Dropdown ===
-        function toggleDropdown(event) {
-            event.preventDefault();
-            event.stopPropagation();
+.logo {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2em; /* 32px */
+    letter-spacing: 0.125rem; /* 2px */
+    text-align: center;
+    margin: 0; /* Remove margem padrão do H1 */
+    /* font-weight: bold; <-- Removido, Nixie One já tem peso */
+}
+.logo a {
+    color: #392523;
+    text-decoration: none;
+}
 
-            var dropdown = event.currentTarget.closest('.dropdown'); // Encontra o LI pai
-            if (!dropdown) return; // Sai se não encontrar o dropdown
-            var dropdownContent = dropdown.querySelector('.dropdown-content');
-            if (!dropdownContent) return; // Sai se não encontrar o conteúdo
+.nav-links {
+    display: flex; /* Visível no desktop */
+    align-items: center;
+}
 
-            var isCurrentlyShown = dropdownContent.classList.contains('show');
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-            closeAllDropdowns(null); // Fecha todos os outros primeiro
+nav ul li {
+    margin: 0 0.9375rem; /* 15px */
+}
 
-            if (!isCurrentlyShown) {
-                dropdownContent.classList.add('show');
-            }
-        }
+/* Estilo BASE para todos os links da nav (inclui Trajetória, Conteúdo) */
+nav ul li a {
+    text-decoration: none;
+    color: #392523;
+    font-weight: 500;
+    font-family: 'Fragment Core', sans-serif;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+nav ul li a:hover {
+    color: #94A473;
+}
 
-        function closeAllDropdowns(exceptThisOne) {
-            var dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(function(dropdown) {
-                // exceptThisOne não é mais usado aqui, mas pode ser útil no futuro
-                if (dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            });
-        }
+/* Estilos específicos para ícones DENTRO dos links <a> */
+nav ul li a i {
+    margin-right: 5px; /* Espaço entre ícone e texto (se houver) */
+    font-size: 1.1em; /* Tamanho base do ícone */
+    color: inherit; /* Herda a cor do link */
+}
+/* Ícones Sociais Desktop */
+nav ul li a[aria-label="LinkedIn"] i,
+nav ul li a[aria-label="Instagram"] i,
+nav ul li a[aria-label="E-mail"] i {
+     margin-right: 0; /* Sem margem pois não tem texto */
+     font-size: 1.2em; /* Tamanho específico */
+}
+/* Ícone Home */
+nav ul li a[aria-label="Home"] i {
+    font-size: 1.3em; /* Tamanho específico */
+    margin-right: 0; /* Sem margem pois não tem texto */
+}
 
-        window.onclick = function(event) {
-          // Fecha dropdown se clicar fora
-          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
-             closeAllDropdowns(null);
-          }
-        }
-        // === Fim Script Dropdown ===
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem; /* 160px */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Adicionado visibility */
+    visibility: hidden; /* Escondido para acessibilidade */
+    margin-top: 5px; /* Pequeno espaço do botão */
+    left: 0; /* Alinha com o início do botão */
+}
+.dropdown-content.show {
+    display: block; /* Necessário para animação */
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-content a {
+    padding: 0.75rem 1rem; /* 12px 16px */
+    text-decoration: none;
+    display: block;
+    color: #392523;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #94A473;
+}
+/* Botão que ativa o dropdown ("Projetos") */
+.dropbtn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    /* Estilos para igualar aos outros links */
+    color: #392523;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dropbtn:hover {
+    color: #94A473;
+}
 
-        // Fecha o menu mobile se um link dentro dele for clicado (opcional, mas boa UX)
-        const navLinksContainer = document.querySelector('.nav-links');
-        if (navLinksContainer && header) { // Verifica se existem
-            navLinksContainer.addEventListener('click', (event) => {
-                const targetLink = event.target.closest('a');
-                if (targetLink && header.classList.contains('active')) {
-                    // Não fecha o menu se clicar no botão dropdown
-                    if (!targetLink.classList.contains('dropbtn')) {
-                        header.classList.remove('active');
-                        closeAllDropdowns(null); // Garante fechamento de dropdowns
-                    }
-                }
-            });
-        }
-        // --- FIM: JS necessário para o Header funcionar ---
+/* Ícones Mobile - Escondido por padrão (Desktop) */
+.social-icons-mobile {
+    display: none; /* ESSENCIAL: Esconde no desktop */
+    /* Outros estilos aplicados apenas no mobile */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
-        // (Seu script original para o menu toggle, se for diferente, pode manter)
-        // const menuToggle = document.querySelector('.menu-toggle');
-        // const header = document.querySelector('header');
-        // menuToggle.addEventListener('click', () => {
-        //      header.classList.toggle('active');
-        // });
+/* Botão Menu Hambúrguer - Escondido por padrão (Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* 24px */
+    color: #392523;
+    cursor: pointer;
+}
 
-        // Script para atualizar o ano no footer (opcional, pode adicionar se precisar)
-        const currentYearSpan = document.querySelector('footer p span#currentYear'); // Busca pelo ID opcional
-        const currentYearElement = document.querySelector('footer p'); // Busca pelo parágrafo
-        if (currentYearSpan) {
-             currentYearSpan.textContent = new Date().getFullYear();
-        } else if (currentYearElement && currentYearElement.textContent.includes('©')) {
-            // Se não achar o span#currentYear, tenta adicionar ao final do parágrafo
-            currentYearElement.textContent += ' ' + new Date().getFullYear();
-        }
+/* === RESPONSIVIDADE DO HEADER === */
+@media (max-width: 768px) {
+    /* Ajusta padding do header no mobile */
+    header {
+        padding: 0.9375rem 1.25rem; /* 15px 20px */
+        /* flex-direction: column; <-- Removido, causa problemas com o toggle */
+        /* align-items: flex-start; <-- Removido */
+        /* height: auto; <-- Removido */
+    }
 
+     /* Ajusta tamanho do logo no mobile */
+    .logo {
+        font-size: 1.5em; /* 24px */
+        text-align: left; /* Alinha à esquerda no mobile */
+        flex-grow: 1; /* Ocupa espaço disponível */
+    }
 
-    </script>
-</body>
-</html>
+    /* Mostra o botão do menu */
+    .menu-toggle {
+        display: block;
+        /* position: absolute; <-- Removido, deixa no fluxo normal */
+        /* top: 1rem; */
+        /* right: 1rem; */
+    }
+
+    /* Configurações do menu mobile quando FECHADO */
+    .nav-links {
+        display: none; /* Escondido por padrão */
+        position: absolute; /* Posiciona abaixo do header */
+        top: 100%; /* Logo abaixo do header */
+        left: 0;
+        width: 100%;
+        background-color: #F8F2EA; /* Mesmo fundo do header */
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        padding: 1rem 0; /* Espaçamento interno vertical */
+        border-top: 1px solid #eee; /* Linha separadora */
+    }
+
+    /* Configurações do menu mobile quando ABERTO (classe 'active' no header) */
+    header.active .nav-links {
+        display: block; /* Mostra o menu */
+    }
+
+    /* Estilo da lista no menu mobile */
+    nav ul {
+        flex-direction: column; /* Empilha os itens */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilo dos itens da lista no menu mobile */
+    nav ul li {
+        margin: 0.8rem 0; /* Espaçamento vertical */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* Esconde os ÍCONES SOCIAIS DESKTOP no mobile */
+    nav ul li a[aria-label="LinkedIn"],
+    nav ul li a[aria-label="Instagram"],
+    nav ul li a[aria-label="E-mail"] {
+        display: none !important; /* Garante que fiquem escondidos */
+    }
+
+    /* Configuração do Dropdown no mobile */
+    .dropdown-content {
+         position: static; /* Volta ao fluxo normal */
+         box-shadow: none;
+         background-color: transparent;
+         min-width: auto;
+         opacity: 1; /* Sempre visível quando 'show' */
+         display: none; /* Controlado pelo JS */
+         padding-left: 20px; /* Indentação */
+         border-left: 2px solid #e0d8cf; /* Linha lateral */
+         margin: 5px 15% 10px 15%; /* Margens */
+         transition: none; /* Remove transição no mobile */
+         visibility: visible; /* Sempre visível quando display block */
+    }
+    .dropdown-content.show {
+        display: block; /* Mostrado pelo JS */
+    }
+    .dropdown-content a {
+        padding: 0.5rem 1rem; /* Padding menor */
+        color: #5c4b49; /* Cor diferente */
+        font-size: 0.95em;
+        text-align: left; /* Alinha à esquerda */
+        white-space: normal; /* Permite quebra de linha */
+    }
+    .dropdown-content a:hover {
+        background-color: #e0d8cf; /* Fundo diferente no hover */
+    }
+    /* Botão "Projetos" no mobile */
+    .dropbtn {
+        width: 100%; /* Ocupa a largura do LI */
+        justify-content: center; /* Centraliza o texto */
+    }
+
+    /* Mostra e estiliza o CONTAINER dos ícones sociais no mobile */
+    .social-icons-mobile {
+        display: block !important; /* ESSENCIAL: Mostra o container no mobile */
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee; /* Linha separadora */
+        text-align: center; /* Centraliza os ícones */
+        width: auto; /* Largura automática baseada no conteúdo */
+        padding-left: 0; /* Remove padding padrão de lista */
+    }
+    /* Estilo para os LINKS <a> dentro do container mobile */
+    .social-icons-mobile a {
+        display: inline-block !important; /* Ícones lado a lado */
+        margin: 0 15px !important; /* Espaçamento entre ícones (aumentado) */
+        color: #392523;
+        transition: color 0.3s ease;
+    }
+    .social-icons-mobile a:hover {
+        color: #94A473;
+    }
+    /* Estilo para os ÍCONES <i> dentro dos links mobile */
+    .social-icons-mobile a i {
+        font-size: 1.4em !important; /* Tamanho do ícone */
+        margin-right: 0 !important; /* Sem margem */
+    }
+}
+/* -- END HEADER CSS -- */
+
+/* ------------------------------------------------------- */
+/* Restante do seu CSS (Banner Sections, Gallery, Footer, etc.) */
+/* Mantenha o restante do seu style.css aqui */
+/* ... (seu CSS para main, banners, footer, etc.) ... */
+
+/* Exemplo: Estilos do Footer que você forneceu */
+ footer {
+     padding: 1.875rem 0;
+     background-color: #392523;
+     text-align: center;
+     width: 100%;
+     color: #F8F2EA;
+     /* Removido ::after para usar parágrafo real */
+ }
+
+ footer p { /* Estilo para o parágrafo do copyright */
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #F8F2EA; /* Garante a cor */
+    font-family: 'Fragment Core', sans-serif; /* Consistência de fonte */
+ }
+
+ .social-icons { /* Estilos para os ícones DENTRO do footer */
+    margin-bottom: 1.25rem; /* 20px */
+ }
+
+ .social-icons a {
+     font-size: 1.5625rem; /* 25px */
+     margin: 0 .625rem; /* 10px */
+     color: #F8F2EA;
+     /* font-family: 'Fragment Core', sans-serif; <-- Removido, já herda do footer */
+     transition: transform .3s ease, color .3s ease;
+ }
+
+ .social-icons a:hover {
+     transform: scale(1.2);
+     color: #94A473;
+ }
+
+ .contact-form {
+     max-width: 31.25rem; /* 500px */
+     margin: 1.25rem auto;
+     text-align: left;
+     display: none; /* Mantém escondido como no original */
+ }
+/* ... (adicione/mantenha o resto do seu CSS aqui) ... */
