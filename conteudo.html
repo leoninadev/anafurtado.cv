@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteúdo - Ana Furtado</title> <!-- Mantido o título original -->
-    <!-- <link rel="stylesheet" href="style.css"> Removido se todo CSS está inline -->
+    <title>Fundação Lemann - Ana Furtado</title> <!-- Título Atualizado -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos GERAIS que você já tinha */
+        /* Estilos GERAIS (Mantidos) */
         body {
             font-family: 'Nixie One', sans-serif;
-            background-color: #F8F2EA;
+            background-color: #F8F2EA; /* Fundo geral bege claro */
             color: #392523;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            line-height: 1.6; /* Adicionado para melhor legibilidade geral */
+            line-height: 1.6;
         }
 
         header {
@@ -48,8 +48,8 @@
             text-decoration: none;
         }
 
-        .nav-links { /* Container da navegação para controle mobile */
-             display: flex; /* Mostrar por padrão em desktop */
+        .nav-links {
+             display: flex;
         }
 
         nav ul {
@@ -63,6 +63,7 @@
             margin: 0 0.9375rem;
         }
 
+        /* Header Links ATUALIZADOS - sem dropdown Portfólio */
         nav ul li a {
             text-decoration: none;
             color: #392523;
@@ -75,53 +76,8 @@
             color: #94A473;
         }
 
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 10rem;
-            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .dropdown-content.show {
-            display: block;
-            opacity: 1;
-        }
-
-        .dropdown-content a {
-            padding: 0.75rem 1rem;
-            text-decoration: none;
-            display: block;
-            color: #392523;
-            font-family: 'Fragment Core', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #94A473;
-        }
-
-        .dropbtn {
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: inherit;
-            font: inherit;
-            padding: 0;
-            display: inline-flex; /* Para alinhar ícone se houver */
-            align-items: center; /* Para alinhar ícone se houver */
-        }
-         .dropbtn i { /* Estilo para o ícone dentro do botão */
-             margin-left: 5px;
-         }
+        /* Remover estilos específicos do dropdown se não houver mais nenhum */
+        /* .dropdown, .dropdown-content, .dropbtn etc. podem ser removidos se não usados */
 
         .menu-toggle {
             display: none;
@@ -133,170 +89,128 @@
         }
 
         /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
-
         main {
              padding: 20px;
              padding-top: 100px; /* Espaço para o header fixo */
-             background-color: #F8F2EA;
+             /* Removido background-color daqui, aplicado via classe */
         }
+
+        /* NOVA CLASSE para fundo cinza */
+        .bg-gray {
+            background-color: #EAEAEA; /* Tom de cinza claro - ajuste se necessário */
+        }
+        /* Ajustar cor do texto dentro de bg-gray se necessário (provavelmente não, pois é claro) */
+        /* .bg-gray h2, .bg-gray p { color: #392523; } */
+
 
         main section {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: 1px solid #e0d8cf; /* Linha divisória sutil no tom bege */
+            /* Remover borda inferior se não desejar mais a separação */
+            /* border-bottom: 1px solid #dcdcdc; */
         }
-         main section:last-of-type { /* Usar last-of-type é mais robusto */
+         main section:last-of-type {
              border-bottom: none;
          }
 
          main h2 {
             font-family: 'Nixie One', sans-serif;
-            font-size: 2.2em; /* Um pouco maior */
+            font-size: 2.2em;
             color: #392523;
-            margin-bottom: 15px;
-            font-weight: 400; /* Nixie One geralmente é mais leve */
+            margin-bottom: 10px; /* Menos espaço antes das tags */
+            font-weight: 400;
          }
+         /* Título "Tipos de Conteúdo" */
          main h3 {
              font-family: 'Fragment Core', sans-serif;
              font-weight: 600;
-             font-size: 1.6em; /* Um pouco maior */
-             color: #392523;
-             margin-top: 30px; /* Mais espaço acima do h3 */
-             margin-bottom: 20px;
+             font-size: 1.1em; /* Menor, mais sutil */
+             color: #5c4b49; /* Cor mais suave */
+             margin-top: 0; /* Colado no h2 */
+             margin-bottom: 15px;
          }
 
          main p {
             font-family: 'Fragment Core', sans-serif;
             font-size: 1em;
             color: #392523;
-            margin-bottom: 1em; /* Espaçamento padrão entre parágrafos */
+            margin-bottom: 1em;
          }
-         main p em { /* Para as datas */
+         /* Data */
+         main p.date {
              font-family: 'Playfair Display', serif;
              font-style: italic;
              color: #5c4b49;
+             margin-top: 15px; /* Espaço após as tags */
+             margin-bottom: 10px;
+             font-size: 0.95em;
          }
 
+         /* Links */
          main a {
-             color: #94A473; /* Sua cor verde para links */
+             color: #94A473;
              text-decoration: none;
-             font-weight: 600; /* Links um pouco mais destacados */
+             font-weight: 600;
          }
          main a:hover {
              text-decoration: underline;
          }
-         /* Link "Voltar" especial */
-         .back-link {
-             display: inline-block;
-             margin-bottom: 20px;
-             font-size: 0.9em;
-             color: #777;
-         }
-         .back-link:hover {
-             color: #392523;
-         }
 
-
-        /* Texto verde específico (Fundação Lemann) */
+        /* Texto verde */
         .text-verde {
-            color: #7A8A5A; /* Verde consistente */
+            color: #7A8A5A;
         }
-        h2.text-verde, h3.text-verde { /* Garante que títulos verdes usem a cor */
+        h2.text-verde {
              color: #7A8A5A;
         }
 
         /* Tags */
+        .tags {
+            margin-top: 5px; /* Espaço após o h3 */
+            margin-bottom: 5px; /* Espaço antes da data */
+        }
         .tags span {
             display: inline-block;
-            background-color: #e0d8cf; /* Fundo bege escuro */
-            padding: 6px 14px; /* Ajuste padding */
-            margin: 5px 6px 10px 0;
-            border-radius: 16px; /* Mais arredondado */
-            font-size: 0.9em;
+            background-color: #dcdcdc; /* Cinza um pouco mais escuro que o fundo */
+            padding: 5px 12px;
+            margin: 4px 5px 4px 0;
+            border-radius: 15px;
+            font-size: 0.85em; /* Menor */
             font-family: 'Fragment Core', sans-serif;
             color: #392523;
-            /* Removido [colocar uma tag] do CSS, será feito no HTML */
+            font-weight: 400;
         }
 
-        /* Grid de Conteúdo */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Levemente maior */
-            gap: 30px; /* Mais espaçamento */
-            margin-top: 25px;
-        }
-
-        .content-item {
-            border: 1px solid #e0d8cf;
-            padding: 20px; /* Mais padding interno */
-            text-align: center;
-            background-color: #fff; /* Fundo branco */
-            border-radius: 8px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.07); /* Sombra um pouco mais pronunciada */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .content-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-
-        .content-item img {
-            max-width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px auto; /* Mais espaço abaixo da imagem */
-            border-radius: 4px;
-        }
-
-        .content-item a { /* Link dentro do card */
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            font-family: 'Fragment Core', sans-serif;
-            font-weight: 600;
-            font-size: 1.05em; /* Levemente maior */
-            word-wrap: break-word;
-        }
-        .content-item small { /* Nome do arquivo */
-            font-size: 0.8em;
-            color: #777;
-            display: block;
-            word-wrap: break-word;
-            margin-top: 5px; /* Espaço acima do nome do arquivo */
-        }
-
-        /* Footer básico */
+        /* Footer (Mantido) */
         footer {
-            margin-top: 40px;
-            padding: 25px 20px; /* Mais padding vertical */
+            margin-top: 0; /* Remover margem se main tem fundo */
+            padding: 25px 20px;
             text-align: center;
             font-size: 0.9em;
             color: #5c4b49;
             font-family: 'Fragment Core', sans-serif;
             border-top: 1px solid #ddd;
-            background-color: #F8F2EA; /* Mesmo fundo do body/header */
+            background-color: #F8F2EA; /* Fundo bege original */
         }
 
-        /* Estilos de Responsividade que você já tinha - REVISADOS */
+        /* Estilos de Responsividade (REVISADOS para header sem dropdown) */
         @media (max-width: 768px) {
             header {
                 padding: 0.9375rem 1.25rem;
-                /* Flex direction column removido - logo e toggle ficam na linha */
             }
 
-            .nav-links { /* Esconder nav por padrão em mobile */
+            .nav-links {
                 display: none;
                 position: absolute;
-                top: 100%; /* Abaixo do header */
+                top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: #F8F2EA; /* Fundo bege */
+                background-color: #F8F2EA;
                 box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
                 padding: 1rem 0;
             }
 
-            header.active .nav-links { /* Mostrar quando menu ativo */
+            header.active .nav-links {
                 display: block;
             }
 
@@ -304,11 +218,10 @@
                 font-size: 1.5em;
             }
 
-            .menu-toggle { /* Mostrar botão hamburguer */
+            .menu-toggle {
                 display: block;
             }
 
-            /* Menu principal mobile */
             nav ul {
                 flex-direction: column;
                 text-align: center;
@@ -319,59 +232,16 @@
                 margin: 0.8rem 0;
             }
 
-            /* Dropdown mobile */
-            .dropdown-content {
-                 position: static; /* Volta ao fluxo normal */
-                 box-shadow: none;
-                 background-color: transparent;
-                 min-width: auto;
-                 opacity: 1;
-                 display: none; /* Controlado pelo JS */
-                 padding-left: 20px; /* Indentação */
-                 border-left: 2px solid #e0d8cf; /* Linha para indicar subnível */
-                 margin-left: 10%; /* Afastar da borda */
-                 margin-right: 10%;
-                 margin-top: 5px; /* Espaço acima */
-            }
-            .dropdown-content.show {
-                 display: block;
-            }
-            .dropdown-content a {
-                 padding: 0.5rem 1rem;
-                 color: #5c4b49;
-                 font-size: 0.95em; /* Menor */
-                 text-align: left; /* Alinhar à esquerda */
-            }
-             .dropdown-content a:hover {
-                 background-color: #e0d8cf;
-             }
-             .dropbtn { /* Botão do dropdown em mobile */
-                 width: 100%;
-                 justify-content: center; /* Centralizar texto e ícone */
-             }
+            /* Remover regras de dropdown mobile se não houver mais dropdowns */
 
-
-            /* Conteúdo principal mobile */
              main {
-                 padding-top: 80px; /* Ajustar conforme altura do header */
+                 padding-top: 80px;
                  padding-left: 15px;
                  padding-right: 15px;
              }
              main h2 { font-size: 1.8em; }
-             main h3 { font-size: 1.4em; }
-
-            /* Grid mobile */
-            .content-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar minmax */
-                gap: 20px;
-            }
-            .content-item {
-                 padding: 15px;
-            }
-            .content-item img {
-                height: 160px; /* Altura ajustada */
-                 margin-bottom: 15px;
-            }
+             main h3 { font-size: 1em; }
+             .tags span { font-size: 0.8em; padding: 4px 10px; }
         }
 
     </style>
@@ -383,19 +253,10 @@
         <div class="nav-links">
             <nav>
                 <ul>
+                    <!-- NAVEGAÇÃO ATUALIZADA - Sem Dropdown Portfólio -->
                     <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li class="dropdown">
-                        <!-- Atualizado para usar 'button' para melhor acessibilidade e controle JS -->
-                        <button type="button" class="dropbtn" onclick="toggleDropdown(event)">
-                            Portfólio <i class="fas fa-chevron-down fa-xs"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="portfolio-geral.html">Visão Geral</a> <!-- Exemplo -->
-                            <a href="fundacao_lemann_conteudo.html">Fundação Lemann</a> <!-- Link para esta página -->
-                            <!-- Adicione outros links de portfólio aqui -->
-                        </div>
-                    </li>
+                    <li><a href="portfolio-geral.html">Portfólio</a></li> <!-- Link direto -->
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -405,193 +266,54 @@
         </button>
     </header>
 
-    <!-- ===== INÍCIO DO CONTEÚDO PRINCIPAL ===== -->
-    <main>
-        <!-- Seção Introdutória (Fundação Lemann) -->
+    <!-- Conteúdo Principal com fundo cinza -->
+    <main class="bg-gray">
+
+        <!-- Seção Introdutória -->
         <section id="intro-fundacao-lemann">
             <h2 class="text-verde">Fundação Lemann</h2>
-            <p><em>[Oct. 2024 - Presente]</em></p>
+
+             <!-- Título e Tags Movidos para cá -->
+            <h3>Fundação Lemann: Tipos de Conteúdo</h3>
+            <div class="tags">
+                 <span>Redação</span>
+                 <span>Gestão de Redes Sociais</span>
+                 <span>Campanha</span>
+                 <span>Cobertura de Evento</span>
+            </div>
+
+            <p class="date"><em>[Oct. 2024 - Presente]</em></p>
             <p>
                 Organização brasileira que investe em educação e desenvolvimento
                 de lideranças para promover mudanças sistêmicas no Brasil. Seu foco
                 principal está na melhoria da educação pública e na formação de
                 lideranças comprometidas com impacto social.
             </p>
-            <p><a href="#conteudos-detalhados">Conheça minha atuação <i class="fas fa-arrow-down fa-xs"></i></a></p>
+            <!-- Link para a NOVA PÁGINA de detalhes, sem seta -->
+            <p><a href="fundacao_lemann_detalhes.html">Conheça minha atuação</a></p>
         </section>
 
-        <!-- Seção de Detalhamento dos Conteúdos -->
-        <section id="conteudos-detalhados">
-            <h2>Portfólio Detalhado</h2>
+        <!-- A SEÇÃO #conteudos-detalhados FOI REMOVIDA DAQUI -->
 
-            <!-- Link Voltar (Opcional, estilizado) -->
-            <a href="javascript:history.back()" class="back-link">
-                <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
-            </a>
-
-            <h3 class="text-verde">Fundação Lemann: Tipos de Conteúdo</h3>
-
-            <div class="tags">
-                 <span><!--[tag]--> Redação</span>
-                 <span><!--[tag]--> Gestão de Redes Sociais</span>
-                 <span><!--[tag]--> Campanha</span>
-                 <span><!--[tag]--> Cobertura de Evento</span>
-                 <!-- Adicione ou modifique as tags conforme necessário -->
-            </div>
-
-            <!-- Artigos/Containers para cada Bloco de Conteúdo -->
-
-            <article id="campanha-citemaisuma">
-                <h3>CAMPANHA #CiteMaisUma</h3>
-                <div class="content-grid">
-                    <div class="content-item">
-                        <!-- ** IMPORTANTE: Verifique se 'toolzin.com-C4wC5_MvZ5r-1.jpg' está na pasta 'images/' ** -->
-                        <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
-                        <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Ver Postagem 1</a>
-                        <small>toolzin.com-....jpg</small>
-                    </div>
-                    <div class="content-item">
-                        <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
-                        <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Ver Postagem 2</a>
-                        <small>Snapinst.app_429...jpg</small>
-                    </div>
-                    <div class="content-item">
-                         <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
-                        <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 3</a>
-                        <small>Snapinst.app_431...jpg</small>
-                    </div>
-                     <div class="content-item">
-                        <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
-                        <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 4</a>
-                        <small>Snapinst.app_470...jpg</small>
-                    </div>
-                </div>
-            </article>
-
-            <article id="campanha-declaracao-racial">
-                <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
-                <div class="content-grid">
-                    <div class="content-item">
-                        <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
-                        <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 1</a>
-                        <small>Snapinst.app_465...jpg</small>
-                    </div>
-                    <div class="content-item">
-                        <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
-                        <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 2</a>
-                        <small>Snapinst.app_468...jpg</small>
-                    </div>
-                     <div class="content-item">
-                         <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
-                        <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 3</a>
-                        <small>Snapinst.app_469...jpg</small>
-                    </div>
-                     <div class="content-item">
-                        <!-- ** IMPORTANTE: Imagem para este item não foi listada no doc. Use um placeholder ou a imagem correta ** -->
-                        <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4">
-                        <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 4</a>
-                         <small>Imagem não especificada</small>
-                    </div>
-                </div>
-            </article>
-
-            <article id="campanha-always-on">
-                <h3>ALWAYS ON</h3>
-                <div class="content-grid">
-                     <div class="content-item">
-                        <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
-                        <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 1</a>
-                        <small>Snapinst.app_453...jpg</small>
-                    </div>
-                    <div class="content-item">
-                        <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
-                        <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 2</a> <!-- Link corrigido do doc -->
-                         <small>Snapinst.app_480...jpg</small>
-                   </div>
-                   <div class="content-item">
-                        <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
-                        <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 3</a>
-                        <small>Snapinst.app_480...jpg</small>
-                    </div>
-                    <div class="content-item">
-                         <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
-                         <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Ver Postagem 4</a>
-                         <small>Snapinst.app_470...jpg</small>
-                    </div>
-                </div>
-                 <!-- As 5 imagens visuais extras foram REMOVIDAS daqui, pois não constam no documento de referência fornecido nesta interação -->
-            </article>
-
-            <article id="artigos">
-                <h3>ARTIGOS</h3>
-                 <div class="content-grid">
-                    <div class="content-item">
-                        <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
-                        <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Ler Artigo 1 (LinkedIn)</a>
-                        <small>1736773435916.png</small>
-                    </div>
-                     <div class="content-item">
-                        <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
-                        <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Ler Artigo 2 (LinkedIn)</a>
-                        <small>1734728039157.png</small>
-                    </div>
-                 </div>
-            </article>
-
-        </section> <!-- Fim da seção #conteudos-detalhados -->
     </main>
-     <!-- ===== FIM DO CONTEÚDO PRINCIPAL ===== -->
 
     <footer>
          <p>Ana Furtado © <span id="currentYear"></span></p>
-         <!-- Se quiser adicionar "Rawse Creative" do documento: -->
          <!-- <p style="font-size: 0.8em; margin-top: 5px;">Site por Rawse Creative</p> -->
     </footer>
 
     <script>
-        // Script para o Menu Hamburguer
+        // Script para o Menu Hamburguer (Mantido)
         function toggleMenu() {
             const header = document.querySelector('header');
-            header.classList.toggle('active'); // Controla a classe no header para mostrar/esconder .nav-links via CSS
+            header.classList.toggle('active');
         }
 
-        // Script para Dropdown (clique)
-        function toggleDropdown(event) {
-            // Não precisamos mais do preventDefault se usamos <button>
-            // Encontra o conteúdo dropdown irmão ou filho do botão clicado
-            var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
+        // Remover funções toggleDropdown e closeAllDropdowns se não houver mais dropdowns
+        // window.onclick também pode ser simplificado ou removido se não houver dropdowns
 
-            // Fecha outros dropdowns abertos antes de abrir/fechar o atual
-            closeAllDropdowns(dropdownContent);
-
-            // Mostra/esconde o dropdown atual
-             if (dropdownContent) { // Verifica se encontrou o elemento
-                dropdownContent.classList.toggle('show');
-             }
-        }
-
-        // Fecha todos os dropdowns exceto o especificado
-        function closeAllDropdowns(exceptThisOne) {
-            var dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(function(dropdown) {
-                // Fecha se não for o que foi clicado E estiver visível
-                if (dropdown !== exceptThisOne && dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            });
-        }
-
-        // Fecha dropdowns se clicar fora deles
-        window.onclick = function(event) {
-          // Se o clique não foi dentro de um botão dropdown OU dentro de um conteúdo de dropdown
-          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
-             closeAllDropdowns(null); // Chama a função para fechar todos
-          }
-        }
-
-        // Script para atualizar o ano no footer
+        // Script para atualizar o ano no footer (Mantido)
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
     </script>
 
 </body>
