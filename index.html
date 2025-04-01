@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Furtado</title>
+    <!-- Mantém o link para o CSS externo -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Header SUBSTITUÍDO pela versão da página de detalhes -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -23,21 +25,29 @@
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
+                        <!-- O 'a' com class dropbtn agora usa o mesmo estilo de fonte -->
+                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event);">Projetos</a>
                         <div class="dropdown-content">
                             <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
+                    <!-- ÍCONES SOCIAIS DESKTOP (Agora presentes na index também) -->
+                    <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+
+                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE (Com a estrutura corrigida) -->
                      <li class="social-icons-mobile">
-                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                          <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                          <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- MAIN (Não modificado) -->
     <main>
         <section class="banner banner-1">
             <img src="img/foto1.jpg?v=1" alt="foto 1">
@@ -51,16 +61,16 @@
             </div>
         </section>
         <section class="banner banner-3" id="minha-trajetoria">
-    <div class="banner-content">
-        <p class="mini-bio">
-            Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
-            Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
-            <br><br>
-            Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
-            <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
-        </p>
-    </div>
-</section>
+            <div class="banner-content">
+                <p class="mini-bio">
+                    Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
+                    Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
+                    <br><br>
+                    Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
+                    <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
+                </p>
+            </div>
+        </section>
         <section class="banner banner-4" id="trajetoria">
             <h2 class="banner-4-title">Passos da minha trajetória</h2>
             <div class="brands-grid">
@@ -83,6 +93,7 @@
             </div>
         </section>
     </main>
+    <!-- FOOTER (Não modificado) -->
     <footer>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -99,13 +110,90 @@
             </form>
         </div>
     </footer>
+    <!-- SCRIPT (Não modificado - mas o JS do dropdown precisa estar no seu style.css ou aqui) -->
     <script>
+        // --- INÍCIO: JS necessário para o Header funcionar ---
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
-menuToggle.addEventListener('click', () => {
-        header.classList.toggle('active');
-    });
-</script>
-Use code with caution.
+
+        if (menuToggle && header) { // Verifica se os elementos existem
+            menuToggle.addEventListener('click', () => {
+                header.classList.toggle('active');
+                closeAllDropdowns(null); // Fecha dropdowns ao abrir/fechar menu
+            });
+        }
+
+        // === Script Dropdown ===
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var dropdown = event.currentTarget.closest('.dropdown'); // Encontra o LI pai
+            if (!dropdown) return; // Sai se não encontrar o dropdown
+            var dropdownContent = dropdown.querySelector('.dropdown-content');
+            if (!dropdownContent) return; // Sai se não encontrar o conteúdo
+
+            var isCurrentlyShown = dropdownContent.classList.contains('show');
+
+            closeAllDropdowns(null); // Fecha todos os outros primeiro
+
+            if (!isCurrentlyShown) {
+                dropdownContent.classList.add('show');
+            }
+        }
+
+        function closeAllDropdowns(exceptThisOne) {
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+                // exceptThisOne não é mais usado aqui, mas pode ser útil no futuro
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        window.onclick = function(event) {
+          // Fecha dropdown se clicar fora
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+             closeAllDropdowns(null);
+          }
+        }
+        // === Fim Script Dropdown ===
+
+        // Fecha o menu mobile se um link dentro dele for clicado (opcional, mas boa UX)
+        const navLinksContainer = document.querySelector('.nav-links');
+        if (navLinksContainer && header) { // Verifica se existem
+            navLinksContainer.addEventListener('click', (event) => {
+                const targetLink = event.target.closest('a');
+                if (targetLink && header.classList.contains('active')) {
+                    // Não fecha o menu se clicar no botão dropdown
+                    if (!targetLink.classList.contains('dropbtn')) {
+                        header.classList.remove('active');
+                        closeAllDropdowns(null); // Garante fechamento de dropdowns
+                    }
+                }
+            });
+        }
+        // --- FIM: JS necessário para o Header funcionar ---
+
+        // (Seu script original para o menu toggle, se for diferente, pode manter)
+        // const menuToggle = document.querySelector('.menu-toggle');
+        // const header = document.querySelector('header');
+        // menuToggle.addEventListener('click', () => {
+        //      header.classList.toggle('active');
+        // });
+
+        // Script para atualizar o ano no footer (opcional, pode adicionar se precisar)
+        const currentYearSpan = document.querySelector('footer p span#currentYear'); // Busca pelo ID opcional
+        const currentYearElement = document.querySelector('footer p'); // Busca pelo parágrafo
+        if (currentYearSpan) {
+             currentYearSpan.textContent = new Date().getFullYear();
+        } else if (currentYearElement && currentYearElement.textContent.includes('©')) {
+            // Se não achar o span#currentYear, tenta adicionar ao final do parágrafo
+            currentYearElement.textContent += ' ' + new Date().getFullYear();
+        }
+
+
+    </script>
 </body>
 </html>
