@@ -1,727 +1,757 @@
-/* Reset CSS Completo (Mantenha como está) */
- *,
- *::before,
- *::after {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
- 
- /* Definição da fonte base no html */
- html {
-     font-size: 16px; /* Tamanho base para facilitar o escalonamento */
-     scroll-behavior: smooth;
-     scroll-padding-top: 5rem;
- }
- 
- body {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 1rem; /* Usando rem para tamanhos de fonte responsivos */
-     color: #392523;
-     background-color: #F8F2EA;
-     line-height: 1.6;
-     overflow-x: hidden;
- }
- 
- a {
-     text-decoration: none;
-     color: inherit;
- }
- 
- ul,
- ol {
-     list-style: none;
- }
- 
- img {
-     max-width: 100%;
-     height: auto;
-     display: block;
- }
- 
- button {
-     background: none;
-     border: none;
-     cursor: pointer;
-     outline: none;
-     padding: 0;
-     font: inherit;
- }
- 
- input,
- textarea,
- select {
-     font: inherit;
-     border: 1px solid #ccc;
-     border-radius: 0;
-     padding: 0.5em;
-     display: block;
-     width: 100%;
- }
- 
- /* Layout */
- html,
- body {
-     height: 100%;
-     margin: 0;
-     padding: 0;
- }
- 
- /* Header */
- header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 1.25rem 2.5rem;
-     background-color: #F8F2EA;
-     box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
-     position: fixed;
-     top: 0;
-     width: 100%;
-     z-index: 1000;
- }
- 
- /* Logo */
- .logo {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 2em;
-     letter-spacing: .125rem;
-     text-align: center;
-     font-weight: bold; /* Garante que o texto seja exibido em negrito */
- }
- 
- .logo a {
-     color: #392523;
- }
- 
- nav ul {
-     display: flex;
-     list-style: none;
- }
- 
- nav ul li {
-     margin: 0 .9375rem;
- }
- 
- /* Estilo para links de navegação */
- nav ul li a {
-     text-decoration: none;
-     color: #392523;
-     font-weight: 500;
-     font-family: 'Fragment Core', sans-serif;
-     transition: color .3s ease;
- }
- 
- nav ul li a:hover {
-     color: #94A473;
- }
- 
- .dropdown {
-     position: relative;
- }
- 
- .dropdown-content {
-     display: none;
-     position: absolute;
-     background-color: #f9f9f9;
-     min-width: 10rem;
-     box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,.2);
+/* Reset CSS Completo */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição da fonte base no html */
+html {
+    font-size: 16px; /* Tamanho base para facilitar o escalonamento */
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Ajuste conforme a altura final do header fixo */
+}
+
+body {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1rem; /* Usando rem para tamanhos de fonte responsivos */
+    color: #392523;
+    background-color: #F8F2EA;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Adiciona padding-top para compensar header fixo */
+    padding-top: 70px; /* << AJUSTE ESTE VALOR SE NECESSÁRIO >> */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+}
+
+/* Layout - Removido height: 100% de html, body pois pode causar problemas */
+/* html, body { height: 100%; } */
+
+
+/* ======================================================= */
+/* == START HEADER CSS - SUBSTITUA SEU CSS ANTIGO AQUI == */
+/* ======================================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem; /* 20px 40px */
+    background-color: #F8F2EA;
+    color: #392523;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px */
+    position: fixed;
+    top: 0;
+    left: 0; /* Garante que comece na esquerda */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Importante para padding não aumentar width */
+}
+
+.logo {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2em; /* 32px */
+    letter-spacing: 0.125rem; /* 2px */
+    text-align: center;
+    margin: 0; /* Remove margem padrão do H1 */
+    /* font-weight: bold; <-- Removido */
+}
+.logo a {
+    color: #392523;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex; /* Visível no desktop */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0.9375rem; /* 15px */
+}
+
+/* Estilo BASE para todos os links da nav (inclui Trajetória, Conteúdo) */
+nav ul li a {
+    text-decoration: none;
+    color: #392523;
+    font-weight: 500;
+    font-family: 'Fragment Core', sans-serif;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+nav ul li a:hover {
+    color: #94A473;
+}
+
+/* Estilos específicos para ícones DENTRO dos links <a> */
+nav ul li a i {
+    margin-right: 5px; /* Espaço entre ícone e texto (se houver) */
+    font-size: 1.1em; /* Tamanho base do ícone */
+    color: inherit; /* Herda a cor do link */
+}
+/* Ícones Sociais Desktop */
+nav ul li a[aria-label="LinkedIn"] i,
+nav ul li a[aria-label="Instagram"] i,
+nav ul li a[aria-label="E-mail"] i {
+     margin-right: 0; /* Sem margem pois não tem texto */
+     font-size: 1.2em; /* Tamanho específico */
+}
+/* Ícone Home */
+nav ul li a[aria-label="Home"] i {
+    font-size: 1.3em; /* Tamanho específico */
+    margin-right: 0; /* Sem margem pois não tem texto */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem; /* 160px */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Adicionado visibility */
+    visibility: hidden; /* Escondido para acessibilidade */
+    margin-top: 5px; /* Pequeno espaço do botão */
+    left: 0; /* Alinha com o início do botão */
+}
+.dropdown-content.show {
+    display: block; /* Necessário para animação */
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-content a {
+    padding: 0.75rem 1rem; /* 12px 16px */
+    text-decoration: none;
+    display: block;
+    color: #392523;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #94A473;
+}
+/* Botão que ativa o dropdown ("Projetos") */
+.dropbtn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    /* Estilos para igualar aos outros links */
+    color: #392523;
+    font-family: 'Fragment Core', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dropbtn:hover {
+    color: #94A473;
+}
+
+/* Ícones Mobile - Escondido por padrão (Desktop) */
+.social-icons-mobile {
+    display: none; /* ESSENCIAL: Esconde no desktop */
+    /* Outros estilos aplicados apenas no mobile */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Botão Menu Hambúrguer - Escondido por padrão (Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* 24px */
+    color: #392523;
+    cursor: pointer;
+}
+
+/* === RESPONSIVIDADE DO HEADER === */
+@media (max-width: 768px) {
+    /* Ajusta padding do header no mobile */
+    header {
+        padding: 0.9375rem 1.25rem; /* 15px 20px */
+    }
+
+     /* Ajusta tamanho do logo no mobile */
+    .logo {
+        font-size: 1.5em; /* 24px */
+        text-align: left; /* Alinha à esquerda no mobile */
+        flex-grow: 1; /* Ocupa espaço disponível */
+    }
+
+    /* Mostra o botão do menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Configurações do menu mobile quando FECHADO */
+    .nav-links {
+        display: none; /* Escondido por padrão */
+        position: absolute; /* Posiciona abaixo do header */
+        top: 100%; /* Logo abaixo do header */
+        left: 0;
+        width: 100%;
+        background-color: #F8F2EA; /* Mesmo fundo do header */
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+        padding: 1rem 0; /* Espaçamento interno vertical */
+        border-top: 1px solid #eee; /* Linha separadora */
+    }
+
+    /* Configurações do menu mobile quando ABERTO (classe 'active' no header) */
+    header.active .nav-links {
+        display: block; /* Mostra o menu */
+    }
+
+    /* Estilo da lista no menu mobile */
+    nav ul {
+        flex-direction: column; /* Empilha os itens */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Estilo dos itens da lista no menu mobile */
+    nav ul li {
+        margin: 0.8rem 0; /* Espaçamento vertical */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* Esconde os ÍCONES SOCIAIS DESKTOP no mobile */
+    nav ul li > a[aria-label="LinkedIn"], /* Seleciona o <a> filho direto de <li> */
+    nav ul li > a[aria-label="Instagram"],
+    nav ul li > a[aria-label="E-mail"] {
+        display: none !important; /* Garante que fiquem escondidos */
+    }
+
+    /* Configuração do Dropdown no mobile */
+    .dropdown-content {
+         position: static; /* Volta ao fluxo normal */
+         box-shadow: none;
+         background-color: transparent;
+         min-width: auto;
+         opacity: 1; /* Sempre visível quando 'show' */
+         display: none; /* Controlado pelo JS */
+         padding-left: 20px; /* Indentação */
+         border-left: 2px solid #e0d8cf; /* Linha lateral */
+         margin: 5px 15% 10px 15%; /* Margens */
+         transition: none; /* Remove transição no mobile */
+         visibility: visible; /* Sempre visível quando display block */
+    }
+    .dropdown-content.show {
+        display: block; /* Mostrado pelo JS */
+    }
+    .dropdown-content a {
+        padding: 0.5rem 1rem; /* Padding menor */
+        color: #5c4b49; /* Cor diferente */
+        font-size: 0.95em;
+        text-align: left; /* Alinha à esquerda */
+        white-space: normal; /* Permite quebra de linha */
+    }
+    .dropdown-content a:hover {
+        background-color: #e0d8cf; /* Fundo diferente no hover */
+    }
+    /* Botão "Projetos" no mobile */
+    .dropbtn {
+        width: 100%; /* Ocupa a largura do LI */
+        justify-content: center; /* Centraliza o texto */
+    }
+
+    /* Mostra e estiliza o CONTAINER dos ícones sociais no mobile */
+    .social-icons-mobile {
+        display: block !important; /* ESSENCIAL: Mostra o container no mobile */
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee; /* Linha separadora */
+        text-align: center; /* Centraliza os ícones */
+        width: auto; /* Largura automática baseada no conteúdo */
+        padding-left: 0; /* Remove padding padrão de lista */
+    }
+    /* Estilo para os LINKS <a> dentro do container mobile */
+    .social-icons-mobile a {
+        display: inline-block !important; /* Ícones lado a lado */
+        margin: 0 15px !important; /* Espaçamento entre ícones (aumentado) */
+        color: #392523;
+        transition: color 0.3s ease;
+    }
+    .social-icons-mobile a:hover {
+        color: #94A473;
+    }
+    /* Estilo para os ÍCONES <i> dentro dos links mobile */
+    .social-icons-mobile a i {
+        font-size: 1.4em !important; /* Tamanho do ícone */
+        margin-right: 0 !important; /* Sem margem */
+    }
+}
+
+/* ======================================================= */
+/* == END HEADER CSS ==================================== */
+/* ======================================================= */
+
+
+/* ======================================================= */
+/* == SEU CSS PARA MAIN, FOOTER, ETC. COMEÇA AQUI ====== */
+/* ======================================================= */
+
+/* Banner Sections */
+main {
+    /* padding-top: 2rem; <-- Removido, body já tem padding-top */
+    /* O padding-top do body cuida do espaço para o header fixo */
+}
+
+section {
+    padding: 3.75rem 0; /* Padding vertical padrão */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner-1 {
+    width: 100%;
+    /* height: 50rem; <-- Altura fixa pode ser problemática */
+    min-height: 60vh; /* Usar altura mínima relativa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: #F8F2EA;
+    padding-bottom: .9375rem;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0; /* Para animação */
+    transition: transform .3s ease;
+}
+
+.banner-1:hover {
+    transform: scale(1.02);
+}
+
+.banner-1 img {
+    width: 100%;
+    height: 100%; /* Ocupa altura do container */
+    /* max-height: 50rem; <-- Removido */
+    object-fit: cover; /* Alterado para cover */
+    object-position: top; /* Prioriza o topo */
+    transition: transform .3s ease;
+}
+
+.banner-1 img:hover {
+    transform: scale(1.05);
+}
+
+/* .banner-content (usado no banner 3) */
+/* .banner-title (não parece estar em uso no HTML fornecido) */
+
+
+.container-banners {
+    display: flex;
+    width: 100%;
+    /* height: 40.625rem; <-- Altura fixa pode ser problemática */
+    padding-top: .9375rem;
+}
+
+.container-banners > * {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; <-- Removido */
+    min-height: 40rem; /* Usar altura mínima */
+}
+
+.container-banners .banner-texto {
+    background-color: #392523;
+    color: #F8F2EA;
+    padding: 2rem; /* Adicionado padding interno */
+}
+
+.container-banners .banner-texto .banner-subtitle {
+    width: 80%;
+    max-width: 600px; /* Limita largura máxima */
+    text-align: center;
+    font-size: 3.25em;
+    text-transform: uppercase;
+    line-height: 1.3; /* Melhora leitura */
+}
+
+.container-banners .banner-texto .banner-subtitle .comunicacao {
+    color: #94A473;
+}
+
+.container-banners .banner-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.banner-3 {
+    background-color: #F8F2EA;
+    display: flex;
+    position: relative; /* Mantido para .banner-content */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 6.75rem 1rem; /* Adicionado padding horizontal */
+    min-height: 20rem;
+    flex-direction: column; /* .banner-content centralizado */
+    text-align: center;
+    /* margin-top: -6rem; <-- Removido, pode causar sobreposição indesejada */
+}
+
+/* Removido .background-image e .banner-image pois não estão no HTML da index */
+
+/* .banner-3 .banner-text { z-index: 1; } <-- Mantido se .banner-content precisar */
+.banner-content {
+    /* Se banner-3 tiver fundo escuro ou imagem, adicione z-index */
      z-index: 1;
-     opacity: 0;
- }
- 
- /* Adicionado para o script do dropdown */
- .dropdown-content.show {
-     display: block;
-     opacity: 1;
- }
- 
- /* Estilo para links do dropdown */
- .dropdown-content a {
-     padding: .75rem 1rem;
-     text-decoration: none;
-     display: block;
-     color: #392523;
-     font-family: 'Fragment Core', sans-serif;
-     transition: color .3s ease;
- }
- 
- .dropdown-content a:hover {
-     background-color: #f1f1f1;
-     color: #94A473;
- }
- 
- .dropdown:hover .dropdown-content {
-     display: block;
-     opacity: 1;
- }
- 
- .dropbtn {
-     cursor: pointer;
- }
- 
- /* Banner Sections */
- main {
-     padding-top: 2rem;
- }
- 
- section {
-     padding: 3.75rem 0;
-     position: relative;
-     overflow: hidden;
-     width: 100%;
- }
- 
- /* --------------- MODIFICADO --------------- */
- .banner-1 {
-     width: 100%;
-     height: 50rem;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     position: relative;
-     z-index: 1;
-     background-color: #F8F2EA;
-     padding-bottom: .9375rem;
-     animation: fadeInUp 1s ease forwards;
-     opacity: 0;
-     transition: transform .3s ease;
- }
- 
- .banner-1:hover {
-     transform: scale(1.02);
- }
- 
- /* Adiciona srcset para imagens responsivas */
- .banner-1 img {
-     width: 100%;
-     height: auto;
-     max-height: 50rem;
-     object-fit: contain;
-     object-position: center;
-     height: 100%; /* Alterado para 100% para ocupar todo o espaço */
-     object-fit: cover; /* Adicionado object-fit: cover para cobrir o container */
-     object-position: top; /* Alterado para top para priorizar a parte superior */
-     transition: transform .3s ease;
- }
- 
- .banner-1 img:hover {
-     transform: scale(1.05);
- }
- 
- .banner-content {
-     color: #fff;
-     font-size: 2em;
- }
- 
- .banner-title {
-     font-family: 'Playfair Display', serif;
-     font-size: 4em;
-     color: #fff;
-     font-style: italic;
- }
- 
- /* --------------- ADICIONADO --------------- */
- .container-banners {
-     display: flex;
-     width: 100%;
-     height: 40.625rem;
-     padding-top: .9375rem;
- }
- 
- .container-banners > * {
-     width: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100%;
- }
- 
- .container-banners .banner-texto {
-     background-color: #392523;
-     color: #F8F2EA;
-     height: 100%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- 
- .container-banners .banner-texto .banner-subtitle {
-     width: 80%;
-     text-align: center;
-     font-size: 3.25em;
-     text-transform: uppercase;
- }
- 
- /* Estilização da palavra "Comunicação" */
- .container-banners .banner-texto .banner-subtitle .comunicacao {
-     color: #94A473;
- }
- 
- .container-banners .banner-imagem img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     object-position: center;
- }
- 
- /* --------------- MODIFICADO --------------- */
- .banner-3 {
-     background-color: #F8F2EA;
-     display: flex;
-     position: relative;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-     padding: 6.75rem 0;
-     min-height: 20rem;
- 
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     margin-top: -6rem;
- }
- 
- .banner-3 .background-image {
-     background-image: url(img/banner3.jpg);
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     z-index: 0;
-     filter: brightness(.4);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
- }
- 
- .banner-3 .banner-image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     object-position: center;
-     display: none;
- }
- 
- .banner-3 .banner-text {
-     z-index: 1;
- }
- 
- /* --------------- MODIFICADO - TAMANHO DA FONTE DA MINI BIO --------------- */
- .mini-bio {
-     font-family: 'Glacial Indifference', sans-serif;
-     font-weight: normal;
-     color: #392523;
-     line-height: 1.6;
-     max-width: 43.75rem;
-     text-align: justify;
-     margin: 0 auto;
-     font-style: italic;
-     font-size: 1rem;
- }
- 
- .mini-bio p {
-     margin-bottom: 0;
- }
- 
- /* --------------- MODIFICADO - TAMANHO DO BANNER 4 --------------- */
- .banner-4 {
-     background-color: #f5f5f5;
-     text-align: center;
-     width: 100%;
-     padding-top: 7.5rem;
-     padding-bottom: 7.5rem;
- }
- 
- .banner-4-title {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 2.5em;
-     color: #392523;
-     margin-bottom: 1.875rem;
- }
- 
- .brands-grid {
-     display: flex;
-     flex-direction: column;
-     padding: 0 1.25rem 3.75rem;
- }
- 
- .brand-row {
-     display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
-     margin-bottom: 1.875rem;
- }
- 
- .brand-row img {
-     height: 10rem;
-     width: 10rem;
-     object-fit: contain;
-     min-width: auto;
-     margin: 0 1.25rem;
-     transition: transform .3s ease;
- }
- 
- .brand-row img:hover {
-     transform: scale(1.1);
- }
- 
- /* Gallery */
- .gallery {
-     background-color: #fff;
-     text-align: center;
-     width: 100%;
-     padding-top: 3.75rem;
-     padding-bottom: 0;
- }
- 
- .gallery h2 {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 2.5em;
-     color: #392523;
-     margin-bottom: 1.875rem;
- }
- 
- .gallery-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-     gap: 1.25rem;
-     padding: 1.25rem;
- }
- 
- .gallery-item {
-     text-decoration: none;
-     display: block;
- }
- 
- .gallery-item img {
-     width: 100%;
-     height: auto;
-     display: block;
- }
- 
- /* Footer */
- footer {
-     padding: 1.875rem 0;
-     background-color: #392523;
-     text-align: center;
-     width: 100%;
-     color: #F8F2EA;
- }
- 
- footer::after {
-     content: "© 2025 Ana Furtado. Todos os direitos reservados.";
-     display: block;
-     margin-top: 10px;
-     font-size: 0.8em;
- }
- 
- .social-icons a {
-     font-size: 1.5625rem;
-     margin: 0 .625rem;
-     color: #F8F2EA;
-     font-family: 'Fragment Core', sans-serif;
-     transition: transform .3s ease,color .3s ease;
- }
- 
- .social-icons a:hover {
-     transform: scale(1.2);
-     color: #94A473;
- }
- 
- .contact-form {
-     max-width: 31.25rem;
-     margin: 1.25rem auto;
-     text-align: left;
- }
- 
- .contact-form h3 {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 1.8em;
-     color: #94A473;
-     text-align: center;
-     margin-bottom: .9375rem;
- }
- 
- .contact-form input[type="email"],
- .contact-form input[type="text"],
- .contact-form textarea {
-     width: 100%;
-     padding: .625rem;
-     margin-bottom: .625rem;
-     border: 1px solid #ccc;
-     border-radius: .3125rem;
-     box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
-     font-family: 'Nixie One', sans-serif;
-     color: #392523;
- }
- 
- .contact-form button {
-     background-color: #94A473;
-     color: #fff;
-     padding: .625rem 1.25rem;
-     border: none;
-     border-radius: .3125rem;
-     cursor: pointer;
-     transition: background-color 0.3s ease;
- }
- 
- .contact-form button:hover {
-     background-color: #6A7652;
- }
- 
- /* Esconde o botão do menu por padrão */
- .menu-toggle {
-     display: none;
-     background: none;
-     border: none;
-     font-size: 1.5rem;
-     color: #392523;
-     cursor: pointer;
- }
- 
- /* Responsiveness */
- @media (max-width: 768px) {
-     header {
-         padding: .9375rem 1.25rem;
-         flex-direction: column;
-         align-items: flex-start;
-         height: auto;
-         position: fixed;
-     }
- 
-     .logo {
-         font-size: 1.5em;
-         margin-bottom: 0;
-          font-family: 'Nixie One', sans-serif !important;
-     }
- 
-     /* Mostra o botão do menu */
-     .menu-toggle {
-         display: block;
-         position: absolute;
-         top: 1rem;
-         right: 1rem;
-     }
- 
-     /* Esconde a navegação por padrão */
-     .nav-links {
-         display: none;
-         width: 100%;
-         justify-content: center;
-     }
- 
-     .nav-links nav ul {
-         flex-direction: column;
-         text-align: center;
-     }
- 
-     .nav-links nav ul li {
-         margin: .625rem 0;
-          font-family: 'Fragment Core', sans-serif !important;
-     }
- 
-     /* Estilos para quando o menu estiver ativo */
-     header.active .nav-links {
-         display: block;
-         background-color: #f9f9f9;
-         padding: 1rem;
-         width: 100%;
-     }
- header.active .social-icons-mobile {
-     display: flex;
-     justify-content: space-around;
- }
- 
- 
-     /* Estilo da fonte nos links do menu mobile */
-     header.active .nav-links nav ul li a {
-         font-family: 'Fragment Core', sans-serif !important; /* Adiciona a fonte Fragment Core */
-     }
- 
-     /* Ajustes na mini-bio para telas menores */
-     .mini-bio {
-         font-size: .8em;
-         margin-left: 0;
-         margin-right: 0;
-         padding-left: 1rem; /* Adicionado padding esquerdo */
-         padding-right: 1rem; /* Adicionado padding direito */
-         text-align: justify;
-         box-sizing: border-box;
-          font-family: 'Glacial Indifference', sans-serif !important;
-     }
- 
-     .container-banners .banner-texto .banner-subtitle {
-         font-size: 2.8em;
-          font-family: 'Nixie One', sans-serif !important;
-     }
- 
- /* Início - Ajustes para o formulário de contato no mobile */
- footer .contact-form {
-     max-width: 90%;
-     margin-left: auto;
-     margin-right: auto;
-     padding-left: 1rem; /* Adicionado padding esquerdo */
-     padding-right: 1rem; /* Adicionado padding direito */
-     box-sizing: border-box;
-      font-family: 'Nixie One', sans-serif !important;
- }
- /* Fim - Ajustes para o formulário de contato no mobile */
-     /* Ajuste para o subtítulo em telas médias */
-         /* Início - Estilos para alinhar os ícones sociais */
-     header.active .nav-links nav ul .social-icons-mobile {
-         display: flex;
-         justify-content: space-around;
-         width: 100%;
-         padding: 0;
-         margin-top: 1rem;
-     }
- 
-     header.active .nav-links nav ul .social-icons-mobile li {
-         margin: 0;
-     }
- 
-     header.active .nav-links nav ul li a {
-         font-size: 1.5rem;
-     }
-     /* Fim - Estilos para alinhar os ícones sociais */
- 
- /*Estilo específico para o conteúdo.html*/
-     .conteudo-item-container {
-         flex-direction: column; /* Empilha os itens verticalmente */
-         align-items: flex-start; /* Alinha os itens à esquerda */
-     }
- 
-     .conteudo-texto {
-         margin-right: 0; /* Remove a margem */
-     }
- 
-     .conteudo-texto h3 {
-          font-family: 'Fragment Core', sans-serif !important;
-     }
- 
-     .conteudo-texto h2 {
-          font-family: 'Nixie One', sans-serif !important;
-     }
- 
-     .conteudo-texto p {
-          font-family: 'Fragment Core', sans-serif !important;
-     }
- 
-     .conteudo-imagem {
-         width: 100%; /* A imagem ocupa toda a largura */
-         max-height: 200px; /* Define uma altura máxima */
-         margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
-     }
- 
-     .conteudo-imagem img {
-         object-fit: cover; /* Garante que a imagem cubra o espaço */
-         object-position: center; /* Centraliza a imagem */
-     }
- 
-     /* Ajustes para o container de banners */
-     .container-banners {
-         padding-left: 1rem; /* Adicionado padding esquerdo */
-         padding-right: 1rem; /* Adicionado padding direito */
-         box-sizing: border-box;
-     }
- section {
-     padding: 3.75rem 1rem; /* Adicionado padding horizontal */
-     position: relative;
-     overflow: hidden;
-     width: 100%;
-     box-sizing: border-box; /* Garante que o padding não aumente a largura */
- }
-  main h1{
-           font-family: 'Nixie One', sans-serif !important;
-         }
-         main p {
-              font-family: 'Fragment Core', sans-serif !important;
-         }
- }
- 
- @media (max-width: 480px) {
-     .banner-title {
-         font-size: 2.5em;
-     }
- 
-     .banner-3 .banner-text {
-         padding: 1.875rem;
-     }
- 
-     .mini-bio {
-         font-size: .7em;
-         line-height: 1.7;
-     }
- 
-     /* Ajustes para o container de banners */
-     .container-banners {
-         flex-direction: column;
-         height: auto;
-     }
- 
+     position: relative; /* Garante que z-index funcione */
+}
+
+
+.mini-bio {
+    /* font-family: 'Glacial Indifference', sans-serif; <-- Fonte não importada */
+    font-family: 'Fragment Core', sans-serif; /* Usar fonte disponível */
+    font-weight: normal; /* ou 400 */
+    color: #392523;
+    line-height: 1.6;
+    max-width: 43.75rem; /* 700px */
+    text-align: justify;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* .mini-bio p { margin-bottom: 0; } <-- Desnecessário se for só um <p> */
+
+
+.banner-4 {
+    background-color: #f5f5f5;
+    text-align: center;
+    width: 100%;
+    padding: 7.5rem 1rem; /* Padding vertical e horizontal */
+}
+
+.banner-4-title {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2.5em;
+    color: #392523;
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+.brands-grid {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 1.25rem 3.75rem; <-- Padding já está no .banner-4 */
+    padding-bottom: 3.75rem; /* Apenas padding inferior aqui */
+    align-items: center; /* Centraliza as rows */
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.875rem; /* 30px */
+    max-width: 1200px; /* Limita largura máxima da linha de logos */
+    width: 100%;
+}
+
+.brand-row img {
+    height: 10rem; /* 160px */
+    width: auto; /* Largura automática para manter proporção */
+    max-width: 10rem; /* Limita largura máxima */
+    object-fit: contain;
+    margin: 1rem 1.25rem; /* Espaçamento vertical e horizontal */
+    transition: transform .3s ease;
+}
+
+.brand-row img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Gallery (Não presente no HTML da index, mas mantido se usar em outras páginas) */
+.gallery {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 3.75rem 1rem; /* Padding vertical e horizontal */
+    /* padding-bottom: 0; */
+}
+.gallery h2 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 2.5em;
+    color: #392523;
+    margin-bottom: 1.875rem;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* minmax(300px, 1fr) */
+    gap: 1.25rem; /* 20px */
+    /* padding: 1.25rem; <-- Padding já está na section .gallery */
+    max-width: 1200px; /* Opcional: centraliza grid em telas largas */
+    margin: 0 auto;
+}
+.gallery-item { text-decoration: none; display: block; }
+.gallery-item img { width: 100%; height: auto; display: block; }
+
+
+/* Footer */
+footer {
+    padding: 1.875rem 1rem; /* Padding vertical e horizontal */
+    background-color: #392523;
+    text-align: center;
+    width: 100%;
+    color: #F8F2EA;
+    /* ::after removido */
+}
+footer p { /* Estilo para o parágrafo do copyright */
+   margin-top: 10px;
+   font-size: 0.8em;
+   color: #F8F2EA; /* Garante a cor */
+   font-family: 'Fragment Core', sans-serif; /* Consistência de fonte */
+}
+.social-icons { /* Container dos ícones no footer */
+   margin-bottom: 1.25rem; /* 20px */
+}
+.social-icons a { /* Links dos ícones no footer */
+    font-size: 1.5625rem; /* 25px */
+    margin: 0 .625rem; /* 10px */
+    color: #F8F2EA;
+    transition: transform .3s ease, color .3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #94A473;
+}
+
+/* Contact Form (Escondido no HTML original, estilos mantidos) */
+.contact-form {
+    max-width: 31.25rem; /* 500px */
+    margin: 1.25rem auto;
+    text-align: left;
+    display: none; /* Mantém escondido */
+}
+.contact-form h3 {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 1.8em;
+    color: #94A473;
+    text-align: center;
+    margin-bottom: .9375rem;
+}
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: .625rem;
+    margin-bottom: .625rem;
+    border: 1px solid #ccc;
+    border-radius: .3125rem;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.1);
+    font-family: 'Nixie One', sans-serif;
+    color: #392523;
+}
+.contact-form button {
+    background-color: #94A473;
+    color: #fff;
+    padding: .625rem 1.25rem;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #6A7652;
+}
+
+
+/* ======================================================= */
+/* == RESPONSIVIDADE GERAL (Exceto Header) ============= */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+    /* Header já tratado acima */
+
+    body {
+        padding-top: 60px; /* Ajuste o padding do body para a altura do header mobile */
+    }
+    html {
+       scroll-padding-top: 60px; /* Ajuste o scroll padding */
+    }
+
+    /* Ajustes na mini-bio para telas menores */
+    .mini-bio {
+        font-size: .9em; /* Pouco maior que 0.8em */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /* font-family: 'Glacial Indifference'... <-- Removido */
+    }
+
+    .container-banners {
+        /* Ajustes se necessário para mobile */
+        height: auto; /* Altura automática */
+        padding-top: 0;
+    }
      .container-banners > * {
-         width: 100%;
-         margin-bottom: 1.875rem;
+        width: 100%; /* Ocupa toda largura */
+        min-height: 25rem; /* Altura mínima menor */
      }
- 
-     .container-banners .banner-texto .banner-subtitle {
-         font-size: 2.25em;
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 2.5em; /* Reduzido */
+        width: 90%;
+        /* font-family: 'Nixie One'... <-- Removido !important */
+    }
+
+
+    footer .contact-form {
+        max-width: 90%;
+        /* font-family: 'Nixie One'... <-- Removido !important */
+    }
+
+    /* Estilos específicos para outras páginas (ex: conteudo.html) */
+    /* Mantenha aqui se precisar, mas idealmente separe em outro CSS */
+    /* .conteudo-item-container { ... } */
+
+
+    /* Padding geral das seções no mobile */
+    section {
+        padding: 3rem 1rem; /* Reduz padding vertical, mantém horizontal */
+    }
+
+     /* Remove !important desnecessários */
+     main h1, main p, .conteudo-texto h2, .conteudo-texto h3, .conteudo-texto p {
+          font-family: inherit !important; /* Permite herança normal */
+          /* Ou defina a fonte correta sem !important se necessário */
      }
- 
-     /* INÍCIO - Ajustes para o Banner 1 em Mobile */
-     .banner-1 {
-         height: auto;
-         padding-top: 0;
-         padding-bottom: 0;
+}
+
+@media (max-width: 480px) {
+     body {
+        padding-top: 55px; /* Exemplo de ajuste para telas muito pequenas */
      }
- 
-     .banner-1 img {
-         max-height: calc(100vh - 6rem);
-         object-fit: contain;
-         margin: 0;
-         padding: 0;
+     html {
+        scroll-padding-top: 55px;
      }
-     /* FIM - Ajustes para o Banner 1 em Mobile */
- 
-     /* Início - Espaçamento entre as logos no mobile */
-     .brand-row img {
-         margin: .625rem;
+
+    /* .banner-title (Se voltar a usar) */
+    /* .banner-title { font-size: 2.5em; } */
+
+    .banner-3 {
+        padding: 4rem 1rem;
+    }
+
+    .mini-bio {
+        font-size: .85em; /* Ajustado */
+        line-height: 1.7;
+    }
+
+    .container-banners {
+        flex-direction: column;
+    }
+    .container-banners > * {
+        min-height: 20rem; /* Reduzido */
+        margin-bottom: 1rem;
+    }
+     .container-banners > *:last-child {
+        margin-bottom: 0;
      }
- 
-     .second-row img {
-         margin-top: 1.25rem;
-     }
-     /* Fim - Espaçamento entre as logos no mobile */
- 
-     /* Início - Ajustes para o formulário de contato no mobile */
-     footer .contact-form {
-         max-width: 90%;
-         margin-left: auto;
-         margin-right: auto;
-     }
-     /* Fim - Ajustes para o formulário de contato no mobile */
- }
- 
- /* Estilos para telas grandes (acima de 768px) */
- @media (min-width: 769px) {
-     .mini-bio {
-         font-size: 1.3rem;
-     }
- }
- 
- /* Keyframes para animações */
- @keyframes fadeInUp {
-     from {
-         opacity: 0;
-         transform: translateY(20px);
-     }
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+    .container-banners .banner-texto .banner-subtitle {
+        font-size: 2em; /* Reduzido */
+    }
+
+    .banner-1 {
+        min-height: 50vh; /* Ajustado */
+        padding-bottom: 0;
+    }
+    .banner-1 img {
+        max-height: calc(100vh - 55px); /* Ajusta com base no padding-top do body */
+        object-fit: contain;
+    }
+
+    .brand-row img {
+        height: 8rem; /* Menor */
+        max-width: 8rem;
+        margin: .5rem; /* Menor */
+    }
+    .second-row {
+        /* margin-top: 1.25rem; <-- Removido, espaçamento padrão do .brand-row */
+    }
+
+}
+
+/* Estilos para telas grandes (Opcional, refinar .mini-bio) */
+@media (min-width: 769px) {
+    .mini-bio {
+        font-size: 1.1rem; /* Ajustado para não ficar tão grande */
+    }
+}
+
+/* Keyframes para animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
