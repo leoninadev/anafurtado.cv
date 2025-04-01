@@ -74,31 +74,27 @@ main {
      color: #F8F2EA; /* Cor de texto principal clara */
 }
 
-/* Título Principal da Página (MODIFICADO - SEM LINHA) */
+/* Título Principal da Página (SEM LINHA) */
 main h2.page-title {
      font-family: 'Nixie One', sans-serif;
      font-size: 2.2em;
-     color: #7A8A5A; /* Letra verde conforme solicitado */
+     color: #7A8A5A; /* Letra verde */
      margin-bottom: 10px; /* Espaço ANTES das tags */
      font-weight: 400;
-     /* padding-bottom: 10px; <-- REMOVIDO */
-     /* border-bottom: 1px solid #7a6a63; <-- REMOVIDO */
 }
-.text-verde { color: #7A8A5A !important; } /* Garante verde se a classe for usada */
+.text-verde { color: #7A8A5A !important; }
 
-
-/* Tags (MODIFICADO - COM LINHA ABAIXO) */
+/* Tags (COM LINHA ABAIXO) */
 .tags {
     margin-top: 15px; /* Espaço após título */
     margin-bottom: 30px; /* Espaço ANTES do próximo H3 (abaixo da linha) */
     padding-bottom: 20px; /* Espaço ENTRE as tags e a linha */
-    border-bottom: 1px solid #7a6a63; /* <<< LINHA ADICIONADA AQUI */
+    border-bottom: 1px solid #7a6a63; /* Linha divisória */
 }
 .tags span {
     display: inline-block;
-    /* Estilo para fundo escuro */
-    background-color: #6e5c54; /* Tom castanho um pouco mais claro que o fundo */
-    color: #F8F2EA; /* Texto claro */
+    background-color: #6e5c54;
+    color: #F8F2EA;
     padding: 5px 12px;
     margin: 4px 5px 4px 0;
     border-radius: 15px;
@@ -107,20 +103,23 @@ main h2.page-title {
     font-weight: 400;
 }
 
+/* **NOVO**: Espaçamento entre seções (articles) */
+article {
+    margin-bottom: 60px; /* Aumenta o espaço ABAIXO de cada bloco de artigo */
+}
 
-/* Títulos das Seções (H3) (MODIFICADO - SEM MARGIN-TOP EXTRA) */
+
+/* Títulos das Seções (H3) */
 main h3 {
      font-family: 'Fragment Core', sans-serif;
      font-weight: 600;
      font-size: 1.6em;
-     color: #F8F2EA; /* Título claro */
-     margin-top: 0; /* Remover espaço extra, pois .tags tem margin-bottom */
-     margin-bottom: 25px;
-     border-bottom: 1px solid #7a6a63; /* Linha abaixo do H3 mantida */
+     color: #F8F2EA;
+     margin-top: 0; /* OK */
+     margin-bottom: 25px; /* OK - Espaço antes do grid */
+     border-bottom: 1px solid #7a6a63;
      padding-bottom: 10px;
 }
- /* Regra para :first-of-type não é mais necessária */
-
 
 /* Link Voltar */
 .back-link {
@@ -140,22 +139,29 @@ main h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    margin-top: 25px;
+    margin-top: 25px; /* Espaço entre H3 e grid - OK */
 }
 
-/* Cards de Conteúdo - FUNDO BEGE */
+/* Cards de Conteúdo - PADRÃO FUNDO BEGE */
 .content-item {
-    border: 1px solid #dcdcdc; /* Borda cinza clara para contraste com bege */
+    border: 1px solid #dcdcdc;
     padding: 20px;
     text-align: center;
-    background-color: #F8F2EA; /* Fundo BEGE claro */
+    background-color: #F8F2EA; /* <<< FUNDO BEGE PADRÃO */
     border-radius: 8px;
-    color: #392523; /* TEXTO ESCURO dentro do card */
+    color: #392523; /* TEXTO ESCURO PADRÃO */
     transition: box-shadow 0.2s ease-in-out;
 }
 .content-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra sutil no hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* **NOVO**: Estilo específico para cards da PRIMEIRA campanha (#CiteMaisUma) */
+#campanha-citemaisuma .content-item {
+    background-color: #e0e0e0; /* <<< FUNDO CINZA CLARO */
+    /* Mantém texto escuro e borda clara, deve funcionar bem */
+}
+
 
 .content-item img {
     max-width: 100%;
@@ -164,10 +170,10 @@ main h3 {
     display: block;
     margin: 0 auto 20px auto;
     border-radius: 4px;
-    border: 1px solid #eee; /* Borda muito sutil na imagem */
+    border: 1px solid #eee;
 }
 
-/* Link "Confira" - COR ESCURA */
+/* Link "Confira" */
 .content-item a {
     display: block;
     margin-top: 10px;
@@ -176,7 +182,7 @@ main h3 {
     font-weight: 600;
     font-size: 1.05em;
     word-wrap: break-word;
-    color: #7A8A5A; /* Verde (ou #392523 para marrom) */
+    color: #7A8A5A; /* Verde */
     text-decoration: none;
 }
 .content-item a:hover {
@@ -184,7 +190,7 @@ main h3 {
      text-decoration: underline;
 }
 
-/* Nome do arquivo (<small>) - COR ESCURA */
+/* Nome do arquivo (<small>) */
 .content-item small {
     font-size: 0.8em;
     color: #777; /* Cinza escuro */
@@ -198,7 +204,8 @@ main h3 {
 
 /* Footer (Idêntico) */
 footer {
-    margin-top: 0; padding: 25px 20px; text-align: center; font-size: 0.9em;
+    margin-top: 0; /* OK, pois a margem vem do último article */
+    padding: 25px 20px; text-align: center; font-size: 0.9em;
     color: #5c4b49; font-family: 'Fragment Core', sans-serif;
     border-top: 1px solid #ddd; background-color: #F8F2EA;
 }
@@ -208,7 +215,7 @@ footer .social-icons a:hover { color: #94A473; }
 footer .contact-form { display: none; }
 
 
-/* === RESPONSIVIDADE (Baseado no index.html) === */
+/* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
      header { padding: 0.9375rem 1.25rem; }
     .nav-links {
@@ -237,14 +244,16 @@ footer .contact-form { display: none; }
      /* Conteúdo principal mobile */
      main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
      main h2.page-title { font-size: 1.8em; }
-     /* Ajustes mobile para tags e H3 (manter consistência) */
-     .tags { padding-bottom: 15px; margin-bottom: 25px; } /* Menos espaço no mobile */
+     .tags { padding-bottom: 15px; margin-bottom: 25px; }
      .tags span { font-size: 0.8em; padding: 4px 10px;}
      main h3 { font-size: 1.4em; }
+     /* **NOVO RESPONSIVO**: Ajuste espaçamento entre articles no mobile */
+     article { margin-bottom: 40px; }
 
     /* Grid mobile */
     .content-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .content-item { padding: 15px; }
+    /* Regra específica para #campanha-citemaisuma já se aplica aqui também */
     .content-item img { height: 160px; margin-bottom: 15px; }
     .content-item a { font-size: 1em; }
     .content-item small { font-size: 0.75em; }
@@ -252,7 +261,7 @@ footer .contact-form { display: none; }
     </style>
 </head>
 <body>
-    <!-- HEADER PADRÃO (COPIADO DO INDEX) -->
+    <!-- HEADER PADRÃO -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -281,28 +290,28 @@ footer .contact-form { display: none; }
         </div>
     </header>
 
-<!-- Conteúdo Principal com fundo castanho escuro -->
+<!-- Conteúdo Principal -->
 <main>
     <!-- Link Voltar -->
     <a href="javascript:history.back()" class="back-link">
         <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
     </a>
 
-    <!-- Título e Tags (A LINHA AGORA VEM DEPOIS DAS TAGS VIA CSS) -->
+    <!-- Título e Tags -->
     <h2 class="page-title text-verde">Fundação Lemann</h2>
     <div class="tags">
          <span>Redação</span>
          <span>Gestão de Redes Sociais</span>
          <span>Campanha</span>
          <span>Cobertura de Evento</span>
-         <!-- Adicione ou modifique as tags conforme necessário -->
     </div>
 
 
     <!-- Grids de Conteúdo Detalhado -->
-    <article id="campanha-citemaisuma">
+    <article id="campanha-citemaisuma">  <!-- ID usado para estilizar os cards desta seção -->
         <h3>CAMPANHA #CiteMaisUma</h3>
         <div class="content-grid">
+            <!-- Estes .content-item terão fundo cinza devido à regra CSS -->
             <div class="content-item">
                 <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
                 <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -329,6 +338,7 @@ footer .contact-form { display: none; }
     <article id="campanha-declaracao-racial">
         <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
         <div class="content-grid">
+             <!-- Estes .content-item terão fundo bege (padrão) -->
             <div class="content-item">
                 <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
                 <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -355,6 +365,7 @@ footer .contact-form { display: none; }
     <article id="campanha-always-on">
         <h3>ALWAYS ON</h3>
         <div class="content-grid">
+             <!-- Estes .content-item terão fundo bege (padrão) -->
              <div class="content-item">
                 <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
                 <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -381,6 +392,7 @@ footer .contact-form { display: none; }
     <article id="artigos">
         <h3>ARTIGOS</h3>
          <div class="content-grid">
+             <!-- Estes .content-item terão fundo bege (padrão) -->
             <div class="content-item">
                 <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
                 <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
@@ -395,7 +407,7 @@ footer .contact-form { display: none; }
     </article>
 
 </main>
-<!-- FOOTER (Simplificado) -->
+<!-- FOOTER -->
 <footer>
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -404,7 +416,7 @@ footer .contact-form { display: none; }
     </div>
      <p>Ana Furtado © <span id="currentYear"></span></p>
 </footer>
-<!-- Script Padrão (COPIADO DO INDEX) -->
+<!-- Scripts -->
 <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const header = document.querySelector('header');
@@ -413,7 +425,7 @@ footer .contact-form { display: none; }
         header.classList.toggle('active');
     });
 
-    // === Script Dropdown (Adicionado do Index) ===
+    // === Script Dropdown ===
     function toggleDropdown(event) {
         var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
         closeAllDropdowns(dropdownContent);
@@ -435,7 +447,6 @@ footer .contact-form { display: none; }
       }
     }
     // === Fim Script Dropdown ===
-
 
     // Script para atualizar o ano no footer
     if(document.getElementById('currentYear')) {
