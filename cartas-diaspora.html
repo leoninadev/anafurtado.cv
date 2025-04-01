@@ -1,411 +1,382 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes - Fundação Lemann - Ana Furtado</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Estilos GERAIS */
-        body {
-            font-family: 'Nixie One', sans-serif;
-            background-color: #F8F2EA;
-            color: #392523;
-            margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
-        }
-/* === HEADER PADRÃO === */
-    header {
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 1.25rem 2.5rem; background-color: #F8F2EA;
-        color: #392523;
-        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-        position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
-    }
-    .logo {
-        font-family: 'Nixie One', sans-serif; font-size: 2em;
-        letter-spacing: 0.125rem; text-align: center; margin: 0;
-    }
-    .logo a { color: #392523; text-decoration: none; }
-    .nav-links { display: flex; align-items: center; }
-    nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
-    nav ul li { margin: 0 0.9375rem; }
-    nav ul li a {
-        text-decoration: none; color: #392523; font-weight: 500;
-        font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease;
-        display: flex; align-items: center;
-    }
-    nav ul li a:hover { color: #94A473; }
-    nav ul li a i { margin-right: 5px; font-size: 1.1em; }
-    nav ul li a[aria-label="Home"] i { font-size: 1.3em; }
-    .dropdown { position: relative; }
-    .dropdown-content {
-        display: none; position: absolute; background-color: #f9f9f9;
-        min-width: 10rem; box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-        z-index: 1; opacity: 0; transition: opacity 0.3s ease;
-    }
-    .dropdown-content.show { display: block; opacity: 1; }
-    .dropdown-content a {
-        padding: 0.75rem 1rem; text-decoration: none; display: block;
-        color: #392523; font-family: 'Fragment Core', sans-serif;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .dropdown-content a:hover { background-color: #f1f1f1; color: #94A473; }
-    .dropbtn {
-        cursor: pointer; background: none; border: none; color: inherit;
-        font: inherit; padding: 0; display: inline-flex; align-items: center;
-    }
-    .dropbtn i { margin-left: 5px; }
-    .social-icons-mobile { display: none; }
-    .menu-toggle {
-        display: none; background: none; border: none;
-        font-size: 1.5rem; color: #392523; cursor: pointer;
-    }
-    /* === FIM HEADER PADRÃO === */
-
-/* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
-main {
-     padding-top: 100px;
-     padding-left: 0;
-     padding-right: 0;
-     padding-bottom: 0;
-}
-
-/* Estilos para a seção superior (sobre fundo bege do body) */
-.top-content-area {
-    padding: 30px 20px 0 20px;
-    margin-bottom: 50px;
-}
-
-.top-content-area .back-link {
-     display: inline-block;
-     margin-bottom: 25px;
-     font-size: 0.9em;
-     color: #555555;
-     font-family: 'Fragment Core', sans-serif;
-     font-weight: 400;
-     text-decoration: none;
- }
-.top-content-area .back-link i { margin-right: 5px; }
-.top-content-area .back-link:hover { color: #000000; }
-
-.top-content-area h2.page-title {
-     font-family: 'Nixie One', sans-serif;
-     font-size: 2.2em;
-     color: #7A8A5A;
-     margin-bottom: 15px;
-     font-weight: 400;
-}
-.text-verde { color: #7A8A5A !important; }
-
-.top-content-area .tags {
-    margin-top: 15px;
-    padding-bottom: 0;
-    border-bottom: none;
-    margin-bottom: 0;
-}
-.top-content-area .tags span {
-    display: inline-block;
-    background-color: #6e5c54; /* Fundo marrom mantido */
-    /* **MODIFICADO**: Cor do texto da tag para verde */
-    color: #7A8A5A;
-    padding: 5px 12px;
-    margin: 4px 5px 4px 0;
-    border-radius: 15px;
-    font-size: 0.85em;
-    font-family: 'Fragment Core', sans-serif;
-    font-weight: 400; /* Mantém peso normal */
-}
-
-
-/* Container para os articles (com fundo MARROM MAIS ESCURO) */
-.content-articles {
-    /* **MODIFICADO**: Fundo marrom mais escuro */
-    background-color: #392523;
-    padding: 40px 20px 1px 20px;
-}
-
-/* Espaçamento entre seções (articles) */
-.content-articles article {
-    margin-bottom: 60px;
-}
-.content-articles article:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Títulos das Seções (H3) - Dentro da ÁREA ESCURA */
-.content-articles h3 {
-     font-family: 'Fragment Core', sans-serif;
-     font-weight: 600;
-     font-size: 1.6em;
-     color: #F8F2EA; /* Cor clara OK para contraste */
-     margin-top: 0;
-     margin-bottom: 25px;
-     /* Linha abaixo (marrom claro #7a6a63) ainda deve ser visível */
-     border-bottom: 1px solid #7a6a63;
-     padding-bottom: 10px;
-}
-
-/* Grid de Conteúdo */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 30px;
-    margin-top: 25px;
-}
-
-/* Cards de Conteúdo - TODOS BEGES */
-.content-item {
-    border: 1px solid #dcdcdc;
-    padding: 20px;
-    text-align: center;
-    background-color: #F8F2EA;
-    border-radius: 8px;
-    color: #392523;
-    transition: box-shadow 0.2s ease-in-out;
-}
-.content-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.content-item img {
-    max-width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 20px auto;
-    border-radius: 4px;
-    border: 1px solid #eee;
-}
-
-/* Link "Confira" - **MODIFICADO** */
-.content-item a {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 8px;
-    font-family: 'Fragment Core', sans-serif;
-    font-weight: 400; /* Tira negrito */
-    font-style: italic; /* Adiciona itálico */
-    font-size: 1em;   /* Diminui um pouco a fonte */
-    word-wrap: break-word;
-    color: #7A8A5A; /* Verde mantido */
-    text-decoration: none;
-}
-.content-item a:hover {
-     color: #392523; /* Marrom no hover mantido */
-     text-decoration: underline;
-}
-
-/* Nome do arquivo (<small>) */
-.content-item small {
-    font-size: 0.8em;
-    color: #777;
-    display: block;
-    word-wrap: break-word;
-    margin-top: 5px;
-    font-style: normal;
-    font-family: 'Fragment Core', sans-serif;
-}
-
-/* Footer */
-footer {
-    margin-top: 0;
-    padding: 25px 20px; text-align: center; font-size: 0.9em;
-    color: #392523;
-    font-family: 'Fragment Core', sans-serif;
-    border-top: 1px solid #ddd;
-    background-color: #F8F2EA; /* Fundo bege claro */
-}
-footer .social-icons { margin-bottom: 20px; }
-footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
-footer .social-icons a:hover { color: #94A473; }
-footer .contact-form { display: none; }
-
-
-/* === RESPONSIVIDADE === */
-@media (max-width: 768px) {
-     header { padding: 0.9375rem 1.25rem; }
-    .nav-links { /* ... */ }
-    header.active .nav-links { /* ... */ }
-    .logo { /* ... */ }
-    .menu-toggle { /* ... */ }
-    nav ul { /* ... */ }
-    nav ul li { /* ... */ }
-    .dropdown-content { /* ... */ }
-    .dropdown-content.show { /* ... */ }
-    .dropdown-content a { /* ... */ }
-    .dropdown-content a:hover { /* ... */ }
-    .dropbtn { /* ... */ }
-    .social-icons-mobile { /* ... */ }
-    .social-icons-mobile li { /* ... */ }
-    .social-icons-mobile li a i { /* ... */ }
-
-     /* Conteúdo principal mobile */
-     main { padding-top: 80px; }
-     .top-content-area { padding: 20px 15px 0 15px; margin-bottom: 30px; }
-     .top-content-area .back-link { margin-bottom: 20px; }
-     .top-content-area h2.page-title { font-size: 1.8em; }
-     .top-content-area .tags span { font-size: 0.8em; padding: 4px 10px;} /* Cor já alterada acima */
-
-     /* Area escura mobile */
-     .content-articles { padding: 30px 15px 1px 15px; } /* Fundo já alterado acima */
-     .content-articles article { margin-bottom: 40px; }
-     .content-articles h3 { font-size: 1.4em; }
-
-    /* Grid mobile */
-    .content-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-    .content-item { padding: 15px; }
-    .content-item img { height: 160px; margin-bottom: 15px; }
-    .content-item a { font-size: 0.95em; } /* Ajuste fino para mobile, se necessário */
-    .content-item small { font-size: 0.75em; }
-}
-    </style>
-</head>
-<body>
-    <!-- HEADER PADRÃO -->
-    <header>
-        <!-- ... conteúdo do header ... -->
+@@ -0,0 +1,381 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Detalhes - Fundação Lemann - Ana Furtado</title> <!-- Título Atualizado -->
+     <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+         /* Estilos GERAIS (Iguais à página principal) */
+         body {
+             font-family: 'Nixie One', sans-serif;
+             background-color: #F8F2EA; /* Fundo geral bege claro */
+             color: #392523;
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             line-height: 1.6;
+         }
+ 
+         header { /* Header idêntico */
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: 1.25rem 2.5rem;
+             background-color: #F8F2EA;
+             box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+             position: fixed;
+             top: 0;
+             width: 100%;
+             z-index: 1000;
+             box-sizing: border-box;
+         }
+         .logo { /* Idêntico */
+             font-family: 'Nixie One', sans-serif;
+             font-size: 2em;
+             letter-spacing: 0.125rem;
+             text-align: center;
+             margin: 0;
+         }
+         .logo a { /* Idêntico */
+             color: #392523;
+             text-decoration: none;
+         }
+         .nav-links { /* Idêntico */
+              display: flex;
+         }
+         nav ul { /* Idêntico */
+             display: flex;
+             list-style: none;
+             margin: 0;
+             padding: 0;
+         }
+         nav ul li { /* Idêntico */
+             margin: 0 0.9375rem;
+         }
+         nav ul li a { /* Idêntico (com navegação atualizada) */
+             text-decoration: none;
+             color: #392523;
+             font-weight: 500;
+             font-family: 'Fragment Core', sans-serif;
+             transition: color 0.3s ease;
+         }
+         nav ul li a:hover { /* Idêntico */
+             color: #94A473;
+         }
+         .menu-toggle { /* Idêntico */
+             display: none;
+             background: none;
+             border: none;
+             font-size: 1.5rem;
+             color: #392523;
+             cursor: pointer;
+         }
+ 
+         /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ---- */
+         main {
+              padding: 20px;
+              padding-top: 100px; /* Espaço para o header fixo */
+              /* Background aplicado via classe */
+         }
+ 
+         /* NOVA CLASSE para fundo castanho escuro */
+         .bg-dark-brown {
+             background-color: #4E403B; /* Castanho escuro - ajuste se necessário */
+             color: #F8F2EA; /* Cor de texto principal clara */
+         }
+ 
+         /* Ajustes para elementos DENTRO do fundo escuro */
+         .bg-dark-brown h3 {
+              font-family: 'Fragment Core', sans-serif;
+              font-weight: 600;
+              font-size: 1.6em;
+              color: #F8F2EA; /* Título claro */
+              margin-top: 30px;
+              margin-bottom: 20px;
+              border-bottom: 1px solid #7a6a63; /* Linha divisória sutil no tom */
+              padding-bottom: 10px;
+         }
+ 
+         /* Link Voltar */
+         .back-link {
+              display: inline-block;
+              margin-bottom: 30px; /* Mais espaço abaixo do voltar */
+              font-size: 0.9em;
+              color: #bdb0a7; /* Cor clara, mas diferente do texto principal */
+              font-family: 'Fragment Core', sans-serif;
+              font-weight: 400;
+              text-decoration: none;
+          }
+          .back-link i { margin-right: 5px; }
+          .back-link:hover {
+              color: #ffffff; /* Branco no hover */
+              text-decoration: none;
+          }
+ 
+         /* Grid de Conteúdo no fundo escuro */
+         .content-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+             gap: 30px;
+             margin-top: 25px;
+         }
+ 
+         .content-item {
+             border: 1px solid #7a6a63; /* Borda mais escura */
+             padding: 20px;
+             text-align: center;
+             background-color: #5e4d46; /* Fundo do card ligeiramente mais claro que o main */
+             border-radius: 8px;
+             /* Sombra não é muito visível em fundo escuro, pode remover */
+             /* box-shadow: 0 3px 6px rgba(0,0,0,0.07); */
+             transition: background-color 0.2s ease-in-out;
+              color: #F8F2EA; /* Texto dentro do card claro */
+         }
+         .content-item:hover {
+             background-color: #6e5c54; /* Escurece um pouco no hover */
+             /* transform: translateY(-5px); */ /* Efeito pode ser sutil demais */
+         }
+ 
+         .content-item img {
+             max-width: 100%;
+             height: 180px;
+             object-fit: cover;
+             display: block;
+             margin: 0 auto 20px auto;
+             border-radius: 4px;
+              border: 1px solid #7a6a63; /* Borda na imagem */
+         }
+ 
+         /* Link "Confira" dentro do card */
+         .content-item a {
+             display: block;
+             margin-top: 10px;
+             margin-bottom: 8px;
+             font-family: 'Fragment Core', sans-serif;
+             font-weight: 600;
+             font-size: 1.05em;
+             word-wrap: break-word;
+             color: #d4c8bd; /* Cor do link clara, diferente do texto */
+             text-decoration: none;
+         }
+         .content-item a:hover {
+              color: #ffffff; /* Branco no hover */
+              text-decoration: underline;
+         }
+ 
+         /* Nome do arquivo (<small>) */
+         .content-item small {
+             font-size: 0.8em; /* Tamanho mantido */
+             color: #b0a39a; /* Cor clara e suave */
+             display: block;
+             word-wrap: break-word;
+             margin-top: 5px;
+             font-style: normal; /* Garantir que não seja itálico */
+             font-family: 'Fragment Core', sans-serif; /* Fonte consistente */
+         }
+ 
+ 
+         /* Footer (idêntico) */
+         footer {
+             margin-top: 0;
+             padding: 25px 20px;
+             text-align: center;
+             font-size: 0.9em;
+             color: #5c4b49;
+             font-family: 'Fragment Core', sans-serif;
+             border-top: 1px solid #ddd;
+             background-color: #F8F2EA;
+         }
+ 
+         /* Responsividade (Idêntica, mas aplicada ao contexto da página escura) */
+         @media (max-width: 768px) {
+              header { /* Idêntico */
+                 padding: 0.9375rem 1.25rem;
+              }
+             .nav-links { /* Idêntico */
+                 display: none;
+                 position: absolute;
+                 top: 100%; left: 0; width: 100%;
+                 background-color: #F8F2EA;
+                 box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+                 padding: 1rem 0;
+             }
+             header.active .nav-links { display: block; } /* Idêntico */
+             .logo { font-size: 1.5em; } /* Idêntico */
+             .menu-toggle { display: block; } /* Idêntico */
+             nav ul { flex-direction: column; text-align: center; width: 100%; } /* Idêntico */
+             nav ul li { margin: 0.8rem 0; } /* Idêntico */
+ 
+              /* Conteúdo principal mobile */
+              main {
+                  padding-top: 80px;
+                  padding-left: 15px;
+                  padding-right: 15px;
+              }
+              .bg-dark-brown h3 { font-size: 1.4em; }
+ 
+             /* Grid mobile */
+             .content-grid {
+                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                 gap: 20px;
+             }
+             .content-item {
+                  padding: 15px;
+             }
+             .content-item img {
+                 height: 160px;
+                  margin-bottom: 15px;
+             }
+              .content-item a { font-size: 1em; }
+              .content-item small { font-size: 0.75em; }
+         }
+ 
+     </style>
+ </head>
+ <body>
+     <!-- Header Idêntico ao da página principal -->
+     <header>
          <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
-        <button class="menu-toggle" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-            <nav>
-                <ul>
-                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
-                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
-                    <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
-                        <div class="dropdown-content">
-                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
-                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
-                        </div>
-                    </li>
-                     <li class="social-icons-mobile">
-                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-<!-- Conteúdo Principal -->
-<main>
-    <!-- Área superior com fundo bege -->
-    <div class="top-content-area">
-        <!-- Link Voltar -->
-        <a href="javascript:history.back()" class="back-link">
-            <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
-        </a>
-
-        <!-- Título e Tags (Tags agora com texto verde) -->
-        <h2 class="page-title text-verde">Fundação Lemann</h2>
-        <div class="tags">
-             <span>Redação</span>
-             <span>Gestão de Redes Sociais</span>
-             <span>Campanha</span>
-             <span>Cobertura de Evento</span>
-        </div>
-    </div>
-
-    <!-- Container para os articles (com fundo MARROM MAIS ESCURO) -->
-    <div class="content-articles">
-        <!-- Grids de Conteúdo Detalhado -->
-        <article id="campanha-citemaisuma">
-            <h3>CAMPANHA #CiteMaisUma</h3>
-            <div class="content-grid">
-                <!-- Cards com link "Confira" alterado -->
-                 <div class="content-item"> <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1"> <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a> <small>toolzin.com-....jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2"> <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_429...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3"> <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_431...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4"> <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_470...jpg</small> </div>
-            </div>
-        </article>
-
-        <article id="campanha-declaracao-racial">
-            <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
-            <div class="content-grid">
-                 <div class="content-item"> <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1"> <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_465...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2"> <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_468...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3"> <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_469...jpg</small> </div>
-                 <div class="content-item"> <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Imagem não especificada</small> </div>
-            </div>
-        </article>
-
-        <article id="campanha-always-on">
-            <h3>ALWAYS ON</h3>
-            <div class="content-grid">
-                 <div class="content-item"> <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1"> <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_453...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2"> <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_480...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3"> <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_480...jpg</small> </div>
-                 <div class="content-item"> <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4"> <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <small>Snapinst.app_470...jpg</small> </div>
-            </div>
-        </article>
-
-        <article id="artigos">
-            <h3>ARTIGOS</h3>
+         <div class="nav-links">
+             <nav>
+                 <ul>
+                     <li><a href="index.html">Início</a></li>
+                     <li><a href="sobre.html">Sobre</a></li>
+                     <li><a href="portfolio-geral.html">Portfólio</a></li>
+                     <li><a href="contato.html">Contato</a></li>
+                 </ul>
+             </nav>
+         </div>
+         <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+         </button>
+     </header>
+ 
+     <!-- Conteúdo Principal com fundo castanho escuro -->
+     <main class="bg-dark-brown">
+ 
+         <!-- Link Voltar -->
+         <a href="javascript:history.back()" class="back-link">
+             <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
+         </a>
+ 
+         <!-- Grids de Conteúdo Detalhado -->
+         <article id="campanha-citemaisuma">
+             <h3>CAMPANHA #CiteMaisUma</h3>
              <div class="content-grid">
-                 <div class="content-item"> <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco"> <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a> <small>1736773435916.png</small> </div>
-                 <div class="content-item"> <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024"> <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a> <small>1734728039157.png</small> </div>
+                 <div class="content-item">
+                     <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
+                     <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>toolzin.com-....jpg</small>
+                 </div>
+                 <div class="content-item">
+                     <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
+                     <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_429...jpg</small>
+                 </div>
+                 <div class="content-item">
+                      <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
+                     <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_431...jpg</small>
+                 </div>
+                  <div class="content-item">
+                     <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
+                     <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_470...jpg</small>
+                 </div>
              </div>
-        </article>
-    </div>
-
-</main>
-<!-- FOOTER -->
-<footer>
-    <!-- ... conteúdo do footer ... -->
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-    </div>
-     <p>Ana Furtado © <span id="currentYear"></span></p>
-</footer>
-<!-- Scripts -->
-<script>
-    // ... scripts ...
-    const menuToggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('header');
-
-    menuToggle.addEventListener('click', () => {
-        header.classList.toggle('active');
-    });
-
-    // === Script Dropdown ===
-    function toggleDropdown(event) {
-        var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
-        closeAllDropdowns(dropdownContent);
-        if (dropdownContent) {
-            dropdownContent.classList.toggle('show');
-        }
-    }
-    function closeAllDropdowns(exceptThisOne) {
-        var dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(function(dropdown) {
-            if (dropdown !== exceptThisOne && dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
-    }
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
-         closeAllDropdowns(null);
-      }
-    }
-    // === Fim Script Dropdown ===
-
-    // Script para atualizar o ano no footer
-    if(document.getElementById('currentYear')) {
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    }
-</script>
-
-</body>
-</html>
+         </article>
+ 
+         <article id="campanha-declaracao-racial">
+             <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
+             <div class="content-grid">
+                 <div class="content-item">
+                     <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
+                     <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_465...jpg</small>
+                 </div>
+                 <div class="content-item">
+                     <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
+                     <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_468...jpg</small>
+                 </div>
+                  <div class="content-item">
+                      <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
+                     <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_469...jpg</small>
+                 </div>
+                  <div class="content-item">
+                     <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
+                     <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                      <small>Imagem não especificada</small>
+                 </div>
+             </div>
+         </article>
+ 
+         <article id="campanha-always-on">
+             <h3>ALWAYS ON</h3>
+             <div class="content-grid">
+                  <div class="content-item">
+                     <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
+                     <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_453...jpg</small>
+                 </div>
+                 <div class="content-item">
+                     <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
+                     <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                      <small>Snapinst.app_480...jpg</small>
+                </div>
+                <div class="content-item">
+                     <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
+                     <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>Snapinst.app_480...jpg</small>
+                 </div>
+                 <div class="content-item">
+                      <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
+                      <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                      <small>Snapinst.app_470...jpg</small>
+                 </div>
+             </div>
+         </article>
+ 
+         <article id="artigos">
+             <h3>ARTIGOS</h3>
+              <div class="content-grid">
+                 <div class="content-item">
+                     <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
+                     <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>1736773435916.png</small>
+                 </div>
+                  <div class="content-item">
+                     <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
+                     <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a> <!-- Texto Alterado -->
+                     <small>1734728039157.png</small>
+                 </div>
+              </div>
+         </article>
+ 
+ 
+     </main>
+ 
+     <!-- Footer Idêntico -->
+      <footer>
+          <p>Ana Furtado © <span id="currentYear"></span></p>
+          <!-- <p style="font-size: 0.8em; margin-top: 5px;">Site por Rawse Creative</p> -->
+     </footer>
+ 
+     <!-- Scripts Idênticos -->
+     <script>
+         function toggleMenu() {
+             const header = document.querySelector('header');
+             header.classList.toggle('active');
+         }
+         document.getElementById('currentYear').textContent = new Date().getFullYear();
+     </script>
+ 
+ </body>
+ </html>
