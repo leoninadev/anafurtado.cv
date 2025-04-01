@@ -64,6 +64,7 @@
         font-size: 1.5rem; color: #392523; cursor: pointer;
     }
     /* === FIM HEADER PADRÃO === */
+
 /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ---- */
 main {
      padding: 20px;
@@ -73,23 +74,25 @@ main {
      color: #F8F2EA; /* Cor de texto principal clara */
 }
 
-/* Título Principal da Página (NOVO) */
+/* Título Principal da Página (MODIFICADO - SEM LINHA) */
 main h2.page-title {
      font-family: 'Nixie One', sans-serif;
      font-size: 2.2em;
      color: #7A8A5A; /* Letra verde conforme solicitado */
-     margin-bottom: 5px; /* Espaço antes das tags */
+     margin-bottom: 10px; /* Espaço ANTES das tags */
      font-weight: 400;
-     padding-bottom: 10px;
-     border-bottom: 1px solid #7a6a63; /* Linha divisória sutil */
+     /* padding-bottom: 10px; <-- REMOVIDO */
+     /* border-bottom: 1px solid #7a6a63; <-- REMOVIDO */
 }
 .text-verde { color: #7A8A5A !important; } /* Garante verde se a classe for usada */
 
 
-/* Tags (MOVIDAS PARA CÁ) */
+/* Tags (MODIFICADO - COM LINHA ABAIXO) */
 .tags {
     margin-top: 15px; /* Espaço após título */
-    margin-bottom: 30px; /* Espaço antes do primeiro H3 */
+    margin-bottom: 30px; /* Espaço ANTES do próximo H3 (abaixo da linha) */
+    padding-bottom: 20px; /* Espaço ENTRE as tags e a linha */
+    border-bottom: 1px solid #7a6a63; /* <<< LINHA ADICIONADA AQUI */
 }
 .tags span {
     display: inline-block;
@@ -105,20 +108,19 @@ main h2.page-title {
 }
 
 
-/* Títulos das Seções (H3) */
+/* Títulos das Seções (H3) (MODIFICADO - SEM MARGIN-TOP EXTRA) */
 main h3 {
      font-family: 'Fragment Core', sans-serif;
      font-weight: 600;
      font-size: 1.6em;
      color: #F8F2EA; /* Título claro */
-     margin-top: 40px; /* Mais espaço entre seções */
+     margin-top: 0; /* Remover espaço extra, pois .tags tem margin-bottom */
      margin-bottom: 25px;
-     border-bottom: 1px solid #7a6a63;
+     border-bottom: 1px solid #7a6a63; /* Linha abaixo do H3 mantida */
      padding-bottom: 10px;
 }
- main article:first-of-type h3 {
-     margin-top: 0; /* Remover espaço extra antes do primeiro H3 */
- }
+ /* Regra para :first-of-type não é mais necessária */
+
 
 /* Link Voltar */
 .back-link {
@@ -235,6 +237,8 @@ footer .contact-form { display: none; }
      /* Conteúdo principal mobile */
      main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
      main h2.page-title { font-size: 1.8em; }
+     /* Ajustes mobile para tags e H3 (manter consistência) */
+     .tags { padding-bottom: 15px; margin-bottom: 25px; } /* Menos espaço no mobile */
      .tags span { font-size: 0.8em; padding: 4px 10px;}
      main h3 { font-size: 1.4em; }
 
@@ -245,9 +249,7 @@ footer .contact-form { display: none; }
     .content-item a { font-size: 1em; }
     .content-item small { font-size: 0.75em; }
 }
-Use code with caution.
-</style>
-Use code with caution.
+    </style>
 </head>
 <body>
     <!-- HEADER PADRÃO (COPIADO DO INDEX) -->
@@ -278,119 +280,120 @@ Use code with caution.
             </nav>
         </div>
     </header>
+
 <!-- Conteúdo Principal com fundo castanho escuro -->
-<main> <!-- Classe .bg-dark-brown removida, aplicada diretamente no estilo do main -->
-<!-- Link Voltar -->
-<a href="javascript:history.back()" class="back-link">
-    <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
-</a>
+<main>
+    <!-- Link Voltar -->
+    <a href="javascript:history.back()" class="back-link">
+        <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
+    </a>
 
-<!-- Título e Tags ADICIONADOS -->
-<h2 class="page-title text-verde">Fundação Lemann</h2>
-<div class="tags">
-     <span>Redação</span>
-     <span>Gestão de Redes Sociais</span>
-     <span>Campanha</span>
-     <span>Cobertura de Evento</span>
-     <!-- Adicione ou modifique as tags conforme necessário -->
-</div>
-
-
-<!-- Grids de Conteúdo Detalhado -->
-<article id="campanha-citemaisuma">
-    <h3>CAMPANHA #CiteMaisUma</h3>
-    <div class="content-grid">
-        <div class="content-item">
-            <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
-            <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>toolzin.com-....jpg</small>
-        </div>
-        <div class="content-item">
-            <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
-            <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_429...jpg</small>
-        </div>
-        <div class="content-item">
-             <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
-            <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_431...jpg</small>
-        </div>
-         <div class="content-item">
-            <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
-            <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_470...jpg</small>
-        </div>
+    <!-- Título e Tags (A LINHA AGORA VEM DEPOIS DAS TAGS VIA CSS) -->
+    <h2 class="page-title text-verde">Fundação Lemann</h2>
+    <div class="tags">
+         <span>Redação</span>
+         <span>Gestão de Redes Sociais</span>
+         <span>Campanha</span>
+         <span>Cobertura de Evento</span>
+         <!-- Adicione ou modifique as tags conforme necessário -->
     </div>
-</article>
 
-<article id="campanha-declaracao-racial">
-    <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
-    <div class="content-grid">
-        <div class="content-item">
-            <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
-            <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_465...jpg</small>
-        </div>
-        <div class="content-item">
-            <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
-            <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_468...jpg</small>
-        </div>
-         <div class="content-item">
-             <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
-            <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_469...jpg</small>
-        </div>
-         <div class="content-item">
-            <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
-            <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-             <small>Imagem não especificada</small>
-        </div>
-    </div>
-</article>
 
-<article id="campanha-always-on">
-    <h3>ALWAYS ON</h3>
-    <div class="content-grid">
-         <div class="content-item">
-            <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
-            <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_453...jpg</small>
+    <!-- Grids de Conteúdo Detalhado -->
+    <article id="campanha-citemaisuma">
+        <h3>CAMPANHA #CiteMaisUma</h3>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
+                <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>toolzin.com-....jpg</small>
+            </div>
+            <div class="content-item">
+                <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
+                <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_429...jpg</small>
+            </div>
+            <div class="content-item">
+                 <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
+                <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_431...jpg</small>
+            </div>
+             <div class="content-item">
+                <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
+                <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_470...jpg</small>
+            </div>
         </div>
-        <div class="content-item">
-            <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
-            <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-             <small>Snapinst.app_480...jpg</small>
-       </div>
-       <div class="content-item">
-            <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
-            <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>Snapinst.app_480...jpg</small>
-        </div>
-        <div class="content-item">
-             <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
-             <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-             <small>Snapinst.app_470...jpg</small>
-        </div>
-    </div>
-</article>
+    </article>
 
-<article id="artigos">
-    <h3>ARTIGOS</h3>
-     <div class="content-grid">
-        <div class="content-item">
-            <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
-            <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>1736773435916.png</small>
+    <article id="campanha-declaracao-racial">
+        <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
+                <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_465...jpg</small>
+            </div>
+            <div class="content-item">
+                <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
+                <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_468...jpg</small>
+            </div>
+             <div class="content-item">
+                 <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
+                <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_469...jpg</small>
+            </div>
+             <div class="content-item">
+                <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
+                <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                 <small>Imagem não especificada</small>
+            </div>
         </div>
-         <div class="content-item">
-            <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
-            <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
-            <small>1734728039157.png</small>
+    </article>
+
+    <article id="campanha-always-on">
+        <h3>ALWAYS ON</h3>
+        <div class="content-grid">
+             <div class="content-item">
+                <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
+                <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_453...jpg</small>
+            </div>
+            <div class="content-item">
+                <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
+                <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                 <small>Snapinst.app_480...jpg</small>
+           </div>
+           <div class="content-item">
+                <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
+                <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>Snapinst.app_480...jpg</small>
+            </div>
+            <div class="content-item">
+                 <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
+                 <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                 <small>Snapinst.app_470...jpg</small>
+            </div>
         </div>
-     </div>
-</article>
-Use code with caution.
+    </article>
+
+    <article id="artigos">
+        <h3>ARTIGOS</h3>
+         <div class="content-grid">
+            <div class="content-item">
+                <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
+                <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>1736773435916.png</small>
+            </div>
+             <div class="content-item">
+                <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
+                <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
+                <small>1734728039157.png</small>
+            </div>
+         </div>
+    </article>
+
 </main>
 <!-- FOOTER (Simplificado) -->
 <footer>
@@ -439,3 +442,6 @@ Use code with caution.
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     }
 </script>
+
+</body>
+</html>
