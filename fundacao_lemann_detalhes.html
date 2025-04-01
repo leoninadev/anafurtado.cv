@@ -10,17 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos GERAIS (Iguais) */
+        /* Estilos GERAIS */
         body {
             font-family: 'Nixie One', sans-serif;
-            background-color: #F8F2EA;
-            color: #392523;
+            /* **MODIFICADO**: Fundo marrom escuro movido para cá */
+            background-color: #4E403B;
+            /* **MODIFICADO**: Cor de texto padrão clara para contraste com fundo marrom */
+            color: #F8F2EA;
             margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
         }
-/* === HEADER PADRÃO (do index.html) === */
+/* === HEADER PADRÃO === */
     header {
         display: flex; justify-content: space-between; align-items: center;
-        padding: 1.25rem 2.5rem; background-color: #F8F2EA;
+        padding: 1.25rem 2.5rem; background-color: #F8F2EA; /* Header continua bege */
+        color: #392523; /* Texto do header escuro */
         box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
         position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
     }
@@ -65,36 +68,60 @@
     }
     /* === FIM HEADER PADRÃO === */
 
-/* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ---- */
+/* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
 main {
-     padding: 20px;
+     /* **MODIFICADO**: Remove padding geral, será controlado por seções internas */
+     padding: 0;
+     /* Mantém espaço para o header fixo */
      padding-top: 100px;
-     /* Fundo castanho escuro aplicado diretamente */
-     background-color: #4E403B;
-     color: #F8F2EA; /* Cor de texto principal clara */
+     /* **REMOVIDO**: Background color movida para o body */
+     /* background-color: #4E403B; */
+     /* **REMOVIDO**: Color padrão vem do body */
+     /* color: #F8F2EA; */
 }
 
-/* Título Principal da Página (SEM LINHA) */
-main h2.page-title {
+/* **NOVO**: Wrapper para a seção superior cinza */
+.top-section-wrapper {
+    background-color: #CCCCCC; /* Cinza médio */
+    padding: 30px 20px 25px 20px; /* Topo, Direita, Fundo, Esquerda */
+    margin-bottom: 50px; /* Espaço entre a seção cinza e o primeiro H3 */
+    border-bottom: 1px solid #A0A0A0; /* Linha sutil no final da seção cinza */
+    color: #392523; /* Texto padrão escuro para esta seção */
+}
+
+/* Ajustes para elementos dentro da seção cinza */
+.top-section-wrapper .back-link {
+     display: inline-block;
+     margin-bottom: 25px; /* Espaço abaixo do link voltar */
+     font-size: 0.9em;
+     color: #555555; /* Cor escura para link Voltar */
+     font-family: 'Fragment Core', sans-serif;
+     font-weight: 400;
+     text-decoration: none;
+ }
+.top-section-wrapper .back-link i { margin-right: 5px; }
+.top-section-wrapper .back-link:hover { color: #000000; }
+
+.top-section-wrapper h2.page-title {
      font-family: 'Nixie One', sans-serif;
      font-size: 2.2em;
-     color: #7A8A5A; /* Letra verde */
-     margin-bottom: 10px; /* Espaço ANTES das tags */
+     color: #7A8A5A; /* Manter verde para o título */
+     margin-bottom: 15px; /* Espaço antes das tags */
      font-weight: 400;
 }
 .text-verde { color: #7A8A5A !important; }
 
-/* Tags (COM LINHA ABAIXO) */
-.tags {
-    margin-top: 15px; /* Espaço após título */
-    margin-bottom: 30px; /* Espaço ANTES do próximo H3 (abaixo da linha) */
-    padding-bottom: 20px; /* Espaço ENTRE as tags e a linha */
-    border-bottom: 1px solid #7a6a63; /* Linha divisória */
+.top-section-wrapper .tags {
+    margin-top: 15px;
+    padding-bottom: 0; /* Sem padding extra abaixo */
+    border-bottom: none; /* Sem linha aqui, já está no wrapper */
+    margin-bottom: 0; /* Sem margem extra abaixo */
 }
-.tags span {
+.top-section-wrapper .tags span {
     display: inline-block;
-    background-color: #6e5c54;
-    color: #F8F2EA;
+    /* **MODIFICADO**: Cor de fundo e texto das tags para contraste no cinza */
+    background-color: #6e5c54; /* Mesmo marrom das tags anteriores, ou pode ser cinza escuro como #A0A0A0; */
+    color: #F8F2EA; /* Texto claro */
     padding: 5px 12px;
     margin: 4px 5px 4px 0;
     border-radius: 15px;
@@ -103,51 +130,45 @@ main h2.page-title {
     font-weight: 400;
 }
 
-/* **NOVO**: Espaçamento entre seções (articles) */
+
+/* Container para os articles (fora do wrapper cinza) */
+.content-articles {
+    padding: 0 20px; /* Adiciona padding lateral para os articles */
+}
+
+/* Espaçamento entre seções (articles) */
 article {
-    margin-bottom: 60px; /* Aumenta o espaço ABAIXO de cada bloco de artigo */
+    margin-bottom: 60px; /* Mantém o espaço entre os articles */
 }
 
 
-/* Títulos das Seções (H3) */
+/* Títulos das Seções (H3) - Sobre fundo MARROM */
 main h3 {
      font-family: 'Fragment Core', sans-serif;
      font-weight: 600;
      font-size: 1.6em;
-     color: #F8F2EA;
-     margin-top: 0; /* OK */
-     margin-bottom: 25px; /* OK - Espaço antes do grid */
-     border-bottom: 1px solid #7a6a63;
+     color: #F8F2EA; /* Cor CLARA para contraste com fundo marrom */
+     margin-top: 0;
+     margin-bottom: 25px;
+     border-bottom: 1px solid #7a6a63; /* Linha abaixo do H3 (marrom claro) */
      padding-bottom: 10px;
 }
 
-/* Link Voltar */
-.back-link {
-     display: inline-block;
-     margin-bottom: 30px;
-     font-size: 0.9em;
-     color: #bdb0a7;
-     font-family: 'Fragment Core', sans-serif;
-     font-weight: 400;
-     text-decoration: none;
- }
- .back-link i { margin-right: 5px; }
- .back-link:hover { color: #ffffff; text-decoration: none; }
 
 /* Grid de Conteúdo */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    margin-top: 25px; /* Espaço entre H3 e grid - OK */
+    margin-top: 25px;
 }
 
-/* Cards de Conteúdo - PADRÃO FUNDO BEGE */
+/* Cards de Conteúdo - TODOS BEGES */
 .content-item {
     border: 1px solid #dcdcdc;
     padding: 20px;
     text-align: center;
-    background-color: #F8F2EA; /* <<< FUNDO BEGE PADRÃO */
+    background-color: #F8F2EA; /* <<< FUNDO BEGE PADRÃO PARA TODOS */
     border-radius: 8px;
     color: #392523; /* TEXTO ESCURO PADRÃO */
     transition: box-shadow 0.2s ease-in-out;
@@ -156,12 +177,12 @@ main h3 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* **NOVO**: Estilo específico para cards da PRIMEIRA campanha (#CiteMaisUma) */
+/* **REMOVIDO**: Estilo específico para #campanha-citemaisuma */
+/*
 #campanha-citemaisuma .content-item {
-    background-color: #e0e0e0; /* <<< FUNDO CINZA CLARO */
-    /* Mantém texto escuro e borda clara, deve funcionar bem */
+    background-color: #e0e0e0;
 }
-
+*/
 
 .content-item img {
     max-width: 100%;
@@ -202,12 +223,14 @@ main h3 {
 }
 
 
-/* Footer (Idêntico) */
+/* Footer */
 footer {
-    margin-top: 0; /* OK, pois a margem vem do último article */
+    margin-top: 0; /* OK */
     padding: 25px 20px; text-align: center; font-size: 0.9em;
-    color: #5c4b49; font-family: 'Fragment Core', sans-serif;
-    border-top: 1px solid #ddd; background-color: #F8F2EA;
+    color: #392523; /* Texto escuro */
+    font-family: 'Fragment Core', sans-serif;
+    border-top: 1px solid #ddd;
+    background-color: #F8F2EA; /* Fundo bege claro */
 }
 footer .social-icons { margin-bottom: 20px; }
 footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
@@ -242,18 +265,21 @@ footer .contact-form { display: none; }
     .social-icons-mobile li a i { font-size: 1.4em; margin-right: 0; }
 
      /* Conteúdo principal mobile */
-     main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
-     main h2.page-title { font-size: 1.8em; }
-     .tags { padding-bottom: 15px; margin-bottom: 25px; }
-     .tags span { font-size: 0.8em; padding: 4px 10px;}
-     main h3 { font-size: 1.4em; }
-     /* **NOVO RESPONSIVO**: Ajuste espaçamento entre articles no mobile */
+     main { padding-top: 80px; }
+     /* Ajustes mobile para seção cinza */
+     .top-section-wrapper { padding: 20px 15px 20px 15px; margin-bottom: 30px; }
+     .top-section-wrapper .back-link { margin-bottom: 20px; }
+     .top-section-wrapper h2.page-title { font-size: 1.8em; }
+     .top-section-wrapper .tags span { font-size: 0.8em; padding: 4px 10px;}
+
+     /* Ajustes para articles no mobile */
+     .content-articles { padding: 0 15px; }
      article { margin-bottom: 40px; }
+     main h3 { font-size: 1.4em; }
 
     /* Grid mobile */
     .content-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .content-item { padding: 15px; }
-    /* Regra específica para #campanha-citemaisuma já se aplica aqui também */
     .content-item img { height: 160px; margin-bottom: 15px; }
     .content-item a { font-size: 1em; }
     .content-item small { font-size: 0.75em; }
@@ -292,119 +318,124 @@ footer .contact-form { display: none; }
 
 <!-- Conteúdo Principal -->
 <main>
-    <!-- Link Voltar -->
-    <a href="javascript:history.back()" class="back-link">
-        <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
-    </a>
+    <!-- **NOVO**: Wrapper para a seção superior com fundo cinza -->
+    <div class="top-section-wrapper">
+        <!-- Link Voltar -->
+        <a href="javascript:history.back()" class="back-link">
+            <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
+        </a>
 
-    <!-- Título e Tags -->
-    <h2 class="page-title text-verde">Fundação Lemann</h2>
-    <div class="tags">
-         <span>Redação</span>
-         <span>Gestão de Redes Sociais</span>
-         <span>Campanha</span>
-         <span>Cobertura de Evento</span>
-    </div>
-
-
-    <!-- Grids de Conteúdo Detalhado -->
-    <article id="campanha-citemaisuma">  <!-- ID usado para estilizar os cards desta seção -->
-        <h3>CAMPANHA #CiteMaisUma</h3>
-        <div class="content-grid">
-            <!-- Estes .content-item terão fundo cinza devido à regra CSS -->
-            <div class="content-item">
-                <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
-                <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>toolzin.com-....jpg</small>
-            </div>
-            <div class="content-item">
-                <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
-                <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_429...jpg</small>
-            </div>
-            <div class="content-item">
-                 <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
-                <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_431...jpg</small>
-            </div>
-             <div class="content-item">
-                <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
-                <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_470...jpg</small>
-            </div>
+        <!-- Título e Tags -->
+        <h2 class="page-title text-verde">Fundação Lemann</h2>
+        <div class="tags">
+             <span>Redação</span>
+             <span>Gestão de Redes Sociais</span>
+             <span>Campanha</span>
+             <span>Cobertura de Evento</span>
         </div>
-    </article>
+    </div> <!-- Fim do wrapper da seção superior -->
 
-    <article id="campanha-declaracao-racial">
-        <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
-        <div class="content-grid">
-             <!-- Estes .content-item terão fundo bege (padrão) -->
-            <div class="content-item">
-                <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
-                <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_465...jpg</small>
+    <!-- **NOVO**: Container para os articles (sobre fundo marrom do body) -->
+    <div class="content-articles">
+        <!-- Grids de Conteúdo Detalhado -->
+        <article id="campanha-citemaisuma">
+            <h3>CAMPANHA #CiteMaisUma</h3>
+            <div class="content-grid">
+                <!-- Cards com fundo BEGE -->
+                <div class="content-item">
+                    <img src="images/toolzin.com-C4wC5_MvZ5r-1.jpg" alt="Campanha #CiteMaisUma - Conteúdo 1">
+                    <a href="https://www.instagram.com/p/C4wC5_MvZ5r/" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>toolzin.com-....jpg</small>
+                </div>
+                <div class="content-item">
+                    <img src="images/Snapinst.app_429854379_18434148652016321_5521760523116687493_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 2">
+                    <a href="https://www.instagram.com/p/C4QhAu2LS4i/" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_429...jpg</small>
+                </div>
+                <div class="content-item">
+                     <img src="images/Snapinst.app_431432300_282603231533629_1820631483738070758_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 3">
+                    <a href="https://www.instagram.com/p/C4OozTMvBKT/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_431...jpg</small>
+                </div>
+                 <div class="content-item">
+                    <img src="images/Snapinst.app_470230816_18490794418016321_3439978524542598621_n_1080.jpg" alt="Campanha #CiteMaisUma - Conteúdo 4">
+                    <a href="https://www.instagram.com/p/C92f_XKOzSC/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_470...jpg</small>
+                </div>
             </div>
-            <div class="content-item">
-                <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
-                <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_468...jpg</small>
-            </div>
-             <div class="content-item">
-                 <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
-                <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_469...jpg</small>
-            </div>
-             <div class="content-item">
-                <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
-                <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                 <small>Imagem não especificada</small>
-            </div>
-        </div>
-    </article>
+        </article>
 
-    <article id="campanha-always-on">
-        <h3>ALWAYS ON</h3>
-        <div class="content-grid">
-             <!-- Estes .content-item terão fundo bege (padrão) -->
-             <div class="content-item">
-                <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
-                <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_453...jpg</small>
+        <article id="campanha-declaracao-racial">
+            <h3>CAMPANHA DECLARAÇÃO RACIAL</h3>
+            <div class="content-grid">
+                 <!-- Cards com fundo BEGE -->
+                <div class="content-item">
+                    <img src="images/Snapinst.app_465616154_18482620306016321_3307973677826258060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 1">
+                    <a href="https://www.instagram.com/p/DB9W-_Iv2EN/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_465...jpg</small>
+                </div>
+                <div class="content-item">
+                    <img src="images/Snapinst.app_468179638_610407321548195_3657889152300915727_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 2">
+                    <a href="https://www.instagram.com/p/DC9CLsERs8C/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_468...jpg</small>
+                </div>
+                 <div class="content-item">
+                     <img src="images/Snapinst.app_469025924_562235593322513_6117337096400145060_n_1080.jpg" alt="Campanha Declaração Racial - Conteúdo 3">
+                    <a href="https://www.instagram.com/p/DDFeJiAvJdg/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_469...jpg</small>
+                </div>
+                 <div class="content-item">
+                    <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
+                    <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                     <small>Imagem não especificada</small>
+                </div>
             </div>
-            <div class="content-item">
-                <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
-                <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                 <small>Snapinst.app_480...jpg</small>
-           </div>
-           <div class="content-item">
-                <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
-                <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>Snapinst.app_480...jpg</small>
-            </div>
-            <div class="content-item">
-                 <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
-                 <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
-                 <small>Snapinst.app_470...jpg</small>
-            </div>
-        </div>
-    </article>
+        </article>
 
-    <article id="artigos">
-        <h3>ARTIGOS</h3>
-         <div class="content-grid">
-             <!-- Estes .content-item terão fundo bege (padrão) -->
-            <div class="content-item">
-                <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
-                <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>1736773435916.png</small>
+        <article id="campanha-always-on">
+            <h3>ALWAYS ON</h3>
+            <div class="content-grid">
+                 <!-- Cards com fundo BEGE -->
+                 <div class="content-item">
+                    <img src="images/Snapinst.app_453874364_530272836228311_7129544933379185145_n_1080.jpg" alt="Always On - Conteúdo 1">
+                    <a href="https://www.instagram.com/p/C-V8BYKM0mS/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_453...jpg</small>
+                </div>
+                <div class="content-item">
+                    <img src="images/Snapinst.app_480809189_669509902304603_7398201101213142351_n_1080.jpg" alt="Always On - Conteúdo 2">
+                    <a href="https://www.instagram.com/p/DCl3B3BhREK/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                     <small>Snapinst.app_480...jpg</small>
+               </div>
+               <div class="content-item">
+                    <img src="images/Snapinst.app_480577372_668065545782372_3058952618561775398_n_1080.jpg" alt="Always On - Conteúdo 3">
+                    <a href="https://www.instagram.com/p/C8hGdvYqvqL/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>Snapinst.app_480...jpg</small>
+                </div>
+                <div class="content-item">
+                     <img src="images/Snapinst.app_470581267_18491012947016321_7468630414536311943_n_1080.jpg" alt="Always On - Conteúdo 4">
+                     <a href="https://www.instagram.com/p/DA_nwrOt0xE/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
+                     <small>Snapinst.app_470...jpg</small>
+                </div>
             </div>
-             <div class="content-item">
-                <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
-                <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
-                <small>1734728039157.png</small>
-            </div>
-         </div>
-    </article>
+        </article>
+
+        <article id="artigos">
+            <h3>ARTIGOS</h3>
+             <div class="content-grid">
+                 <!-- Cards com fundo BEGE -->
+                <div class="content-item">
+                    <img src="images/1736773435916.png" alt="Artigo 1 - Lideranças em Foco">
+                    <a href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>1736773435916.png</small>
+                </div>
+                 <div class="content-item">
+                    <img src="images/1734728039157.png" alt="Artigo 2 - Retrospectiva FL 2024">
+                    <a href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/" target="_blank" rel="noopener noreferrer">Confira</a>
+                    <small>1734728039157.png</small>
+                </div>
+             </div>
+        </article>
+    </div> <!-- Fim do container dos articles -->
 
 </main>
 <!-- FOOTER -->
