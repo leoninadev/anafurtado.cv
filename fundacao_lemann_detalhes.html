@@ -4,100 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes - Fundação Lemann - Ana Furtado</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- *** CSS EXTERNO ATIVADO PARA GARANTIR CONSISTÊNCIA DO HEADER *** -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos GERAIS (Iguais) */
+        /* Estilos GERAIS (Podem ser movidos para style.css se aplicável globalmente) */
         body {
+            /* A cor de fundo principal é definida pelo style.css agora,
+               mas mantemos a fonte e outros padrões caso style.css não carregue */
             font-family: 'Nixie One', sans-serif;
-            background-color: #F8F2EA;
-            color: #392523;
             margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
+            /* A cor de fundo do body virá do style.css (#F8F2EA) */
+            /* A cor padrão do texto virá do style.css (#392523) */
         }
 
-        /* === HEADER PADRÃO (do index.html) === */
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1.25rem 2.5rem; background-color: #F8F2EA;
-            box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-            position: fixed; top: 0; width: 100%; z-index: 1000; box-sizing: border-box;
-        }
-        .logo {
-            font-family: 'Nixie One', sans-serif; font-size: 2em;
-            letter-spacing: 0.125rem; text-align: center; margin: 0;
-        }
-        .logo a { color: #392523; text-decoration: none; }
-        .nav-links { display: flex; align-items: center; }
-        nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
-        nav ul li { margin: 0 0.9375rem; }
-        nav ul li a {
-            text-decoration: none; color: #392523; font-weight: 500;
-            font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease;
-            display: flex; align-items: center;
-        }
-        nav ul li a:hover { color: #94A473; }
-        nav ul li a i { margin-right: 5px; font-size: 1.1em; }
-        nav ul li a[aria-label="Home"] i { font-size: 1.3em; }
-        .dropdown { position: relative; }
-        .dropdown-content {
-            display: none; position: absolute; background-color: #f9f9f9;
-            min-width: 10rem; box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
-            z-index: 1; opacity: 0; transition: opacity 0.3s ease;
-        }
-        .dropdown-content.show { display: block; opacity: 1; }
-        .dropdown-content a {
-            padding: 0.75rem 1rem; text-decoration: none; display: block;
-            color: #392523; font-family: 'Fragment Core', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .dropdown-content a:hover { background-color: #f1f1f1; color: #94A473; }
-        .dropbtn {
-            cursor: pointer; background: none; border: none; color: inherit;
-            font: inherit; padding: 0; display: inline-flex; align-items: center;
-        }
-        .dropbtn i { margin-left: 5px; }
-        .social-icons-mobile { display: none; }
-        .menu-toggle {
-            display: none; background: none; border: none;
-            font-size: 1.5rem; color: #392523; cursor: pointer;
-        }
-        /* === FIM HEADER PADRÃO === */
+        /* === ESTILOS DO HEADER FORAM REMOVIDOS DESTE BLOCO === */
+        /* === Eles agora vêm exclusivamente do style.css === */
 
 
-        /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ---- */
+        /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) DESTA PÁGINA ESPECÍFICA ---- */
         main {
              padding: 20px;
-             padding-top: 100px;
-             /* Fundo castanho escuro aplicado diretamente */
-             background-color: #4E403B;
-             color: #F8F2EA; /* Cor de texto principal clara */
+             /* Garante espaço suficiente abaixo do header fixo */
+             padding-top: 120px; /* Ajuste se necessário com base na altura real do header */
+             /* *** COR DE FUNDO AJUSTADA CONFORME SOLICITADO *** */
+             background-color: #392523; /* Castanho escuro da Papia Content */
+             color: #F8F2EA; /* Cor de texto principal clara para contraste */
+             min-height: calc(100vh - 120px - 75px); /* Calcula altura mínima descontando header e footer (ajuste o 75px se o footer tiver altura diferente) */
+             box-sizing: border-box;
         }
 
-        /* Título Principal da Página (NOVO) */
+        /* Título Principal da Página */
         main h2.page-title {
              font-family: 'Nixie One', sans-serif;
              font-size: 2.2em;
              color: #7A8A5A; /* Letra verde conforme solicitado */
-             margin-bottom: 5px; /* Espaço antes das tags */
+             margin-bottom: 5px;
              font-weight: 400;
              padding-bottom: 10px;
-             border-bottom: 1px solid #7a6a63; /* Linha divisória sutil */
+             border-bottom: 1px solid #7a6a63; /* Linha divisória sutil (tom sobre tom com fundo escuro) */
         }
         .text-verde { color: #7A8A5A !important; } /* Garante verde se a classe for usada */
 
-
-        /* Tags (MOVIDAS PARA CÁ) */
+        /* Tags */
         .tags {
-            margin-top: 15px; /* Espaço após título */
-            margin-bottom: 30px; /* Espaço antes do primeiro H3 */
+            margin-top: 15px;
+            margin-bottom: 30px;
         }
         .tags span {
             display: inline-block;
             /* Estilo para fundo escuro */
-            background-color: #6e5c54; /* Tom castanho um pouco mais claro que o fundo */
+            background-color: #6e5c54; /* Tom castanho um pouco mais claro que o fundo main */
             color: #F8F2EA; /* Texto claro */
             padding: 5px 12px;
             margin: 4px 5px 4px 0;
@@ -107,16 +67,15 @@
             font-weight: 400;
         }
 
-
         /* Títulos das Seções (H3) */
         main h3 {
              font-family: 'Fragment Core', sans-serif;
              font-weight: 600;
              font-size: 1.6em;
              color: #F8F2EA; /* Título claro */
-             margin-top: 40px; /* Mais espaço entre seções */
+             margin-top: 40px;
              margin-bottom: 25px;
-             border-bottom: 1px solid #7a6a63;
+             border-bottom: 1px solid #7a6a63; /* Linha divisória sutil */
              padding-bottom: 10px;
         }
          main article:first-of-type h3 {
@@ -128,13 +87,14 @@
              display: inline-block;
              margin-bottom: 30px;
              font-size: 0.9em;
-             color: #bdb0a7;
+             color: #bdb0a7; /* Cor clara, mas diferente do texto principal */
              font-family: 'Fragment Core', sans-serif;
              font-weight: 400;
              text-decoration: none;
+             transition: color 0.3s ease;
          }
          .back-link i { margin-right: 5px; }
-         .back-link:hover { color: #ffffff; text-decoration: none; }
+         .back-link:hover { color: #ffffff; } /* Branco no hover */
 
         /* Grid de Conteúdo */
         .content-grid {
@@ -146,26 +106,28 @@
 
         /* Cards de Conteúdo - FUNDO BEGE */
         .content-item {
-            border: 1px solid #dcdcdc; /* Borda cinza clara para contraste com bege */
+            border: 1px solid #5a4a46; /* Borda sutil um pouco mais escura que o fundo bege para separar do fundo castanho */
             padding: 20px;
             text-align: center;
+            /* *** COR DE FUNDO AJUSTADA CONFORME SOLICITADO *** */
             background-color: #F8F2EA; /* Fundo BEGE claro */
             border-radius: 8px;
             color: #392523; /* TEXTO ESCURO dentro do card */
-            transition: box-shadow 0.2s ease-in-out;
+            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
         .content-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra sutil no hover */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra um pouco mais pronunciada no hover */
+            transform: translateY(-3px); /* Leve efeito de elevação */
         }
 
         .content-item img {
             max-width: 100%;
-            height: 180px;
-            object-fit: cover;
+            height: 180px; /* Altura fixa para manter alinhamento */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
             display: block;
             margin: 0 auto 20px auto;
             border-radius: 4px;
-            border: 1px solid #eee; /* Borda muito sutil na imagem */
+            border: 1px solid #e0d8cf; /* Borda muito sutil na imagem dentro do card bege */
         }
 
         /* Link "Confira" - COR ESCURA */
@@ -176,9 +138,10 @@
             font-family: 'Fragment Core', sans-serif;
             font-weight: 600;
             font-size: 1.05em;
-            word-wrap: break-word;
-            color: #7A8A5A; /* Verde (ou #392523 para marrom) */
+            word-wrap: break-word; /* Quebra palavras longas se necessário */
+            color: #7A8A5A; /* Verde conforme original (ou use #392523 se preferir marrom) */
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         .content-item a:hover {
              color: #392523; /* Marrom no hover */
@@ -188,61 +151,43 @@
         /* Nome do arquivo (<small>) - COR ESCURA */
         .content-item small {
             font-size: 0.8em;
-            color: #777; /* Cinza escuro */
+            color: #665856; /* Cinza/Marrom escuro, bom contraste no bege */
             display: block;
-            word-wrap: break-word;
+            word-wrap: break-word; /* Quebra palavras longas se necessário */
             margin-top: 5px;
             font-style: normal;
             font-family: 'Fragment Core', sans-serif;
         }
 
 
-        /* Footer (Idêntico) */
+        /* Footer (Deve vir do style.css para consistência) */
+        /* Regras específicas de footer podem ficar aqui se necessário,
+           mas a base (cores, fontes) deve vir do style.css */
         footer {
-            margin-top: 0; padding: 25px 20px; text-align: center; font-size: 0.9em;
-            color: #5c4b49; font-family: 'Fragment Core', sans-serif;
-            border-top: 1px solid #ddd; background-color: #F8F2EA;
+            background-color: #F8F2EA; /* Fundo bege padrão */
+            color: #392523; /* Texto escuro padrão */
+            /* Outros estilos de footer vêm do style.css */
+            margin-top: 0; /* Remove margem superior para colar após o main escuro */
         }
-        footer .social-icons { margin-bottom: 20px; }
-        footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
-        footer .social-icons a:hover { color: #94A473; }
-        footer .contact-form { display: none; }
 
-
-        /* === RESPONSIVIDADE (Baseado no index.html) === */
+        /* Ajustes de Responsividade Específicos para esta página (se necessário) */
         @media (max-width: 768px) {
-             header { padding: 0.9375rem 1.25rem; }
-            .nav-links {
-                display: none; position: absolute; top: 100%; left: 0; width: 100%;
-                background-color: #F8F2EA; box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-                padding: 1rem 0; border-top: 1px solid #eee;
-            }
-            header.active .nav-links { display: block; }
-            .logo { font-size: 1.5em; }
-            .menu-toggle { display: block; }
-            nav ul { flex-direction: column; text-align: center; width: 100%; }
-            nav ul li { margin: 0.8rem 0; width: 100%; }
-            .dropdown-content {
-                 position: static; box-shadow: none; background-color: transparent;
-                 min-width: auto; opacity: 1; display: none; padding-left: 20px;
-                 border-left: 2px solid #e0d8cf; margin: 5px 15% 0 15%;
-            }
-            .dropdown-content.show { display: block; }
-            .dropdown-content a { padding: 0.5rem 1rem; color: #5c4b49; font-size: 0.95em; text-align: left; }
-            .dropdown-content a:hover { background-color: #e0d8cf; }
-            .dropbtn { width: 100%; justify-content: center; }
-            .social-icons-mobile { display: block; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee; }
-            .social-icons-mobile li { display: inline-block; margin: 0 10px; }
-            .social-icons-mobile li a i { font-size: 1.4em; margin-right: 0; }
-
-             /* Conteúdo principal mobile */
-             main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
+             /* Ajuste o padding-top se o header mobile for de altura diferente */
+             main {
+                 padding-top: 100px; /* Pode precisar ajustar */
+                 padding-left: 15px;
+                 padding-right: 15px;
+                 min-height: calc(100vh - 100px - 75px); /* Recalcula altura mínima */
+             }
              main h2.page-title { font-size: 1.8em; }
              .tags span { font-size: 0.8em; padding: 4px 10px;}
              main h3 { font-size: 1.4em; }
 
             /* Grid mobile */
-            .content-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+            .content-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mantém, ajusta bem */
+                gap: 20px;
+            }
             .content-item { padding: 15px; }
             .content-item img { height: 160px; margin-bottom: 15px; }
             .content-item a { font-size: 1em; }
@@ -252,7 +197,7 @@
     </style>
 </head>
 <body>
-    <!-- HEADER PADRÃO (COPIADO DO INDEX) -->
+    <!-- HEADER PADRÃO (Renderizado com base no style.css agora) -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -265,7 +210,8 @@
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <!-- Removido onclick inline, o script JS cuidará disso -->
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
                         <div class="dropdown-content">
                             <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
@@ -282,14 +228,14 @@
     </header>
 
     <!-- Conteúdo Principal com fundo castanho escuro -->
-    <main> <!-- Classe .bg-dark-brown removida, aplicada diretamente no estilo do main -->
+    <main>
 
         <!-- Link Voltar -->
         <a href="javascript:history.back()" class="back-link">
             <i class="fas fa-arrow-left fa-xs"></i> Voltar para página anterior
         </a>
 
-        <!-- Título e Tags ADICIONADOS -->
+        <!-- Título e Tags -->
         <h2 class="page-title text-verde">Fundação Lemann</h2>
         <div class="tags">
              <span>Redação</span>
@@ -298,7 +244,6 @@
              <span>Cobertura de Evento</span>
              <!-- Adicione ou modifique as tags conforme necessário -->
         </div>
-
 
         <!-- Grids de Conteúdo Detalhado -->
         <article id="campanha-citemaisuma">
@@ -346,7 +291,8 @@
                     <small>Snapinst.app_469...jpg</small>
                 </div>
                  <div class="content-item">
-                    <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4"> <!-- Manter Placeholder -->
+                    <!-- Se tiver a imagem, substitua o placeholder -->
+                    <img src="images/placeholder_declaracao_racial_4.jpg" alt="Campanha Declaração Racial - Conteúdo 4">
                     <a href="https://www.instagram.com/p/DDX3cm8Pw2S/?img_index=1" target="_blank" rel="noopener noreferrer">Confira</a>
                      <small>Imagem não especificada</small>
                 </div>
@@ -397,7 +343,7 @@
 
     </main>
 
-    <!-- FOOTER (Simplificado) -->
+    <!-- FOOTER (Renderizado com base no style.css) -->
     <footer>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -405,44 +351,63 @@
             <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
         </div>
          <p>Ana Furtado © <span id="currentYear"></span></p>
+         <!-- O formulário de contato não existe nesta página, ok -->
     </footer>
 
-    <!-- Script Padrão (COPIADO DO INDEX) -->
+    <!-- Script Padrão (Melhor ter um arquivo .js separado, mas mantendo como solicitado) -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
+        const dropdownButtons = document.querySelectorAll('.dropbtn'); // Seleciona todos os botões de dropdown
 
-        menuToggle.addEventListener('click', () => {
-            header.classList.toggle('active');
-        });
-
-        // === Script Dropdown (Adicionado do Index) ===
-        function toggleDropdown(event) {
-            var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
-            closeAllDropdowns(dropdownContent);
-            if (dropdownContent) {
-                dropdownContent.classList.toggle('show');
-            }
+        // Script Menu Hamburguer
+        if (menuToggle && header) {
+            menuToggle.addEventListener('click', () => {
+                header.classList.toggle('active');
+                // Fecha dropdowns abertos ao fechar o menu hamburguer
+                if (!header.classList.contains('active')) {
+                    closeAllDropdowns(null);
+                }
+            });
         }
+
+        // === Script Dropdown Aprimorado ===
         function closeAllDropdowns(exceptThisOne) {
-            var dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(function(dropdown) {
-                if (dropdown !== exceptThisOne && dropdown.classList.contains('show')) {
+            document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
+                if (dropdown !== exceptThisOne) {
                     dropdown.classList.remove('show');
                 }
             });
         }
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn i')) {
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Previne o comportamento padrão do link '#'
+                const dropdownContent = button.nextElementSibling; // Pega o .dropdown-content irmão
+                const isCurrentlyShown = dropdownContent.classList.contains('show');
+
+                closeAllDropdowns(null); // Fecha todos antes de abrir/fechar o clicado
+
+                if (!isCurrentlyShown) {
+                    dropdownContent.classList.add('show');
+                }
+                // Se já estava aberto, o closeAllDropdowns já o fechou.
+            });
+        });
+
+        // Fecha dropdowns se clicar fora
+        window.addEventListener('click', (event) => {
+          // Verifica se o clique NÃO foi em um botão dropdown OU dentro de um conteúdo de dropdown
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
              closeAllDropdowns(null);
           }
-        }
+        });
         // === Fim Script Dropdown ===
 
-
         // Script para atualizar o ano no footer
-        if(document.getElementById('currentYear')) {
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const currentYearSpan = document.getElementById('currentYear');
+        if(currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
         }
     </script>
 
