@@ -17,7 +17,7 @@
             color: #392523;
             margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
         }
-/* === HEADER PADRÃO === */
+/* === HEADER PADRÃO (Chevron removido do dropdown, resto mantido) === */
     header {
         display: flex; justify-content: space-between; align-items: center;
         padding: 1.25rem 2.5rem; background-color: #F8F2EA;
@@ -39,12 +39,13 @@
         display: flex; align-items: center;
     }
     nav ul li a:hover { color: #94A473; }
+    /* Estilo genérico para ícones dentro de links (afeta o Home) */
     nav ul li a i {
         margin-right: 5px;
         font-size: 1.1em;
         color: inherit;
     }
-    /* Estilo específico para ícones sociais no desktop */
+    /* Estilo específico para ícones sociais no desktop (mantidos) */
     nav ul li a[aria-label="LinkedIn"] i,
     nav ul li a[aria-label="Instagram"] i,
     nav ul li a[aria-label="E-mail"] i {
@@ -66,13 +67,14 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
     .dropdown-content a:hover { background-color: #f1f1f1; color: #94A473; }
-    .dropbtn {
+    .dropbtn { /* Estilo para o botão do dropdown */
         cursor: pointer; background: none; border: none; color: inherit;
         font: inherit; padding: 0; display: inline-flex; align-items: center;
     }
-    .dropbtn i { margin-left: 5px; }
+    /* A regra .dropbtn i ainda existe mas não se aplicará ao Projetos pois o <i> foi removido */
+    /* .dropbtn i { margin-left: 5px; } */
 
-    /* Esconder container mobile por padrão (desktop) */
+    /* Esconder container mobile por padrão (desktop) - estrutura mantida */
     .social-icons-mobile {
         display: none;
     }
@@ -139,7 +141,6 @@ main {
 /* Container dos articles com fundo marrom escuro #392523 */
 .content-articles {
     background-color: #392523;
-    /* **MODIFICADO**: Aumentado padding inferior */
     padding: 40px 20px 40px 20px;
 }
 
@@ -148,7 +149,7 @@ main {
     margin-bottom: 60px;
 }
 .content-articles article:last-of-type {
-    margin-bottom: 0; /* Mantém: remove margem extra do último article */
+    margin-bottom: 0;
 }
 
 /* Títulos H3 dentro da área escura */
@@ -195,7 +196,7 @@ main {
     border: 1px solid #eee;
 }
 
-/* Link "Confira" (Itálico, Normal, Menor) */
+/* Link "Confira" */
 .content-item a {
     display: block;
     margin-top: 10px;
@@ -243,11 +244,7 @@ footer .contact-form { display: none; }
 @media (max-width: 768px) {
      header { padding: 0.9375rem 1.25rem; }
 
-    /* Esconder links de texto e ícones sociais desktop */
-    .nav-links nav > ul > li:not(.dropdown):not(:first-child):not(.social-icons-mobile) {
-        /* Você pode esconder outros itens aqui se precisar */
-    }
-     /* Esconde especificamente os links dos ícones sociais desktop */
+    /* Esconde especificamente os links dos ícones sociais desktop (mantido) */
      nav > ul > li > a[aria-label="LinkedIn"],
      nav > ul > li > a[aria-label="Instagram"],
      nav > ul > li > a[aria-label="E-mail"] {
@@ -276,18 +273,18 @@ footer .contact-form { display: none; }
     .dropdown-content a:hover { background-color: #e0d8cf; }
     .dropbtn { width: 100%; justify-content: center; }
 
-    /* Estilos para o CONTAINER dos ícones sociais no mobile */
+    /* Estilos para o CONTAINER dos ícones sociais no mobile (mantido) */
     .social-icons-mobile {
         display: block !important; /* Mostra o container no mobile */
         margin-top: 1rem;
         padding-top: 1rem;
         border-top: 1px solid #eee;
-        list-style: none; /* Remove o bullet point do li container */
+        list-style: none; /* Remove o marcador do LI container */
         padding-left: 0;
         width: 100%;
         text-align: center; /* Centraliza os links inline */
     }
-    /* Estilo para os LINKS dentro do container mobile */
+    /* Estilo para os LINKS dentro do container mobile (mantido) */
     .social-icons-mobile a {
         display: inline-block !important; /* Coloca os links lado a lado */
         margin: 0 10px !important; /* Espaçamento entre os ícones */
@@ -297,10 +294,10 @@ footer .contact-form { display: none; }
     .social-icons-mobile a:hover {
         color: #94A473; /* Cor no hover */
     }
-    /* Estilo para os ÍCONES dentro dos links DENTRO do container mobile */
+    /* Estilo para os ÍCONES dentro dos links DENTRO do container mobile (mantido) */
     .social-icons-mobile a i {
-        font-size: 1.4em !important; /* Tamanho do ícone no mobile */
-        margin-right: 0 !important; /* Remove margem extra se houver */
+        font-size: 1.4em !important; /* <<< ESTE É O TAMANHO */
+        margin-right: 0 !important;
     }
 
      /* Conteúdo principal mobile */
@@ -310,9 +307,8 @@ footer .contact-form { display: none; }
      .top-content-area h2.page-title { font-size: 1.8em; }
      .top-content-area .tags span { font-size: 0.8em; padding: 4px 10px;}
 
-     /* Area escura mobile - **MODIFICADO** */
+     /* Area escura mobile */
      .content-articles {
-        /* Aumentado padding inferior mobile */
         padding: 30px 15px 30px 15px;
      }
      .content-articles article { margin-bottom: 40px; }
@@ -328,7 +324,7 @@ footer .contact-form { display: none; }
     </style>
 </head>
 <body>
-    <!-- HEADER PADRÃO -->
+    <!-- HEADER PADRÃO (Chevron removido, ícones desktop mantidos, mobile corrigido mantido) -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -341,20 +337,20 @@ footer .contact-form { display: none; }
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <!-- Link do dropdown SEM o ícone de chevron -->
+                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event); return false;">Projetos</a>
                         <div class="dropdown-content">
                             <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
-                    <!-- ÍCONES SOCIAIS DESKTOP (Serão escondidos no mobile pelo CSS) -->
+                    <!-- ÍCONES SOCIAIS DESKTOP (Mantidos) -->
                     <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
 
-                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE (Será mostrado no mobile pelo CSS) -->
+                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE (Estrutura corrigida mantida) -->
                      <li class="social-icons-mobile">
-                          <!-- Links diretamente dentro do container li -->
                           <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                           <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                           <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
@@ -364,7 +360,7 @@ footer .contact-form { display: none; }
         </div>
     </header>
 
-<!-- Conteúdo Principal -->
+<!-- Conteúdo Principal (Mantido como estava) -->
 <main>
     <!-- Área superior com fundo bege -->
     <div class="top-content-area">
@@ -422,7 +418,7 @@ footer .contact-form { display: none; }
     </div>
 
 </main>
-<!-- FOOTER -->
+<!-- FOOTER (Mantido como estava) -->
 <footer>
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -431,7 +427,7 @@ footer .contact-form { display: none; }
     </div>
      <p>Ana Furtado © <span id="currentYear"></span></p>
 </footer>
-<!-- Scripts -->
+<!-- Scripts (Mantidos como estavam) -->
 <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const header = document.querySelector('header');
@@ -444,14 +440,19 @@ footer .contact-form { display: none; }
 
     // === Script Dropdown ===
     function toggleDropdown(event) {
+        // Prevenir comportamento padrão do link
+        event.preventDefault();
+        event.stopPropagation(); // Impede que o clique feche o menu imediatamente via window.onclick
+
         var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
         var isCurrentlyShown = dropdownContent && dropdownContent.classList.contains('show');
-        closeAllDropdowns(null); // Fecha todos primeiro
+
+        closeAllDropdowns(null); // Fecha todos os outros dropdowns
+
         if (dropdownContent && !isCurrentlyShown) { // Abre apenas se não estava aberto
             dropdownContent.classList.add('show');
         }
-        // Impede que o clique no link navegue ou feche o menu via window.onclick
-        event.stopPropagation();
+        // Não precisa retornar false aqui pois já usamos preventDefault
     }
 
     function closeAllDropdowns(exceptThisOne) {
@@ -469,6 +470,13 @@ footer .contact-form { display: none; }
       if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content')) {
          closeAllDropdowns(null);
       }
+      // Se o menu mobile estiver aberto e o clique for fora do header, fecha o menu (opcional)
+      /*
+      if (header.classList.contains('active') && !header.contains(event.target) && !menuToggle.contains(event.target)) {
+           header.classList.remove('active');
+           closeAllDropdowns(null); // Garante que dropdowns fechem também
+      }
+      */
     }
     // === Fim Script Dropdown ===
 
@@ -481,11 +489,13 @@ footer .contact-form { display: none; }
     const navLinksContainer = document.querySelector('.nav-links');
     if (navLinksContainer) {
         navLinksContainer.addEventListener('click', (event) => {
-            // Verifica se o clique foi em um link 'a' e se o menu mobile está ativo
-            if (event.target.tagName === 'A' && header.classList.contains('active')) {
+            const targetLink = event.target.closest('a');
+            if (targetLink && header.classList.contains('active')) {
                  // Verifica se NÃO é o botão do dropdown para permitir que ele funcione
-                 if (!event.target.classList.contains('dropbtn') && !event.target.closest('.dropbtn')) {
+                 if (!targetLink.classList.contains('dropbtn')) {
                     header.classList.remove('active'); // Fecha o menu
+                    // Importante: Fechar dropdowns abertos ao fechar o menu
+                    closeAllDropdowns(null);
                  }
             }
         });
