@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Estilos GERAIS */
+        /* Estilos GERAIS (Originais) */
         body {
             font-family: 'Nixie One', sans-serif;
             background-color: #F8F2EA;
@@ -19,7 +19,7 @@
             margin: 0; padding: 0; box-sizing: border-box; line-height: 1.6;
         }
 
-        /* === HEADER PADRÃO (do index.html) === */
+        /* === HEADER PADRÃO (Original) === */
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 1.25rem 2.5rem; background-color: #F8F2EA;
@@ -60,26 +60,25 @@
             font: inherit; padding: 0; display: inline-flex; align-items: center;
         }
         .dropbtn i { margin-left: 5px; }
-        .social-icons-mobile { display: none; }
+        .social-icons-mobile { display: none; } /* Escondido no desktop por padrão */
         .menu-toggle {
             display: none; background: none; border: none;
             font-size: 1.5rem; color: #392523; cursor: pointer;
         }
-        /* === FIM HEADER PADRÃO === */
+        /* === FIM HEADER PADRÃO (Original) === */
 
 
-        /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) ---- */
+        /* ---- ESTILOS PARA O CONTEÚDO PRINCIPAL (<main>) (Originais) ---- */
         main {
              padding: 20px;
              padding-top: 100px;
-             /* Fundo cinza aplicado diretamente */
              background-color: #EAEAEA;
         }
 
         main section {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: none; /* Sem borda no fundo cinza */
+            border-bottom: none;
         }
          main section:last-of-type {
              margin-bottom: 0; padding-bottom: 0;
@@ -89,10 +88,10 @@
             font-family: 'Nixie One', sans-serif;
             font-size: 2.2em;
             color: #392523;
-            margin-bottom: 10px; /* Reduzido */
+            margin-bottom: 10px;
             font-weight: 400;
          }
-         /* Título H3 REMOVIDO */
+         /* Título H3 REMOVIDO (Original) */
 
          main p {
             font-family: 'Fragment Core', sans-serif;
@@ -100,13 +99,12 @@
             color: #392523;
             margin-bottom: 1em;
          }
-         /* Data - Fonte Alterada */
          main p.date {
-             font-family: 'Fragment Core', sans-serif; /* ALTERADO */
-             font-style: italic; /* Mantido */
+             font-family: 'Fragment Core', sans-serif;
+             font-style: italic;
              color: #5c4b49;
-             margin-top: 5px; /* Ajustado para seguir H2 */
-             margin-bottom: 15px; /* Espaço antes da descrição */
+             margin-top: 5px;
+             margin-bottom: 15px;
              font-size: 0.95em;
          }
 
@@ -118,10 +116,10 @@
         .text-verde { color: #7A8A5A; }
         h2.text-verde { color: #7A8A5A; }
 
-        /* Estilos de Tags REMOVIDOS ou não usados nesta página */
+        /* Estilos de Tags REMOVIDOS (Original) */
         /* .tags, .tags span { ... } */
 
-        /* Footer */
+        /* Footer (Original) */
         footer {
             margin-top: 0; padding: 25px 20px; text-align: center; font-size: 0.9em;
             color: #5c4b49; font-family: 'Fragment Core', sans-serif;
@@ -130,10 +128,10 @@
         footer .social-icons { margin-bottom: 20px; }
         footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
         footer .social-icons a:hover { color: #94A473; }
-        footer .contact-form { display: none; } /* Formulário oculto */
+        footer .contact-form { display: none; } /* Formulário oculto (Original) */
 
 
-        /* === RESPONSIVIDADE (Baseado no index.html) === */
+        /* === RESPONSIVIDADE (Original) === */
         @media (max-width: 768px) {
             header { padding: 0.9375rem 1.25rem; }
             .nav-links {
@@ -155,8 +153,18 @@
             .dropdown-content a { padding: 0.5rem 1rem; color: #5c4b49; font-size: 0.95em; text-align: left; }
             .dropdown-content a:hover { background-color: #e0d8cf; }
             .dropbtn { width: 100%; justify-content: center; }
-            .social-icons-mobile { display: block; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee; }
-            .social-icons-mobile li { display: inline-block; margin: 0 10px; }
+            .social-icons-mobile {
+                display: block; /* Mostrado no mobile */
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid #eee;
+            }
+             /* A regra original `.social-icons-mobile li` ainda funciona após a correção do HTML */
+            .social-icons-mobile li {
+                display: inline-block;
+                margin: 0 10px;
+                width: auto; /* Para não ocupar a linha toda no flex-column */
+             }
             .social-icons-mobile li a i { font-size: 1.4em; margin-right: 0; }
 
              main { padding-top: 80px; padding-left: 15px; padding-right: 15px; }
@@ -166,7 +174,7 @@
     </style>
 </head>
 <body>
-    <!-- HEADER PADRÃO (COPIADO DO INDEX) -->
+    <!-- HEADER PADRÃO (Original) -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -185,43 +193,41 @@
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
+                     <!-- Estrutura HTML corrigida para validade, mantendo o comportamento CSS original -->
                      <li class="social-icons-mobile">
-                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                         <ul> <!-- Adicionado UL para conter os LIs dos ícones -->
+                              <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                              <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                              <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Conteúdo Principal com fundo cinza -->
-    <main> <!-- Fundo cinza aplicado via CSS -->
-
-        <!-- Seção Introdutória -->
+    <!-- Conteúdo Principal (Original) -->
+    <main>
         <section id="intro-fundacao-lemann">
             <h2 class="text-verde">Fundação Lemann</h2>
 
-            <!-- Título H3 Removido -->
-            <!-- Tags Removidas -->
+            <!-- Título H3 Removido (Original) -->
+            <!-- Tags Removidas (Original) -->
 
-            <!-- Data com fonte ajustada no CSS -->
             <p class="date"><em>[Oct. 2024 - Presente]</em></p>
 
-            <!-- Descrição -->
             <p>
                 Organização brasileira que investe em educação e desenvolvimento
                 de lideranças para promover mudanças sistêmicas no Brasil. Seu foco
                 principal está na melhoria da educação pública e na formação de
                 lideranças comprometidas com impacto social.
             </p>
-            <!-- Link para a página de detalhes -->
+            <!-- Link Original -->
             <p><a href="fundacao_lemann_detalhes.html">Conheça minha atuação</a></p>
         </section>
-
     </main>
 
-    <!-- FOOTER (Simplificado) -->
+    <!-- FOOTER (Original) -->
      <footer>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -231,7 +237,7 @@
          <p>Ana Furtado © <span id="currentYear"></span></p>
     </footer>
 
-    <!-- Script Padrão (COPIADO DO INDEX) -->
+    <!-- Script Padrão (Original) -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
@@ -240,7 +246,7 @@
             header.classList.toggle('active');
         });
 
-        // === Script Dropdown (Adicionado do Index) ===
+        // === Script Dropdown (Original) ===
         function toggleDropdown(event) {
             var dropdownContent = event.currentTarget.closest('.dropdown').querySelector('.dropdown-content');
             closeAllDropdowns(dropdownContent);
