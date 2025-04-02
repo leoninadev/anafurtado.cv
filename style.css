@@ -468,9 +468,8 @@ section {
 
 
 .mini-bio {
-    /* font-family: 'Glacial Indifference', sans-serif; <-- Fonte não importada */
-    font-family: 'Fragment Core', sans-serif; /* Usar fonte disponível */
-    font-weight: normal; /* ou 400 */
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: normal;
     color: #392523;
     line-height: 1.6;
     max-width: 43.75rem; /* 700px */
