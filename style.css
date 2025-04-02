@@ -476,7 +476,7 @@ section {
     text-align: justify;
     margin: 0 auto;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 /* .mini-bio p { margin-bottom: 0; } <-- Desnecessário se for só um <p> */
