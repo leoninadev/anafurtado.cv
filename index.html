@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Furtado</title>
-    <!-- Certifique-se que este link para style.css está correto -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Importação da fonte Glacial Indifference -->
-    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header com a estrutura CORRETA -->
     <header>
         <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
         <button class="menu-toggle" aria-label="Menu">
@@ -27,29 +23,21 @@
                     <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
                     <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                     <li class="dropdown">
-                        <a href="#" aria-label="Projetos" class="dropbtn" onclick="toggleDropdown(event);">Projetos</a>
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
                         <div class="dropdown-content">
                             <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                             <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                         </div>
                     </li>
-                    <!-- ÍCONES SOCIAIS DESKTOP -->
-                    <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
-
-                    <!-- CONTAINER PARA ÍCONES SOCIAIS MOBILE -->
                      <li class="social-icons-mobile">
-                          <a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                          <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                          <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- Seu <main> e <footer> continuam aqui -->
     <main>
         <section class="banner banner-1">
             <img src="img/foto1.jpg?v=1" alt="foto 1">
@@ -63,16 +51,16 @@
             </div>
         </section>
         <section class="banner banner-3" id="minha-trajetoria">
-            <div class="banner-content">
-                <p class="mini-bio">
-                    Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
-                    Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
-                    <br><br>
-                    Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
-                    <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
-                </p>
-            </div>
-        </section>
+    <div class="banner-content">
+        <p class="mini-bio">
+            Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
+            Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
+            <br><br>
+            Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
+            <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
+        </p>
+    </div>
+</section>
         <section class="banner banner-4" id="trajetoria">
             <h2 class="banner-4-title">Passos da minha trajetória</h2>
             <div class="brands-grid">
@@ -110,73 +98,243 @@
                 <button type="submit" style="margin-top: 10px;">Enviar</button>
             </form>
         </div>
-         <!-- Adicionando o parágrafo do copyright aqui se não existir -->
-         <p>Ana Furtado © <span id="currentYear"></span></p>
     </footer>
-
-    <!-- Script para Header e Footer -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
+menuToggle.addEventListener('click', () => {
+        header.classList.toggle('active');
+    });
+</script>
+Use code with caution.
+</body>
+</html>
+fazer a parte "fundação leman" ser bege", e o castanho precisa ser exatamente como na pagina de Papia Content, mesma cor. vou mandar novamente o código da papia pra vc pegar a cor certa:
 
-        if (menuToggle && header) {
-            menuToggle.addEventListener('click', () => {
-                header.classList.toggle('active');
-                closeAllDropdowns(null);
-            });
+papia-content:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papia Content</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #392523;
+            color: #F8F2EA;
+            font-family: 'Nixie One', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 80px;
+            box-sizing: border-box;
+            align-items: center; /* Centralizar horizontalmente */
+        }
+/* Estilos para a barra de progresso */
+    .progress-container {
+        width: fit-content; /* Largura baseada no conteúdo */
+        max-width: 400px; /* Largura máxima */
+        height: 15px; /* Altura da barra */
+        background-color: #ddd;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        display: inline-block; /* Para ocupar apenas o tamanho do texto */
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #94A473;
+        width: 75%; /* Preenchimento de 75% */
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-family: 'Nixie One', sans-serif;
+        font-size: 2em;
+        margin-bottom: 10px; /* Ajustei a margem */
+        font-weight: normal;
+        color: #F8F2EA;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px; /* Reduzi a margem */
+        font-family: 'Fragment Core', sans-serif;
+        max-width: 50rem; /* Aumentei a largura máxima */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        font-style: italic;
+        color: #F8F2EA;
+    }
+
+    .loading-gif {
+        margin-top: 20px;
+        margin-bottom: 40px; /* Adicionei margem inferior */
+        max-width: 100px; /* Defina um tamanho máximo dnv*/
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        margin-top: auto;
+        margin-bottom: 10px;
+        font-size: 0.8em;
+        background-color: inherit;
+        color: #F8F2EA;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #F8F2EA;
+        padding: 1.25rem 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-family: 'Nixie One', sans-serif;
+        font-size: 2em;
+        letter-spacing: 0.125rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .logo a {
+        color: #392523;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 0.9375rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #392523;
+        font-weight: 500;
+        font-family: 'Fragment Core', sans-serif;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #94A473;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            padding: 0.9375rem 1.25rem;
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
         }
 
-        function toggleDropdown(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            var dropdown = event.currentTarget.closest('.dropdown');
-            if (!dropdown) return;
-            var dropdownContent = dropdown.querySelector('.dropdown-content');
-            if (!dropdownContent) return;
-            var isCurrentlyShown = dropdownContent.classList.contains('show');
-            closeAllDropdowns(null);
-            if (!isCurrentlyShown) {
-                dropdownContent.classList.add('show');
-            }
+        .logo {
+            font-size: 1.5em;
+            margin-bottom: 0.625rem;
         }
 
-        function closeAllDropdowns(exceptThisOne) {
-            var dropdowns = document.querySelectorAll('.dropdown-content');
-            dropdowns.forEach(function(dropdown) {
-                if (dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            });
+        nav ul {
+            flex-direction: column;
+            text-align: center;
         }
 
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
-             closeAllDropdowns(null);
-          }
+        nav ul li {
+            margin: 0.625rem 0;
         }
 
-        const navLinksContainer = document.querySelector('.nav-links');
-        if (navLinksContainer && header) {
-            navLinksContainer.addEventListener('click', (event) => {
-                const targetLink = event.target.closest('a');
-                if (targetLink && header.classList.contains('active')) {
-                    if (!targetLink.classList.contains('dropbtn')) {
-                        header.classList.remove('active');
-                        closeAllDropdowns(null);
-                    }
-                }
-            });
+        /* Adicionado para resolver o problema em telas menores */
+        body {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
-        // Script para atualizar o ano no footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        } else {
-            // Tenta adicionar ao parágrafo do footer se o span não existir
-             const footerP = document.querySelector('footer p[©]');
-             if(footerP) footerP.textContent += ' ' + new Date().getFullYear();
+        p {
+           max-width: 100%; /* Garante que o texto não ultrapasse as bordas */
+           padding-left: 1rem;
+           padding-right: 1rem;
+           text-align: justify;
         }
-    </script>
+    }
+</style>
+Use code with caution.
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="index.html#minha-trajetoria" aria-label="Minha Trajetória">Minha Trajetória</a></li>
+                    <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
+                        <div class="dropdown-content">
+                            <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
+                            <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
+                        </div>
+                    </li>
+                     <li class="social-icons-mobile">
+                          <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <h1>EM CONSTRUÇÃO</h1>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <p>
+        Comunicar é mais do que falar — é existir, ocupar espaços, reivindicar narrativas. "Papia", do crioulo cabo-verdiano "falar", representa esse projeto que nasce para amplificar vozes historicamente silenciadas.
+
+        Aqui, a comunicação se torna ferramenta de mudança. Por meio de mentorias personalizadas e um plano estratégico de conteúdo, apoio pessoas e iniciativas a potencializar suas histórias, conectar-se com novos públicos e transformar sua mensagem em impacto real.
+
+        Porque não é só dizer — é fazer ecoar. E com o Papia Content, cada voz importa.
+    </p>
+
+    <img src="img/loading.gif" alt="Carregando..." class="loading-gif"> <!-- Adicionado o GIF -->
+</main>
+
+<footer style="background-color: #392523;">
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+
+    menuToggle.addEventListener('click', () => {
+        header.classList.toggle('active');
+    });
+</script>
+Use code with caution.
 </body>
 </html>
