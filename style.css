@@ -494,42 +494,42 @@ position: fixed;
 }
 
 .logo {
-    font-size: 1.5em;
-    margin-bottom: 0;
-     font-family: 'Nixie One', sans-serif !important;
+font-size: 1.5em;
+margin-bottom: 0;
+font-family: 'Nixie One', sans-serif !important;
 }
 
 /* Mostra o botão do menu */
 .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+display: block;
+position: absolute;
+top: 1rem;
+right: 1rem;
 }
 
 /* Esconde a navegação por padrão */
 .nav-links {
-    display: none;
-    width: 100%;
-    justify-content: center;
+display: none;
+width: 100%;
+justify-content: center;
 }
 
 .nav-links nav ul {
-    flex-direction: column;
-    text-align: center;
+flex-direction: column;
+text-align: center;
 }
 
 .nav-links nav ul li {
-    margin: .625rem 0;
-     font-family: 'Fragment Core', sans-serif !important;
+margin: .625rem 0;
+font-family: 'Fragment Core', sans-serif !important;
 }
 
 /* Estilos para quando o menu estiver ativo */
 header.active .nav-links {
-    display: block;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    width: 100%;
+display: block;
+background-color: #f9f9f9;
+padding: 1rem;
+width: 100%;
 }
 Use code with caution.
 header.active .social-icons-mobile {
@@ -537,26 +537,26 @@ display: flex;
 justify-content: space-around;
 }
 
-/* Estilo da fonte nos links do menu mobile */
+/* Estilo da fonte nos links do menu mobile /
 header.active .nav-links nav ul li a {
-    font-family: 'Fragment Core', sans-serif !important; /* Adiciona a fonte Fragment Core */
+font-family: 'Fragment Core', sans-serif !important; / Adiciona a fonte Fragment Core */
 }
 
-/* Ajustes na mini-bio para telas menores */
+/* Ajustes na mini-bio para telas menores /
 .mini-bio {
-    font-size: .8em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 1rem; /* Adicionado padding esquerdo */
-    padding-right: 1rem; /* Adicionado padding direito */
-    text-align: justify;
-    box-sizing: border-box;
-     font-family: 'Glacial Indifference', sans-serif !important;
+font-size: .8em;
+margin-left: 0;
+margin-right: 0;
+padding-left: 1rem; / Adicionado padding esquerdo /
+padding-right: 1rem; / Adicionado padding direito */
+text-align: justify;
+box-sizing: border-box;
+font-family: 'Glacial Indifference', sans-serif !important;
 }
 
 .container-banners .banner-texto .banner-subtitle {
-    font-size: 2.8em;
-     font-family: 'Nixie One', sans-serif !important;
+font-size: 2.8em;
+font-family: 'Nixie One', sans-serif !important;
 }
 Use code with caution.
 /* Início - Ajustes para o formulário de contato no mobile /
@@ -581,56 +581,56 @@ margin-top: 1rem;
 }
 
 header.active .nav-links nav ul .social-icons-mobile li {
-    margin: 0;
+margin: 0;
 }
 
 header.active .nav-links nav ul li a {
-    font-size: 1.5rem;
+font-size: 1.5rem;
 }
-/* Fim - Estilos para alinhar os ícones sociais */
+/* Fim - Estilos para alinhar os ícones sociais /
 Use code with caution.
 /Estilo específico para o conteúdo.html/
 .conteudo-item-container {
-flex-direction: column; /* Empilha os itens verticalmente /
+flex-direction: column; / Empilha os itens verticalmente /
 align-items: flex-start; / Alinha os itens à esquerda */
 }
 
 .conteudo-texto {
-    margin-right: 0; /* Remove a margem */
+margin-right: 0; /* Remove a margem */
 }
 
 .conteudo-texto h3 {
-     font-family: 'Fragment Core', sans-serif !important;
+font-family: 'Fragment Core', sans-serif !important;
 }
 
 .conteudo-texto h2 {
-     font-family: 'Nixie One', sans-serif !important;
+font-family: 'Nixie One', sans-serif !important;
 }
 
 .conteudo-texto p {
-     font-family: 'Fragment Core', sans-serif !important;
+font-family: 'Fragment Core', sans-serif !important;
 }
 
 .conteudo-imagem {
-    width: 100%; /* A imagem ocupa toda a largura */
-    max-height: 200px; /* Define uma altura máxima */
-    margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+width: 100%; /* A imagem ocupa toda a largura /
+max-height: 200px; / Define uma altura máxima /
+margin-bottom: 10px; / Adiciona um espaço abaixo da imagem */
 }
 
 .conteudo-imagem img {
-    object-fit: cover; /* Garante que a imagem cubra o espaço */
-    object-position: center; /* Centraliza a imagem */
+object-fit: cover; /* Garante que a imagem cubra o espaço /
+object-position: center; / Centraliza a imagem */
 }
 
-/* Ajustes para o container de banners */
+/* Ajustes para o container de banners /
 .container-banners {
-    padding-left: 1rem; /* Adicionado padding esquerdo */
-    padding-right: 1rem; /* Adicionado padding direito */
-    box-sizing: border-box;
+padding-left: 1rem; / Adicionado padding esquerdo /
+padding-right: 1rem; / Adicionado padding direito /
+box-sizing: border-box;
 }
 Use code with caution.
 section {
-padding: 3.75rem 1rem; /* Adicionado padding horizontal /
+padding: 3.75rem 1rem; / Adicionado padding horizontal /
 position: relative;
 overflow: hidden;
 width: 100%;
@@ -650,61 +650,61 @@ font-size: 2.5em;
 }
 
 .banner-3 .banner-text {
-    padding: 1.875rem;
+padding: 1.875rem;
 }
 
 .mini-bio {
-    font-size: .7em;
-    line-height: 1.7;
+font-size: .7em;
+line-height: 1.7;
 }
 
 /* Ajustes para o container de banners */
 .container-banners {
-    flex-direction: column;
-    height: auto;
+flex-direction: column;
+height: auto;
 }
 
 .container-banners > * {
-    width: 100%;
-    margin-bottom: 1.875rem;
+width: 100%;
+margin-bottom: 1.875rem;
 }
 
 .container-banners .banner-texto .banner-subtitle {
-    font-size: 2.25em;
+font-size: 2.25em;
 }
 
 /* INÍCIO - Ajustes para o Banner 1 em Mobile */
 .banner-1 {
-    height: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+height: auto;
+padding-top: 0;
+padding-bottom: 0;
 }
 
 .banner-1 img {
-    max-height: calc(100vh - 6rem);
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
+max-height: calc(100vh - 6rem);
+object-fit: contain;
+margin: 0;
+padding: 0;
 }
 /* FIM - Ajustes para o Banner 1 em Mobile */
 
 /* Início - Espaçamento entre as logos no mobile */
 .brand-row img {
-    margin: .625rem;
+margin: .625rem;
 }
 
 .second-row img {
-    margin-top: 1.25rem;
+margin-top: 1.25rem;
 }
 /* Fim - Espaçamento entre as logos no mobile */
 
-/* Início - Ajustes para o formulário de contato no mobile */
+/* Início - Ajustes para o formulário de contato no mobile /
 footer .contact-form {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+max-width: 90%;
+margin-left: auto;
+margin-right: auto;
 }
-/* Fim - Ajustes para o formulário de contato no mobile */
+/ Fim - Ajustes para o formulário de contato no mobile */
 Use code with caution.
 }
 
