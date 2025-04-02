@@ -4,59 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Furtado</title>
-    <link rel="stylesheet" href="style.css"> <!-- Certifique-se que este CSS existe e está correto -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <style>
-        /* Adicione aqui estilos mínimos SE o style.css não estiver carregando */
-        /* Exemplo: Estilos básicos para o footer para garantir visibilidade */
-        footer {
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #392523; /* Cor padrão escura */
-            font-family: 'Fragment Core', sans-serif;
-            border-top: 1px solid #ddd; /* Linha divisória */
-            background-color: #F8F2EA; /* Fundo bege padrão */
-        }
-        footer .social-icons { margin-bottom: 20px; }
-        footer .social-icons a { color: #392523; margin: 0 10px; font-size: 1.5em; transition: color 0.3s ease; }
-        footer .social-icons a:hover { color: #94A473; }
-        footer .contact-form { margin-top: 20px; /* Espaço acima do formulário */ margin-bottom: 20px; /* Espaço abaixo do formulário */ }
-        footer .contact-form h3 { /* Estilo básico para o título */
-             color: #7A8A5A; /* Verde */
-             font-family: 'Fragment Core', sans-serif;
-             font-weight: 600;
-             margin-bottom: 15px;
-        }
-        footer .contact-form input,
-        footer .contact-form textarea {
-             width: 80%; /* Ajuste a largura conforme necessário */
-             max-width: 400px; /* Limite máximo */
-             padding: 10px;
-             margin-bottom: 10px;
-             border: 1px solid #ccc;
-             border-radius: 4px;
-             font-family: 'Fragment Core', sans-serif;
-        }
-         footer .contact-form button {
-             padding: 10px 20px;
-             background-color: #7A8A5A; /* Verde */
-             color: #F8F2EA; /* Texto claro */
-             border: none;
-             border-radius: 4px;
-             cursor: pointer;
-             font-family: 'Fragment Core', sans-serif;
-             transition: background-color 0.3s ease;
-         }
-         footer .contact-form button:hover {
-             background-color: #94A473; /* Verde mais claro no hover */
-         }
-        footer p { margin-top: 20px; /* Espaço acima do copyright */ }
-         /* Se você tiver outros estilos no style.css, eles prevalecerão */
-    </style>
 </head>
 <body>
     <header>
@@ -99,16 +51,16 @@
             </div>
         </section>
         <section class="banner banner-3" id="minha-trajetoria">
-            <div class="banner-content">
-                <p class="mini-bio">
-                    Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
-                    Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
-                    <br><br>
-                    Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
-                    <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
-                </p>
-            </div>
-        </section>
+    <div class="banner-content">
+        <p class="mini-bio">
+            Com uma trajetória que entrelaça raízes <strong>cabo-verdianas e brasileiras</strong>, minha identidade é a base de minha jornada profissional e acadêmica.
+            Sou uma comunicóloga apaixonada por construir pontes, conectar histórias e amplificar vozes, unindo minha formação em <strong>Comunicação Social</strong> e em <strong>Gênero e Diversidade</strong> para promover <strong>narrativas de impacto</strong>.
+            <br><br>
+            Quase <strong>uma década de atuação com comunicação digital</strong>, mantenho meu foco em inclusão, equidade, democracia e transformação social. Sigo o meu compromisso de construir um futuro mais inclusivo e equitativo por meio da comunicação.<br><br>
+            <strong>Comunicação é um ato de resistência e transformação — com ela construo narrativas que moldam um futuro mais inclusivo HOJE!</strong>
+        </p>
+    </div>
+</section>
         <section class="banner banner-4" id="trajetoria">
             <h2 class="banner-4-title">Passos da minha trajetória</h2>
             <div class="brands-grid">
@@ -146,26 +98,14 @@
                 <button type="submit" style="margin-top: 10px;">Enviar</button>
             </form>
         </div>
-        <!-- LINHA DE COPYRIGHT ADICIONADA AQUI -->
-        <p>© <span id="currentYear"></span> Ana Furtado. Todos os direitos reservados.</p>
     </footer>
     <script>
-        // Script Menu Hamburguer
         const menuToggle = document.querySelector('.menu-toggle');
         const header = document.querySelector('header');
-
-        if(menuToggle && header){ // Verifica se existem
-             menuToggle.addEventListener('click', () => {
-                header.classList.toggle('active');
-            });
-        }
-
-        // Script para atualizar o ano no footer
-        const currentYearSpan = document.getElementById('currentYear');
-        if(currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-    </script>
+menuToggle.addEventListener('click', () => {
+        header.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
