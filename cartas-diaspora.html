@@ -4,176 +4,135 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Cartas da Diáspora</title>
-     <!-- <link rel="stylesheet" href="style.css"> --> <!-- Link para CSS externo, se houver -->
+     <!-- <link rel="stylesheet" href="style.css"> -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Fragment+Core:wght@400;600&family=Nixie+One&family=Playfair+Display:ital@1&family=Role+Model&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <style>
          body {
-             /* Fundo escuro e cor clara já definidos */
              background-color: #392523;
              color: #F8F2EA;
              font-family: 'Nixie One', sans-serif;
-             /* Removido text-align: center; será controlado por main */
              display: flex;
              flex-direction: column;
              min-height: 100vh;
              margin: 0;
-             /* Mantém padding para header fixo */
-             padding-top: 80px;
+             padding-top: 80px; /* Espaço para header fixo */
              box-sizing: border-box;
-             /* Removido align-items: center; será controlado por main */
          }
 
-          /* Header Fixo (sem alterações) */
          header {
              position: fixed;
              top: 0;
              left: 0;
              width: 100%;
-             background-color: #F8F2EA; /* Fundo bege do header */
+             background-color: #F8F2EA;
              padding: 1.25rem 2.5rem;
              display: flex;
              justify-content: space-between;
              align-items: center;
              z-index: 1000;
              box-sizing: border-box;
-             color: #392523; /* Texto escuro no header */
-             box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* Sombra original */
+             color: #392523;
+             box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
          }
-         .logo { font-family: 'Nixie One', sans-serif; font-size: 2em; letter-spacing: 0.125rem; text-align: center; font-weight: 400; /* Fonte normal */ }
+         .logo { font-family: 'Nixie One', sans-serif; font-size: 2em; letter-spacing: 0.125rem; text-align: center; font-weight: 400; }
          .logo a { color: #392523; text-decoration: none; }
-         .nav-links { display: flex; align-items: center; } /* Para desktop */
+         .nav-links { display: flex; align-items: center; }
          nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
          nav ul li { margin: 0 0.9375rem; }
          nav ul li a { text-decoration: none; color: #392523; font-weight: 500; font-family: 'Fragment Core', sans-serif; transition: color 0.3s ease; display: flex; align-items: center; }
          nav ul li a:hover { color: #94A473; }
          nav ul li a i { margin-right: 5px; font-size: 1.1em; }
          nav ul li a i.fas.fa-home { font-size: 1.3em; }
-         /* Esconder dropdown e ícones mobile no desktop */
          .dropdown-content { display: none; }
          .dropdown .dropbtn::after { display: none; }
          .social-icons-mobile { display: none; }
          .menu-toggle { display: none; }
 
-
-         /* **NOVO**: Estilos para o <main> para centralizar e espaçar */
+         /* Estilos para <main> */
          main {
              display: flex;
-             flex-direction: column; /* Organiza itens verticalmente */
-             align-items: center; /* Centraliza itens horizontalmente */
-             flex-grow: 1; /* Permite que main ocupe o espaço restante */
-             width: 100%; /* Garante que ocupe a largura */
+             flex-direction: column;
+             align-items: center;
+             flex-grow: 1;
+             width: 100%;
              box-sizing: border-box;
-             /* Adiciona padding superior para empurrar para baixo E padding lateral */
-             padding: 60px 20px 40px 20px; /* Ajuste 60px conforme necessário */
-             text-align: center; /* Centraliza texto dentro de blocos como h1 */
+             padding: 60px 20px 40px 20px;
+             text-align: center;
          }
 
-         /* Estilos para o conteúdo dentro de main */
          h1 {
              font-family: 'Nixie One', sans-serif;
              font-size: 2em;
-             margin-bottom: 20px; /* Aumentado um pouco */
+             /* Aumentar margem inferior já que a barra saiu */
+             margin-bottom: 40px;
              font-weight: normal;
              color: #F8F2EA;
          }
 
-         .progress-container {
-             width: 90%; /* Usar porcentagem para responsividade */
-             max-width: 350px; /* Reduzido um pouco */
-             height: 15px;
-             background-color: #5e4e48; /* Fundo da barra um pouco mais visível */
-             border-radius: 10px;
-             margin-bottom: 30px; /* Mais espaço abaixo */
-             overflow: hidden;
-             /* display: inline-block; Removido - main agora é flex container */
-         }
-
-         .progress-bar {
-             height: 100%;
-             background-color: #94A473;
-             width: 75%;
-             border-radius: 10px;
-         }
+         /* **REMOVIDO**: Estilos da barra de progresso não são mais necessários */
+         /*
+         .progress-container { ... }
+         .progress-bar { ... }
+         */
 
          p {
              font-size: 1.2em;
-             margin-bottom: 30px; /* Mais espaço abaixo */
+             margin-bottom: 30px;
              font-family: 'Fragment Core', sans-serif;
              max-width: 50rem;
-             /* margin-left/right: auto; Removido - main centraliza */
-             text-align: justify; /* Justificado continua ok */
+             text-align: justify;
              font-style: italic;
              color: #F8F2EA;
-             width: 100%; /* Garante que o parágrafo use a largura disponível (limitada por max-width) */
+             width: 100%;
          }
 
+         /* Estilo para o GIF */
          .loading-gif {
-             margin-top: 20px;
-             margin-bottom: 40px;
+             margin-top: 20px; /* Espaço acima do GIF */
+             margin-bottom: 40px; /* Espaço abaixo do GIF */
              max-width: 100px;
              height: auto;
-             /* display: block; Removido - main centraliza */
-             /* margin-left/right: auto; Removido - main centraliza */
          }
 
-         /* Footer (sem alterações significativas) */
          footer {
-             margin-top: auto; /* Empurra para o fim se main não preencher tudo */
-             padding-bottom: 10px; /* Adiciona padding em vez de margin */
+             margin-top: auto;
+             padding-bottom: 10px;
              font-size: 0.8em;
-             background-color: inherit; /* Herda fundo do body */
+             background-color: inherit;
              color: #F8F2EA;
-             width: 100%; /* Ocupa largura */
-             text-align: center; /* Centraliza texto do footer */
+             width: 100%;
+             text-align: center;
          }
 
-
-         /* Responsividade (Ajustes no header e conteúdo) */
          @media (max-width: 768px) {
-             /* Header Mobile (igual ao index.html padrão) */
              header { padding: 0.9375rem 1.25rem; }
              .nav-links nav > ul > li:not(:first-child):not(.social-icons-mobile) { display: none; }
              .nav-links nav > ul > li:first-child { display:none; }
              .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: #F8F2EA; box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); padding: 1rem 0; border-top: 1px solid #eee; }
              header.active .nav-links { display: block; }
              .logo { font-size: 1.5em; }
-             .menu-toggle { display: block; color: #392523; /* Cor do ícone hamburguer */ }
+             .menu-toggle { display: block; color: #392523; font-size: 1.5rem; background: none; border: none; cursor: pointer;}
              nav ul { flex-direction: column; text-align: center; width: 100%; }
              nav ul li { margin: 0.8rem 0; width: 100%; }
              .nav-links nav > ul > li:not(:first-child):not(.social-icons-mobile) { display: list-item; width: 100%; }
              .social-icons-mobile { display: block !important; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee; list-style: none; padding-left: 0; width: 100%; text-align: center; }
              .social-icons-mobile li { display: inline-block !important; margin: 0 10px !important; width: auto !important; }
              .social-icons-mobile li a i { font-size: 1.4em !important; margin-right: 0 !important; }
-             .dropdown-content { display: none !important; } /* Esconde dropdown no mobile aqui também */
+             .dropdown-content { display: none !important; }
 
-
-             /* Ajuste padding do body e main no mobile */
-             body {
-                 padding-top: 70px; /* Altura menor do header mobile */
-                 /* Padding lateral do body removido, controlado por main */
-                 padding-left: 0;
-                 padding-right: 0;
-             }
-             main {
-                 /* Padding superior menor, laterais menores */
-                 padding: 40px 15px 30px 15px;
-             }
-             h1 { font-size: 1.8em; }
-             p {
-                font-size: 1.1em;
-                text-align: justify; /* Manter justificado se preferir */
-                padding-left: 0; /* Remover padding extra, main já tem */
-                padding-right: 0;
-             }
-             .progress-container { max-width: 90%; } /* Ajustar barra */
+             body { padding-top: 70px; padding-left: 0; padding-right: 0; }
+             main { padding: 40px 15px 30px 15px; }
+             h1 { font-size: 1.8em; margin-bottom: 30px; } /* Ajuste margem mobile */
+             p { font-size: 1.1em; padding-left: 0; padding-right: 0; }
+             /* Estilo da barra removido */
          }
      </style>
  </head>
  <body>
-     <!-- Header Padrão (Sem dropdown ativo, sem ícones sociais desktop aqui) -->
+     <!-- Header Padrão -->
      <header>
          <h1 class="logo"><a href="index.html">ANA FURTADO</a></h1>
          <button class="menu-toggle" aria-label="Menu">
@@ -187,12 +146,12 @@
                      <li><a href="conteudo.html" aria-label="Conteúdo">Conteúdo</a></li>
                      <li class="dropdown">
                          <a href="#" aria-label="Projetos" class="dropbtn">Projetos</a>
-                         <div class="dropdown-content"> <!-- Escondido por CSS -->
+                         <div class="dropdown-content">
                              <a href="papia-content.html" aria-label="Papia Content">Papia Content</a>
                              <a href="cartas-diaspora.html" aria-label="Cartas da Diáspora">Cartas da Diáspora</a>
                          </div>
                      </li>
-                      <li class="social-icons-mobile"> <!-- Apenas para mobile -->
+                      <li class="social-icons-mobile">
                            <li><a href="https://www.linkedin.com/in/anaclaudiafurtado/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                            <li><a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                            <li><a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a></li>
@@ -205,21 +164,19 @@
      <!-- Conteúdo Principal Centralizado e Espaçado -->
      <main>
          <h1>EM CONSTRUÇÃO</h1>
-         <div class="progress-container">
-             <div class="progress-bar"></div>
-         </div>
+         <!-- BARRA DE PROGRESSO REMOVIDA DAQUI -->
          <p>
              10 ilhas compõe Cabo Verde, mas sua essência se estende para além do oceano Atlântico. A 11ª ilha, invisível aos mapas, mas presente em cada rua estrangeira onde a sodad pulsa. Essa é a diáspora viva — feita de passos que cruzaram oceanos, de vozes que se entrelaçam em mornas e batuques, de memórias carregadas no peito como quem leva o mar dentro de si.
 
              “Cartas da Diáspora” nasce desse pulsar, das vozes que ecoam quebrando as distâncias. Este projeto busca transformar saudade em encontro, ausência em palavra, identidade em resistência. É um espaço onde cada carta é um abraço, cada história um retorno. Faça parte dessa ilha que não se vê, mas se sente — a ilha di nós genti, espalhada pelo mundo, mas eternamente cabo-verdiana.
          </p>
+         <!-- IMAGEM GIF MANTIDA AQUI -->
          <img src="img/loading.gif" alt="Carregando..." class="loading-gif">
      </main>
 
      <!-- Footer básico -->
      <footer>
-        <!-- Adicione copyright ou outros links se necessário -->
-         <!-- Exemplo: <p>© <span id="currentYear"></span> Ana Furtado</p> -->
+         <!-- Conteúdo do footer, se houver -->
      </footer>
 
      <!-- Script Menu Hamburguer -->
@@ -232,13 +189,6 @@
                  header.classList.toggle('active');
              });
          }
-
-        /* Script opcional para ano no footer, se adicionar o parágrafo acima
-         const currentYearSpan = document.getElementById('currentYear');
-         if(currentYearSpan) {
-             currentYearSpan.textContent = new Date().getFullYear();
-         }
-        */
      </script>
  </body>
  </html>
