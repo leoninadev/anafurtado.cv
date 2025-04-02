@@ -87,10 +87,11 @@ font-family: 'Nixie One', sans-serif;
 font-size: 2em;
 letter-spacing: .125rem;
 text-align: center;
-font-weight: normal;
+font-weight: normal !important;
 }
 
 .logo a {
+font-weight: normal
 color: #392523;
 }
 
@@ -215,7 +216,7 @@ font-size: 2em;
 font-family: 'Playfair Display', serif;
 font-size: 4em;
 color: #fff;
-font-style: italic;
+font-style: normal;
 }
 
 /* --------------- ADICIONADO --------------- */
