@@ -395,41 +395,79 @@ display: block;
 
 /* Footer */
 footer {
-padding: 1.875rem 0;
-background-color: #392523;
-text-align: center;
-width: 100%;
-color: #F8F2EA;
+  padding: 1.875rem 0;
+  background-color: #392523;
+  text-align: center;
+  width: 100%;
+  color: #F8F2EA;
 }
 
-footer::after {
-content: "© 2025 Ana Furtado. Todos os direitos reservados.";
-display: block;
-margin-top: 10px;
-font-size: 0.8em;
+/* Ícones sociais: o container precisa do flexbox */
+.social-icons {
+  display: flex; /* Torna o container um flex container */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Opcional: centraliza verticalmente */
+  margin-bottom: 1rem; /* Adiciona espaço abaixo dos ícones */
 }
 
+/* Estilo para os links dentro de .social-icons */
 .social-icons a {
-font-size: 1.5625rem;
-margin: 0 .625rem;
-color: #F8F2EA;
-font-family: 'Fragment Core', sans-serif;
-display: flex;
-justify-content: center; 
-align-items: center; 
-margin-bottom: 1rem; 
-transition: transform .3s ease,color .3s ease;
+  font-size: 1.5625rem;
+  margin: 0 0.625rem; /* Espaçamento horizontal entre os ícones */
+  color: #F8F2EA;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-transform: scale(1.2);
-color: #94A473;
+  transform: scale(1.2);
+  color: #94A473;
 }
 
+/* Formulário de contato */
 .contact-form {
-max-width: 31.25rem;
-margin: 1.25rem auto;
-text-align: left;
+  max-width: 31.25rem;
+  margin: 1.25rem auto;
+  text-align: left;
+}
+
+/* Estilos responsivos (para telas menores) */
+@media (max-width: 768px) {
+ /* Footer */
+footer {
+  padding: 1.875rem 0;
+  background-color: #392523;
+  text-align: center;
+  width: 100%;
+  color: #F8F2EA;
+}
+
+/* Ícones sociais: o container precisa do flexbox */
+.social-icons {
+  display: flex; /* Torna o container um flex container */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Opcional: centraliza verticalmente */
+  margin-bottom: 1rem; /* Adiciona espaço abaixo dos ícones */
+}
+
+/* Estilo para os links dentro de .social-icons */
+.social-icons a {
+  font-size: 1.5625rem;
+  margin: 0 0.625rem; /* Espaçamento horizontal entre os ícones */
+  color: #F8F2EA;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #94A473;
+}
+
+/* Formulário de contato */
+.contact-form {
+  max-width: 31.25rem;
+  margin: 1.25rem auto;
+  text-align: left;
+}
 }
 
 .contact-form h3 {
