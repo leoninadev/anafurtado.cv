@@ -85,11 +85,12 @@ font-family: 'Nixie One', sans-serif;
 font-size: 2em;
 letter-spacing: .125rem;
 text-align: center;
-font-weight: normal; / Garante que o texto seja exibido em negrito */
+font-weight: normal; 
 }
 
 .logo a {
 color: #392523;
+font-weight: normal;
 }
 
 nav ul {
