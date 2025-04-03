@@ -631,7 +631,7 @@ footer {
         margin-top: 1rem;
     }
 
-    header.active .nav-links nav ul .social-icons-mobile li {
+    header.active .nav-links nav ul li {
         margin: 0;
     }
 
