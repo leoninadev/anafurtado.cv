@@ -284,6 +284,8 @@
             /* Adicionado: para alinhar verticalmente */
             flex-direction: column;
             /* Adicionado: para organizar o conteúdo em coluna */
+            height: 100%;
+            /* Adicionado: para ocupar toda a altura disponível */
         }
 
         .content-item:hover {
@@ -294,8 +296,8 @@
             width: 100%;
             height: auto;
             /* Alterado: para manter a proporção da imagem */
-            aspect-ratio: 1 / 1;
-            /* Adicionado: para manter a proporção quadrada */
+            max-height: 200px;
+            /* Adicionado: para limitar a altura máxima */
             object-fit: cover;
             display: block;
             margin: 0 auto 10px auto;
