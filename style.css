@@ -153,7 +153,9 @@ opacity: 1;
 }
 
 .dropbtn {
-cursor: pointer;
+    cursor: pointer; background: none; border: none; color: inherit;
+    font: inherit; padding: 0; display: inline-flex; align-items: center;
+    font-family: 'Fragment Core', sans-serif; /* ADICIONEI ESSA LINHA */
 }
 
 /* Banner Sections */
