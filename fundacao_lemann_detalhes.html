@@ -324,19 +324,22 @@
             text-decoration: underline;
         }
 
-       /* Estilos específicos para as imagens na seção ARTIGOS */
-.artigos-grid .content-item {
-    padding: 5px; /* Reduz o padding geral do item */
+     /* Estilos específicos para as imagens na seção ARTIGOS */
+ .artigos-grid .content-item {
+    padding: 0px;
+    /* Removido o padding geral do item */
+    height: 170px;  /* Defina uma altura fixa para o contêiner do item */
+    display: flex;
+    align-items: center;
 }
 
 .artigos-grid .content-item img {
-    object-fit: contain; /* Garante que a imagem inteira seja exibida */
-    object-position: center; /* Centraliza a imagem horizontalmente */
-    width: 100%; /* Garante que a imagem ocupe toda a largura */
-    /* max-height: 170px;  REMOVIDO */
-    /* Remove o limite de altura */
-    margin-bottom: 2px; /* Espaço entre a imagem e "Confira" */
-    display: block; /* Remove espaços extras */
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    max-height: 100%;  /* Defina uma altura máxima (ajuste conforme necessário) */
+    margin-bottom: 8px;  /* Aumenta a distância entre a imagem e o "Confira" */
+    display: block;
 }
 
 .wide-article-image {
