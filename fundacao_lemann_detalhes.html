@@ -326,7 +326,7 @@
 
         /* Estilos específicos para as imagens na seção ARTIGOS */
         .artigos-grid .content-item img {
-            max-height: 150px;
+            /*max-height: 150px; REMOVIDO */
             /* Ajuste este valor conforme necessário */
             object-fit: contain;
             /* Garante que a imagem caiba dentro do contêiner */
@@ -533,6 +533,12 @@
                 font-size: 0.75em;
             }
         }
+
+        .wide-article-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 
@@ -649,10 +655,12 @@
             <article id="artigos">
                 <h3>ARTIGOS</h3>
                 <div class="content-grid artigos-grid">
-                    <div class="content-item"> <img src="img/fundacao13.png" alt="Artigo 1 - Lideranças em Foco"> <a
+                    <div class="content-item"> <img src="img/fundacao13.png" alt="Artigo 1 - Lideranças em Foco"
+                            class="wide-article-image"> <a
                             href="https://www.linkedin.com/pulse/lideran%C3%A7as-em-foco-fundacao-lemann-mougf/?trackingId=YenykeIEGdvKrApFKJr9vw%3D%3D"
                             target="_blank" rel="noopener noreferrer">Confira</a> </div>
-                    <div class="content-item"> <img src="img/fundacao14.png" alt="Artigo 2 - Retrospectiva FL 2024"> <a
+                    <div class="content-item"> <img src="img/fundacao14.png" alt="Artigo 2 - Retrospectiva FL 2024"
+                            class="wide-article-image"> <a
                             href="https://www.linkedin.com/pulse/retrospectivafl2024-educa%C3%A7%C3%A3o-fundacao-lemann-xwpmf/"
                             target="_blank" rel="noopener noreferrer">Confira</a> </div>
                 </div>
