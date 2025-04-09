@@ -326,223 +326,24 @@
 
         /* Estilos específicos para as imagens na seção ARTIGOS */
         .artigos-grid .content-item {
-            padding: 10px; /* Reduz o padding geral do item */
+            padding: 8px;
+            /* Reduz o padding geral do item */
         }
 
         .artigos-grid .content-item img {
-            /*max-height: 150px; REMOVIDO */
-            /* Ajuste este valor conforme necessário */
-            object-fit: contain;
-            /* Garante que a imagem caiba dentro do contêiner */
-            margin-bottom: 5px; /* Adiciona margem inferior à imagem */
-        }
-
-        /* Nome do arquivo (<small>) */
-        /* REMOVIDO */
-
-        /* Footer */
-        footer {
-            margin-top: 0;
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #392523;
-            font-family: 'Fragment Core', sans-serif;
-            border-top: 1px solid #ddd;
-            background-color: #F8F2EA;
-        }
-
-        footer .social-icons {
-            margin-bottom: 20px;
-        }
-
-        footer .social-icons a {
-            color: #392523;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s ease;
-        }
-
-        footer .social-icons a:hover {
-            color: #94A473;
-        }
-
-        footer .contact-form {
-            display: none;
-        }
-
-
-        /* === RESPONSIVIDADE === */
-        @media (max-width: 768px) {
-            header {
-                padding: 0.9375rem 1.25rem;
-            }
-
-            .nav-links nav>ul>li:not(.dropdown):not(:first-child):not(.social-icons-mobile),
-            .nav-links nav>ul>li>a[aria-label="LinkedIn"],
-            .nav-links nav>ul>li>a[aria-label="Instagram"],
-            .nav-links nav>ul>li>a[aria-label="E-mail"] {}
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #F8F2EA;
-                box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-                padding: 1rem 0;
-                border-top: 1px solid #eee;
-            }
-
-            header.active .nav-links {
-                display: block;
-            }
-
-            .logo {
-                font-size: 1.5em;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                width: 100%;
-            }
-
-            nav ul li {
-                margin: 0.8rem 0;
-                width: 100%;
-            }
-
-            nav ul li a[aria-label="LinkedIn"],
-            nav ul li a[aria-label="Instagram"],
-            nav ul li a[aria-label="E-mail"] {
-                display: none;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                background-color: transparent;
-                min-width: auto;
-                opacity: 1;
-                display: none;
-                padding-left: 20px;
-                border-left: 2px solid #e0d8cf;
-                margin: 5px 15% 0 15%;
-            }
-
-            .dropdown-content.show {
-                display: block;
-            }
-
-            .dropdown-content a {
-                padding: 0.5rem 1rem;
-                color: #5c4b49;
-                font-size: 0.95em;
-                text-align: left;
-            }
-
-            .dropdown-content a:hover {
-                background-color: #e0d8cf;
-            }
-
-            .dropbtn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .social-icons-mobile {
-                display: block !important;
-                margin-top: 1rem;
-                padding-top: 1rem;
-                border-top: 1px solid #eee;
-                list-style: none;
-                padding-left: 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .social-icons-mobile li {
-                display: inline-block !important;
-                margin: 0 10px !important;
-                width: auto !important;
-            }
-
-            .social-icons-mobile li a i {
-                font-size: 1.4em !important;
-                margin-right: 0 !important;
-            }
-
-            /* Conteúdo principal mobile */
-            main {
-                padding-top: 80px;
-            }
-
-            .top-content-area {
-                padding: 20px 15px 0 15px;
-                margin-bottom: 30px;
-            }
-
-            .top-content-area .back-link {
-                margin-bottom: 20px;
-            }
-
-            .top-content-area h2.page-title {
-                font-size: 1.8em;
-            }
-
-            .top-content-area .tags span {
-                font-size: 0.8em;
-                padding: 4px 10px;
-            }
-
-            /* Area escura mobile - **MODIFICADO** */
-            .content-articles {
-                /* Aumentado padding inferior mobile */
-                padding: 30px 15px 30px 15px;
-            }
-
-            .content-articles article {
-                margin-bottom: 40px;
-            }
-
-            .content-articles h3 {
-                font-size: 1.4em;
-            }
-
-            /* Grid mobile */
-            .content-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
-            }
-
-            .content-item {
-                padding: 15px;
-            }
-
-            .content-item img {
-                height: 160px;
-                margin-bottom: 15px;
-            }
-
-            .content-item a {
-                font-size: 0.95em;
-            }
-
-            .content-item small {
-                font-size: 0.75em;
-            }
+            object-fit: cover;
+            /* Preenche o container cortando a imagem se necessário */
+            width: 100%;
+            /* Garante que a imagem ocupe toda a largura */
+            max-height: 150px;
+            /* Define uma altura máxima para o container da imagem. Ajuste este valor! */
+            margin-bottom: 3px;
+            /* Adiciona margem inferior à imagem */
         }
 
         .wide-article-image {
             width: 100%;
             height: auto;
-            object-fit: contain;
         }
     </style>
 </head>
