@@ -331,12 +331,14 @@
         }
 
         .artigos-grid .content-item img {
-            object-fit: cover;
-            /* Preenche o container cortando a imagem se necessário */
+            object-fit: contain;
+            /* Garante que a imagem inteira seja exibida, com espaços em branco se necessário */
+            object-position: center;
+            /* Centraliza a imagem dentro do contêiner */
             width: 100%;
             /* Garante que a imagem ocupe toda a largura */
-            max-height: 210px;
-            /* Define uma altura máxima para o container da imagem. Ajuste este valor! */
+            /* max-height: 170px; REMOVIDO */
+            /* REMOVE a altura máxima, permitindo que a imagem se ajuste */
             margin-bottom: 3px;
             /* Adiciona margem inferior à imagem */
         }
