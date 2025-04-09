@@ -325,11 +325,16 @@
         }
 
         /* Estilos específicos para as imagens na seção ARTIGOS */
+        .artigos-grid .content-item {
+            padding: 10px; /* Reduz o padding geral do item */
+        }
+
         .artigos-grid .content-item img {
             /*max-height: 150px; REMOVIDO */
             /* Ajuste este valor conforme necessário */
             object-fit: contain;
             /* Garante que a imagem caiba dentro do contêiner */
+            margin-bottom: 5px; /* Adiciona margem inferior à imagem */
         }
 
         /* Nome do arquivo (<small>) */
@@ -675,7 +680,8 @@
                     class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/anafurtado.png/" target="_blank" aria-label="Instagram"><i
                     class="fab fa-instagram"></i></a>
-            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:ana.furtado1996@gmail.com" aria-label="E-mail"><i
+                                class="fas fa-envelope"></i></a>
         </div>
         <p>Ana Furtado © <span id="currentYear"></span></p>
     </footer>
