@@ -325,23 +325,18 @@
         }
 
         /* Estilos específicos para as imagens na seção ARTIGOS */
-        .artigos-grid .content-item {
-            padding: 8px;
-            /* Reduz o padding geral do item */
-        }
+.artigos-grid .content-item {
+    padding: 8px; /* Reduz o padding geral do item */
+}
 
-        .artigos-grid .content-item img {
-            object-fit: contain;
-            /* Garante que a imagem inteira seja exibida, com espaços em branco se necessário */
-            object-position: center;
-            /* Centraliza a imagem dentro do contêiner */
-            width: 100%;
-            /* Garante que a imagem ocupe toda a largura */
-            /* max-height: 170px; REMOVIDO */
-            /* REMOVE a altura máxima, permitindo que a imagem se ajuste */
-            margin-bottom: 3px;
-            /* Adiciona margem inferior à imagem */
-        }
+.artigos-grid .content-item img {
+    object-fit: contain; /* Garante que a imagem inteira seja exibida */
+    object-position: center; /* Centraliza a imagem horizontalmente */
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    max-height: 170px; /* Limite para evitar alturas excessivas */
+    margin-bottom: 3px; /* Espaço entre a imagem e "Confira" */
+    display: block; /* Remove espaços extras */
+}
 
         .wide-article-image {
             width: 100%;
